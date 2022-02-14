@@ -1,0 +1,50 @@
+{
+  "name": "vuefes-2022",
+  "version": "1.0.0",
+  "description": "Vue Fes Japan 2022",
+  "author": "jiyuujin <jiyuujinunite@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi preview",
+    "generate": "nuxi generate",
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
+    "lint": "npm run eslint && npm run stylelint",
+    "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
+    "eslint": "eslint . --ext js,jsx,ts,tsx,vue",
+    "eslint:fix": "eslint . --ext js,jsx,ts,tsx,vue --fix",
+    "stylelint": "stylelint --config .stylelintrc.js 'app/**/*.vue' 'app/**/*.{css,scss}'",
+    "stylelint:fix": "stylelint --config .stylelintrc.js 'app/**/*.vue' 'app/**/*.{css,scss}' --fix"
+  },
+  "devDependencies": {
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge",
+    "@nuxtjs/svg": "^0.4.0",
+    "@nuxtjs/tailwindcss": "^5.0.0-4",
+    "@testing-library/vue": "^6.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "eslint": "^8.8.0",
+    "eslint-plugin-tailwindcss": "^3.4.3",
+    "eslint-plugin-vue": "^8.4.1",
+    "eslint-plugin-vuejs-accessibility": "^1.1.1",
+    "express": "^4.17.2",
+    "husky": "^7.0.4",
+    "nuxt-edge": "latest",
+    "postcss": "^8.4.6",
+    "postcss-html": "^1.3.0",
+    "postcss-scss": "^4.0.3",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.7",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^14.4.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-scss": "^4.1.0",
+    "typescript": "^4.5.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
