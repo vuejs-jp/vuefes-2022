@@ -1,0 +1,70 @@
+<script setup lang="ts">
+import ButtonField from '~/components/forms/ButtonField.vue'
+import InputField from '~/components/forms/InputField.vue'
+import TextareaField from '~/components/forms/TextareaField.vue'
+
+const name = ref('')
+const email = ref('')
+const detail = ref('')
+
+const updateName = (value: string) => {
+  name.value = value
+}
+
+const updateEmail = (value: string) => {
+  email.value = value
+}
+
+const updateDetail = (value: string) => {
+  detail.value = value
+}
+
+const createSubmit = () => {
+  console.log('Clicked', { name: name.value, email: email.value, detail: detail.value })
+}
+</script>
+
+<template>
+  <section
+    id="form"
+    class="container py-4 px-6 mx-auto"
+  >
+    <div class="flex flex-col justify-center items-center align-middle">
+      <div class="mb-6 w-2/5 text-center">
+        <div class="pr-8 text-xl font-bold">{{ `問い合わせ` }}</div>
+      </div>
+      <div class="mb-6 w-2/5">
+        <InputField
+          id-label="name"
+          title-label="お名前"
+          required
+          @on-change="updateName"
+        />
+      </div>
+      <div class="mb-6 w-2/5">
+        <InputField
+          id-label="email"
+          title-label="メールアドレス"
+          type="email"
+          required
+          @on-change="updateEmail"
+        />
+      </div>
+      <div class="mb-6 w-2/5">
+        <TextareaField
+          id-label="detail"
+          title-label="ご用件"
+          :rows="3"
+          required
+          @on-change="updateDetail"
+        />
+      </div>
+      <div class="mb-6 w-2/5 text-center">
+        <ButtonField
+          title-label="送信"
+          @on-click="createSubmit"
+        />
+      </div>
+    </div>
+  </section>
+</template>
