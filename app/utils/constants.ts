@@ -12,7 +12,7 @@ export const copyright = 'Copyright © 2022 Vue Fes Japan 2022 Executive Committ
 
 export const copyrightDetail =
   '© 2018-2022 Vue.js Japan User Group some rights reserved.' +
-  '\n' +
+  '<br>' +
   'Vue.js artworks by Evan You is licensed under a Creative Commons Attribution 4.0 International License.'
 
 export const networkLinks = [
