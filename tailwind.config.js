@@ -2,11 +2,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'vuefes-primary-1': '#42b883',
-        'vuefes-primary-2': '#35495E',
-        'vuefes-submit-1': '#33A6B8',
-        'vuefes-submit-2': '#42B983',
-        'vuefes-tweet': '#34495E',
+        'vue-blue': '#35495E',
+        'vue-green': '#42b893',
+        'typescript-blue': '#3178C6',
+        asagi: '#33A6B8',
+        sangosyu: '#F17C67',
+        tohoh: '#FFC408',
+        hiwamoegi: '#90B44B',
+        tsuchi: '#E5E5E5',
       },
     },
   },

@@ -19,7 +19,7 @@ const handleClick = () => {
 <template>
   <button
     type="submit"
-    class="py-2.5 px-10 w-full text-sm font-medium text-center text-white bg-gradient-to-r rounded-lg focus:ring-4 focus:ring-blue-300 hover:opacity-80 sm:w-auto from-vuefes-submit-1 to-vuefes-submit-2"
+    class="py-2.5 px-10 w-full text-sm font-medium text-center text-white bg-gradient-to-r rounded-lg focus:ring-4 focus:ring-blue-300 hover:opacity-80 sm:w-auto from-vue-green to-asagi"
     @click="handleClick"
   >
     {{ titleLabel }}
