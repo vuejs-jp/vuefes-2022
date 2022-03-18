@@ -1,4 +1,6 @@
-export const conferenceTitle = 'Vue Fes Japan 2022'
+export const conferenceTitle = 'Vue Fes Japan Online 2022'
+
+export const subtitle = 'Re: さまざまな困難を乗り越えたすべての人へ'
 
 // WIP
 export const message =
