@@ -5,5 +5,5 @@ export default defineNuxtConfig({
   srcDir: 'app/',
   css: ['~/assets/main.scss'],
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
-  buildModules: ['@nuxtjs/svg', '@nuxtjs/tailwindcss']
+  buildModules: ['@nuxtjs/svg', '@nuxtjs/tailwindcss'],
 })
