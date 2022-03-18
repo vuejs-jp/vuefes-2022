@@ -38,7 +38,7 @@ jobs:
 
       - name: Transpile
         run: |
-          npm install
-          npm install build
+          npm ci
+          npm run build
         env:
           CI: true
