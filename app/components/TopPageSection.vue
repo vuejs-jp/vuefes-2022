@@ -1,6 +1,6 @@
 <template>
-  <section class="min-h-screen">
-    <div class="flex flex-col justify-center items-center py-12 px-3 bg-white dark:bg-gray-800 md:px-4">
+  <section class="container mx-auto max-w-full">
+    <div class="flex flex-col justify-center items-center py-12 px-3 md:px-4 bg-tsuchi">
       <h1 class="mt-8 text-3xl font-semibold leading-10 text-center text-gray-800 dark:text-white md:mt-12 md:w-9/12 lg:w-7/12 lg:text-4xl">
         {{ conferenceTitle }}
       </h1>
