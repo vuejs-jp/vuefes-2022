@@ -10,6 +10,9 @@ export const message =
   '\n' +
   '間もなく Vue.js 3.0 の正式リリースが予定されています。世界中で Vue.js ユーザーの盛り上がりが予想されているため、別途オンラインで開催できるイベントも企画中です。 そのためには Vue.js コミュニティである皆さんの力も必要です。引き続き Vue.js、ならびに日本ユーザーグループをサポートしていただけたら幸いです。ぜひ一緒に Vue.js を楽しみましょう！'
 
+export const introduction =
+  'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
+
 export const copyright = 'Copyright © 2022 Vue Fes Japan 2022 Executive Committee.'
 
 export const copyrightDetail =

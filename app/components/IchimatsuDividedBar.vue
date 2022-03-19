@@ -10,7 +10,7 @@ const props = defineProps({
 
 const nameClass = computed(() => {
   if (props.name === 'tsuchi') return 'bg-ichimatsu-tsuchi'
-  return 'bg-ichimatsu-vue-blue'
+  return 'bg-tsuchi bg-ichimatsu-vue-blue'
 })
 </script>
 

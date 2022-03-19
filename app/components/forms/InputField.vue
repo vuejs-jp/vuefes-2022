@@ -38,13 +38,13 @@ const handleChange = (e) => {
 <template>
   <label
     :for="idLabel"
-    class="block mb-2 text-sm font-medium text-black"
+    class="block mb-2 text-sm font-bold text-vue-blue"
   >
     {{ titleLabel }}
     <input
       :id="idLabel"
       :type="type"
-      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+      class="block p-2.5 w-full text-sm bg-transparent rounded-lg border focus:border-blue-500 focus:ring-blue-500 text-vue-blue border-vue-blue"
       :placeholder="placeholder"
       :required="required"
       @input="handleChange"
