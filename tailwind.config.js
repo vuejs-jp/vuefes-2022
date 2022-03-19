@@ -11,6 +11,9 @@ export default {
         hiwamoegi: '#90B44B',
         tsuchi: '#E5E5E5',
       },
+      width: {
+        192: '48rem',
+      },
     },
     backgroundImage: {
       'ichimatsu-vue-blue':
