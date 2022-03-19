@@ -17,6 +17,7 @@ export default {
         'linear-gradient(45deg, #35495e 25%, transparent 25%, transparent 75%, #35495e 75%), linear-gradient(45deg, #35495e 25%, transparent 25%, transparent 75%, #35495e 75%)',
       'ichimatsu-tsuchi':
         'linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%), linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%)',
+      submit: 'linear-gradient(#42b893, #33A6B8)',
     },
     backgroundSize: {
       40: '40px 40px',
