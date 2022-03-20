@@ -8,7 +8,7 @@
         <div class="px-12 mr-24 text-4xl font-extrabold md:pb-20 md:mr-0 md:text-center lg:p-20 lg:mr-0 lg:w-36 lg:text-center text-vue-blue">
           {{ `Message` }}
         </div>
-        <div class="md:px-12 lg:px-36 text-vue-blue lg:w-192">
+        <div class="md:px-12 lg:pl-36 text-vue-blue lg:w-192">
           <div
             class="pb-7 font-normal text-left text-vue-blue"
             v-html="message"
