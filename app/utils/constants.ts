@@ -2,6 +2,8 @@ export const conferenceTitle = 'Vue Fes Japan Online 2022'
 
 export const subtitle = 'Re: さまざまな困難を乗り越えたすべての人へ'
 
+export const eventDate = '2022.10.16 10:00〜19:00'
+
 // WIP
 export const message =
   'Vue.js 日本ユーザーグループでは、2020年11月14日の Vue Fes Japan 2020 開催を目指し、2019年冬より準備を進めてきました。しかし、昨今の新型コロナウイルス感染症を取り巻く状況を鑑みて予定どおりの開催は困難であると判断し、Vue Fes Japan 2020 の開催を見送ることにしましたので、ここにお知らせいたします。\n' +
@@ -14,6 +16,10 @@ export const representative = 'Vue.js 日本ユーザーグループ代表 川�
 
 export const introduction =
   'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
+
+export const tweetLabel = 'Twitter ー @vuefes  #vuefes'
+
+export const tweetUrl = 'https://twitter.com/intent/tweet?hashtags=vuefes'
 
 export const copyright = 'Copyright © 2022 Vue Fes Japan 2022 Executive Committee.'
 

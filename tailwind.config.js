@@ -14,6 +14,16 @@ export default {
       width: {
         192: '48rem',
       },
+      spacing: {
+        '2/7': '28.57%',
+        '4/15': '26.66%',
+      },
+      borderRadius: {
+        '4xl': '100px',
+      },
+      translate: {
+        'm-1/2': '-50%',
+      },
     },
     backgroundImage: {
       'ichimatsu-vue-blue':
