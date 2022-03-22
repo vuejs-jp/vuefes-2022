@@ -1,1 +1,7 @@
 /* Write main styles */
+
+@use 'fonts';
+
+body {
+  font-family: 'din-2014', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+}
