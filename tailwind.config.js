@@ -12,10 +12,13 @@ export default {
         tsuchi: '#E5E5E5',
       },
       width: {
-        192: '48rem',
+        170: '42rem',
       },
       borderRadius: {
         '4xl': '100px',
+      },
+      fontFamily: {
+        'kokuryu-heading': ['kokuryu', 'sans-serif'],
       },
     },
     backgroundImage: {
