@@ -34,7 +34,7 @@ const createSubmit = () => {
     <form>
       <div class="flex flex-col justify-center items-center align-middle">
         <div class="px-36 mb-6 text-center md:px-12 md:w-full lg:w-2/5">
-          <div class="flex flex-col justify-center items-center lg:pr-8 ">
+          <div class="flex flex-col justify-center items-center">
             <div class="text-6xl opacity-10 font-kokuryu-heading text-vue-blue">{{ `お問い合わせ` }}</div>
             <div class="-m-5 text-4xl font-extrabold lg:w-36 lg:text-center text-vue-blue">{{ `Contact` }}</div>
           </div>
