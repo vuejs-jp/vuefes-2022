@@ -55,6 +55,7 @@ const createSubmit = () => {
           <InputField
             id-label="email"
             title-label="メールアドレス"
+            placeholder="yamada@gmail.com"
             type="email"
             required
             @on-change="updateEmail"
@@ -63,7 +64,7 @@ const createSubmit = () => {
         <div class="px-36 mb-6 3xl:w-3/5 md:px-0 md:w-full">
           <TextareaField
             id-label="detail"
-            title-label="ご用件"
+            title-label="お問い合わせ内容"
             :rows="3"
             required
             @on-change="updateDetail"
