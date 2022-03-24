@@ -1,15 +1,15 @@
 <template>
   <section
     id="message"
-    class="container mx-auto max-w-full"
+    class="container py-40 px-0 m-0 max-w-full"
   >
-    <div class="py-40 px-4 bg-white md:px-0 md:w-full md:text-center lg:px-0 lg:text-center">
-      <div class="flex justify-center items-center md:flex-col lg:flex-row">
-        <div class="flex flex-col justify-center items-center px-12 mr-24 md:pb-20 md:mr-0 md:text-center lg:p-20 lg:mr-0">
-          <div class="text-6xl opacity-10 lg:w-60 lg:text-center font-kokuryu-heading text-vue-blue">{{ `ことづけ` }}</div>
-          <div class="-m-5 text-4xl font-extrabold lg:w-36 lg:text-center text-vue-blue">{{ `Message` }}</div>
+    <div class="text-center bg-white md:px-0 md:w-full md:text-center lg:px-0">
+      <div class="flex justify-center items-center md:flex-row lg:flex-col">
+        <div class="flex flex-col justify-center items-center 3xl:pr-12 pb-20 md:pb-20 md:mr-0 md:text-center lg:mr-0">
+          <div class="w-60 text-6xl opacity-10 lg:w-80 lg:text-center font-kokuryu-heading text-vue-blue">{{ `ことづけ` }}</div>
+          <div class="-m-5 w-36 text-4xl font-extrabold 3xl:text-center md:w-36 lg:w-36 text-vue-blue">{{ `Message` }}</div>
         </div>
-        <div class="md:px-12 lg:pl-24 text-vue-blue lg:w-170">
+        <div class="3xl:px-12 md:w-full lg:pl-24 text-vue-blue w-192">
           <div
             class="pb-7 font-normal text-left text-vue-blue"
             v-html="message"

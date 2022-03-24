@@ -1,10 +1,10 @@
 <template>
   <section
     id="footer"
-    class="container mx-auto max-w-full"
+    class="container py-16 mx-auto max-w-full bg-vue-blue"
   >
-    <div class="py-16 px-4 text-white bg-vue-blue">
-      <div class="flex justify-center items-center px-36 md:flex-col md:px-12 md:w-full">
+    <div class="px-4 text-white">
+      <div class="flex flex-col laptop:flex-col justify-center items-center px-36 md:px-12 md:w-full">
         <div class="pb-16">
           <img
             :src="`/icon/vuefes_logo-invert.svg`"
