@@ -33,17 +33,17 @@ const createSubmit = () => {
   >
     <form>
       <div class="flex flex-col justify-center items-center align-middle">
-        <div class="px-36 mb-6 text-center md:px-12 md:w-full lg:w-2/5">
+        <div class="mb-6 text-center md:px-12 px-90">
           <div class="flex flex-col justify-center items-center">
             <div class="text-6xl opacity-10 font-kokuryu-heading text-vue-blue">{{ `お問い合わせ` }}</div>
-            <div class="-m-5 text-4xl font-extrabold lg:w-36 lg:text-center text-vue-blue">{{ `Contact` }}</div>
+            <div class="-m-5 text-4xl font-extrabold lg:w-36 text-vue-blue">{{ `Contact` }}</div>
           </div>
           <div
             class="py-20 text-lg text-left text-vue-blue"
             v-html="introduction"
           />
         </div>
-        <div class="px-36 mb-6 md:px-12 md:w-full lg:w-2/5">
+        <div class="px-36 mb-6 3xl:w-3/5 md:px-0 md:w-full">
           <InputField
             id-label="name"
             title-label="お名前"
@@ -51,7 +51,7 @@ const createSubmit = () => {
             @on-change="updateName"
           />
         </div>
-        <div class="px-36 mb-6 md:px-12 md:w-full lg:w-2/5">
+        <div class="px-36 mb-6 3xl:w-3/5 md:px-0 md:w-full">
           <InputField
             id-label="email"
             title-label="メールアドレス"
@@ -60,7 +60,7 @@ const createSubmit = () => {
             @on-change="updateEmail"
           />
         </div>
-        <div class="px-36 mb-6 md:px-12 md:w-full lg:w-2/5">
+        <div class="px-36 mb-6 3xl:w-3/5 md:px-0 md:w-full">
           <TextareaField
             id-label="detail"
             title-label="ご用件"
@@ -69,7 +69,7 @@ const createSubmit = () => {
             @on-change="updateDetail"
           />
         </div>
-        <div class="px-36 mb-6 text-center md:px-12 lg:w-2/5">
+        <div class="mb-6 text-center md:px-12">
           <SubmitButtonField
             title-label="送信"
             @on-click="createSubmit"

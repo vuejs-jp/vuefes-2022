@@ -11,8 +11,15 @@ export default {
         hiwamoegi: '#90B44B',
         tsuchi: '#E5E5E5',
       },
+      spacing: {
+        14: '50px',
+        35: '140px',
+        90: '360px',
+        153: '610px',
+      },
       width: {
         170: '42rem',
+        192: '54rem',
       },
       borderRadius: {
         '4xl': '100px',
@@ -33,6 +40,11 @@ export default {
     },
     backgroundPosition: {
       'vertical-20': '0 0, 20px 20px',
+    },
+    screens: {
+      md: { max: '770px' },
+      lg: { max: '980px' },
+      '3xl': { max: '1920px' },
     },
   },
 }
