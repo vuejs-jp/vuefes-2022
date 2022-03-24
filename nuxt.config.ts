@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   srcDir: 'app/',
   target: 'static',
   css: ['~/assets/main.scss'],
+  head: {
+    meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+  },
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
   buildModules: ['@nuxtjs/device', '@nuxtjs/svg', '@nuxtjs/tailwindcss'],
   publicRuntimeConfig: {
