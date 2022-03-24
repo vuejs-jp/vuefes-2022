@@ -1,4 +1,6 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
+import { generalOg, twitterOg } from './app/utils/og.constants'
+import { conferenceTitle } from './app/utils/constants'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
@@ -6,7 +8,12 @@ export default defineNuxtConfig({
   target: 'static',
   css: ['~/assets/main.scss'],
   head: {
-    meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    title: conferenceTitle,
+    meta: [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      ...generalOg(),
+      ...twitterOg(),
+    ],
     htmlAttrs: {
       lang: 'ja',
     },
