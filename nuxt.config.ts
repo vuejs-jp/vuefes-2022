@@ -7,6 +7,9 @@ export default defineNuxtConfig({
   css: ['~/assets/main.scss'],
   head: {
     meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    htmlAttrs: {
+      lang: 'ja',
+    },
   },
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
   buildModules: ['@nuxtjs/device', '@nuxtjs/svg', '@nuxtjs/tailwindcss'],
