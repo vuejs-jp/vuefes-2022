@@ -44,7 +44,7 @@ const handleChange = (e) => {
     <input
       :id="idLabel"
       :type="type"
-      class="block p-2.5 w-full text-sm bg-transparent rounded-lg border focus:border-blue-500 focus:ring-blue-500 text-vue-blue border-vue-blue"
+      class="block p-2.5 w-full text-sm bg-transparent border focus:border-blue-500 focus:ring-blue-500 text-vue-blue border-vue-blue"
       :placeholder="placeholder"
       :required="required"
       @input="handleChange"
