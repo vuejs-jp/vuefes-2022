@@ -5,7 +5,7 @@
   >
     <div class="text-center bg-white md:px-0 md:w-full md:text-center lg:px-0">
       <div class="flex justify-center items-center md:flex-row lg:flex-col">
-        <div class="flex flex-col justify-center items-center 3xl:pr-12 pb-20 md:pb-20 md:mr-0 md:text-center lg:mr-0">
+        <div class="flex flex-col justify-center items-center 3xl:pr-0 pb-20 md:pr-12 md:pb-20 md:mr-0 md:text-center lg:mr-0">
           <div class="w-60 text-6xl opacity-10 lg:w-80 lg:text-center font-kokuryu-heading text-vue-blue">{{ `ことづけ` }}</div>
           <div class="-m-5 w-36 text-4xl font-extrabold 3xl:text-center md:w-36 lg:w-36 text-vue-blue">{{ `Message` }}</div>
         </div>
