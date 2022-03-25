@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full md:w-auto">
+  <div class="md:container md:mx-auto">
     <NuxtPage />
   </div>
 </template>
