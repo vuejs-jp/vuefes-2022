@@ -4,7 +4,7 @@
     class="container py-16 mx-auto max-w-full bg-vue-blue"
   >
     <div class="px-4 text-white">
-      <div class="flex flex-col laptop:flex-col justify-center items-center px-36 md:px-12 md:w-full">
+      <div class="flex flex-col justify-center items-center px-36 md:px-12 md:w-full">
         <div class="pb-16">
           <img
             :src="`/icon/vuefes_logo-invert.svg`"
