@@ -29,13 +29,15 @@ const createSubmit = () => {
 <template>
   <section
     id="form"
-    class="container py-40 px-0 m-0 max-w-full bg-tsuchi"
+    class="py-40"
   >
     <form>
       <div class="flex flex-col justify-center items-center align-middle">
         <div class="3xl:px-0 mb-6 3xl:w-3/5 text-center md:px-36">
           <div class="flex flex-col justify-center items-center">
-            <div class="text-6xl opacity-10 font-kokuryu-heading text-vue-blue">{{ `お問い合わせ` }}</div>
+            <div class="text-6xl opacity-10 font-kokuryu-heading text-vue-blue">
+              {{ `お問い合わせ` }}
+            </div>
             <div class="-m-5 text-4xl font-extrabold lg:w-36 text-vue-blue">{{ `Contact` }}</div>
           </div>
           <div

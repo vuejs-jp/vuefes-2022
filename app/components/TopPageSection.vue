@@ -1,6 +1,6 @@
 <template>
   <section class="container mx-auto max-w-full">
-    <div class="flex flex-col justify-center items-center py-12 px-3 md:px-4 bg-tsuchi">
+    <div class="flex flex-col justify-center items-center py-12 px-3 md:px-4">
       <img
         :src="`/img/kv_solid.svg`"
         :alt="conferenceTitle"
@@ -8,7 +8,9 @@
       >
       <div class="relative w-full h-80 lg:w-11/12">
         <div class="flex absolute z-50 flex-col justify-center items-center mx-auto w-full top-30">
-          <h1 class="mx-auto mt-9 mb-2.5 text-3xl font-extrabold leading-10 text-center md:mt-12 lg:text-4xl text-vue-blue">
+          <h1
+            class="mx-auto mt-9 mb-2.5 text-3xl font-extrabold leading-10 text-center md:mt-12 lg:text-4xl text-vue-blue"
+          >
             {{ conferenceTitle }}
           </h1>
           <p class="m-0 mx-auto text-4xl font-extrabold leading-normal text-center text-vue-blue">
