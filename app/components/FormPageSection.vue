@@ -9,18 +9,6 @@ const name = ref('')
 const email = ref('')
 const detail = ref('')
 
-const updateName = (value: string) => {
-  name.value = value
-}
-
-const updateEmail = (value: string) => {
-  email.value = value
-}
-
-const updateDetail = (value: string) => {
-  detail.value = value
-}
-
 const createSubmit = () => {
   console.log('Clicked', { name: name.value, email: email.value, detail: detail.value })
 }
@@ -31,7 +19,7 @@ const createSubmit = () => {
     id="form"
     class="py-40"
   >
-    <form>
+    <form @submit.prevent>
       <div class="flex flex-col justify-center items-center align-middle">
         <div class="3xl:px-0 mb-6 3xl:w-3/5 text-center md:px-36">
           <div class="flex flex-col justify-center items-center">
@@ -47,35 +35,36 @@ const createSubmit = () => {
         </div>
         <div class="3xl:px-0 mb-6 3xl:w-2/5 md:px-36">
           <InputField
+            v-model.trim="name"
             id-label="name"
             title-label="お名前"
+            placeholder="山田太郎"
             required
-            @on-change="updateName"
           />
         </div>
         <div class="3xl:px-0 mb-6 3xl:w-2/5 md:px-36">
           <InputField
+            v-model.trim="email"
             id-label="email"
             title-label="メールアドレス"
             placeholder="yamada@gmail.com"
             type="email"
             required
-            @on-change="updateEmail"
           />
         </div>
         <div class="3xl:px-0 mb-6 3xl:w-2/5 md:px-36">
           <TextareaField
+            v-model.trim="detail"
             id-label="detail"
             title-label="お問い合わせ内容"
             :rows="3"
             required
-            @on-change="updateDetail"
           />
         </div>
         <div class="mb-6 text-center md:px-12">
           <SubmitButtonField
             title-label="送信"
-            @on-click="createSubmit"
+            @click="createSubmit"
           />
         </div>
       </div>

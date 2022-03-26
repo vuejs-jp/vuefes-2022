@@ -1,18 +1,18 @@
 <script setup lang="ts">
 interface ISubmitButtonFieldEmit {
-  (e: 'onClick'): void
+  (e: 'click'): void
 }
 
 const props = defineProps({
   titleLabel: {
     type: String,
-    required: true
+    required: true,
   },
 })
 const emit = defineEmits<ISubmitButtonFieldEmit>()
 
 const handleClick = () => {
-  emit('onClick')
+  emit('click')
 }
 </script>
 

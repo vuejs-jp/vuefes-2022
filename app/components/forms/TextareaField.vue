@@ -1,37 +1,38 @@
 <script setup lang="ts">
 interface ITextareaFieldEmit {
-  (e: 'onChange', value: string): void
+  (e: 'input', value: string): void
 }
 
 const props = defineProps({
   idLabel: {
     type: String,
-    required: true
+    required: true,
   },
   titleLabel: {
     type: String,
-    required: true
+    required: true,
   },
   rows: {
     type: Number,
-    required: true
+    required: true,
   },
   placeholder: {
     type: String,
-    default: ''
+    default: '',
   },
   required: {
     type: Boolean,
-    default: false
+    default: false,
   },
 })
+
 const emit = defineEmits<ITextareaFieldEmit>()
 
-const handleChange = (e) => {
+const handleInput = (e) => {
   if (!(e.target instanceof HTMLTextAreaElement)) {
     return
   }
-  emit('onChange', e.target.value)
+  emit('input', e.target.value)
 }
 </script>
 
@@ -47,7 +48,7 @@ const handleChange = (e) => {
       :rows="rows"
       :placeholder="placeholder"
       :required="required"
-      @input="handleChange"
+      @input="handleInput"
     />
   </label>
 </template>
