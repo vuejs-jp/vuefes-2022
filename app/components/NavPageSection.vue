@@ -10,7 +10,7 @@
             >
           </div>
           <div class="grow items-center w-full lg:flex lg:w-auto">
-            <div class="xl:mx-8 mt-2 text-base font-bold lg:grow">
+            <div class="xl:mx-8 mt-2 font-bold text-vue-blue lg:grow">
               {{ subtitle }}
             </div>
           </div>

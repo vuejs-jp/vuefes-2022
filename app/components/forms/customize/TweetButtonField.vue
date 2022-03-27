@@ -6,7 +6,7 @@ interface ITweetButtonFieldEmit {
 const props = defineProps({
   titleLabel: {
     type: String,
-    required: true
+    required: true,
   },
 })
 const emit = defineEmits<ITweetButtonFieldEmit>()
@@ -19,7 +19,7 @@ const handleClick = () => {
 <template>
   <button
     type="submit"
-    class="py-2.5 px-10 w-full sm:w-auto text-sm font-medium text-center text-vue-blue bg-transparent rounded-4xl border border-vue-blue focus:ring-4 focus:ring-blue-300 hover:opacity-80"
+    class="w-[218px] h-9 text-sm text-center text-vue-blue bg-transparent rounded-4xl border border-vue-blue hover:opacity-80 lg:w-[480px] lg:h-16 lg:text-2xl"
     @click="handleClick"
   >
     {{ titleLabel }}

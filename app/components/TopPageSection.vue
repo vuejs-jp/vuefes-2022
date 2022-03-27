@@ -1,38 +1,31 @@
 <template>
-  <section class="container mx-auto max-w-full">
-    <div class="flex flex-col justify-center items-center py-12 px-3 md:px-4">
+  <section class="py-7">
+    <div class="px-5">
       <img
-        :src="`/img/kv_solid.svg`"
+        class="mx-auto mb-6 lg:mb-9"
+        src="/img/kv_solid_3x.png"
         :alt="conferenceTitle"
-        width="800"
+        width="1178"
       >
-      <div class="relative w-full h-80 lg:w-11/12">
-        <div class="flex absolute z-50 flex-col justify-center items-center mx-auto w-full top-30">
-          <h1
-            class="mx-auto mt-9 mb-2.5 text-3xl font-extrabold leading-10 text-center text-vue-blue md:mt-12 lg:text-4xl"
-          >
-            {{ conferenceTitle }}
-          </h1>
-          <p class="m-0 mx-auto text-4xl font-extrabold leading-normal text-center text-vue-blue">
-            {{ eventDate }}
-          </p>
-          <div class="py-10 mx-auto text-center">
-            <TweetButtonField
-              :title-label="tweetLabel"
-              @onClick="tweet"
-            />
-          </div>
-        </div>
-        <div class="block absolute top-32 mx-auto w-48 lg:top-16 lg:left-0">
-          <img
-            :src="`/img/wave_1.png`"
-            :alt="conferenceTitle"
-            :width="!$device.isMobileOrTablet ? 1160 : 960"
-            class="max-w-none mix-blend-multiply"
-          >
-        </div>
+      <h1 class="mb-2.5 text-2xl font-extrabold text-center text-vue-blue md:text-5xl lg:text-6xl">
+        {{ conferenceTitle }}
+      </h1>
+      <p
+        class="mb-[25px] font-extrabold text-center text-vue-blue md:mb-14 md:text-3xl lg:text-4xl"
+      >
+        {{ eventDate }}
+      </p>
+      <div class="text-center">
+        <TweetButtonField
+          :title-label="tweetLabel"
+          @onClick="tweet"
+        />
       </div>
     </div>
+    <img
+      :src="`/img/wave_1.png`"
+      :alt="conferenceTitle"
+    >
   </section>
 </template>
 
