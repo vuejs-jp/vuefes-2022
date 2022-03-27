@@ -44,7 +44,7 @@ const handleInput = (e) => {
     <input
       :id="idLabel"
       :type="type"
-      class="block py-3.5 px-4 mt-2.5 w-full h-12 text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[74px]"
+      class="block py-3.5 px-4 mt-2.5 w-full h-12 text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[4.625rem]"
       :placeholder="placeholder"
       :required="required"
       @input="handleInput"

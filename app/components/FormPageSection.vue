@@ -21,12 +21,14 @@ const createSubmit = () => {
     id="form"
     class="py-20 lg:py-40"
   >
-    <div class="px-5 mx-auto max-w-[700px]">
+    <div class="px-5 mx-auto max-w-[43.75rem]">
       <div class="mb-10 text-center lg:mb-20">
-        <div class="font-kokuryu-heading text-[40px] text-vue-blue opacity-10 lg:text-[80px]">
+        <div class="font-kokuryu-heading text-[2.5rem] text-vue-blue opacity-10 lg:text-[5rem]">
           お問い合わせ
         </div>
-        <h2 class="-mt-6 text-xl font-extrabold text-vue-blue lg:-mt-10 lg:text-[40px]">Contact</h2>
+        <h2 class="-mt-6 text-xl font-extrabold text-vue-blue lg:-mt-10 lg:text-[2.5rem]">
+          Contact
+        </h2>
       </div>
       <p
         class="mb-10 text-sm leading-7 text-vue-blue lg:mb-20 lg:text-lg lg:leading-8"

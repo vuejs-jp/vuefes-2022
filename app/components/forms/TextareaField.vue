@@ -44,7 +44,7 @@ const handleInput = (e) => {
     {{ titleLabel }}
     <textarea
       :id="idLabel"
-      class="block py-3.5 px-4 mt-2.5 w-full h-[130px] text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[180px]"
+      class="block py-3.5 px-4 mt-2.5 w-full h-[8.125rem] text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[11.25rem]"
       :rows="rows"
       :placeholder="placeholder"
       :required="required"

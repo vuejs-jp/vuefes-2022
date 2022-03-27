@@ -8,15 +8,17 @@ import { representative } from '~/utils/constants'
     class="py-20 bg-white lg:py-40"
   >
     <div
-      class="px-5 mx-auto max-w-[700px] lg:flex lg:gap-6 lg:justify-between lg:items-center lg:max-w-[1190px]"
+      class="px-5 mx-auto max-w-[43.75rem] lg:flex lg:gap-6 lg:justify-between lg:items-center lg:max-w-[74.375rem]"
     >
       <div class="shrink-0 mb-10 text-center lg:mb-20">
-        <div class="font-kokuryu-heading text-[40px] text-vue-blue opacity-10 lg:text-[80px]">
+        <div class="font-kokuryu-heading text-[2.5rem] text-vue-blue opacity-10 lg:text-[5rem]">
           ことづけ
         </div>
-        <h2 class="-mt-6 text-xl font-extrabold text-vue-blue lg:-mt-10 lg:text-[40px]">Message</h2>
+        <h2 class="-mt-6 text-xl font-extrabold text-vue-blue lg:-mt-10 lg:text-[2.5rem]">
+          Message
+        </h2>
       </div>
-      <div class="text-sm leading-7 text-vue-blue lg:max-w-[720px] lg:text-lg lg:leading-8">
+      <div class="text-sm leading-7 text-vue-blue lg:max-w-[45rem] lg:text-lg lg:leading-8">
         <p class="mb-6">
           Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。文字通り Fes =
           お祭りのように Vue.js
