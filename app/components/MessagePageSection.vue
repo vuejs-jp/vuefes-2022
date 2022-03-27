@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { representative } from '~/utils/constants'
+import { message1, message2, message3, message4, message5, representative } from '~/utils/constants'
 </script>
 
 <template>
@@ -19,26 +19,11 @@ import { representative } from '~/utils/constants'
         </h2>
       </div>
       <div class="text-sm leading-7 text-vue-blue lg:max-w-[45rem] lg:text-lg lg:leading-8">
-        <p class="mb-6">
-          Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。文字通り Fes =
-          お祭りのように Vue.js
-          を共に盛り上げ、共に学び、そしてなによりも共に楽しむために誕生しました。
-        </p>
-        <p class="mb-6">
-          残念ながら 2019 年は令和元年東日本台風により、2020
-          年以降は新型コロナウイルス感染症により中止となり、痛恨の極みとなりましたが、私たちはカンファレンス開催を諦めず、力を貯めつつ活動を続けてきました。
-        </p>
-        <p class="mb-6">
-          この数年で Vue.js を取り巻く環境は激変しました。Vue.js 3.0 のリリース、そして Vue.js
-          の作者 Evan You 氏によって新たな OSS として Vite.js が作られ、JavaScript
-          コミュニティに放たれました。Vue.js や Nuxt.js といった OSS はもちろん、それ以外に Vitest
-          といった Vue.js 以外の新しい OSS エコシステムが形成しつつあります。
-        </p>
-        <p class="mb-6">
-          そうした状況で盛り上がる中、この度 2022 年、オンラインカンファレンスとして Vue Fes Japan
-          の開催を決定しましたので、ここにお知らせいたします。
-        </p>
-        <p class="mb-6">ぜひ、一緒にカンファレンスを楽しみましょう！</p>
+        <p class="mb-6">{{ message1 }}</p>
+        <p class="mb-6">{{ message2 }}</p>
+        <p class="mb-6">{{ message3 }}</p>
+        <p class="mb-6">{{ message4 }}</p>
+        <p class="mb-6">{{ message5 }}</p>
         <p class="text-right">{{ representative }}</p>
       </div>
     </div>
