@@ -3,7 +3,7 @@ import SubmitButtonField from '~/components/forms/customize/SubmitButtonField.vu
 import InputField from '~/components/forms/InputField.vue'
 import TextareaField from '~/components/forms/TextareaField.vue'
 
-import useForm from '~/hooks/useForm'
+import useForm from '~/composables/useForm'
 
 import { introduction } from '~/utils/constants'
 
@@ -52,7 +52,7 @@ export default {
               title-label="お名前"
               placeholder="山田太郎"
               required
-              @on-input="updateName"
+              @input="updateName"
             />
           </div>
           <div class="mb-10 w-full lg:mb-20">
@@ -62,7 +62,7 @@ export default {
               placeholder="yamada@gmail.com"
               type="email"
               required
-              @on-input="updateEmail"
+              @input="updateEmail"
             />
           </div>
           <div class="mb-10 w-full lg:mb-20">
@@ -71,7 +71,7 @@ export default {
               title-label="お問い合わせ内容"
               :rows="3"
               required
-              @on-input="updateDetail"
+              @input="updateDetail"
             />
           </div>
           <div class="text-center">
