@@ -9,7 +9,7 @@
       <div class="relative w-full h-80 lg:w-11/12">
         <div class="flex absolute z-50 flex-col justify-center items-center mx-auto w-full top-30">
           <h1
-            class="mx-auto mt-9 mb-2.5 text-3xl font-extrabold leading-10 text-center md:mt-12 lg:text-4xl text-vue-blue"
+            class="mx-auto mt-9 mb-2.5 text-3xl font-extrabold leading-10 text-center text-vue-blue md:mt-12 lg:text-4xl"
           >
             {{ conferenceTitle }}
           </h1>

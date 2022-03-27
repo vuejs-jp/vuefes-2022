@@ -46,7 +46,7 @@ const onMouseLeave = (value: string) => {
       :key="network.value"
       :href="network.url"
       :title="network.description"
-      class="flex justify-center items-center px-4 mr-2 mb-0 w-40 h-10 no-underline hover:bg-white rounded-full border-2 border-gray-200 shadow-sm md:mr-0 md:mb-5 hover:text-vue-blue"
+      class="flex justify-center items-center px-4 mr-2 mb-0 w-40 h-10 hover:text-vue-blue no-underline hover:bg-white rounded-full border-2 border-gray-200 shadow-sm md:mr-0 md:mb-5"
       @mouseover="onMouseOver(network.value)"
       @focus="onMouseOver(network.value)"
       @mouseout="onMouseLeave(network.value)"

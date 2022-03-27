@@ -39,12 +39,12 @@ const handleInput = (e) => {
 <template>
   <label
     :for="idLabel"
-    class="block mb-2 text-sm font-bold text-vue-blue"
+    class="block text-sm font-bold text-vue-blue lg:text-lg"
   >
     {{ titleLabel }}
     <textarea
       :id="idLabel"
-      class="block p-2.5 w-full text-sm bg-transparent border focus:border-blue-500 focus:ring-blue-500 text-vue-blue border-vue-blue"
+      class="block py-3.5 px-4 mt-2.5 w-full h-[130px] text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[180px]"
       :rows="rows"
       :placeholder="placeholder"
       :required="required"
