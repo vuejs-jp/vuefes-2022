@@ -1,53 +1,54 @@
 <script setup lang="ts">
 interface ITextareaFieldEmit {
-  (e: 'onChange', value: string): void
+  (e: 'input', value: string): void
 }
 
 const props = defineProps({
   idLabel: {
     type: String,
-    required: true
+    required: true,
   },
   titleLabel: {
     type: String,
-    required: true
+    required: true,
   },
   rows: {
     type: Number,
-    required: true
+    required: true,
   },
   placeholder: {
     type: String,
-    default: ''
+    default: '',
   },
   required: {
     type: Boolean,
-    default: false
+    default: false,
   },
 })
+
 const emit = defineEmits<ITextareaFieldEmit>()
 
-const handleChange = (e) => {
+const handleInput = (e) => {
   if (!(e.target instanceof HTMLTextAreaElement)) {
     return
   }
-  emit('onChange', e.target.value)
+  emit('input', e.target.value)
 }
 </script>
 
 <template>
   <label
     :for="idLabel"
-    class="block mb-2 text-sm font-bold text-vue-blue"
+    class="block text-sm font-bold text-vue-blue lg:text-lg"
   >
     {{ titleLabel }}
     <textarea
       :id="idLabel"
-      class="block p-2.5 w-full text-sm bg-transparent border focus:border-blue-500 focus:ring-blue-500 text-vue-blue border-vue-blue"
+      class="block py-3.5 px-4 mt-2.5 w-full h-[8.125rem] text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[11.25rem]"
       :rows="rows"
       :placeholder="placeholder"
       :required="required"
-      @input="handleChange"
+      @input="handleInput"
     />
   </label>
 </template>

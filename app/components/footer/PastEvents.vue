@@ -3,13 +3,13 @@ import { websiteLinks } from '~/utils/constants'
 </script>
 
 <template>
-  <div class="flex justify-center items-center pb-20">
+  <div class="flex gap-4 justify-center">
     <a
       v-for="website in websiteLinks"
       :key="website.value"
       :href="website.url"
       :title="website.description"
-      class="mt-6 mr-8 text-base leading-4 hover:text-gray-500 underline focus:underline focus:outline-none cursor-pointer md:mr-0 md:text-center"
+      class="text-xs leading-4 hover:text-gray-500 underline focus:underline focus:outline-none cursor-pointer lg:text-lg"
     >
       {{ website.title }}
     </a>

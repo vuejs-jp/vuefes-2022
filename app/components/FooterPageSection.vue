@@ -1,21 +1,16 @@
 <template>
   <section
     id="footer"
-    class="container py-16 mx-auto max-w-full bg-vue-blue"
+    class="py-10 text-white bg-vue-blue lg:py-20"
   >
-    <div class="px-4 text-white">
-      <div class="flex flex-col justify-center items-center px-36 md:px-12 md:w-full">
-        <div class="pb-16">
-          <img
-            :src="`/icon/vuefes_logo-invert.svg`"
-            alt="Vue fes 2022"
-          >
-        </div>
-        <contact-list />
-        <past-events />
-        <copyright-text />
-      </div>
-    </div>
+    <img
+      class="mx-auto mb-10 w-[9.375rem] lg:mb-20 lg:w-[15rem]"
+      :src="`/icon/vuefes_logo-invert.svg`"
+      alt="Vue fes 2022"
+    >
+    <contact-list class="mb-5 lg:mb-10" />
+    <past-events class="mb-10 lg:mb-20" />
+    <copyright-text />
   </section>
 </template>
 

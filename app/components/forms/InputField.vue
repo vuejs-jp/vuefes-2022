@@ -1,53 +1,53 @@
 <script setup lang="ts">
 interface IInputFieldEmit {
-  (e: 'onChange', value: string): void
+  (e: 'input', value: string): void
 }
 
 const props = defineProps({
   idLabel: {
     type: String,
-    required: true
+    required: true,
   },
   titleLabel: {
     type: String,
-    required: true
+    required: true,
   },
   type: {
     type: String,
-    default: 'text'
+    default: 'text',
   },
   placeholder: {
     type: String,
-    default: ''
+    default: '',
   },
   required: {
     type: Boolean,
-    default: false
+    default: false,
   },
 })
 const emit = defineEmits<IInputFieldEmit>()
 
-const handleChange = (e) => {
+const handleInput = (e) => {
   if (!(e.target instanceof HTMLInputElement)) {
-    return;
+    return
   }
-  emit('onChange', e.target.value)
+  emit('input', e.target.value)
 }
 </script>
 
 <template>
   <label
     :for="idLabel"
-    class="block mb-2 text-sm font-bold text-vue-blue"
+    class="block text-sm font-bold text-vue-blue lg:text-lg"
   >
     {{ titleLabel }}
     <input
       :id="idLabel"
       :type="type"
-      class="block p-2.5 w-full text-sm bg-transparent border focus:border-blue-500 focus:ring-blue-500 text-vue-blue border-vue-blue"
+      class="block py-3.5 px-4 mt-2.5 w-full h-12 text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[4.625rem]"
       :placeholder="placeholder"
       :required="required"
-      @input="handleChange"
+      @input="handleInput"
     >
   </label>
 </template>

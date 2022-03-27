@@ -8,77 +8,76 @@ import { introduction } from '~/utils/constants'
 const name = ref('')
 const email = ref('')
 const detail = ref('')
-
-const updateName = (value: string) => {
-  name.value = value
-}
-
-const updateEmail = (value: string) => {
-  email.value = value
-}
-
-const updateDetail = (value: string) => {
-  detail.value = value
-}
+const isSended = ref(false)
 
 const createSubmit = () => {
   console.log('Clicked', { name: name.value, email: email.value, detail: detail.value })
+  isSended.value = true
 }
 </script>
 
 <template>
   <section
     id="form"
-    class="py-40"
+    class="py-20 lg:py-40"
   >
-    <form>
-      <div class="flex flex-col justify-center items-center align-middle">
-        <div class="3xl:px-0 mb-6 3xl:w-3/5 text-center md:px-36">
-          <div class="flex flex-col justify-center items-center">
-            <div class="text-6xl opacity-10 font-kokuryu-heading text-vue-blue">
-              {{ `お問い合わせ` }}
-            </div>
-            <div class="-m-5 text-4xl font-extrabold lg:w-36 text-vue-blue">{{ `Contact` }}</div>
-          </div>
-          <div
-            class="py-20 text-lg text-left text-vue-blue"
-            v-html="introduction"
-          />
+    <div class="px-5 mx-auto max-w-[43.75rem]">
+      <div class="mb-10 text-center lg:mb-20">
+        <div class="font-kokuryu-heading text-[2.5rem] text-vue-blue opacity-10 lg:text-[5rem]">
+          お問い合わせ
         </div>
-        <div class="3xl:px-0 mb-6 3xl:w-2/5 md:px-36">
-          <InputField
-            id-label="name"
-            title-label="お名前"
-            required
-            @on-change="updateName"
-          />
-        </div>
-        <div class="3xl:px-0 mb-6 3xl:w-2/5 md:px-36">
-          <InputField
-            id-label="email"
-            title-label="メールアドレス"
-            placeholder="yamada@gmail.com"
-            type="email"
-            required
-            @on-change="updateEmail"
-          />
-        </div>
-        <div class="3xl:px-0 mb-6 3xl:w-2/5 md:px-36">
-          <TextareaField
-            id-label="detail"
-            title-label="お問い合わせ内容"
-            :rows="3"
-            required
-            @on-change="updateDetail"
-          />
-        </div>
-        <div class="mb-6 text-center md:px-12">
-          <SubmitButtonField
-            title-label="送信"
-            @on-click="createSubmit"
-          />
-        </div>
+        <h2 class="-mt-6 text-xl font-extrabold text-vue-blue lg:-mt-10 lg:text-[2.5rem]">
+          Contact
+        </h2>
       </div>
-    </form>
+      <p
+        class="mb-10 text-sm leading-7 text-vue-blue lg:mb-20 lg:text-lg lg:leading-8"
+        v-html="introduction"
+      />
+      <p
+        v-if="isSended"
+        class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8"
+      >
+        お問い合わせありがとうございます。担当者より確認次第、ご返答させていただきます。
+      </p>
+      <div v-else>
+        <form @submit.prevent>
+          <div class="mb-10 w-full lg:mb-20">
+            <InputField
+              v-model.trim="name"
+              id-label="name"
+              title-label="お名前"
+              placeholder="山田太郎"
+              required
+            />
+          </div>
+          <div class="mb-10 w-full lg:mb-20">
+            <InputField
+              v-model.trim="email"
+              id-label="email"
+              title-label="メールアドレス"
+              placeholder="yamada@gmail.com"
+              type="email"
+              required
+            />
+          </div>
+          <div class="mb-10 w-full lg:mb-20">
+            <TextareaField
+              v-model.trim="detail"
+              id-label="detail"
+              title-label="お問い合わせ内容"
+              :rows="3"
+              required
+            />
+          </div>
+          <div class="text-center">
+            <SubmitButtonField
+              title-label="送信"
+              @click="createSubmit"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
 </template>
