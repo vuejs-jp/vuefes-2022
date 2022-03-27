@@ -1,19 +1,21 @@
 <script setup lang="ts">
-type NameClassType = 'tsuchi' | 'vue-blue'
+import { PropType } from '@nuxt/bridge/dist/runtime/vue2-bridge'
 
 const props = defineProps({
-  name: {
-    type: String as NameClassType,
-    required: true
+  color: {
+    type: String as PropType<'white' | 'vue-blue'>,
+    required: true,
   },
 })
 
-const nameClass = computed(() => {
-  if (props.name === 'tsuchi') return 'bg-ichimatsu-tsuchi'
-  return 'bg-tsuchi bg-ichimatsu-vue-blue'
+const colorClass = computed(() => {
+  return props.color === 'white' ? 'bg-ichimatsu-white' : 'bg-ichimatsu-vue-blue'
 })
 </script>
 
 <template>
-  <div :class="`my-0 mx-auto w-full h-10 bg-40 bg-vertical-20 ${nameClass}`" />
+  <div
+    class="w-full h-10 bg-40 bg-vertical-20"
+    :class="colorClass"
+  />
 </template>

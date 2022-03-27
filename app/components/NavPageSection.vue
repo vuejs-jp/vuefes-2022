@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-tsuchi">
+  <header>
     <div class="py-4 px-2 lg:mx-4 xl:mx-12">
       <div>
         <nav class="flex justify-between items-center">

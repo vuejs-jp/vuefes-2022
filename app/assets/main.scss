@@ -5,4 +5,21 @@
 body {
   font-family: 'din-2014', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
   overflow-x: hidden;
+  background-image: url('/img/bg.png');
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 400px;
+}
+
+@media only screen and (min-width: 770px) {
+  body {
+    background-size: 680px;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  body {
+    background-size: 768px;
+  }
 }
