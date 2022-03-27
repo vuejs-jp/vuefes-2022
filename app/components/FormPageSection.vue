@@ -1,18 +1,22 @@
-<script setup lang="ts">
+<script lang="ts">
 import SubmitButtonField from '~/components/forms/customize/SubmitButtonField.vue'
 import InputField from '~/components/forms/InputField.vue'
 import TextareaField from '~/components/forms/TextareaField.vue'
 
+import useForm from '~/hooks/useForm'
+
 import { introduction } from '~/utils/constants'
 
-const name = ref('')
-const email = ref('')
-const detail = ref('')
-const isSended = ref(false)
-
-const createSubmit = () => {
-  console.log('Clicked', { name: name.value, email: email.value, detail: detail.value })
-  isSended.value = true
+export default {
+  components: {
+    SubmitButtonField,
+    InputField,
+    TextareaField
+  },
+  setup() {
+    const formComposable = useForm()
+    return { ...formComposable, introduction }
+  }
 }
 </script>
 
@@ -44,35 +48,54 @@ const createSubmit = () => {
         <form @submit.prevent>
           <div class="mb-10 w-full lg:mb-20">
             <InputField
-              v-model.trim="name"
               id-label="name"
               title-label="お名前"
               placeholder="山田太郎"
               required
+              @on-input="updateName"
             />
+            <p
+              v-if="nameError"
+              class="text-sm text-sangosyu"
+            >
+              {{ nameError }}
+            </p>
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <InputField
-              v-model.trim="email"
               id-label="email"
               title-label="メールアドレス"
               placeholder="yamada@gmail.com"
               type="email"
               required
+              @on-input="updateEmail"
             />
+            <p
+              v-if="emailError"
+              class="text-sm text-sangosyu"
+            >
+              {{ emailError }}
+            </p>
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <TextareaField
-              v-model.trim="detail"
               id-label="detail"
               title-label="お問い合わせ内容"
               :rows="3"
               required
+              @on-input="updateDetail"
             />
+            <p
+              v-if="detailError"
+              class="text-sm text-sangosyu"
+            >
+              {{ detailError }}
+            </p>
           </div>
           <div class="text-center">
             <SubmitButtonField
               title-label="送信"
+              :disabled="!isSubmitting"
               @click="createSubmit"
             />
           </div>

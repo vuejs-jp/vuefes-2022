@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface IInputFieldEmit {
-  (e: 'input', value: string): void
+  (e: 'on-input', value: string): void
 }
 
 const props = defineProps({
@@ -31,7 +31,7 @@ const handleInput = (e) => {
   if (!(e.target instanceof HTMLInputElement)) {
     return
   }
-  emit('input', e.target.value)
+  emit('on-input', e.target.value)
 }
 </script>
 
