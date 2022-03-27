@@ -40,19 +40,21 @@ const onMouseLeave = (value: string) => {
 </script>
 
 <template>
-  <div class="flex justify-center items-center pb-8 md:flex-wrap md:px-48">
+  <div
+    class="grid grid-cols-[max-content_max-content] gap-2.5 justify-center lg:grid-cols-[max-content_max-content_max-content_max-content] lg:gap-5"
+  >
     <a
       v-for="network in networkLinks"
       :key="network.value"
       :href="network.url"
       :title="network.description"
-      class="flex justify-center items-center px-4 mr-2 mb-0 w-40 h-10 hover:text-vue-blue no-underline hover:bg-white rounded-full border-2 border-gray-200 shadow-sm md:mr-0 md:mb-5"
+      class="flex justify-center items-center w-40 h-10 text-base font-bold hover:text-vue-blue hover:bg-white rounded-full border-2 shadow-sm lg:w-[13.75rem] lg:h-[3.375rem] lg:text-lg"
       @mouseover="onMouseOver(network.value)"
       @focus="onMouseOver(network.value)"
       @mouseout="onMouseLeave(network.value)"
       @blur="onMouseLeave(network.value)"
     >
-      <div class="pr-2 text-right rounded-full">
+      <span class="pr-2">
         <template v-if="network.value === 'twitter'">
           <TwitterSvg />
         </template>
@@ -65,10 +67,8 @@ const onMouseLeave = (value: string) => {
         <template v-if="network.value === 'github'">
           <GithubSvg />
         </template>
-      </div>
-      <div class="text-left">
-        <p class="text-xs font-medium">{{ network.title }}</p>
-      </div>
+      </span>
+      {{ network.title }}
     </a>
   </div>
 </template>
