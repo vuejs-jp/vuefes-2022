@@ -11,12 +11,12 @@ export default {
   components: {
     SubmitButtonField,
     InputField,
-    TextareaField
+    TextareaField,
   },
   setup() {
     const formComposable = useForm()
     return { ...formComposable, introduction }
-  }
+  },
 }
 </script>
 
@@ -45,7 +45,29 @@ export default {
         お問い合わせありがとうございます。担当者より確認次第、ご返答させていただきます。
       </p>
       <div v-else>
-        <form @submit.prevent>
+        <form
+          name="contact"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          netlify
+          @submit.prevent
+        >
+          <div class="hidden">
+            <p>
+              <label for="bot-field">
+                Don’t fill this out:
+                <input
+                  id="bot-field"
+                  name="bot-field"
+                >
+              </label>
+            </p>
+            <input
+              type="hidden"
+              name="form-name"
+              value="contact"
+            >
+          </div>
           <div class="mb-10 w-full lg:mb-20">
             <InputField
               id-label="name"
