@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface ITextareaFieldEmit {
-  (e: 'on-input', value: string): void
+  (e: 'input', value: string): void
 }
 
 const props = defineProps({
@@ -32,7 +32,7 @@ const handleInput = (e) => {
   if (!(e.target instanceof HTMLTextAreaElement)) {
     return
   }
-  emit('on-input', e.target.value)
+  emit('input', e.target.value)
 }
 </script>
 

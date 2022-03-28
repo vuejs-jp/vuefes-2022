@@ -43,9 +43,31 @@ export default () => {
     return nameError.value === '' && emailError.value === '' && detailError.value === ''
   })
 
+  const encode = (data: object): string => {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
   const createSubmit = () => {
-    console.log('Clicked', { name: name.value, email: email.value, detail: detail.value })
-    isSended.value = true
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact',
+        name: name.value,
+        email: email.value,
+        detail: detail.value,
+      }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          isSended.value = true
+          return
+        }
+        throw new Error('Network response was not ok')
+      })
+      .catch((error) => alert(error))
   }
 
   return {
