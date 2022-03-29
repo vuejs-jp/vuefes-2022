@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
 import { conferenceTitle, eventDate, tweetLabel, tweetUrl } from '~/utils/constants'
-import {onMounted, ref} from "@vue/composition-api";
+import { onMounted, ref } from '@vue/composition-api'
 
 const waveImageSrc = ref<string>()
 
@@ -44,15 +44,15 @@ const tweet = () => {
 onMounted((): void => {
   const windowSize =  window.innerWidth
   if(windowSize <= 770) {
-    waveImageSrc.value = "/img/wave_sm.png"
+    waveImageSrc.value = '/img/wave_sm.png'
     return
   }
   if(770 < windowSize && windowSize <= 980) {
-    waveImageSrc.value = "/img/wave_md.png"
+    waveImageSrc.value = '/img/wave_md.png'
     return
   }
   if(980 < windowSize) {
-    waveImageSrc.value = "/img/wave_lg.png"
+    waveImageSrc.value = '/img/wave_lg.png'
     return
   }
 })
