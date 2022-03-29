@@ -42,16 +42,16 @@ const tweet = () => {
 // 画面サイズで波の画像の読み込み先を切り替え
 onMounted((): void => {
   const windowSize =  window.innerWidth
-  if(windowSize <= 770) {
-    waveImageSrc.value = "/img/wave_sm.png"
+  if (windowSize <= 770) {
+    waveImageSrc.value = '/img/wave_sm.png'
     return
   }
-  if(770 < windowSize && windowSize <= 980) {
-    waveImageSrc.value = "/img/wave_md.png"
+  if (770 < windowSize && windowSize <= 980) {
+    waveImageSrc.value = '/img/wave_md.png'
     return
   }
-  if(980 < windowSize) {
-    waveImageSrc.value = "/img/wave_lg.png"
+  if (980 < windowSize) {
+    waveImageSrc.value = '/img/wave_lg.png'
     return
   }
 })
