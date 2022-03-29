@@ -43,5 +43,8 @@
     "stylelint-config-standard": "^25.0.0",
     "stylelint-scss": "^4.1.0",
     "typescript": "^4.5.5"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }
