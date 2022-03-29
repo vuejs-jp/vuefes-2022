@@ -70,6 +70,7 @@ export default {
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <InputField
+              name="name"
               id-label="name"
               title-label="お名前"
               placeholder="山田太郎"
@@ -79,6 +80,7 @@ export default {
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <InputField
+              name="email"
               id-label="email"
               title-label="メールアドレス"
               placeholder="yamada@gmail.com"
@@ -89,6 +91,7 @@ export default {
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <TextareaField
+              name="detail"
               id-label="detail"
               title-label="お問い合わせ内容"
               :rows="3"
