@@ -32,9 +32,8 @@
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
 import { conferenceTitle, eventDate, tweetLabel, tweetUrl } from '~/utils/constants'
-import {onMounted, ref} from "@vue/composition-api";
 
-const waveImageSrc = ref<string>()
+const waveImageSrc = ref<string>('')
 
 const tweet = () => {
   window.open(tweetUrl, '__blank')
