@@ -45,9 +45,9 @@ module.exports = {
       'vertical-20': '0 0, 20px 20px',
     },
     screens: {
-      md: '770px',
-      lg: '980px',
-      '3xl': '1920px',
+      md: '771px',
+      lg: '981px',
+      '3xl': '1921px',
     },
   },
 }
