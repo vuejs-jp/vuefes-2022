@@ -9,10 +9,10 @@ import SectionTitle from '~/components/SectionTitle.vue'
     class="py-20 bg-white lg:py-40"
   >
     <div
-      class="px-5 mx-auto max-w-[43.75rem] lg:flex lg:gap-6 lg:justify-between lg:items-center lg:max-w-[74.375rem]"
+      class="px-5 mx-auto max-w-[43.75rem] lg:flex lg:justify-between lg:items-center lg:max-w-[74.375rem]"
     >
       <SectionTitle
-        class="mb-10 lg:mb-20"
+        class="mb-10 lg:mr-6 lg:mb-20"
         title="Message"
         title-yamato="ことづけ"
       />
