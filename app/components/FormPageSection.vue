@@ -2,6 +2,7 @@
 import SubmitButtonField from '~/components/forms/customize/SubmitButtonField.vue'
 import InputField from '~/components/forms/InputField.vue'
 import TextareaField from '~/components/forms/TextareaField.vue'
+import SectionTitle from '~/components/SectionTitle.vue'
 
 import useForm from '~/composables/useForm'
 
@@ -12,6 +13,7 @@ export default {
     SubmitButtonField,
     InputField,
     TextareaField,
+    SectionTitle,
   },
   setup() {
     const formComposable = useForm()
@@ -26,14 +28,11 @@ export default {
     class="py-20 lg:py-40"
   >
     <div class="px-5 mx-auto max-w-[43.75rem]">
-      <div class="mb-10 text-center lg:mb-20">
-        <div class="font-kokuryu-heading text-[2.5rem] text-vue-blue opacity-10 lg:text-[5rem]">
-          お問い合わせ
-        </div>
-        <h2 class="-mt-6 text-xl font-extrabold text-vue-blue lg:-mt-10 lg:text-[2.5rem]">
-          Contact
-        </h2>
-      </div>
+      <SectionTitle
+        class="mb-10 lg:mb-20"
+        title="Contact"
+        title-yamato="お問い合わせ"
+      />
       <p
         class="mb-10 text-sm leading-7 text-vue-blue lg:mb-20 lg:text-lg lg:leading-8"
         v-html="introduction"
