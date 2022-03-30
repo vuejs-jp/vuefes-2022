@@ -1,5 +1,5 @@
 <template>
-  <section class="py-7">
+  <section class="pb-7">
     <div class="relative pb-[18vw] mx-auto max-w-[1920px] md:pb-[15vw] lg:pb-[11vw]">
       <div class="px-5">
         <img
