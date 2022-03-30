@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TwitterSvg from '~/static/icon/twitter_logo.svg?inline'
+import TwitterSvg from '~/static/icon/twitter_logo-invert.svg?inline'
 import NoteSvg from '~/static/icon/note_logo.svg?inline'
 import YouTubeSvg from '~/static/icon/youtube_logo.svg?inline'
 import GithubSvg from '~/static/icon/github_logo.svg?inline'
