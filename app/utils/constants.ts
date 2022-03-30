@@ -23,7 +23,7 @@ export const representative = 'Vue.js 日本ユーザーグループ代表 川�
 export const introduction =
   'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
 
-export const tweetLabel = 'Twitter ー @vuefes  #vuefes'
+export const tweetLabel = '@vuefes  #vuefes'
 
 export const tweetUrl = 'https://twitter.com/intent/tweet?hashtags=vuefes'
 
