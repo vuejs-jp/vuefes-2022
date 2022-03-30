@@ -4,7 +4,7 @@
       <div class="px-5">
         <img
           class="mx-auto mb-[6.23vw] lg:mb-9"
-          src="/img/kv_solid_3x.png"
+          :src="topImageSrc"
           :alt="conferenceTitle"
           width="1178"
         >
@@ -36,28 +36,20 @@
 
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
+import { getTopImage, getWaveImage } from '~/services/showImages'
 import { conferenceTitle, eventDate, tweetLabel, tweetUrl } from '~/utils/constants'
 
+const topImageSrc = ref<string>('')
 const waveImageSrc = ref<string>('')
 
 const tweet = () => {
   window.open(tweetUrl, '__blank')
 }
 
-// 画面サイズで波の画像の読み込み先を切り替え
 onMounted((): void => {
-  const windowSize = window.innerWidth
-  if (windowSize <= 770) {
-    waveImageSrc.value = '/img/wave_sm.png'
-    return
-  }
-  if (770 < windowSize && windowSize <= 980) {
-    waveImageSrc.value = '/img/wave_md.png'
-    return
-  }
-  if (980 < windowSize) {
-    waveImageSrc.value = '/img/wave_lg.png'
-    return
-  }
+  Promise.all([
+    topImageSrc.value = getTopImage(),
+    waveImageSrc.value = getWaveImage()
+  ])
 })
 </script>
