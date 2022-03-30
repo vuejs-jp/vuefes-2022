@@ -5,12 +5,12 @@ interface ITweetButtonFieldEmit {
   (e: 'onClick'): void
 }
 
-// const props = defineProps({
-//   titleLabel: {
-//     type: String,
-//     required: true,
-//   },
-// })
+const props = defineProps({
+  titleLabel: {
+    type: String,
+    required: true,
+  },
+})
 const emit = defineEmits<ITweetButtonFieldEmit>()
 
 const handleClick = () => {
@@ -27,7 +27,7 @@ const handleClick = () => {
     <div class="flex justify-center items-center align-middle">
       <TwitterSvg class="w-[3.64vw]" />
       <span class="ml-[1.82vw] lg:ml-1">
-        <span class="font-bold">Twitter</span> ー @vuefes #vuefes
+        <span class="font-bold">Twitter</span> ー {{ titleLabel }}
       </span>
     </div>
   </button>
