@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { message1, message2, message3, message4, message5, representative } from '~/utils/constants'
+import {
+  message1,
+  message2,
+  message3,
+  message4,
+  message5,
+  representative,
+  representativeTwitterID,
+} from '~/utils/constants'
 import SectionTitle from '~/components/SectionTitle.vue'
 </script>
 
@@ -22,7 +30,14 @@ import SectionTitle from '~/components/SectionTitle.vue'
         <p class="mb-6">{{ message3 }}</p>
         <p class="mb-6">{{ message4 }}</p>
         <p class="mb-6">{{ message5 }}</p>
-        <p class="text-right">{{ representative }}</p>
+        <p class="text-right">
+          {{ representative }}（<a
+            href="https://twitter.com/kazu_pon"
+            target="_blank"
+            rel="noreferrer"
+            class="underline hover:opacity-60 transition-opacity"
+          >{{ representativeTwitterID }}</a>）
+        </p>
       </div>
     </div>
   </section>

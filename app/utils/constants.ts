@@ -18,7 +18,9 @@ export const message4 =
 
 export const message5 = 'ぜひ、一緒にカンファレンスを楽しみましょう！'
 
-export const representative = 'Vue.js 日本ユーザーグループ代表 川口 和也（@kazu_pon）'
+export const representative = 'Vue.js 日本ユーザーグループ代表 川口 和也'
+
+export const representativeTwitterID = '@kazu_pon'
 
 export const introduction =
   'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
@@ -65,19 +67,19 @@ export const websiteLinks = [
   {
     value: 'vuefes2020',
     title: 'Vue Fes Japan 2020',
-    url: 'https://vuefes.com/2020',
+    url: 'https://vuefes.jp/2020',
     description: 'Check the website of Vue Fes Japan 2020.',
   },
   {
     value: 'vuefes2019',
     title: 'Vue Fes Japan 2019',
-    url: 'https://vuefes.com/2019',
+    url: 'https://vuefes.jp/2019',
     description: 'Check the website of Vue Fes Japan 2019.',
   },
   {
     value: 'vuefes2018',
     title: 'Vue Fes Japan 2018',
-    url: 'https://vuefes.com/2018',
+    url: 'https://vuefes.jp/2018',
     description: 'Check the website of Vue Fes Japan 2018.',
   },
 ]
