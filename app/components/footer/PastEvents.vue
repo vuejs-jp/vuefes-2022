@@ -7,6 +7,8 @@ import { websiteLinks } from '~/utils/constants'
     <a
       v-for="website in websiteLinks"
       :key="website.value"
+      target="_blank"
+      rel="noreferrer"
       :href="website.url"
       :title="website.description"
       class="text-xs leading-4 hover:text-gray-500 underline focus:underline focus:outline-none cursor-pointer lg:text-lg"

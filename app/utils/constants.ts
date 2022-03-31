@@ -65,19 +65,19 @@ export const websiteLinks = [
   {
     value: 'vuefes2020',
     title: 'Vue Fes Japan 2020',
-    url: 'https://vuefes.com/2020',
+    url: 'https://vuefes.jp/2020',
     description: 'Check the website of Vue Fes Japan 2020.',
   },
   {
     value: 'vuefes2019',
     title: 'Vue Fes Japan 2019',
-    url: 'https://vuefes.com/2019',
+    url: 'https://vuefes.jp/2019',
     description: 'Check the website of Vue Fes Japan 2019.',
   },
   {
     value: 'vuefes2018',
     title: 'Vue Fes Japan 2018',
-    url: 'https://vuefes.com/2018',
+    url: 'https://vuefes.jp/2018',
     description: 'Check the website of Vue Fes Japan 2018.',
   },
 ]
