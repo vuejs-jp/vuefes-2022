@@ -18,7 +18,9 @@ export const message4 =
 
 export const message5 = 'ぜひ、一緒にカンファレンスを楽しみましょう！'
 
-export const representative = 'Vue.js 日本ユーザーグループ代表 川口 和也（@kazu_pon）'
+export const representative = 'Vue.js 日本ユーザーグループ代表 川口 和也'
+
+export const representativeTwitterID = '@kazu_pon'
 
 export const introduction =
   'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
