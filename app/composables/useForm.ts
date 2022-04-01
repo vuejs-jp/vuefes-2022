@@ -12,15 +12,22 @@ export default () => {
   const submitError = ref('')
 
   const updateName = (value: string) => {
+    name.value = value
+  }
+
+  const validateName = (value: string) => {
     if (value === '') {
       nameError.value = FormError.nameErrorMessage
       return
     }
     nameError.value = ''
-    name.value = value
   }
 
   const updateEmail = (value: string) => {
+    email.value = value
+  }
+
+  const validateEmail = (value: string) => {
     if (value === '') {
       emailError.value = FormError.emailErrorMessage
       return
@@ -29,16 +36,18 @@ export default () => {
       return
     }
     emailError.value = ''
-    email.value = value
   }
 
   const updateDetail = (value: string) => {
+    detail.value = value
+  }
+
+  const validateDetail = (value: string) => {
     if (value === '') {
       detailError.value = FormError.detailErrorMessage
       return
     }
     detailError.value = ''
-    detail.value = value
   }
 
   const isSubmitting = computed(() => {
@@ -90,6 +99,9 @@ export default () => {
     updateName,
     updateEmail,
     updateDetail,
+    validateName,
+    validateEmail,
+    validateDetail,
     isSubmitting,
     createSubmit,
   }
