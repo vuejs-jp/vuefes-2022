@@ -41,7 +41,7 @@ const handleInput = (e) => {
 }
 
 const handleFocusOut = (e) => {
-  if (!(e.target instanceof HTMLInputElement)) {
+  if (!(e.target instanceof HTMLTextAreaElement)) {
     return
   }
   emit('blur', e.target.value)
