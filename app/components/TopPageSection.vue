@@ -38,27 +38,30 @@
           />
         </div>
       </div>
-      <img
-        class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
-        :src="waveImageSrc"
-        :alt="conferenceTitle"
-      >
+      <picture>
+        <source
+          srcset="/img/wave_lg.png"
+          media="(min-width: 981px)"
+        >
+        <source
+          srcset="/img/wave_md.png"
+          media="(min-width: 771px)"
+        >
+        <img
+          class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
+          src="/img/wave_sm.png"
+          alt=""
+        >
+      </picture>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
-import { getTopImage, getWaveImage } from '~/services/showImages'
 import { conferenceTitle, eventDate, tweetLabel, tweetUrl } from '~/utils/constants'
-
-const waveImageSrc = ref<string>('')
 
 const tweet = () => {
   window.open(tweetUrl, '__blank')
 }
-
-onMounted((): void => {
-  waveImageSrc.value = getWaveImage()
-})
 </script>
