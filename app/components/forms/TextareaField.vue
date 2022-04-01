@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface ITextareaFieldEmit {
   (e: 'input', value: string): void
+  (e: 'blur', value: string): void
 }
 
 const props = defineProps({
@@ -38,6 +39,13 @@ const handleInput = (e) => {
   }
   emit('input', e.target.value)
 }
+
+const handleFocusOut = (e) => {
+  if (!(e.target instanceof HTMLInputElement)) {
+    return
+  }
+  emit('blur', e.target.value)
+}
 </script>
 
 <template>
@@ -54,6 +62,7 @@ const handleInput = (e) => {
       :placeholder="placeholder"
       :required="required"
       @input="handleInput"
+      @blur="handleFocusOut"
     />
   </label>
 </template>

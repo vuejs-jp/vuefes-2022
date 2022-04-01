@@ -75,6 +75,7 @@ export default {
               placeholder="山田太郎"
               required
               @input="updateName"
+              @blur="validateName"
             />
             <p
               v-if="nameError"
@@ -92,6 +93,7 @@ export default {
               type="email"
               required
               @input="updateEmail"
+              @blur="validateEmail"
             />
             <p
               v-if="emailError"
@@ -108,6 +110,7 @@ export default {
               :rows="3"
               required
               @input="updateDetail"
+              @blur="validateDetail"
             />
             <p
               v-if="detailError"
