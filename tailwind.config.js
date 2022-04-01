@@ -40,9 +40,11 @@ module.exports = {
     },
     backgroundSize: {
       40: '40px 40px',
+      80: '80px 80px',
     },
     backgroundPosition: {
       'vertical-20': '0 0, 20px 20px',
+      'vertical-40': '0 0, 40px 40px',
     },
     screens: {
       md: '771px',
