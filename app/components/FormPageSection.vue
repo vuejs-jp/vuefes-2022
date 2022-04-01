@@ -79,7 +79,7 @@ export default {
             />
             <p
               v-if="nameError"
-              class="mt-2.5 text-sm text-sangosyu"
+              class="absolute mt-2.5 text-sm text-sangosyu"
             >
               {{ nameError }}
             </p>
@@ -97,7 +97,7 @@ export default {
             />
             <p
               v-if="emailError"
-              class="mt-2.5 text-sm text-sangosyu"
+              class="absolute mt-2.5 text-sm text-sangosyu"
             >
               {{ emailError }}
             </p>
@@ -114,7 +114,7 @@ export default {
             />
             <p
               v-if="detailError"
-              class="mt-2.5 text-sm text-sangosyu"
+              class="absolute mt-2.5 text-sm text-sangosyu"
             >
               {{ detailError }}
             </p>
@@ -127,7 +127,7 @@ export default {
             />
             <p
               v-if="submitError"
-              class="mt-2.5 text-sm text-sangosyu"
+              class="absolute mt-2.5 text-sm text-sangosyu"
             >
               {{ submitError }}
             </p>
