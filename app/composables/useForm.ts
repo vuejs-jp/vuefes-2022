@@ -1,16 +1,19 @@
+import FormError from '~/utils/form.constants'
+
 export default () => {
   const name = ref('')
   const email = ref('')
   const detail = ref('')
-  const isSended = ref(false)
+  const isSent = ref(false)
 
   const nameError = ref('')
   const emailError = ref('')
   const detailError = ref('')
+  const submitError = ref('')
 
   const updateName = (value: string) => {
     if (value === '') {
-      nameError.value = '名前を入力してください'
+      nameError.value = FormError.nameErrorMessage
       return
     }
     nameError.value = ''
@@ -19,10 +22,10 @@ export default () => {
 
   const updateEmail = (value: string) => {
     if (value === '') {
-      emailError.value = 'メールアドレスを入力してください'
+      emailError.value = FormError.emailErrorMessage
       return
     } else if (!/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}/.test(value)) {
-      emailError.value = 'メールアドレスの形式を確認してください'
+      emailError.value = FormError.emailFormatErrorMessage
       return
     }
     emailError.value = ''
@@ -31,7 +34,7 @@ export default () => {
 
   const updateDetail = (value: string) => {
     if (value === '') {
-      detailError.value = '問い合わせ内容を入力してください'
+      detailError.value = FormError.detailErrorMessage
       return
     }
     detailError.value = ''
@@ -50,6 +53,8 @@ export default () => {
   }
 
   const createSubmit = () => {
+    submitError.value = ''
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -62,22 +67,26 @@ export default () => {
     })
       .then((response) => {
         if (response.ok) {
-          isSended.value = true
+          isSent.value = true
           return
         }
+        submitError.value = FormError.submitErrorMessage
         throw new Error('Network response was not ok')
       })
-      .catch((error) => alert(error))
+      .catch((error) => {
+        submitError.value = FormError.submitErrorMessage
+      })
   }
 
   return {
     name,
     email,
     detail,
-    isSended,
+    isSent,
     nameError,
     emailError,
     detailError,
+    submitError,
     updateName,
     updateEmail,
     updateDetail,

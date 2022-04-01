@@ -38,7 +38,7 @@ export default {
         v-html="introduction"
       />
       <p
-        v-if="isSended"
+        v-if="isSent"
         class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8"
       >
         お問い合わせありがとうございます。担当者より確認次第、ご返答させていただきます。
@@ -76,6 +76,12 @@ export default {
               required
               @input="updateName"
             />
+            <p
+              v-if="nameError"
+              class="mt-2.5 text-sm text-sangosyu"
+            >
+              {{ nameError }}
+            </p>
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <InputField
@@ -87,6 +93,12 @@ export default {
               required
               @input="updateEmail"
             />
+            <p
+              v-if="emailError"
+              class="mt-2.5 text-sm text-sangosyu"
+            >
+              {{ emailError }}
+            </p>
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <TextareaField
@@ -97,6 +109,12 @@ export default {
               required
               @input="updateDetail"
             />
+            <p
+              v-if="detailError"
+              class="mt-2.5 text-sm text-sangosyu"
+            >
+              {{ detailError }}
+            </p>
           </div>
           <div class="text-center">
             <SubmitButtonField
@@ -104,6 +122,12 @@ export default {
               :disabled="!isSubmitting"
               @click="createSubmit"
             />
+            <p
+              v-if="submitError"
+              class="mt-2.5 text-sm text-sangosyu"
+            >
+              {{ submitError }}
+            </p>
           </div>
         </form>
       </div>
