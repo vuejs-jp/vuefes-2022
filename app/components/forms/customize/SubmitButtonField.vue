@@ -10,16 +10,16 @@ const props = defineProps({
   },
   disabled: {
     type: Boolean,
-    required: false
+    required: false,
   },
 })
 const emit = defineEmits<ISubmitButtonFieldEmit>()
 
 const buttonClass = computed(() => {
   if (props.disabled === true) {
-    return 'w-full max-w-[30rem] h-16 text-xl font-bold text-white bg-submit rounded-4xl shadow-submit opacity-50 lg:h-[4.5rem] lg:text-2xl'
+    return 'opacity-50'
   }
-  return 'w-full max-w-[30rem] h-16 text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 shadow-submit hover:opacity-80 lg:h-[4.5rem] lg:text-2xl'
+  return 'focus:ring-4 focus:ring-blue-300 hover:opacity-80'
 })
 
 const handleClick = () => {
@@ -31,6 +31,7 @@ const handleClick = () => {
   <button
     type="submit"
     :disabled="disabled"
+    class="w-full max-w-[30rem] h-16 text-xl font-bold text-white bg-submit rounded-4xl shadow-submit transition-opacity lg:h-[4.5rem] lg:text-2xl"
     :class="buttonClass"
     @click="handleClick"
   >
