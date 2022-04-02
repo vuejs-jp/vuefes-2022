@@ -15,26 +15,25 @@ const props = defineProps({
 })
 const emit = defineEmits<ISubmitButtonFieldEmit>()
 
-const buttonClass = computed(() => {
-  if (props.disabled === true) {
-    return 'opacity-50'
-  }
-  return 'focus:ring-4 focus:ring-blue-300 hover:opacity-80'
-})
-
 const handleClick = () => {
   emit('click')
 }
 </script>
 
 <template>
-  <button
-    type="submit"
-    :disabled="disabled"
-    class="w-full max-w-[30rem] h-16 text-xl font-bold text-white bg-submit rounded-4xl shadow-submit transition-opacity lg:h-[4.5rem] lg:text-2xl"
-    :class="buttonClass"
-    @click="handleClick"
+  <div
+    class="inline-block before:block relative before:-z-10 w-full before:w-full max-w-[30rem] h-16 before:h-full before:bg-submit-border rounded-4xl before:rounded-4xl shadow-submit transition lg:h-[4.5rem]"
+    :class="{ 'hover:shadow-submit-hover': !disabled, 'opacity-40': disabled }"
   >
-    {{ titleLabel }}
-  </button>
+    <div class="flex absolute top-0 justify-center items-center p-px w-full h-full">
+      <button
+        type="submit"
+        :disabled="disabled"
+        class="w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
+        @click="handleClick"
+      >
+        {{ titleLabel }}
+      </button>
+    </div>
+  </div>
 </template>
