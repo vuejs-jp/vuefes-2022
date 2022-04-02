@@ -23,6 +23,7 @@ module.exports = {
       },
       boxShadow: {
         submit: '0px 10px 20px rgba(0, 0, 0, 0.1)',
+        'submit-hover': '0 0 0 rgba(#000000, 0.2)',
       },
       borderRadius: {
         '4xl': '100px',
@@ -36,7 +37,8 @@ module.exports = {
         'linear-gradient(45deg, #35495e 25%, transparent 25%, transparent 75%, #35495e 75%), linear-gradient(45deg, #35495e 25%, transparent 25%, transparent 75%, #35495e 75%)',
       'ichimatsu-white':
         'linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%)',
-      submit: 'linear-gradient(#42b893, #33A6B8)',
+      submit: 'linear-gradient(91.03deg, #33A6B8 0%, #42B983 100.01%)',
+      'submit-border': 'linear-gradient(90deg, #42b983 0%, #33a6b8 100%)',
     },
     backgroundSize: {
       40: '40px 40px',
