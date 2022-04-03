@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import TwitterSvg from '~/static/icon/twitter_logo-invert.svg?inline'
-import NoteSvg from '~/static/icon/note_logo.svg?inline'
-import YouTubeSvg from '~/static/icon/youtube_logo.svg?inline'
-import GithubSvg from '~/static/icon/github_logo.svg?inline'
+import TwitterSvg from '~/public/icon/twitter_logo-invert.svg?inline'
+import NoteSvg from '~/public/icon/note_logo.svg?inline'
+import YouTubeSvg from '~/public/icon/youtube_logo.svg?inline'
+import GithubSvg from '~/public/icon/github_logo.svg?inline'
 
 import { networkLinks } from '~/utils/constants'
 
