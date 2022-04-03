@@ -1,12 +1,10 @@
-import { conferenceTitle } from './constants'
+import { conferenceTitle, ogDescription, linkUrl, vuefesTwitterID } from './constants'
 
 export const generalOg = (title?: string, description?: string, url?: string, image?: string) => [
   {
     hid: 'description',
     name: 'description',
-    content: description
-      ? description
-      : '2022年10月16日（日）に開催される日本最大級の Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+    content: description ? description : ogDescription,
   },
   {
     hid: 'og:site_name',
@@ -21,9 +19,7 @@ export const generalOg = (title?: string, description?: string, url?: string, im
   {
     hid: 'og:description',
     name: 'og:description',
-    content: description
-      ? description
-      : '2022年10月16日（日）に開催される日本最大級の Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+    content: description ? description : ogDescription,
   },
   {
     hid: 'og:title',
@@ -33,7 +29,7 @@ export const generalOg = (title?: string, description?: string, url?: string, im
   {
     hid: 'og:url',
     name: 'og:url',
-    content: url ? url : 'https://webneko.dev/',
+    content: url ? url : linkUrl,
   },
   // {
   //   hid: 'og:image',
@@ -46,9 +42,7 @@ export const twitterOg = (title?: string, description?: string, image?: string) 
   {
     hid: 'twitter:description',
     name: 'twitter:description',
-    content: description
-      ? description
-      : '2022年10月16日（日）に開催される日本最大級の Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！',
+    content: description ? description : ogDescription,
   },
   {
     hid: 'twitter:title',
@@ -63,17 +57,17 @@ export const twitterOg = (title?: string, description?: string, image?: string) 
   {
     hid: 'twitter:site',
     name: 'twitter:site',
-    content: '@vuefes',
+    content: vuefesTwitterID,
   },
   {
     hid: 'twitter:creator',
     name: 'twitter:creator',
-    content: '@vuefes',
+    content: vuefesTwitterID,
   },
   {
     hid: 'twitter:site',
     name: 'twitter:site',
-    content: '@vuefes',
+    content: vuefesTwitterID,
   },
   // {
   //   hid: 'twitter:image',
