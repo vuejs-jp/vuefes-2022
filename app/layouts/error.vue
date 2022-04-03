@@ -2,7 +2,7 @@
   <div class="error">
     <img
       alt="Vue Fes 2022"
-      :src="`/icon/vuefes_logo.svg`"
+      :src="`/2022/icon/vuefes_logo.svg`"
     >
     <nuxt-link
       to="/"
@@ -21,9 +21,9 @@ export default {
       type: Object,
       default: function () {
         return {}
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 

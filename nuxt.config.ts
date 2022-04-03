@@ -26,4 +26,7 @@ export default defineNuxtConfig({
   build: {
     extractCSS: true,
   },
+  router: {
+    base: '/2022/',
+  },
 })
