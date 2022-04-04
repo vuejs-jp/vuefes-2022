@@ -33,4 +33,7 @@ export default defineNuxtConfig({
     buildAssetsDir: '/_nuxt/',
     baseURL: '/2022/',
   },
+  generate: {
+    dir: 'dist/2022',
+  },
 })
