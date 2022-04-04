@@ -54,4 +54,6 @@ module.exports = {
       '3xl': '1921px',
     },
   },
+
+  content: ['./app/**/*.vue'],
 }
