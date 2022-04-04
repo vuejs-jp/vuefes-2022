@@ -31,11 +31,11 @@ export const generalOg = (title?: string, description?: string, url?: string, im
     name: 'og:url',
     content: url ? url : linkUrl,
   },
-  // {
-  //   hid: 'og:image',
-  //   name: 'og:image',
-  //   content: '',
-  // },
+  {
+    hid: 'og:image',
+    name: 'og:image',
+    content: `${linkUrl}img/og-image.png`,
+  },
 ]
 
 export const twitterOg = (title?: string, description?: string, image?: string) => [
@@ -69,9 +69,9 @@ export const twitterOg = (title?: string, description?: string, image?: string) 
     name: 'twitter:site',
     content: vuefesTwitterID,
   },
-  // {
-  //   hid: 'twitter:image',
-  //   name: 'twitter:image',
-  //   content: '',
-  // },
+  {
+    hid: 'twitter:image',
+    name: 'twitter:image',
+    content: `${linkUrl}img/og-image.png`,
+  },
 ]
