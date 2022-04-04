@@ -8,6 +8,7 @@
           :alt="conferenceTitle"
           width="1178"
         >
+        <top-animation />
         <h1
           class="mb-[2.6vw] text-[7.01vw] font-extrabold leading-none text-center text-vue-blue lg:mb-2.5 lg:text-[4.0625rem]"
         >
@@ -38,6 +39,7 @@
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
 import { getTopImage, getWaveImage } from '~/services/showImages'
 import { conferenceTitle, eventDate, tweetLabel, tweetUrl } from '~/utils/constants'
+import TopAnimation from '~/components/TopAnimation.vue'
 
 const topImageSrc = ref<string>('')
 const waveImageSrc = ref<string>('')
