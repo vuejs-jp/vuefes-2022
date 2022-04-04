@@ -27,7 +27,7 @@
           {{ conferenceTitle }}
         </h1>
         <p
-          class="mb-[6.49vw] text-[3.9vw] font-extrabold text-center text-vue-blue lg:mb-[3.125rem] lg:text-[2.5rem]"
+          class="mb-[6.49vw] text-[3.9vw] text-center text-vue-blue lg:mb-[3.125rem] lg:text-[2.5rem]"
         >
           {{ eventDate }}
         </p>
