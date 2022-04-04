@@ -5,6 +5,9 @@ import { conferenceTitle } from './app/utils/constants'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'app/',
+  router: {
+    base: '/2022/',
+  },
   target: 'static',
   css: ['~/assets/main.scss'],
   head: {
@@ -24,6 +27,9 @@ export default defineNuxtConfig({
   },
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
   buildModules: ['@nuxtjs/device', '@nuxtjs/svg', '@nuxtjs/tailwindcss'],
+  generate: {
+    dir: 'dist/2022',
+  },
   publicRuntimeConfig: {
     NUXT_KOKURYU_FONT_ID: process.env.NUXT_KOKURYU_FONT_ID,
   },
