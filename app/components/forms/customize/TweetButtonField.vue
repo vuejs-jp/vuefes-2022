@@ -2,7 +2,7 @@
 import TwitterSvg from '~/static/icon/twitter_logo.svg?inline'
 
 interface ITweetButtonFieldEmit {
-  (e: 'onClick'): void
+  (e: 'on-click'): void
 }
 
 const props = defineProps({
@@ -14,7 +14,7 @@ const props = defineProps({
 const emit = defineEmits<ITweetButtonFieldEmit>()
 
 const handleClick = () => {
-  emit('onClick')
+  emit('on-click')
 }
 </script>
 

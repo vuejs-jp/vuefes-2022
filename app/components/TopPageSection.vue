@@ -34,7 +34,7 @@
         <div class="text-right md:text-center">
           <TweetButtonField
             :title-label="tweetLabel"
-            @onClick="tweet"
+            @on-click="tweet"
           />
         </div>
       </div>

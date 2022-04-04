@@ -33,10 +33,12 @@ export default {
         title="Contact"
         title-yamato="お問い合わせ"
       />
+      <!-- eslint-disable vue/no-v-html -->
       <p
         class="mb-10 text-sm leading-7 text-vue-blue lg:mb-20 lg:text-lg lg:leading-8"
         v-html="introduction"
       />
+      <!-- eslint-enable -->
       <p
         v-if="isSent"
         class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8"
