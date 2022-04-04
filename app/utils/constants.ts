@@ -9,7 +9,7 @@ export const linkUrl = 'https://vuefes.jp/2022/'
 
 export const vuefesTwitterID = '@vuefes'
 
-export const eventDate = '2022.10.16 10:00〜19:00'
+export const eventDate = '2022.10.16 SUN'
 
 export const message1 =
   'Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。文字通り Fes = お祭りのように Vue.js を共に盛り上げ、共に学び、そしてなによりも共に楽しむために誕生しました。'
