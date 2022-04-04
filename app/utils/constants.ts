@@ -34,7 +34,7 @@ export const introduction =
 
 export const tweetLabel = '@vuefes  #vuefes'
 
-export const tweetUrl = 'https://twitter.com/intent/tweet?hashtags=vuefes'
+export const tweetUrl = 'https://twitter.com/vuefes'
 
 export const copyright = 'Copyright © 2022 Vue Fes Japan 2022 Executive Committee.'
 
