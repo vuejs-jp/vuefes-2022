@@ -52,7 +52,7 @@ export const networkLinks = [
   },
   {
     value: 'note',
-    title: 'Note',
+    title: 'note',
     url: 'https://note.com/vuejs_jp',
     description: 'Check articles.',
   },
@@ -64,7 +64,7 @@ export const networkLinks = [
   },
   {
     value: 'github',
-    title: 'Github',
+    title: 'GitHub',
     url: 'https://github.com/vuejs-jp',
     description: 'Check information.',
   },
