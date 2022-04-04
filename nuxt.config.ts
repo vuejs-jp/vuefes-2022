@@ -29,4 +29,8 @@ export default defineNuxtConfig({
   router: {
     base: '/2022/',
   },
+  app: {
+    buildAssetsDir: '/_nuxt/',
+    baseURL: '/2022/',
+  },
 })
