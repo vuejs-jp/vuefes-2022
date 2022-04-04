@@ -1,41 +1,53 @@
+import FormError from '~/utils/form.constants'
+
 export default () => {
   const name = ref('')
   const email = ref('')
   const detail = ref('')
-  const isSended = ref(false)
+  const isSent = ref(false)
 
   const nameError = ref('')
   const emailError = ref('')
   const detailError = ref('')
+  const submitError = ref('')
 
   const updateName = (value: string) => {
-    if (value === '') {
-      nameError.value = '名前を入力してください'
-      return
-    }
-    nameError.value = ''
     name.value = value
   }
 
-  const updateEmail = (value: string) => {
+  const validateName = (value: string) => {
     if (value === '') {
-      emailError.value = 'メールアドレスを入力してください'
-      return
-    } else if (!/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}/.test(value)) {
-      emailError.value = 'メールアドレスの形式を確認してください'
+      nameError.value = FormError.nameErrorMessage
       return
     }
-    emailError.value = ''
+    nameError.value = ''
+  }
+
+  const updateEmail = (value: string) => {
     email.value = value
   }
 
-  const updateDetail = (value: string) => {
+  const validateEmail = (value: string) => {
     if (value === '') {
-      detailError.value = '問い合わせ内容を入力してください'
+      emailError.value = FormError.emailErrorMessage
+      return
+    } else if (!/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}/.test(value)) {
+      emailError.value = FormError.emailFormatErrorMessage
+      return
+    }
+    emailError.value = ''
+  }
+
+  const updateDetail = (value: string) => {
+    detail.value = value
+  }
+
+  const validateDetail = (value: string) => {
+    if (value === '') {
+      detailError.value = FormError.detailErrorMessage
       return
     }
     detailError.value = ''
-    detail.value = value
   }
 
   const isSubmitting = computed(() => {
@@ -50,6 +62,8 @@ export default () => {
   }
 
   const createSubmit = () => {
+    submitError.value = ''
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -62,25 +76,32 @@ export default () => {
     })
       .then((response) => {
         if (response.ok) {
-          isSended.value = true
+          isSent.value = true
           return
         }
+        submitError.value = FormError.submitErrorMessage
         throw new Error('Network response was not ok')
       })
-      .catch((error) => alert(error))
+      .catch((error) => {
+        submitError.value = FormError.submitErrorMessage
+      })
   }
 
   return {
     name,
     email,
     detail,
-    isSended,
+    isSent,
     nameError,
     emailError,
     detailError,
+    submitError,
     updateName,
     updateEmail,
     updateDetail,
+    validateName,
+    validateEmail,
+    validateDetail,
     isSubmitting,
     createSubmit,
   }

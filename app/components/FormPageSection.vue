@@ -33,12 +33,14 @@ export default {
         title="Contact"
         title-yamato="お問い合わせ"
       />
+      <!-- eslint-disable vue/no-v-html -->
       <p
         class="mb-10 text-sm leading-7 text-vue-blue lg:mb-20 lg:text-lg lg:leading-8"
         v-html="introduction"
       />
+      <!-- eslint-enable -->
       <p
-        v-if="isSended"
+        v-if="isSent"
         class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8"
       >
         お問い合わせありがとうございます。担当者より確認次第、ご返答させていただきます。
@@ -75,7 +77,14 @@ export default {
               placeholder="山田太郎"
               required
               @input="updateName"
+              @blur="validateName"
             />
+            <p
+              v-if="nameError"
+              class="absolute mt-2.5 text-sm text-sangosyu"
+            >
+              {{ nameError }}
+            </p>
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <InputField
@@ -86,7 +95,14 @@ export default {
               type="email"
               required
               @input="updateEmail"
+              @blur="validateEmail"
             />
+            <p
+              v-if="emailError"
+              class="absolute mt-2.5 text-sm text-sangosyu"
+            >
+              {{ emailError }}
+            </p>
           </div>
           <div class="mb-10 w-full lg:mb-20">
             <TextareaField
@@ -96,7 +112,14 @@ export default {
               :rows="3"
               required
               @input="updateDetail"
+              @blur="validateDetail"
             />
+            <p
+              v-if="detailError"
+              class="absolute mt-2.5 text-sm text-sangosyu"
+            >
+              {{ detailError }}
+            </p>
           </div>
           <div class="text-center">
             <SubmitButtonField
@@ -104,6 +127,12 @@ export default {
               :disabled="!isSubmitting"
               @click="createSubmit"
             />
+            <p
+              v-if="submitError"
+              class="absolute mt-2.5 text-sm text-sangosyu"
+            >
+              {{ submitError }}
+            </p>
           </div>
         </form>
       </div>
