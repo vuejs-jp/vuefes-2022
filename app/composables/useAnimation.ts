@@ -15,7 +15,7 @@ export default () => {
     ['◣⧄⧅3◤⧅o⧄6', '-⮽1⧅⧄4⧅|⧄', '⧅◣o⧄2-⧄⧄⧄'],
     ['5⧄◣3◤⧅o⧄6', '-⮽1⧅⧄4⮽|⧄', '⧄◣o⧅2-⧄⧄⧄'],
     ['o⧄⧅3⧄⧅o⧄6', '-⮽1⧅⧄4⧄|⧄', '⧄◣o⧄2⧅⧄◥⮽'],
-    ['3⧄4⧅⧄⧅⮽5o', 'o⮽⧄◤2⧄6◥|', '⧅◢⧅1⧅⧅⧄-⧄']
+    ['3⧄4⧅⧄⧅⮽5o', 'o⮽⧄◤2⧄6◥|', '⧅◢⧅1⧅⧅⧄-⧄'],
   ]
 
   onMounted(() => {
@@ -41,12 +41,11 @@ export default () => {
     return pattern[state.patternIndex].map((line, row) =>
       Array.from(line)
         .slice(0, state.t)
-        .map(
-          (p, col) => {
-            let type = 'head-circle'
-            let rotate = 0
-            let src = ''
-            switch (p) {
+        .map((p, col) => {
+          let type = 'head-circle'
+          let rotate = 0
+          let src = ''
+          switch (p) {
             case '⮽':
               type = 'head-cross'
               break
@@ -109,17 +108,16 @@ export default () => {
               type = 'head-photo'
               src = 'image06.png'
               break
-            }
-            return {
-              type,
-              // x: (gap + grid) / 2 + col * (gap + grid),
-              // y: (gap + grid) / 2 + row * (gap + grid),
-              rotate,
-              src,
-              key: `${row}-${col}-${type}-${rotate}`
-            }
           }
-        )
+          return {
+            type,
+            // x: (gap + grid) / 2 + col * (gap + grid),
+            // y: (gap + grid) / 2 + row * (gap + grid),
+            rotate,
+            src,
+            key: `${row}-${col}-${type}-${rotate}`,
+          }
+        }),
     )
   }
 
