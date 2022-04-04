@@ -3,7 +3,7 @@ import { websiteLinks } from '~/utils/constants'
 </script>
 
 <template>
-  <div class="flex gap-4 justify-center">
+  <div class="flex gap-8 justify-center">
     <a
       v-for="website in websiteLinks"
       :key="website.value"

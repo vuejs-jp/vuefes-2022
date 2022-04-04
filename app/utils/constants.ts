@@ -1,6 +1,6 @@
 export const conferenceTitle = 'Vue Fes Japan Online 2022'
 
-export const subtitle = 'Re: さまざまな困難を乗り越えたすべての人へ'
+export const subtitle = 'さまざまな困難を乗り越えたすべての人へ'
 
 export const ogDescription =
   '2022年10月16日（日）に開催される日本最大級の Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！'
@@ -9,13 +9,13 @@ export const linkUrl = 'https://vuefes.jp/2022/'
 
 export const vuefesTwitterID = '@vuefes'
 
-export const eventDate = '2022.10.16 10:00〜19:00'
+export const eventDate = '2022.10.16 SUN'
 
 export const message1 =
   'Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。文字通り Fes = お祭りのように Vue.js を共に盛り上げ、共に学び、そしてなによりも共に楽しむために誕生しました。'
 
 export const message2 =
-  '残念ながら 2019 年は令和元年東日本台風により、2020年以降は新型コロナウイルス感染症により中止となり、痛恨の極みとなりましたが、私たちはカンファレンス開催を諦めず、力を貯めつつ活動を続けてきました。'
+  '残念ながら 2019 年は令和元年東日本台風により、2020 年以降は新型コロナウイルス感染症により中止となり、痛恨の極みとなりましたが、私たちはカンファレンス開催を諦めず、力を貯めつつ活動を続けてきました。'
 
 export const message3 =
   'この数年で Vue.js を取り巻く環境は激変しました。Vue.js 3.0 のリリース、そして Vue.js の作者 Evan You 氏によって新たな OSS として Vite.js が作られ、JavaScript コミュニティに放たれました。Vue.js や Nuxt.js といった OSS はもちろん、それ以外に Vitest といった Vue.js 以外の新しい OSS エコシステムが形成しつつあります。'
@@ -34,7 +34,7 @@ export const introduction =
 
 export const tweetLabel = '@vuefes  #vuefes'
 
-export const tweetUrl = 'https://twitter.com/intent/tweet?hashtags=vuefes'
+export const tweetUrl = 'https://twitter.com/vuefes'
 
 export const copyright = 'Copyright © 2022 Vue Fes Japan 2022 Executive Committee.'
 
@@ -52,7 +52,7 @@ export const networkLinks = [
   },
   {
     value: 'note',
-    title: 'Note',
+    title: 'note',
     url: 'https://note.com/vuejs_jp',
     description: 'Check articles.',
   },
@@ -64,7 +64,7 @@ export const networkLinks = [
   },
   {
     value: 'github',
-    title: 'Github',
+    title: 'GitHub',
     url: 'https://github.com/vuejs-jp',
     description: 'Check information.',
   },
