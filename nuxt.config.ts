@@ -5,9 +5,6 @@ import { conferenceTitle } from './app/utils/constants'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'app/',
-  router: {
-    base: '/2022/',
-  },
   target: 'static',
   css: ['~/assets/main.scss'],
   head: {
