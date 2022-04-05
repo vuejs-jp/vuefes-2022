@@ -36,5 +36,10 @@ export default defineNuxtConfig({
   build: {
     extractCSS: true,
     publicPath: 'https://deploy-preview-83--o4in4jv6a7iiicsi42hcb3bs.netlify.app/2022/_nuxt',
+    extend(config, { isDev }) {
+      if (!isDev) {
+        config.output.publicPath = './static/'
+      }
+    },
   },
 })
