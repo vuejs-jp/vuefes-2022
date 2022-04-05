@@ -5,7 +5,7 @@
   >
     <img
       class="mx-auto mb-10 w-[9.375rem] lg:mb-20 lg:w-[15rem]"
-      :src="`/2022/icon/vuefes_logo-invert.svg`"
+      :src="`/icon/vuefes_logo-invert.svg`"
       alt="Vue fes 2022"
     >
     <contact-list class="mb-5 lg:mb-10" />

@@ -3,7 +3,7 @@
     <nav class="flex">
       <img
         class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-[200px] lg:h-9"
-        :src="`/2022/icon/vuefes_logo.svg`"
+        :src="`/icon/vuefes_logo.svg`"
         :alt="conferenceTitle"
       >
       <p

@@ -5,16 +5,16 @@
         <div class="aspect-[650/384] mb-[6.23vw] md:aspect-[782/384] lg:aspect-auto lg:mb-9">
           <picture>
             <source
-              srcset="/2022/img/kv_solid_lg.png"
+              srcset="/img/kv_solid_lg.png"
               media="(min-width: 981px)"
             >
             <source
-              srcset="/2022/img/kv_solid_md.png"
+              srcset="/img/kv_solid_md.png"
               media="(min-width: 771px)"
             >
             <img
               class="mx-auto"
-              src="/2022/img/kv_solid_sm.png"
+              src="/img/kv_solid_sm.png"
               :alt="conferenceTitle"
               width="1178"
               height="384"
@@ -40,16 +40,16 @@
       </div>
       <picture>
         <source
-          srcset="/2022/img/wave_lg.png"
+          srcset="/img/wave_lg.png"
           media="(min-width: 981px)"
         >
         <source
-          srcset="/2022/img/wave_md.png"
+          srcset="/img/wave_md.png"
           media="(min-width: 771px)"
         >
         <img
           class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
-          src="/2022/img/wave_sm.png"
+          src="/img/wave_sm.png"
           alt=""
         >
       </picture>

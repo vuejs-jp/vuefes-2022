@@ -2,7 +2,7 @@
   <div class="error">
     <img
       alt="Vue Fes 2022"
-      :src="`/2022/icon/vuefes_logo.svg`"
+      :src="`/icon/vuefes_logo.svg`"
     >
     <nuxt-link
       to="/"
