@@ -1,5 +1,5 @@
 <template>
-  <div class="error">
+  <div class="flex flex-col">
     <img
       alt="Vue Fes 2022"
       :src="`/icon/vuefes_logo.svg`"
@@ -7,7 +7,7 @@
     <nuxt-link
       to="/"
       title="トップへ戻る"
-      class="icon"
+      class="flex justify-center items-center"
     >
       Oooops, something is wrong \ {{ error.statusCode }} / error
     </nuxt-link>
@@ -26,16 +26,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.error {
-  display: flex;
-  flex-direction: column;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>
