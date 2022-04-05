@@ -9,7 +9,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
-    "generate": "nuxi generate && ls -la dist && mkdir tmp && mv dist/* dist/.* tmp/ && mkdir dist/2022 && mv tmp/* dist/2022/ && ls -la dist/2022 && rm -rf tmp",
+    "generate": "nuxi generate && mkdir tmp && mv dist/* tmp/ && mkdir dist/2022 && mv tmp/* dist/2022/ && rm -rf tmp",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
     "lint": "npm run eslint && npm run stylelint",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
