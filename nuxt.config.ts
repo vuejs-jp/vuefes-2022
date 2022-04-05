@@ -27,9 +27,9 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     NUXT_KOKURYU_FONT_ID: process.env.NUXT_KOKURYU_FONT_ID,
   },
-  build: {
-    extractCSS: true,
-  },
+  // build: {
+  //   extractCSS: true,
+  // },
   router: {
     base: '/2022/',
   },
