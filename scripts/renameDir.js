@@ -3,7 +3,7 @@ const { resolve } = require('path')
 
 fs.moveSync(resolve(__dirname, '../dist/'), resolve(__dirname, '../tmp/'))
 
-fs.moveSync(resolve(__dirname, '../tmp/2022/'), resolve(__dirname, '../dist/2022/'))
+fs.moveSync(resolve(__dirname, '../tmp/'), resolve(__dirname, '../dist/2022/'))
 
 fs.remove('tmp', (err) => {
   if (err) {
