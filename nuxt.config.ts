@@ -8,6 +8,10 @@ export default defineNuxtConfig({
   router: {
     base: '/2022/',
   },
+  app: {
+    buildAssetsDir: '/_nuxt/',
+    baseURL: '/2022/',
+  },
   target: 'static',
   css: ['~/assets/main.scss'],
   head: {
@@ -32,14 +36,5 @@ export default defineNuxtConfig({
   },
   publicRuntimeConfig: {
     NUXT_KOKURYU_FONT_ID: process.env.NUXT_KOKURYU_FONT_ID,
-  },
-  build: {
-    extractCSS: true,
-    publicPath: 'https://deploy-preview-83--o4in4jv6a7iiicsi42hcb3bs.netlify.app/2022',
-    extend(config, { isDev }) {
-      if (!isDev) {
-        config.output.publicPath = './static/'
-      }
-    },
   },
 })
