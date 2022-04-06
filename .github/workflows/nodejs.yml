@@ -39,6 +39,6 @@ jobs:
       - name: Transpile
         run: |
           npm ci
-          npm run generate
+          npm run generate:transpile
         env:
           CI: true
