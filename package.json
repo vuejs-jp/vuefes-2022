@@ -9,7 +9,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
-    "generate": "nuxi generate && node scripts/renameDir.js",
+    "generate": "nuxi generate",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
     "lint": "npm run eslint && npm run stylelint",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
