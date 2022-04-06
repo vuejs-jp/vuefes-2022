@@ -6,11 +6,11 @@ import { conferenceTitle } from './app/utils/constants'
 export default defineNuxtConfig({
   srcDir: 'app/',
   router: {
-    base: '/2022/',
+    base: process.env.NODE_ENV === 'production' ? '/2022/' : '/',
   },
   app: {
     buildAssetsDir: '/_nuxt/',
-    baseURL: '/2022/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/2022/' : '/',
   },
   target: 'static',
   css: ['~/assets/main.scss'],
