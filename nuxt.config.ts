@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
+import { gtagList } from './app/utils/gtag.constants'
 import { generalOg, twitterOg } from './app/utils/og.constants'
 import { conferenceTitle } from './app/utils/constants'
 
@@ -18,9 +19,14 @@ export default defineNuxtConfig({
     title: conferenceTitle,
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
+      ...gtagList(),
       ...generalOg(),
       ...twitterOg(),
     ],
+    __dangerouslyDisableSanitizersByTagID: {
+      GAsrc: ['innerHTML'],
+      GAcode: ['innerHTML'],
+    },
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'icon', sizes: '180x180', href: '/icon/apple-touch-icon.png' },
@@ -36,6 +42,7 @@ export default defineNuxtConfig({
   },
   publicRuntimeConfig: {
     NUXT_KOKURYU_FONT_ID: process.env.NUXT_KOKURYU_FONT_ID,
+    NUXT_GTAG_ID: process.env.NUXT_GTAG_ID,
   },
   build: {
     extractCSS: true,
