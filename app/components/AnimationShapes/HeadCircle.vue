@@ -13,7 +13,7 @@
 </template>
 <script lang="ts">
 import { PropType } from '@nuxt/bridge/dist/runtime/vue2-bridge'
-import useAnimationParts from '~/composables/useAnimationParts'
+import { useAnimationParts } from '~/composables/useAnimationParts'
 
 interface IPropParts {
   type: string
@@ -25,6 +25,7 @@ interface IPropParts {
 }
 
 export default {
+  name: 'HeadCircle',
   props: {
     parts: {
       type: Object as PropType<IPropParts>,
@@ -42,12 +43,12 @@ export default {
 
     const createAnimations = () => {
       setTimeout(() => {
-        useAnimeParts.createAnimation(refs, KEY_FRAME[1])
+        useAnimeParts.createAnimation(refs.shape, { r: KEY_FRAME[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      useAnimeParts.fadeAnimation(refs, KEY_FRAME[0])
+      useAnimeParts.fadeAnimation(refs.shape, { r: KEY_FRAME[0] })
     }
 
     onMounted(() => {
