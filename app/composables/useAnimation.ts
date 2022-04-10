@@ -25,6 +25,8 @@ export function useAnimation() {
     tMax: number
     isVisible: boolean
     windowMode: TWindowType
+    width: number
+    height: number
   }
 
   const state = reactive<IState>({
@@ -33,6 +35,8 @@ export function useAnimation() {
     tMax: 27,
     isVisible: false,
     windowMode: 'lg',
+    width: 0,
+    height: 384
   })
 
   // 定数
@@ -61,6 +65,24 @@ export function useAnimation() {
     }
   }
 
+  const adjustSvg = () => {
+    // SSR 時には SVG の表示を確定することができないため、
+    // 初期表示時にちらついてしまう
+    state.t = 0
+
+    state.width = (GRID + GAP) * 5 - GAP
+    state.tMax = 15
+
+    if (state.windowMode === 'md') {
+      state.width = (GRID + GAP) * 6 - GAP
+      state.tMax = 18
+    }
+    if (state.windowMode === 'lg') {
+      state.width = (GRID + GAP) * 9 - GAP
+      state.tMax = 27
+    }
+  }
+
   const createItems = (): IParts[][] => {
     return PATTERN[state.patternIndex].map((line, row) =>
       Array.from(line)
@@ -75,65 +97,65 @@ export function useAnimation() {
             key: `${row}-${col}`,
           }
           switch (p) {
-            case '⮽':
-              parts.type = 'head-cross'
-              break
-            case '⧅':
-              parts.type = 'head-slash'
-              parts.rotate = 90
-              break
-            case '⧄':
-              parts.type = 'head-slash'
-              break
-            case '|':
-              parts.type = 'head-horizontal'
-              parts.rotate = 90
-              break
-            case 'o':
-              parts.type = 'head-circle'
-              break
-            case '-':
-              parts.type = 'head-horizontal'
-              break
-            case '◢':
-              parts.type = 'head-triangle'
-              break
-            case '◥':
-              parts.type = 'head-triangle'
-              parts.rotate = 270
-              break
-            case '◣':
-              parts.type = 'head-triangle'
-              parts.rotate = 90
-              break
-            case '◤':
-              parts.type = 'head-triangle'
-              parts.rotate = 180
-              break
-            case '1':
-              parts.type = 'head-photo'
-              parts.src = 'image01.png'
-              break
-            case '2':
-              parts.type = 'head-photo'
-              parts.src = 'image02.png'
-              break
-            case '3':
-              parts.type = 'head-photo'
-              parts.src = 'image03.png'
-              break
-            case '4':
-              parts.type = 'head-photo'
-              parts.src = 'image04.png'
-              break
-            case '5':
-              parts.type = 'head-photo'
-              parts.src = 'image05.png'
-              break
-            case '6':
-              parts.type = 'head-photo'
-              parts.src = 'image06.png'
-              break
+          case '⮽':
+            parts.type = 'head-cross'
+            break
+          case '⧅':
+            parts.type = 'head-slash'
+            parts.rotate = 90
+            break
+          case '⧄':
+            parts.type = 'head-slash'
+            break
+          case '|':
+            parts.type = 'head-horizontal'
+            parts.rotate = 90
+            break
+          case 'o':
+            parts.type = 'head-circle'
+            break
+          case '-':
+            parts.type = 'head-horizontal'
+            break
+          case '◢':
+            parts.type = 'head-triangle'
+            break
+          case '◥':
+            parts.type = 'head-triangle'
+            parts.rotate = 270
+            break
+          case '◣':
+            parts.type = 'head-triangle'
+            parts.rotate = 90
+            break
+          case '◤':
+            parts.type = 'head-triangle'
+            parts.rotate = 180
+            break
+          case '1':
+            parts.type = 'head-photo'
+            parts.src = 'image01.png'
+            break
+          case '2':
+            parts.type = 'head-photo'
+            parts.src = 'image02.png'
+            break
+          case '3':
+            parts.type = 'head-photo'
+            parts.src = 'image03.png'
+            break
+          case '4':
+            parts.type = 'head-photo'
+            parts.src = 'image04.png'
+            break
+          case '5':
+            parts.type = 'head-photo'
+            parts.src = 'image05.png'
+            break
+          case '6':
+            parts.type = 'head-photo'
+            parts.src = 'image06.png'
+            break
           }
           return parts
         }),
@@ -163,6 +185,7 @@ export function useAnimation() {
   // init
   onMounted(() => {
     setWindowMode()
+    adjustSvg()
   })
 
   return { state, itemsFlatten }

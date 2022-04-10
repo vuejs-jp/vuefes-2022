@@ -1,7 +1,11 @@
 <template>
-  <section class="mx-[5vw] mt-[1vw] text-center">
+  <section class="mx-[5vw] mt-[1vw] h-[calc(120px_*_3_+_12px_*_2)] text-center">
     <client-only>
-      <svg class="w-full h-[calc(120px_*_3_+_12px_*_2)]">
+      <svg
+        class="mx-auto max-w-full"
+        :width="state.width"
+        :height="state.height"
+      >
         <g transform="translate(-6, -6)">
           <transition-group
             tag="g"
