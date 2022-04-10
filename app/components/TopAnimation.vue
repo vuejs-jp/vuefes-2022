@@ -29,13 +29,15 @@ import HeadCircle from '~/components/AnimationShapes/HeadCircle.vue'
 import HeadCross from '~/components/AnimationShapes/HeadCross.vue'
 import HeadHorizontal from '~/components/AnimationShapes/HeadHorizontal.vue'
 import HeadSlash from '~/components/AnimationShapes/HeadSlash.vue'
+import HeadTriangle from '~/components/AnimationShapes/HeadTriangle.vue'
 
 export default {
   components: {
     HeadCircle,
     HeadCross,
     HeadHorizontal,
-    HeadSlash
+    HeadSlash,
+    HeadTriangle
   },
   setup() {
     const useAnime = useAnimation()

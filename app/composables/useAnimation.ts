@@ -4,7 +4,6 @@ export function useAnimation() {
   type TParts =
     | 'head-circle'
     | 'head-horizontal'
-    | 'head-square'
     | 'head-triangle'
     | 'head-cross'
     | 'head-photo'
@@ -43,7 +42,7 @@ export function useAnimation() {
   const PATTERN: string[][] = [
     ['-⧄|⧅⧄⧅⮽⧄o', 'o⮽⧄◢-⧄⧅◥|', '⧅◣⧅⧄⧅|⧄⧅⧄'],
     ['1⧄|⧅o⧅⮽⧄◥', 'o⮽⧄◢⧄-⧅2|', '◥◣o⧄⧅|⧄⧅⧄'],
-    ['1⧄|3◤⧅o⧄◥', '-⮽■◣⧄4⧅2|', '⧅⧅o⧄⧅◤⧄■⧄'],
+    ['1⧄|3◤⧅o⧄◥', '-⮽◢◣⧄4⧅2|', '⧅⧅o⧄⧅◤⧄◢⧄'],
     ['◣⧄⧅3◤⧅o⧄6', '-⮽1⧅⧄4⧅|⧄', '⧅◣o⧄2-⧄⧄⧄'],
     ['5⧄◣3◤⧅o⧄6', '-⮽1⧅⧄4⮽|⧄', '⧄◣o⧅2-⧄⧄⧄'],
     ['o⧄⧅3⧄⧅o⧄6', '-⮽1⧅⧄4⧄|⧄', '⧄◣o⧄2⧅⧄◥⮽'],
@@ -76,68 +75,65 @@ export function useAnimation() {
             key: `${row}-${col}`,
           }
           switch (p) {
-            case '⮽':
-              parts.type = 'head-cross'
-              break
-            case '⧅':
-              parts.type = 'head-slash'
-              parts.rotate = 90
-              break
-            case '⧄':
-              parts.type = 'head-slash'
-              break
-            case '■':
-              parts.type = 'head-square'
-              break
-            case '|':
-              parts.type = 'head-horizontal'
-              parts.rotate = 90
-              break
-            case 'o':
-              parts.type = 'head-circle'
-              break
-            case '-':
-              parts.type = 'head-horizontal'
-              break
-            case '◢':
-              parts.type = 'head-triangle'
-              break
-            case '◥':
-              parts.type = 'head-triangle'
-              parts.rotate = 270
-              break
-            case '◣':
-              parts.type = 'head-triangle'
-              parts.rotate = 90
-              break
-            case '◤':
-              parts.type = 'head-triangle'
-              parts.rotate = 180
-              break
-            case '1':
-              parts.type = 'head-photo'
-              parts.src = 'image01.png'
-              break
-            case '2':
-              parts.type = 'head-photo'
-              parts.src = 'image02.png'
-              break
-            case '3':
-              parts.type = 'head-photo'
-              parts.src = 'image03.png'
-              break
-            case '4':
-              parts.type = 'head-photo'
-              parts.src = 'image04.png'
-              break
-            case '5':
-              parts.type = 'head-photo'
-              parts.src = 'image05.png'
-              break
-            case '6':
-              parts.type = 'head-photo'
-              parts.src = 'image06.png'
-              break
+          case '⮽':
+            parts.type = 'head-cross'
+            break
+          case '⧅':
+            parts.type = 'head-slash'
+            parts.rotate = 90
+            break
+          case '⧄':
+            parts.type = 'head-slash'
+            break
+          case '|':
+            parts.type = 'head-horizontal'
+            parts.rotate = 90
+            break
+          case 'o':
+            parts.type = 'head-circle'
+            break
+          case '-':
+            parts.type = 'head-horizontal'
+            break
+          case '◢':
+            parts.type = 'head-triangle'
+            break
+          case '◥':
+            parts.type = 'head-triangle'
+            parts.rotate = 270
+            break
+          case '◣':
+            parts.type = 'head-triangle'
+            parts.rotate = 90
+            break
+          case '◤':
+            parts.type = 'head-triangle'
+            parts.rotate = 180
+            break
+          case '1':
+            parts.type = 'head-photo'
+            parts.src = 'image01.png'
+            break
+          case '2':
+            parts.type = 'head-photo'
+            parts.src = 'image02.png'
+            break
+          case '3':
+            parts.type = 'head-photo'
+            parts.src = 'image03.png'
+            break
+          case '4':
+            parts.type = 'head-photo'
+            parts.src = 'image04.png'
+            break
+          case '5':
+            parts.type = 'head-photo'
+            parts.src = 'image05.png'
+            break
+          case '6':
+            parts.type = 'head-photo'
+            parts.src = 'image06.png'
+            break
           }
           return parts
         }),
