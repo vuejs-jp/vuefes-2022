@@ -1,7 +1,7 @@
 <template>
   <g
     :transform="transform"
-    class="fill-asagi"
+    class="fill-anime-asagi"
   >
     <polygon
       key="1"

@@ -1,4 +1,4 @@
-export default () => {
+export function useAnimation() {
   // types
   type TWindowType = 'sm' | 'md' | 'lg'
   type TParts =

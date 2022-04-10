@@ -11,6 +11,14 @@ module.exports = {
         tohoh: '#FFC408',
         hiwamoegi: '#90B44B',
         tsuchi: '#E5E5E5',
+
+        // アニメーションで使用する色
+        'anime-typescript-blue': '#4374AA',
+        'anime-asagi': '#4D9EAA',
+        'anime-vue-green': '#5AB088',
+        'anime-hiwamoegi': '#93AF5E',
+        'anime-sangosyou': '#D47373',
+        'anime-tohoh': '#E7C350',
       },
       spacing: {
         14: '50px',
