@@ -30,6 +30,7 @@ import HeadCross from '~/components/AnimationShapes/HeadCross.vue'
 import HeadHorizontal from '~/components/AnimationShapes/HeadHorizontal.vue'
 import HeadSlash from '~/components/AnimationShapes/HeadSlash.vue'
 import HeadTriangle from '~/components/AnimationShapes/HeadTriangle.vue'
+import HeadPhoto from '~/components/AnimationShapes/HeadPhoto.vue'
 
 export default {
   components: {
@@ -37,7 +38,8 @@ export default {
     HeadCross,
     HeadHorizontal,
     HeadSlash,
-    HeadTriangle
+    HeadTriangle,
+    HeadPhoto
   },
   setup() {
     const useAnime = useAnimation()
