@@ -1,6 +1,6 @@
 <template>
   <g
-    :transform="transform()"
+    :transform="transform"
     class="fill-sangosyu"
   >
     <circle
@@ -12,8 +12,8 @@
   </g>
 </template>
 <script lang="ts">
-import { gsap, Power2 } from 'gsap'
 import { PropType } from '@nuxt/bridge/dist/runtime/vue2-bridge'
+import useAnimationParts from '~/composables/useAnimationParts'
 
 interface IPropParts {
   type: string
@@ -31,37 +31,31 @@ export default {
       required: true
     }
   },
+
   setup(props, setupContext) {
+    const useAnimeParts = useAnimationParts()
     const refs = setupContext.refs
 
     const KEY_FRAME = [0, 60]
 
-    const transform = () => {
-      return `translate(${props.parts.x}, ${props.parts.y}) rotate(${props.parts.rotate})`
-    }
+    const transform = useAnimeParts.transform(props)
 
-    const setAnimation = () => {
+    const createAnimations = () => {
       setTimeout(() => {
-        gsap.to(refs.shape, 0.6, {
-          attr: {
-            r: KEY_FRAME[1],
-          },
-          ease: Power2.easeOut
-        })
+        useAnimeParts.createAnimation(refs, KEY_FRAME[1])
       }, 0)
     }
 
+    const fadeAnimations = () => {
+      useAnimeParts.fadeAnimation(refs, KEY_FRAME[0])
+    }
+
     onMounted(() => {
-      setAnimation()
+      createAnimations()
     })
 
     onBeforeUnmount(() => {
-      gsap.to(this.$refs.shape, 0.2, {
-        attr: {
-          r: this.keyFrame[0]
-        },
-        ease: Power2.easeOut
-      })
+      fadeAnimations()
     })
 
     return { transform }

@@ -2,13 +2,13 @@ export default () => {
   // types
   type TWindowType = 'sm' | 'md' | 'lg'
   type TParts =
-  | 'head-circle'
-  | 'head-horizontal'
-  | 'head-square'
-  | 'head-triangle'
-  | 'head-cross'
-  | 'head-photo'
-  | 'head-slash'
+    | 'head-circle'
+    | 'head-horizontal'
+    | 'head-square'
+    | 'head-triangle'
+    | 'head-cross'
+    | 'head-photo'
+    | 'head-slash'
 
   interface IParts {
     type: TParts
@@ -33,7 +33,7 @@ export default () => {
     t: 0,
     tMax: 27,
     isVisible: false,
-    windowMode: 'lg'
+    windowMode: 'lg',
   })
 
   // 定数
@@ -73,71 +73,71 @@ export default () => {
             y: (GAP + GRID) / 2 + row * (GAP + GRID),
             rotate: 0,
             src: '',
-            key: `${row}-${col}`
+            key: `${row}-${col}`,
           }
           switch (p) {
-          case '⮽':
-            parts.type = 'head-cross'
-            break
-          case '⧅':
-            parts.type = 'head-slash'
-            parts.rotate = 90
-            break
-          case '⧄':
-            parts.type = 'head-slash'
-            break
-          case '■':
-            parts.type = 'head-square'
-            break
-          case '|':
-            parts.type = 'head-horizontal'
-            parts.rotate = 90
-            break
-          case 'o':
-            parts.type = 'head-circle'
-            break
-          case '-':
-            parts.type = 'head-horizontal'
-            break
-          case '◢':
-            parts.type = 'head-triangle'
-            break
-          case '◥':
-            parts.type = 'head-triangle'
-            parts.rotate = 270
-            break
-          case '◣':
-            parts.type = 'head-triangle'
-            parts.rotate = 90
-            break
-          case '◤':
-            parts.type = 'head-triangle'
-            parts.rotate = 180
-            break
-          case '1':
-            parts.type = 'head-photo'
-            parts.src = 'image01.png'
-            break
-          case '2':
-            parts.type = 'head-photo'
-            parts.src = 'image02.png'
-            break
-          case '3':
-            parts.type = 'head-photo'
-            parts.src = 'image03.png'
-            break
-          case '4':
-            parts.type = 'head-photo'
-            parts.src = 'image04.png'
-            break
-          case '5':
-            parts.type = 'head-photo'
-            parts.src = 'image05.png'
-            break
-          case '6':
-            parts.type = 'head-photo'
-            parts.src = 'image06.png'
-            break
+            case '⮽':
+              parts.type = 'head-cross'
+              break
+            case '⧅':
+              parts.type = 'head-slash'
+              parts.rotate = 90
+              break
+            case '⧄':
+              parts.type = 'head-slash'
+              break
+            case '■':
+              parts.type = 'head-square'
+              break
+            case '|':
+              parts.type = 'head-horizontal'
+              parts.rotate = 90
+              break
+            case 'o':
+              parts.type = 'head-circle'
+              break
+            case '-':
+              parts.type = 'head-horizontal'
+              break
+            case '◢':
+              parts.type = 'head-triangle'
+              break
+            case '◥':
+              parts.type = 'head-triangle'
+              parts.rotate = 270
+              break
+            case '◣':
+              parts.type = 'head-triangle'
+              parts.rotate = 90
+              break
+            case '◤':
+              parts.type = 'head-triangle'
+              parts.rotate = 180
+              break
+            case '1':
+              parts.type = 'head-photo'
+              parts.src = 'image01.png'
+              break
+            case '2':
+              parts.type = 'head-photo'
+              parts.src = 'image02.png'
+              break
+            case '3':
+              parts.type = 'head-photo'
+              parts.src = 'image03.png'
+              break
+            case '4':
+              parts.type = 'head-photo'
+              parts.src = 'image04.png'
+              break
+            case '5':
+              parts.type = 'head-photo'
+              parts.src = 'image05.png'
+              break
+            case '6':
+              parts.type = 'head-photo'
+              parts.src = 'image06.png'
+              break
           }
           return parts
         }),
@@ -164,12 +164,10 @@ export default () => {
     }, 2000)
   })
 
-
   // init
   onMounted(() => {
     setWindowMode()
   })
-
 
   return { state, itemsFlatten }
 }
