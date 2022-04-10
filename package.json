@@ -46,5 +46,8 @@
   },
   "volta": {
     "node": "16.14.2"
+  },
+  "dependencies": {
+    "gsap": "^3.10.2"
   }
 }
