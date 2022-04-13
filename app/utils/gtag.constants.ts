@@ -1,3 +1,4 @@
+// GA4
 const GAcode = `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${process.env.NUXT_GTAG_ID}');`
 
 export const gtagList = () => {
