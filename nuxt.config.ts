@@ -37,7 +37,6 @@ export default defineNuxtConfig({
       '@nuxtjs/google-gtag', // GA3
       {
         id: process.env.NUXT_GTAG_ID,
-        debug: !isProd,
       },
     ],
   ],
