@@ -1,17 +1,17 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
-import { gtagList } from './app/utils/gtag.constants'
 import { generalOg, twitterOg } from './app/utils/og.constants'
 import { conferenceTitle } from './app/utils/constants'
+import { isProd } from './app/utils/environment.constants'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'app/',
   router: {
-    base: process.env.NODE_ENV === 'production' ? '/2022/' : '/',
+    base: isProd ? '/2022/' : '/',
   },
   app: {
     buildAssetsDir: '/_nuxt/',
-    baseURL: process.env.NODE_ENV === 'production' ? '/2022/' : '/',
+    baseURL: isProd ? '/2022/' : '/',
   },
   target: 'static',
   css: ['~/assets/main.scss'],
@@ -19,14 +19,9 @@ export default defineNuxtConfig({
     title: conferenceTitle,
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
-      ...gtagList(),
       ...generalOg(),
       ...twitterOg(),
     ],
-    __dangerouslyDisableSanitizersByTagID: {
-      GAsrc: ['innerHTML'],
-      GAcode: ['innerHTML'],
-    },
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'icon', sizes: '180x180', href: '/icon/apple-touch-icon.png' },
@@ -37,6 +32,14 @@ export default defineNuxtConfig({
   },
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
   buildModules: ['@nuxtjs/device', '@nuxtjs/svg', '@nuxtjs/tailwindcss'],
+  modules: [
+    [
+      '@nuxtjs/google-gtag', // GA3
+      {
+        id: process.env.NUXT_GTAG_ID,
+      },
+    ],
+  ],
   generate: {
     dir: 'dist/2022',
   },
