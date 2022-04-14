@@ -9,7 +9,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
-    "generate:transpile": "nuxi generate",
+    "generate:transpile": "NODE_ENV=production nuxi generate",
     "generate:post-transpile": "node scripts/renameDir.js",
     "generate": "npm run generate:transpile && npm run generate:post-transpile",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
