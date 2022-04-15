@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { PropType } from '@nuxt/bridge/dist/runtime/vue2-bridge'
+import type { CustomPropType } from '~/types/shims-vue'
 
 const props = defineProps({
   color: {
-    type: String as PropType<'white' | 'vue-blue'>,
+    type: String as CustomPropType<'white' | 'vue-blue'>,
     required: true,
   },
 })
