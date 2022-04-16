@@ -1,10 +1,14 @@
 <template>
-  <section class="mx-[5vw] mt-[1vw] h-[calc(120px_*_3_+_12px_*_2)] text-center">
+  <section
+    class="mt-[1vw] mb-[5vw] text-center"
+    :class="`h-[calc(${GRID}px_*_3_+_${GAP}px_*_2)]`"
+  >
     <client-only>
       <svg
-        class="mx-auto max-w-full"
+        class="mx-auto max-w-full h-auto"
         :width="state.width"
         :height="state.height"
+        :viewBox="`0 0 ${state.width} ${state.height}`"
       >
         <g transform="translate(-6, -6)">
           <transition-group

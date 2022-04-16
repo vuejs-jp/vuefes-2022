@@ -188,5 +188,5 @@ export function useAnimation() {
     adjustSvg()
   })
 
-  return { state, itemsFlatten }
+  return { state, itemsFlatten, GRID, GAP }
 }
