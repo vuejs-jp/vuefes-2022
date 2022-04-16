@@ -2,7 +2,7 @@
   <section class="pb-7">
     <div class="relative pb-[18vw] mx-auto max-w-[1920px] md:pb-[15vw] lg:pb-[11vw]">
       <div class="px-5">
-        <top-animation class="mb-[6.23vw] lg:mb-9" />
+        <top-animation />
         <h1
           class="mb-[2.6vw] text-[7.01vw] font-extrabold leading-none text-center text-vue-blue lg:mb-2.5 lg:text-[4.0625rem]"
         >
