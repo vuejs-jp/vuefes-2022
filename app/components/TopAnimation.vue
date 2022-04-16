@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="mt-[1vw] mb-[5vw] text-center"
-    :class="`h-[calc(${GRID}px_*_3_+_${GAP}px_*_2)]`"
-  >
+  <section class="mt-[1vw] mb-[5vw] text-center　h-[calc(120px_*_3_+_12px_*_2)]">
     <client-only>
       <svg
         class="mx-auto max-w-full h-auto"

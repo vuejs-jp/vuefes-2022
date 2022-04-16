@@ -18,7 +18,6 @@ export function useAnimation() {
     key: string
   }
 
-  // state
   interface IState {
     patternIndex: number
     t: number
@@ -29,6 +28,7 @@ export function useAnimation() {
     height: number
   }
 
+  // state の初期値
   const state = reactive<IState>({
     patternIndex: 0,
     t: 0,
@@ -45,6 +45,7 @@ export function useAnimation() {
   const PARTS_CREATE_TIME = 0.6
   const PARTS_FADE_TIME = 0.2
 
+  // pattern を定義
   const PATTERN: string[][] = [
     ['-⧄|⧅⧄⧅⮽⧄o', 'o⮽⧄◢-⧄⧅◥|', '⧅◣⧅⧄⧅|⧄⧅⧄'],
     ['1⧄|⧅o⧅⮽⧄◥', 'o⮽⧄◢⧄-⧅2|', '◥◣o⧄⧅|⧄⧅⧄'],
@@ -67,14 +68,16 @@ export function useAnimation() {
     }
   }
 
+  // SVG 表示量を画面サイズによって調整
   const adjustSvg = () => {
     // SSR 時には SVG の表示を確定することができないため、
     // 初期表示時にちらついてしまう
     state.t = 0
 
-    state.width = (GRID + GAP) * 5 - GAP
-    state.tMax = 15
-
+    if (state.windowMode === 'sm') {
+      state.width = (GRID + GAP) * 5 - GAP
+      state.tMax = 15
+    }
     if (state.windowMode === 'md') {
       state.width = (GRID + GAP) * 6 - GAP
       state.tMax = 18
@@ -85,6 +88,7 @@ export function useAnimation() {
     }
   }
 
+  // pattern の記号列を IParts[][] に変換
   const createItems = (): IParts[][] => {
     return PATTERN[state.patternIndex].map((line, row) =>
       Array.from(line)
@@ -180,6 +184,7 @@ export function useAnimation() {
     }, PARTS_FADE_TIME * 1000)
   }
 
+  // window サイズの変更を検知
   const detectWidowChange = () => {
     window.addEventListener('resize', () => {
       const prevWindowMode = state.windowMode
@@ -190,7 +195,7 @@ export function useAnimation() {
     })
   }
 
-  // Timer
+  // 画面表示からの時間を計測し, パターンを切り替え
   onMounted(() => {
     setInterval(() => {
       if (state.t < state.tMax) {
@@ -216,6 +221,6 @@ export function useAnimation() {
     state,
     itemsFlatten,
     transitionEnter,
-    transitionLeave
+    transitionLeave,
   }
 }
