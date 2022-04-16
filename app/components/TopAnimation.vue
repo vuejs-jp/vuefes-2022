@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-[1vw] mb-[5vw] h-[calc(120px*3_+_12px*2)] lg:h-[calc(((100vw_-_7.8vw*2_-_12px*8)/9)*3_+_12px*2)] 3xl:h-[calc(120px*3_+_12px*2)]">
+  <section class="mt-[1vw] mb-[5vw] h-48 md:h-[calc(120px*3_+_12px*2)] lg:h-[calc(((100vw_-_7.8vw*2_-_12px*8)/9)*3_+_12px*2)] 3xl:h-[calc(120px*3_+_12px*2)]">
     <client-only>
       <svg
         class="mx-auto max-w-full h-auto"
