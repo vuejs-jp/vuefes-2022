@@ -42,6 +42,8 @@ export function useAnimation() {
   // 定数
   const GAP: number = 12
   const GRID: number = 120
+  const PARTS_CREATE_TIME = 0.6
+  const PARTS_FADE_TIME = 0.2
 
   const PATTERN: string[][] = [
     ['-⧄|⧅⧄⧅⮽⧄o', 'o⮽⧄◢-⧄⧅◥|', '⧅◣⧅⧄⧅|⧄⧅⧄'],
@@ -163,10 +165,29 @@ export function useAnimation() {
   }
 
   const itemsFlatten = () => {
-    // if (!state.isVisible) {
-    //   return []
-    // }
     return Array.prototype.concat.apply([], createItems())
+  }
+
+  const transitionEnter = (el, done) => {
+    setTimeout(() => {
+      done()
+    }, PARTS_CREATE_TIME * 1000)
+  }
+
+  const transitionLeave = (el, done) => {
+    setTimeout(() => {
+      done()
+    }, PARTS_FADE_TIME * 1000)
+  }
+
+  const detectWidowChange = () => {
+    window.addEventListener('resize', () => {
+      const prevWindowMode = state.windowMode
+      setWindowMode()
+      if (prevWindowMode !== state.windowMode) {
+        adjustSvg()
+      }
+    })
   }
 
   // Timer
@@ -186,7 +207,15 @@ export function useAnimation() {
   onMounted(() => {
     setWindowMode()
     adjustSvg()
+    detectWidowChange()
   })
 
-  return { state, itemsFlatten, GRID, GAP }
+  return {
+    GRID,
+    GAP,
+    state,
+    itemsFlatten,
+    transitionEnter,
+    transitionLeave
+  }
 }

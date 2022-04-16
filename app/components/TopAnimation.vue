@@ -14,6 +14,8 @@
           <transition-group
             tag="g"
             mode="out-in"
+            @leave="transitionLeave"
+            @enter="transitionEnter"
           >
             <g
               v-for="item in itemsFlatten()"
