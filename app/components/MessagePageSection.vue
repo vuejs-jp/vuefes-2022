@@ -22,7 +22,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
       <SectionTitle
         class="mb-10 lg:mr-6 lg:mb-20"
         title="Message"
-        title-yamato="ことづけ"
+        title-yamato="想い"
       />
       <div class="text-sm leading-7 text-vue-blue lg:max-w-[45rem] lg:text-lg lg:leading-8">
         <p class="mb-6">{{ message1 }}</p>

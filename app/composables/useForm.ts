@@ -64,7 +64,7 @@ export default () => {
   const createSubmit = () => {
     submitError.value = ''
 
-    fetch('/', {
+    fetch('/2022/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({

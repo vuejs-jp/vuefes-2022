@@ -3,7 +3,7 @@ export const conferenceTitle = 'Vue Fes Japan Online 2022'
 export const subtitle = 'さまざまな困難を乗り越えたすべての人へ'
 
 export const ogDescription =
-  '2022年10月16日（日）に開催される日本最大級の Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！'
+  '2022年10月16日（日）に開催される日本最大級の Vue.js オンラインカンファレンス。国内外の著名スピーカーによるセッションの他、初心者向けハンズオンなどのイベントも企画しています。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！'
 
 export const linkUrl = 'https://vuefes.jp/2022/'
 

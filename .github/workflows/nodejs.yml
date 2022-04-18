@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - develop
   pull_request:
     branches:
       - main
+      - develop
 
 jobs:
   build:
@@ -39,6 +41,6 @@ jobs:
       - name: Transpile
         run: |
           npm ci
-          npm run generate
+          npm run generate:transpile
         env:
           CI: true
