@@ -2,25 +2,7 @@
   <section class="pb-7">
     <div class="relative pb-[18vw] mx-auto max-w-[1920px] md:pb-[15vw] lg:pb-[11vw]">
       <div class="px-5">
-        <div class="aspect-[650/384] mb-[6.23vw] md:aspect-[782/384] lg:aspect-auto lg:mb-9">
-          <picture>
-            <source
-              srcset="/img/kv_solid_lg.png"
-              media="(min-width: 981px)"
-            >
-            <source
-              srcset="/img/kv_solid_md.png"
-              media="(min-width: 771px)"
-            >
-            <img
-              class="mx-auto"
-              src="/img/kv_solid_sm.png"
-              :alt="conferenceTitle"
-              width="1178"
-              height="384"
-            >
-          </picture>
-        </div>
+        <top-animation />
         <h1
           class="mb-[2.6vw] text-[7.01vw] font-extrabold leading-none text-center text-vue-blue lg:mb-2.5 lg:text-[4.0625rem]"
         >
@@ -60,6 +42,7 @@
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
 import { conferenceTitle, eventDate, tweetLabel, tweetUrl } from '~/utils/constants'
+import TopAnimation from '~/components/TopAnimation.vue'
 
 const tweet = () => {
   window.open(tweetUrl, '__blank')
