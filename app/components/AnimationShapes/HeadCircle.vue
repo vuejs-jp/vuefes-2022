@@ -12,7 +12,7 @@
   </g>
 </template>
 <script lang="ts">
-import { PropType } from '@nuxt/bridge/dist/runtime/vue2-bridge'
+import type { CustomPropType } from '~/types/shims-vue'
 import { useAnimationParts } from '~/composables/useAnimationParts'
 
 interface IPropParts {
@@ -28,7 +28,7 @@ export default {
   name: 'HeadCircle',
   props: {
     parts: {
-      type: Object as PropType<IPropParts>,
+      type: Object as CustomPropType<IPropParts>,
       required: true
     }
   },
