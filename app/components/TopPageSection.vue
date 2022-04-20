@@ -2,7 +2,11 @@
   <section class="pb-7">
     <div class="relative pb-[18vw] mx-auto max-w-[1920px] md:pb-[15vw] lg:pb-[11vw]">
       <div class="px-5">
-        <top-animation />
+        <div
+          class="aspect-[648/384] mx-auto mb-[6.23vw] max-w-[1176px] md:aspect-[780/384] lg:aspect-[1176/384] lg:mb-9"
+        >
+          <top-animation />
+        </div>
         <h1
           class="mb-[2.6vw] text-[7.01vw] font-extrabold leading-none text-center text-vue-blue lg:mb-2.5 lg:text-[4.0625rem]"
         >

@@ -1,33 +1,26 @@
 <template>
-  <section class="mt-[1vw] mb-[5vw] md:h-[calc(120px*3_+_12px*2)] lg:h-[calc(((100vw_-_7.8vw*2_-_12px*8)/9)*3_+_12px*2)] 3xl:h-48">
-    <client-only>
-      <svg
-        class="mx-auto max-w-full h-auto"
-        :width="state.width"
-        :height="state.height"
-        :viewBox="`0 0 ${state.width} ${state.height}`"
-      >
-        <g transform="translate(-6, -6)">
-          <transition-group
-            tag="g"
-            mode="out-in"
-            @leave="transitionLeave"
-            @enter="transitionEnter"
+  <client-only>
+    <svg :viewBox="`0 0 ${state.width} ${state.height}`">
+      <g transform="translate(-6, -6)">
+        <transition-group
+          tag="g"
+          mode="out-in"
+          @leave="transitionLeave"
+          @enter="transitionEnter"
+        >
+          <g
+            v-for="item in itemsFlatten()"
+            :key="item.key"
           >
-            <g
-              v-for="item in itemsFlatten()"
-              :key="item.key"
-            >
-              <component
-                :is="item.type"
-                :parts="item"
-              />
-            </g>
-          </transition-group>
-        </g>
-      </svg>
-    </client-only>
-  </section>
+            <component
+              :is="item.type"
+              :parts="item"
+            />
+          </g>
+        </transition-group>
+      </g>
+    </svg>
+  </client-only>
 </template>
 
 <script lang="ts">
@@ -46,11 +39,11 @@ export default {
     HeadHorizontal,
     HeadSlash,
     HeadTriangle,
-    HeadPhoto
+    HeadPhoto,
   },
   setup() {
     const useAnime = useAnimation()
     return { ...useAnime }
-  }
+  },
 }
 </script>
