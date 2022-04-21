@@ -208,10 +208,13 @@ export function useAnimation() {
     }, 2000)
   })
 
-  // init
-  onMounted(() => {
+  onBeforeMount(() => {
     setWindowMode()
     adjustSvg()
+  })
+
+  // init
+  onMounted(() => {
     detectWidowChange()
   })
 
