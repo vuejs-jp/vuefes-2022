@@ -18,59 +18,8 @@
       />
     </clipPath>
     <image
-      v-show="parts.src == 'image01.png'"
       key="1"
-      :href="images[0]"
-      x="-60"
-      y="-60"
-      width="120"
-      height="120"
-      :clip-path="`url(#${CLIP_ID})`"
-    />
-    <image
-      v-show="parts.src == 'image02.png'"
-      key="2"
-      :href="images[1]"
-      x="-60"
-      y="-60"
-      width="120"
-      height="120"
-      :clip-path="`url(#${CLIP_ID})`"
-    />
-    <image
-      v-show="parts.src == 'image03.png'"
-      key="3"
-      :href="images[2]"
-      x="-60"
-      y="-60"
-      width="120"
-      height="120"
-      :clip-path="`url(#${CLIP_ID})`"
-    />
-    <image
-      v-show="parts.src == 'image04.png'"
-      key="4"
-      :href="images[3]"
-      x="-60"
-      y="-60"
-      width="120"
-      height="120"
-      :clip-path="`url(#${CLIP_ID})`"
-    />
-    <image
-      v-show="parts.src == 'image05.png'"
-      key="5"
-      :href="images[4]"
-      x="-60"
-      y="-60"
-      width="120"
-      height="120"
-      :clip-path="`url(#${CLIP_ID})`"
-    />
-    <image
-      v-show="parts.src == 'image06.png'"
-      key="6"
-      :href="images[5]"
+      :href="imageSrc"
       x="-60"
       y="-60"
       width="120"
@@ -117,7 +66,17 @@ export default {
 
     const transform = useAnimeParts.transform(props)
 
-    const images = [Image01, Image02, Image03, Image04, Image05, Image06]
+    const imageSrc = computed(() => {
+      const images = {
+        'image01.png': Image01,
+        'image02.png': Image02,
+        'image03.png': Image03,
+        'image04.png': Image04,
+        'image05.png': Image05,
+        'image06.png': Image06,
+      }
+      return images[props.parts.src]
+    })
 
     const createAnimations = () => {
       setTimeout(() => {
@@ -137,7 +96,7 @@ export default {
       fadeAnimations()
     })
 
-    return { transform, CLIP_ID, images }
+    return { transform, CLIP_ID, imageSrc }
   },
 }
 </script>
