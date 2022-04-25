@@ -13,6 +13,10 @@ body {
   background-size: 400px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media only screen and (min-width: 770px) {
   body {
     background-size: 680px;

@@ -90,3 +90,9 @@ export const websiteLinks = [
     description: 'Check the website of Vue Fes Japan 2018.',
   },
 ]
+
+export const menuLinks = [
+  // FIXME: uncomment when resolving issue #7
+  // { displayName: 'Team', uri: '#team' },
+  { displayName: 'Contact', uri: '#form' },
+]
