@@ -3,13 +3,24 @@ import type { CustomPropType } from '~/types/shims-vue'
 
 const props = defineProps({
   color: {
-    type: String as CustomPropType<'white' | 'vue-blue'>,
+    type: String as CustomPropType<'white' | 'vue-blue' | 'hiwamoegi' | 'silver-tree'>,
     required: true,
   },
 })
 
 const colorClass = computed(() => {
-  return props.color === 'white' ? 'bg-ichimatsu-white' : 'bg-ichimatsu-vue-blue'
+  switch (props.color) {
+  case 'white':
+    return 'bg-ichimatsu-white'
+  case 'vue-blue':
+    return 'bg-ichimatsu-vue-blue'
+  case 'hiwamoegi':
+    return 'bg-ichimatsu-hiwamoegi bg-white'
+  case 'silver-tree':
+    return 'bg-ichimatsu-silver-tree'
+  default:
+    return 'bg-ichimatsu-white'
+  }
 })
 </script>
 
