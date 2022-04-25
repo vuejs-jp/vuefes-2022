@@ -19,7 +19,7 @@
     </clipPath>
     <image
       key="1"
-      :href="`/img/animation/${parts.src}`"
+      :href="imageSrc"
       x="-60"
       y="-60"
       width="120"
@@ -31,6 +31,13 @@
 <script lang="ts">
 import type { CustomPropType } from '~/types/shims-vue'
 import { useAnimationParts } from '~/composables/useAnimationParts'
+
+import Image01 from '!url-loader!~/assets/img/animation/image01.png'
+import Image02 from '!url-loader!~/assets/img/animation/image02.png'
+import Image03 from '!url-loader!~/assets/img/animation/image03.png'
+import Image04 from '!url-loader!~/assets/img/animation/image04.png'
+import Image05 from '!url-loader!~/assets/img/animation/image05.png'
+import Image06 from '!url-loader!~/assets/img/animation/image06.png'
 
 interface IPropParts {
   type: string
@@ -46,8 +53,8 @@ export default {
   props: {
     parts: {
       type: Object as CustomPropType<IPropParts>,
-      required: true
-    }
+      required: true,
+    },
   },
 
   setup(props, setupContext) {
@@ -58,6 +65,18 @@ export default {
     const CLIP_ID = `photo-clip${props.parts.key}`
 
     const transform = useAnimeParts.transform(props)
+
+    const imageSrc = computed(() => {
+      const images = {
+        'image01.png': Image01,
+        'image02.png': Image02,
+        'image03.png': Image03,
+        'image04.png': Image04,
+        'image05.png': Image05,
+        'image06.png': Image06,
+      }
+      return images[props.parts.src]
+    })
 
     const createAnimations = () => {
       setTimeout(() => {
@@ -77,7 +96,7 @@ export default {
       fadeAnimations()
     })
 
-    return { transform, CLIP_ID }
-  }
+    return { transform, CLIP_ID, imageSrc }
+  },
 }
 </script>
