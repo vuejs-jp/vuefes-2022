@@ -7,11 +7,7 @@ import {
   tweetLink,
 } from '~/utils/constants'
 import SectionTitle from '~/components/SectionTitle.vue'
-import ButtonField from '~/components/forms/ButtonField.vue'
-
-const open = () => {
-  window.open(sponsorsDocumentUrl, '__blank')
-}
+import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 </script>
 
 <template>
@@ -30,9 +26,9 @@ const open = () => {
           {{ sponsorsDescriptionText }}
         </p>
         <div class="mb-10 text-center lg:mb-20">
-          <ButtonField
+          <LinkButtonField
+            :link="sponsorsDocumentUrl"
             title-label="スポンサー資料を開く"
-            @on-click="open"
           />
         </div>
         <p class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
