@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { linkUrl } from '~/utils/constants'
 import NavPageSection from '~/components/NavPageSection.vue'
-import SectionTitle from '~/components/SectionTitle.vue'
+import PrivacySectionTitle from '~/components/PrivacySectionTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
@@ -10,7 +10,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 <template>
   <div>
     <nav-page-section />
-    <SectionTitle
+    <PrivacySectionTitle
       class="mb-10 lg:mb-20"
       title="Privacy Policy"
       title-yamato="プライバシーポリシー"
