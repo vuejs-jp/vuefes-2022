@@ -18,6 +18,6 @@
 <script setup lang="ts">
 import ContactList from '~/components/footer/ContactList.vue'
 import PastEvents from '~/components/footer/PastEvents.vue'
-import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue';
+import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue'
 import CopyrightText from '~/components/footer/CopyrightText.vue'
 </script>
