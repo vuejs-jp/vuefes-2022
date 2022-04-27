@@ -1,5 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+bash ./bin/imagemin
 npm run lint:fix
 npm run format
