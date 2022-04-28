@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { linkUrl } from '~/utils/constants'
 import NavPageSection from '~/components/NavPageSection.vue'
-import SectionTitle from '~/components/SectionTitle.vue'
+import PrivacyPolicyAndCocSectionTitle from '~/components/PrivacyPolicyAndCocSectionTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
@@ -10,10 +10,11 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 <template>
   <div>
     <nav-page-section />
-    <SectionTitle
+    <PrivacyPolicyAndCocSectionTitle
       class="mb-10 lg:mb-20"
       title="Code of Conduct"
       title-yamato="行動規範"
+      title-type="Coc"
     />
     <div class="px-5 mx-auto max-w-[43.75rem] text-sm leading-7 text-vue-blue lg:max-w-[73.75rem] lg:text-lg lg:leading-8">
       <p class="mb-16">Vue Fes Japan のすべての参加者、スピーカー、スポンサー、スタッフは、オープンかつ友好的な環境を育むため、以下の行動規範に同意していただく必要があります。主催者である Vue.js 日本ユーザーグループは、この規範の実施を遵守します。誰にとっても安全な環境を守るために、すべての参加者のご協力をお願いいたします。</p>

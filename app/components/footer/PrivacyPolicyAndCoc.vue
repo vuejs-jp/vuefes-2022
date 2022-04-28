@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { websiteLinks } from '~/utils/constants'
-</script>
-
 <template>
   <div class="flex gap-8 justify-center">
     <nuxt-link            

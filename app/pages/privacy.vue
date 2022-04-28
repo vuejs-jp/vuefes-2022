@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { linkUrl } from '~/utils/constants'
 import NavPageSection from '~/components/NavPageSection.vue'
-import PrivacySectionTitle from '~/components/PrivacySectionTitle.vue'
+import PrivacyPolicyAndCocSectionTitle from '~/components/PrivacyPolicyAndCocSectionTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
@@ -10,10 +10,11 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 <template>
   <div>
     <nav-page-section />
-    <PrivacySectionTitle
+    <PrivacyPolicyAndCocSectionTitle
       class="mb-10 lg:mb-20"
       title="Privacy Policy"
       title-yamato="プライバシーポリシー"
+      title-type="PrivacyPolicy"
     />
     <div class="px-5 mx-auto max-w-[43.75rem] text-sm leading-7 text-vue-blue lg:max-w-[73.75rem] lg:text-lg lg:leading-8">
       <p class="mb-8">Vue Fes Japan 2019（以下、 カンファレンス）では、カンファレンスへの参加者およびスポンサー（以下、ユーザー）の個人情報保護の重要性について認識しています。</p>
