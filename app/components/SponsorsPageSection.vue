@@ -29,6 +29,7 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           <LinkButtonField
             :link="sponsorsDocumentUrl"
             title-label="スポンサー資料を開く"
+            :is-external-link="true"
           />
         </div>
         <p class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">

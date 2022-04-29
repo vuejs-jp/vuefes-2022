@@ -8,11 +8,16 @@ const props = defineProps({
     type: String,
     required: true
   },
+  isExternalLink: {
+    type: Boolean,
+    default: false
+  },
   titleLabel: {
     type: String,
     required: true
   },
 })
+
 const emit = defineEmits<ILinkButtonFieldEmit>()
 </script>
 
@@ -25,7 +30,7 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
         role="button"
         :href="link"
         class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
-        target="_blank"
+        :target="isExternalLink ? '_blank':'_self'"
         rel="noopener"
       >
         {{ titleLabel }}

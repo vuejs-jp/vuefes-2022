@@ -29,7 +29,14 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
       <p class="mb-16">Vue.js 日本ユーザーグループは安全な環境を守るため、警備員や警察への連絡を含め、付き添い人の提供、その他のあらゆる支援を行います。私達にとってあなたの参加が何よりも大切なことであり、常に差別、ハラスメント行為を受けた人の味方であり続けます。</p>
 
       <h2 class="mb-8 text-3xl font-bold">何かお困りですか？</h2>
-      <p class="mb-8">Vue.js 日本ユーザーグループへのお問い合わせは、 フォームよりお願いいたします。また、Vue Fes Japan 会場内でお困りの場合は、お近くのスタッフまでお尋ねください。</p>
+      <p class="mb-8">
+        Vue.js 日本ユーザーグループへのお問い合わせは、<nuxt-link            
+          :to="{ path: '/',hash:'#form'}"
+          class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
+        >
+          フォーム
+        </nuxt-link>よりお願いいたします。また、Vue Fes Japan 会場内でお困りの場合は、お近くのスタッフまでお尋ねください。
+      </p>
 
       <div class="mb-32 text-center">
         <LinkButtonField
@@ -42,3 +49,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
     <footer-page-section />
   </div>
 </template>
+
+
+:to="{ path: '/',hash:'#form'}"
+
