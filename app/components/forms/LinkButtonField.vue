@@ -27,14 +27,24 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
   >
     <div class="flex absolute top-0 justify-center items-center p-px w-full h-full">
       <a
+        v-if="isExternalLink"
         role="button"
         :href="link"
         class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
-        :target="isExternalLink ? '_blank':'_self'"
+        target="_blank"
         rel="noopener"
       >
         {{ titleLabel }}
       </a>
+      <nuxt-link
+        v-else
+        role="button"
+        :to="link"
+        class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
+        target="_self"
+      >
+        {{ titleLabel }}
+      </nuxt-link>
     </div>
   </div>
 </template>

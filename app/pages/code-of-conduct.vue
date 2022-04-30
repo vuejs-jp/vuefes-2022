@@ -40,7 +40,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 
       <div class="mb-32 text-center">
         <LinkButtonField
-          :link="linkUrl"
+          link="/"
           title-label="トップに戻る"
         />
       </div>
