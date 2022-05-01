@@ -30,7 +30,8 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
         <li>
           メールアドレス
           <ul class="pl-12 mb-4 list-circle">
-            <li class="mt-4">本ウェブサイトで入力されたメールアドレス</li>
+            <li class="mt-4">配送が伴うサービスのお申し込みフォームで入力されたお名前</li>
+            <li>本ウェブサイトで入力されたメールアドレス</li>
             <li>スポンサーお申し込みフォームで入力されたメールアドレス</li>
             <li>CFP お申し込みフォームで入力されたメールアドレス</li>
           </ul>
@@ -42,12 +43,18 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
             <li>CFP お申し込みフォームで入力されたお名前</li>
           </ul>
         </li>
+        <li>
+          住所、電話番号
+          <ul class="pl-12 mb-4 list-circle">
+            <li class="mt-4">配送が伴うサービスのお申し込みフォームで入力された住所、電話番号</li>
+          </ul>
+        </li>
       </ul>
 
       <h2 class="mb-8 text-xl font-bold lg:text-3xl">個人情報の利用目的</h2>
       <p class="mb-8">当カンファレンスは、ユーザーから収集した個人情報を、以下の目的で利用するものとします。</p>
       <ul class="pl-12 mb-16 list-decimal">
-        <li>当カンファレンスの更新情報をご提供する場合</li>
+        <li>当カンファレンスの更新情報、関連情報をご提供する場合</li>
         <li>当カンファレンスに関するご案内、お問い合わせ等へ対応する場合</li>
         <li>ユーザーに対して当カンファレンスに対する意見、感想のご提供を求める場合</li>
         <li>当カンファレンス各規約等に違反する行為又はその恐れのある行為を行ったユーザーに対して注意又は警告を行う場合</li>
@@ -86,10 +93,12 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
       <p class="mb-16">当カンファレンスのウェブサイトは、Cookie 及び類似技術を利用します。これらの技術で、本ウェブサイトの利便性の向上および利用状況を分析するために、Cookie を利用して情報を収集しています。</p>
 
       <h2 class="mb-8 text-xl font-bold lg:text-3xl">使用する Third Party Cookie</h2>
-      <p class="mb-8">当カンファレンスでは、本ウェブサイトの利用状況や利便性を向上させるために、Third Party が提供するサービスを利用しており、そのThird Party によって Cookie が設定されることがあります。当カンファレンスで利用している Third Party のサービスは以下のとおりです。</p>
+      <p class="mb-8">当カンファレンスでは、本ウェブサイトの利用状況や利便性を向上させるために、Third Party が提供するサービスを利用しており、その Third Party によって Cookie が設定されることがあります。当カンファレンスで利用している Third Party のサービスは以下のとおりです。</p>
       <ul class="pl-12 mb-8 list-disc">
         <li>Google Analytics</li>
-        <li>Google Document</li>
+        <li>Google フォーム</li>
+        <li>Google プレゼンテーション</li>
+        <li>Fortee</li>
       </ul>
       <p class="mb-8">Third Party それぞれの Cookie の利用により取得されたデータは、各サービスの運営会社が定めるプライバシーポリシーに従って取得、管理されます。</p>
       <p class="mb-8">当該運営会社のプライバシーポリシーや Cookie に関する説明は、以下をご参照ください。</p>
@@ -99,6 +108,14 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
             target="_blank"
             rel="noreferrer"
             href="https://policies.google.com/privacy?hl=ja"
+            class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
+          >プライバシーポリシー</a>
+        </li>
+        <li>
+          Fortee 社の <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://fortee.jp/site/privacy"
             class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
           >プライバシーポリシー</a>
         </li>
@@ -125,7 +142,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
       <h2 class="mb-8 text-xl font-bold lg:text-3xl">附則</h2>
       <p class="mb-8">当カンファレンスは、収集した個人情報を個人情報保護法に基づき業務委託先以外の第三者に対して開示又は提供しないものとします。ただし、以下に該当する場合は、この限りではありません。</p>
       <ul class="pl-12 mb-16 list-disc">
-        <li>2022年4月28日 制定・施行</li>
+        <li>2022年5月1日 制定・施行</li>
       </ul>
 
       <div class="mb-32 text-center">
