@@ -41,8 +41,8 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
           :to="{ path: '/',hash:'#form'}"
           class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
         >
-          フォーム
-        </nuxt-link>よりお願いいたします。また、Vue Fes Japan Online 2022 会場内でお困りの場合は、お近くのスタッフまでお尋ねください。
+          お問い合わせフォーム
+        </nuxt-link>よりお願いいたします。
       </p>
 
       <div class="mb-32 text-center">

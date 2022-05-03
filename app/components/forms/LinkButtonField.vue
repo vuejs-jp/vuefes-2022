@@ -39,7 +39,6 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
         v-else
         :to="link"
         class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
-        target="_self"
       >
         {{ titleLabel }}
       </nuxt-link>
