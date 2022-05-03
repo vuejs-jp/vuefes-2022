@@ -62,6 +62,12 @@ module.exports = {
       'vertical-20': '0 0, 20px 20px',
       'vertical-40': '0 0, 40px 40px',
     },
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      circle: 'circle',
+    },
     screens: {
       md: '771px',
       lg: '981px',

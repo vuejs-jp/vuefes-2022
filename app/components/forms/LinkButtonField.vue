@@ -8,11 +8,16 @@ const props = defineProps({
     type: String,
     required: true
   },
+  isExternalLink: {
+    type: Boolean,
+    default: false
+  },
   titleLabel: {
     type: String,
     required: true
   },
 })
+
 const emit = defineEmits<ILinkButtonFieldEmit>()
 </script>
 
@@ -22,6 +27,7 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
   >
     <div class="flex absolute top-0 justify-center items-center p-px w-full h-full">
       <a
+        v-if="isExternalLink"
         :href="link"
         class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
         target="_blank"
@@ -29,6 +35,13 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
       >
         {{ titleLabel }}
       </a>
+      <nuxt-link
+        v-else
+        :to="link"
+        class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
+      >
+        {{ titleLabel }}
+      </nuxt-link>
     </div>
   </div>
 </template>
