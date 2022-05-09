@@ -21,12 +21,4 @@ import SponsorsPageSection from '~/components/SponsorsPageSection.vue'
 import FormPageSection from '~/components/FormPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
-
-import { initHeadingFont } from '~/services/initHeadingFont'
-
-onMounted(() => {
-  if (document !== undefined) {
-    initHeadingFont()
-  }
-})
 </script>
