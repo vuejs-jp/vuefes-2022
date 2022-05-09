@@ -207,7 +207,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
       <p class="mb-8">
         当カンファレンスは、収集した個人情報を個人情報保護法に基づき業務委託先以外の第三者に対して開示又は提供しないものとします。ただし、以下に該当する場合は、この限りではありません。
       </p>
-      <ul class="pl-12 mb-16 list-disc">
+      <ul class="pl-12 mb-20 list-disc">
         <li>2022年5月11日 制定・施行</li>
       </ul>
 
