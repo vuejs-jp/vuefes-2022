@@ -155,7 +155,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
             target="_blank"
             rel="noreferrer"
             href="https://policies.google.com/privacy?hl=ja"
-            class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
+            class="hover:text-gray-500 underline transition cursor-pointer"
           >プライバシーポリシー</a>
         </li>
         <li>
@@ -164,7 +164,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
             target="_blank"
             rel="noreferrer"
             href="https://fortee.jp/site/privacy"
-            class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
+            class="hover:text-gray-500 underline transition cursor-pointer"
           >プライバシーポリシー</a>
         </li>
       </ul>
@@ -198,7 +198,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
           target="_blank"
           rel="noreferrer"
           href="mailto:vuefes+privacy@gmail.com"
-          class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
+          class="hover:text-gray-500 underline transition cursor-pointer"
         >vuefes+privacy@gmail.com</a>
         にお問い合わせください。
       </p>

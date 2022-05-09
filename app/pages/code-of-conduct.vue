@@ -45,7 +45,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
       <p class="mb-8">
         もしあなたが差別やハラスメント行為を受けたと感じた場合や、誰かがハラスメント行為を受けていることに気づいた場合、またはその懸念がある場合は、すぐに<nuxt-link
           :to="{ path: '/', hash: '#form' }"
-          class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
+          class="hover:text-gray-500 underline transition cursor-pointer"
         >
           お問い合わせフォーム
         </nuxt-link>からご連絡ください。
@@ -59,7 +59,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
       <p class="mb-20">
         Vue.js 日本ユーザーグループへのお問い合わせは、<nuxt-link
           :to="{ path: '/', hash: '#form' }"
-          class="hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer"
+          class="hover:text-gray-500 underline transition cursor-pointer"
         >
           お問い合わせフォーム
         </nuxt-link>よりお願いいたします。
