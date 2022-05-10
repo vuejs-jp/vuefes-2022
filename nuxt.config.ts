@@ -43,6 +43,9 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  bridge: {
+    meta: true,
+  },
   generate: {
     dir: 'dist/2022',
   },

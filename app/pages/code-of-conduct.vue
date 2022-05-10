@@ -1,10 +1,28 @@
 <script setup lang="ts">
-import { linkUrl } from '~/utils/constants'
+import { conferenceTitle, ogCoCDescription, linkUrl } from '~/utils/constants'
+import Endpoints from '~/utils/endpoints.constants'
+import { generalOg, twitterOg } from '~/utils/og.constants'
 import NavPageSection from '~/components/NavPageSection.vue'
 import PrivacyPolicyAndCocSectionTitle from '~/components/PrivacyPolicyAndCocSectionTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
+
+useHead({
+  title: `行動規範 | ${conferenceTitle}`,
+  meta: [
+    ...generalOg(
+      `行動規範 | ${conferenceTitle}`,
+      ogCoCDescription,
+      `${Endpoints.BASE_URL}code-of-conduct`,
+    ),
+    ...twitterOg(
+      `行動規範 | ${conferenceTitle}`,
+      ogCoCDescription,
+      `${Endpoints.BASE_URL}code-of-conduct`,
+    )
+  ]
+})
 </script>
 
 <template>
