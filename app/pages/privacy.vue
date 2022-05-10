@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { conferenceTitle, ogPrivacyDescription, linkUrl } from '~/utils/constants'
+<script lang="ts">
+import { conferenceTitle, ogPrivacyDescription } from '~/utils/constants'
 import Endpoints from '~/utils/endpoints.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import NavPageSection from '~/components/NavPageSection.vue'
@@ -8,21 +8,32 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 
-useHead({
-  title: `プライバシーポリシー | ${conferenceTitle}`,
-  meta: [
-    ...generalOg(
-      `プライバシーポリシー | ${conferenceTitle}`,
-      ogPrivacyDescription,
-      `${Endpoints.BASE_URL}privacy`,
-    ),
-    ...twitterOg(
-      `プライバシーポリシー | ${conferenceTitle}`,
-      ogPrivacyDescription,
-      `${Endpoints.BASE_URL}privacy`,
-    )
-  ]
-})
+export default {
+  components: {
+    NavPageSection,
+    PrivacyPolicyAndCocSectionTitle,
+    LinkButtonField,
+    IchimatsuDividedBar,
+    FooterPageSection
+  },
+  head() {
+    return {
+      title: `プライバシーポリシー | ${conferenceTitle}`,
+      meta: [
+        ...generalOg(
+          `プライバシーポリシー | ${conferenceTitle}`,
+          ogPrivacyDescription,
+          `${Endpoints.BASE_URL}privacy`,
+        ),
+        ...twitterOg(
+          `プライバシーポリシー | ${conferenceTitle}`,
+          ogPrivacyDescription,
+          `${Endpoints.BASE_URL}privacy`,
+        )
+      ]
+    }
+  }
+}
 </script>
 
 <template>

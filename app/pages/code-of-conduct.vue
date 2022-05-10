@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { conferenceTitle, ogCoCDescription, linkUrl } from '~/utils/constants'
+<script lang="ts">
+import { conferenceTitle, ogCoCDescription } from '~/utils/constants'
 import Endpoints from '~/utils/endpoints.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import NavPageSection from '~/components/NavPageSection.vue'
@@ -8,21 +8,32 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 
-useHead({
-  title: `行動規範 | ${conferenceTitle}`,
-  meta: [
-    ...generalOg(
-      `行動規範 | ${conferenceTitle}`,
-      ogCoCDescription,
-      `${Endpoints.BASE_URL}code-of-conduct`,
-    ),
-    ...twitterOg(
-      `行動規範 | ${conferenceTitle}`,
-      ogCoCDescription,
-      `${Endpoints.BASE_URL}code-of-conduct`,
-    )
-  ]
-})
+export default {
+  components: {
+    NavPageSection,
+    PrivacyPolicyAndCocSectionTitle,
+    LinkButtonField,
+    IchimatsuDividedBar,
+    FooterPageSection
+  },
+  head() {
+    return {
+      title: `行動規範 | ${conferenceTitle}`,
+      meta: [
+        ...generalOg(
+          `行動規範 | ${conferenceTitle}`,
+          ogCoCDescription,
+          `${Endpoints.BASE_URL}code-of-conduct`,
+        ),
+        ...twitterOg(
+          `行動規範 | ${conferenceTitle}`,
+          ogCoCDescription,
+          `${Endpoints.BASE_URL}code-of-conduct`,
+        )
+      ]
+    }
+  }
+}
 </script>
 
 <template>
