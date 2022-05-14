@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   sponsorsDescriptionText,
-  sponsorsPublicScheduleText,
+  sponsorTimeline,
   sponsorsDocumentUrl,
   tweetUrl,
   tweetLink,
@@ -32,9 +32,14 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
             :is-external-link="true"
           />
         </div>
-        <p class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
-          {{ sponsorsPublicScheduleText }}
-        </p>
+        <ul class="mb-5 ml-5 text-sm leading-7 list-disc text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
+          <li
+            v-for="(milestone, index) in sponsorTimeline"
+            :key="index"
+          >
+            {{ milestone }}
+          </li>
+        </ul>
         <p class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           最新情報は、
           <a
