@@ -32,7 +32,7 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
             :is-external-link="true"
           />
         </div>
-        <ul class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-base lg:leading-8">
+        <ul class="mb-5 ml-5 text-sm leading-7 list-disc text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
           <li
             v-for="(milestone, index) in sponsorTimeline"
             :key="index"
