@@ -52,6 +52,8 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     kokuryuFontId: process.env.NUXT_KOKURYU_FONT_ID,
     gtagId: process.env.NUXT_GTAG_ID,
+    microcmsApiKey: process.env.NUXT_MICROCMS_API_KEY,
+    microcmsApiEndpoint: process.env.NUXT_MICROCMS_API_ENDPOINT,
   },
   build: {
     extractCSS: true,
