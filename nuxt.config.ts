@@ -50,8 +50,8 @@ export default defineNuxtConfig({
     dir: 'dist/2022',
   },
   publicRuntimeConfig: {
-    NUXT_KOKURYU_FONT_ID: process.env.NUXT_KOKURYU_FONT_ID,
-    NUXT_GTAG_ID: process.env.NUXT_GTAG_ID,
+    kokuryuFontId: process.env.NUXT_KOKURYU_FONT_ID,
+    gtagId: process.env.NUXT_GTAG_ID,
   },
   build: {
     extractCSS: true,
