@@ -40,7 +40,7 @@ export const sponsorsDescriptionText =
 export const sponsorTimeline = [
   '5/23（月）10:00～ 先行申し込み開始（ Vue Fes Japan 2019 のスポンサー各社様のみ）',
   '5/30（月）10:00～ 一般申し込み開始',
-  '7/15（金）10:00 申し込み終了',
+  '7/15（金）23:59 申し込み終了',
 ]
 
 export const sponsorsDocumentUrl =
