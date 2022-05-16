@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   sponsorsDescriptionText,
-  sponsorsPublicScheduleText,
+  sponsorTimeline,
   sponsorsDocumentUrl,
   tweetUrl,
   tweetLink,
@@ -33,8 +33,19 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           />
         </div>
         <p class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
-          {{ sponsorsPublicScheduleText }}
+          今回は、台風による Vue Fes Japan 2019
+          の開催中止時に一部費用をご負担いただいた当時のスポンサー各社様に感謝の意を込め、以下のスケジュールで募集を予定しています。
         </p>
+        <ul
+          class="mb-5 ml-5 text-sm leading-7 list-disc text-vue-blue lg:mb-10 lg:text-lg lg:leading-8"
+        >
+          <li
+            v-for="(milestone, index) in sponsorTimeline"
+            :key="index"
+          >
+            {{ milestone }}
+          </li>
+        </ul>
         <p class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           最新情報は、
           <a
