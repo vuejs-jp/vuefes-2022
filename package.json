@@ -20,6 +20,10 @@
     "stylelint": "stylelint --config .stylelintrc.js 'app/**/*.vue' 'app/**/*.{css,scss}'",
     "stylelint:fix": "stylelint --config .stylelintrc.js 'app/**/*.vue' 'app/**/*.{css,scss}' --fix"
   },
+  "dependencies": {
+    "gsap": "^3.10.2",
+    "newt-client-js": "^3.0.2"
+  },
   "devDependencies": {
     "@nuxt/bridge": "npm:@nuxt/bridge-edge",
     "@nuxtjs/device": "^2.1.0",
@@ -55,8 +59,5 @@
   },
   "volta": {
     "node": "16.14.2"
-  },
-  "dependencies": {
-    "gsap": "^3.10.2"
   }
 }

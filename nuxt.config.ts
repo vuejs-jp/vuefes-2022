@@ -52,6 +52,12 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     kokuryuFontId: process.env.NUXT_KOKURYU_FONT_ID,
     gtagId: process.env.NUXT_GTAG_ID,
+    spaceUid: process.env.NUXT_NEWT_SPACE_UID,
+    appUid: process.env.NUXT_NEWT_APP_UID,
+    accessToken: process.env.NUXT_NEWT_ACCESS_TOKEN,
+    apiType: 'cdn',
+    postModelUid: 'post',
+    pageLimit: 10,
   },
   build: {
     extractCSS: true,
