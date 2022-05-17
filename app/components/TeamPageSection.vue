@@ -29,7 +29,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
             <div
               v-for="(staff, index) in showStaffs"
               :key="index"
-              class="flex flex-col justify-center mx-1 mb-10 w-1/8 md:mx-4"
+              class="flex flex-col justify-center mx-1 mb-10 md:mx-4 w-1/8"
             >
               <a
                 v-if="staff.twitterID"

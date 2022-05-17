@@ -53,7 +53,7 @@ export const staffList: IStaff[] = [
   { name: 'さいかい', image: '', twitterID: '' },
   { name: 'すずき', image: '', twitterID: '' },
   { name: 'ちおにやん', image: '', twitterID: '' },
-  { name: 'なかしま　じゅり', image: '', twitterID: 'nakashima_38' },
+  { name: 'なかしま　じゅり', image: 'nakashima_38.jpeg', twitterID: 'nakashima_38' },
   { name: '平間久美子', image: '', twitterID: '' },
   { name: '米澤真衣', image: 'fuzno.jpeg', twitterID: 'fuzno' },
   { name: 'naramochi', image: 'naramochi.png', twitterID: '_naramochi' },
