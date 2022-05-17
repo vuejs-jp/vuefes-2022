@@ -52,7 +52,7 @@ const onMouseLeave = (value: string) => {
       target="_blank"
       rel="noopener"
       @mouseover="onMouseOver(network.value)"
-      @focus="onMouseOver(network.value)"
+      @focus="onMouseLeave(network.value)"
       @mouseout="onMouseLeave(network.value)"
       @blur="onMouseLeave(network.value)"
     >
