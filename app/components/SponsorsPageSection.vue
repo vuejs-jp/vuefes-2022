@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   sponsorsDescriptionText,
-  sponsorTimeline,
+  previousSponsorsApplicationUrl,
   sponsorsDocumentUrl,
   tweetUrl,
   tweetLink,
@@ -22,31 +22,20 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           title="Sponsors"
           title-yamato="スポンサー"
         />
-        <p class="mb-10 text-sm leading-7 text-vue-blue lg:mb-20 lg:text-lg lg:leading-8">
+        <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           {{ sponsorsDescriptionText }}
         </p>
-        <div class="mb-10 text-center lg:mb-20">
+        <div class="mb-10 text-center lg:mb-10">
           <LinkButtonField
-            :link="sponsorsDocumentUrl"
-            title-label="スポンサー資料を開く"
+            :link="previousSponsorsApplicationUrl"
+            title-label="申し込みフォームを開く"
             :is-external-link="true"
           />
         </div>
         <p class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
-          今回は、台風による Vue Fes Japan 2019
-          の開催中止時に一部費用をご負担いただいた当時のスポンサー各社様に感謝の意を込め、以下のスケジュールで募集を予定しています。
+          5/23（月）～5/29（日）は、<span class="font-bold">Vue Fes Japan 2019 のスポンサー（当時）各社様限定の先行申し込み</span>の受付期間です。該当社以外のお申し込みは無効となりますのでご注意ください。一般申し込みは5/30（月）10:00より開始予定です。
         </p>
-        <ul
-          class="mb-5 ml-5 text-sm leading-7 list-disc text-vue-blue lg:mb-10 lg:text-lg lg:leading-8"
-        >
-          <li
-            v-for="(milestone, index) in sponsorTimeline"
-            :key="index"
-          >
-            {{ milestone }}
-          </li>
-        </ul>
-        <p class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
+        <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           最新情報は、
           <a
             :href="tweetUrl"
@@ -58,6 +47,13 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           </a>
           をご確認ください。
         </p>
+        <div class="mb-0 text-center">
+          <LinkButtonField
+            :link="sponsorsDocumentUrl"
+            title-label="スポンサー資料を開く"
+            :is-external-link="true"
+          />
+        </div>
       </div>
     </div>
   </section>
