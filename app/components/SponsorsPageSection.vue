@@ -36,6 +36,9 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           5/23 (月) ～ 5/29 (日) は、<span class="font-bold">Vue Fes Japan 2019 のスポンサー（当時）各社様限定の先行申し込み</span>の受付期間です。該当社以外のお申し込みは無効となりますのでご注意ください。一般申し込みは
           5/30 (月) 10:00 より開始予定です。
         </p>
+        <p class="mb-5 text-sm font-bold leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
+          ※PR文はプランによって掲載文字数が異なるので、後日入稿していただきます。申し込みフォームのPR文入力欄には適当な文字列を入力してお申し込みください。
+        </p>
         <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           最新情報は、
           <a
