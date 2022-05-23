@@ -35,13 +35,9 @@ export const representative = 'Vue.js 日本ユーザーグループ代表 川�
 export const representativeTwitterID = '@kazu_pon'
 
 export const sponsorsDescriptionText =
-  'Vue.js に関わる人々が集まる Vue Fes Japan Online 2022 をよりよいカンファレンスにするため、スポンサーを募集します。詳しい内容は資料をご参照ください。'
+  'Vue.js に関わる人々が集まる Vue Fes Japan Online 2022 をよりよいカンファレンスにするため、スポンサーを募集します。以下の申し込みフォームボタンよりお申し込みください。'
 
-export const sponsorTimeline = [
-  '5/23（月）10:00～ 先行申し込み開始（ Vue Fes Japan 2019 のスポンサー各社様のみ）',
-  '5/30（月）10:00～ 一般申し込み開始',
-  '7/15（金）23:59 申し込み終了',
-]
+export const previousSponsorsApplicationUrl = 'https://forms.gle/9e3rtQ71zfbcdYsw8'
 
 export const sponsorsDocumentUrl =
   'https://docs.google.com/presentation/d/1f8hKT_fxOre2ClpbOUaZucesophs4NG391oJ0124Pm4/edit?usp=sharing'
