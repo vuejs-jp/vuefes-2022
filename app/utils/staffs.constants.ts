@@ -32,7 +32,7 @@ export const staffList: IStaff[] = [
   { name: 'rry', image: 'rry.jpeg', twitterID: 'ryamakuchi' },
   { name: 'Rui Kiyoshima', image: '', twitterID: '' },
   { name: 'ryo_gk', image: 'ryo_gk.jpeg', twitterID: 'ryo_gk55' },
-  { name: 'ryuhei373', image: '', twitterID: '' },
+  { name: 'ryuhei373', image: 'ryuhei373.jpeg', twitterID: '373_3' },
   { name: 'Sanadi', image: 'sanadi.jpeg', twitterID: 'favorita_biz' },
   { name: 'sano', image: '', twitterID: '' },
   { name: 'shinji', image: '', twitterID: '' },
@@ -57,5 +57,5 @@ export const staffList: IStaff[] = [
   { name: '平間久美子', image: '', twitterID: '' },
   { name: '米澤真衣', image: 'fuzno.jpeg', twitterID: 'fuzno' },
   { name: 'naramochi', image: 'naramochi.png', twitterID: '_naramochi' },
-  { name: 'moabear', image: '', twitterID: '' },
+  { name: 'moabear', image: 'moabear.jpeg', twitterID: '' },
 ]
