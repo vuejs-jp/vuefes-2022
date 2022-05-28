@@ -25,7 +25,7 @@ import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
           Vue Fes Japan Online 2022 に登壇してみませんか？
         </p>
         <p class="mb-8 text-sm leading-7 text-vue-blue lg:mb-16 lg:text-lg lg:leading-8">
-          VueとVueを取り巻くエコシステムについて、あなただけが持つ、この世に一つの知見と経験を、ぜひ日本中に共有してください。
+          Vueとそのエコシステムについて、あなただけが持つ知見と経験を、日本最大級の Vue.js カンファレンスでぜひ日本中に共有してください。
         </p>
         <SpeakerPageHeading
           class="mb-4 lg:mb-8"
