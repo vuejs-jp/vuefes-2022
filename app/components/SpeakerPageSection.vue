@@ -22,7 +22,7 @@ import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
           title-yamato="スピーカー"
         />
         <p class="mb-4 text-sm leading-7 text-vue-blue lg:mb-8 lg:text-lg lg:leading-8">
-          Vue Fes Japan Online 2022 に登壇してみませんか？ この数年で Vue.js を取り巻く環境は激変しました。Vue.js 3.0 のリリース、そして Vue.js の作者 Evan You 氏によって新たな OSS として Vite.js が作られ、JavaScript コミュニティに放たれました。Vue.js や Nuxt.js といった OSS はもちろん、それ以外に Vitest といった Vue.js 以外の新しい OSS エコシステムが形成しつつあります。
+          Vue Fes Japan Online 2022 に登壇してみませんか？
         </p>
         <p class="mb-8 text-sm leading-7 text-vue-blue lg:mb-16 lg:text-lg lg:leading-8">
           VueとVueを取り巻くエコシステムについて、あなただけが持つ、この世に一つの知見と経験を、ぜひ日本中に共有してください。
