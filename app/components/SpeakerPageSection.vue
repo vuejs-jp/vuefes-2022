@@ -11,7 +11,7 @@ import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
 
 <template>
   <section
-    id="speaker"
+    id="speakers"
     class="px-5 md:px-10"
   >
     <div class="py-20 lg:py-40">
