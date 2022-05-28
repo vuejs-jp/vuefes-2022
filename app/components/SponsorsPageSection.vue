@@ -25,6 +25,9 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
         <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           {{ sponsorsDescriptionText }}
         </p>
+        <p class="mb-10 text-sm font-bold leading-7 text-vue-blue lg:text-lg lg:leading-8">
+          ※PR文はプランによって掲載文字数が異なるので、後日入稿していただきます。申し込みフォームのPR文入力欄には適当な文字列を入力してお申し込みください。
+        </p>
         <div class="mb-10 text-center lg:mb-10">
           <LinkButtonField
             :link="generalSponsorsApplicationUrl"
@@ -33,7 +36,7 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           />
         </div>
         <p class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
-          申し込み締め切りは、7/15(金)10:00 です。
+          申し込み締め切りは、7/15（金）10:00 です。
         </p>
         <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           最新情報は、
