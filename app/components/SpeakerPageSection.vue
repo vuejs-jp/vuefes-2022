@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import {
-  speakersDescriptionText1,
-  speakersDescriptionText2,
   speakersFormUrl,
   tweetUrl,
   tweetLink,
@@ -13,7 +11,7 @@ import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
 
 <template>
   <section
-    id="speraker"
+    id="speaker"
     class="px-5 md:px-10"
   >
     <div class="py-20 lg:py-40">
