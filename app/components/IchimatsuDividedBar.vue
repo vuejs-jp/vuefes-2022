@@ -15,7 +15,7 @@ const colorClass = computed(() => {
   case 'vue-blue':
     return 'bg-ichimatsu-vue-blue'
   case 'hiwamoegi':
-    return 'bg-ichimatsu-hiwamoegi bg-white'
+    return 'bg-ichimatsu-hiwamoegi'
   case 'silver-tree':
     return 'bg-ichimatsu-silver-tree'
   default:
