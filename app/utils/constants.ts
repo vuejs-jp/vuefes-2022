@@ -34,11 +34,7 @@ export const representative = 'Vue.js 日本ユーザーグループ代表 川�
 
 export const representativeTwitterID = '@kazu_pon'
 
-export const speakersDescriptionText1 = 'Vue Fes Japan Online 2022 に登壇してみませんか？ この数年で Vue.js を取り巻く環境は激変しました。Vue.js 3.0 のリリース、そして Vue.js の作者 Evan You 氏によって新たな OSS として Vite.js が作られ、JavaScript コミュニティに放たれました。Vue.js や Nuxt.js といった OSS はもちろん、それ以外に Vitest といった Vue.js 以外の新しい OSS エコシステムが形成しつつあります。'
-
-export const speakersDescriptionText2 = 'VueとVueを取り巻くエコシステムについて、あなただけが持つ、この世に一つの知見と経験を、ぜひ日本中に共有してください。'
-
-export const speakersFormUrl = 'https://vuefes.jp/2022/'
+export const speakersFormUrl = 'https://fortee.jp/vuefes-2022/speaker/proposal/cfp'
 
 export const sponsorsDescriptionText =
   'Vue.js に関わる人々が集まる Vue Fes Japan Online 2022 をよりよいカンファレンスにするため、スポンサーを募集します。以下の申し込みフォームボタンよりお申し込みください。'
