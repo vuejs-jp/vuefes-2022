@@ -36,7 +36,7 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           />
         </div>
         <p class="mb-5 text-sm leading-7 text-vue-blue lg:mb-10 lg:text-lg lg:leading-8">
-          申し込み締め切りは、7/15（金）10:00 です。
+          応募期限: 2022/7/15（金）23:59:59 まで
         </p>
         <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
           最新情報は、
