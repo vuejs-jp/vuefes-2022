@@ -31,8 +31,20 @@ import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
           class="mb-4 lg:mb-8"
           text="募集方法"
         />
-        <p class="mb-8 text-sm leading-7 text-vue-blue lg:mb-16 lg:text-lg lg:leading-8">
+        <p class="mb-4 text-sm leading-7 text-vue-blue lg:mb-8 lg:text-lg lg:leading-8">
           Vue Fes Japan Online 2022 では、スピーカー発表を広く一般から募集するため、CFP（Call for Papers）の仕組みを利用します。<br>Vue.js に関する具体的なセッション内容をご応募いただき、Vue Fes Japan Online 2022 実行委員会が選考の上、正式なセッションとして採用します。
+        </p>
+        <p class="mb-8 text-sm leading-7 text-vue-blue lg:mb-16 lg:text-lg lg:leading-8">
+          ※申し込みの管理には
+          <a
+            href="https://fortee.jp/"
+            target="_blank"
+            rel="noreferrer"
+            class="underline hover:opacity-60 transition-opacity"
+          >
+            Fortee
+          </a>
+          を使用します。
         </p>
         <SpeakerPageHeading
           class="mb-4 lg:mb-8"
