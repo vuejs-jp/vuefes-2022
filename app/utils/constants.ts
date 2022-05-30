@@ -34,10 +34,12 @@ export const representative = 'Vue.js 日本ユーザーグループ代表 川�
 
 export const representativeTwitterID = '@kazu_pon'
 
+export const speakersFormUrl = 'https://fortee.jp/vuefes-2022/speaker/proposal/cfp'
+
 export const sponsorsDescriptionText =
   'Vue.js に関わる人々が集まる Vue Fes Japan Online 2022 をよりよいカンファレンスにするため、スポンサーを募集します。以下の申し込みフォームボタンよりお申し込みください。'
 
-export const previousSponsorsApplicationUrl = 'https://forms.gle/9e3rtQ71zfbcdYsw8'
+export const generalSponsorsApplicationUrl = 'https://fortee.jp/vuefes-2022/sponsor/form'
 
 export const sponsorsDocumentUrl =
   'https://docs.google.com/presentation/d/1f8hKT_fxOre2ClpbOUaZucesophs4NG391oJ0124Pm4/edit?usp=sharing'
