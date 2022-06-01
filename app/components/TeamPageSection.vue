@@ -11,7 +11,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
 
 <template>
   <section
-    id="staffs"
+    id="team"
     class="py-10 px-5 bg-staffs md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
