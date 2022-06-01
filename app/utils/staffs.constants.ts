@@ -45,7 +45,7 @@ export const staffList: IStaff[] = [
   { name: 'taz', image: '', twitterID: '' },
   { name: 'torish14', image: 'torish14.png', twitterID: 'torish14' },
   { name: 'wakamatsu', image: 'wakamatsu.jpeg', twitterID: 'hachi_ihcah' },
-  { name: 'watasan', image: 'watasan.png', twitterID: 'hishiwata7' },
+  { name: 'watasan', image: 'watasan.jpeg', twitterID: 'hishiwata7' },
   { name: 'yaberah', image: '', twitterID: '' },
   { name: 'Yuhei FUJITA', image: 'yuhei_fujita.jpeg', twitterID: 'Yuhei_FUJITA' },
   { name: 'Yuuki Ishibashi', image: 'yuuki_ishibashi.jpeg', twitterID: 'Bassy3600' },
