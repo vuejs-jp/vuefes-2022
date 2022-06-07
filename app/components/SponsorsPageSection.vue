@@ -26,6 +26,10 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
           {{ sponsorsDescriptionText }}
         </p>
         <p class="mb-10 text-sm font-bold leading-7 text-vue-blue lg:text-lg lg:leading-8">
+          ※ご好評につき、ブロンズプラン以外はすべて完売となりました。<br>
+          ブロンズスポンサーとメディアスポンサーについては、引き続き募集中です。
+        </p>
+        <p class="mb-10 text-sm font-bold leading-7 text-vue-blue lg:text-lg lg:leading-8">
           ※PR文はプランによって掲載文字数が異なるので、後日入稿していただきます。申し込みフォームのPR文入力欄には適当な文字列を入力してお申し込みください。
         </p>
         <p class="mb-8 text-sm leading-7 text-vue-blue lg:mb-16 lg:text-lg lg:leading-8">
