@@ -1,7 +1,7 @@
 export const initHeadingFont = () => {
   const $config = useRuntimeConfig()
   let config = {
-      kitId: $config.NUXT_KOKURYU_FONT_ID,
+      kitId: $config.kokuryuFontId,
       scriptTimeout: 3000,
       async: true,
     },
