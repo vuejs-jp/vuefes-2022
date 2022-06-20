@@ -51,7 +51,6 @@ module.exports = {
       'ichimatsu-silver-tree':
         'linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%), linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%)',
       suponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
-      speakers: 'linear-gradient(90deg, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 0%) 100%)',
       submit: 'linear-gradient(91.03deg, #33A6B8 0%, #42B983 100.01%)',
       'submit-border': 'linear-gradient(90deg, #42b983 0%, #33a6b8 100%)',
     },
