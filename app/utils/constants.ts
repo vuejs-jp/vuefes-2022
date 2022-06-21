@@ -78,7 +78,7 @@ export const gifts = [
 export const faqList = [
   {
     question: 'Vue Fes Japan Online 2022 はどのように配信されますか？',
-    answer: '',
+    answer: 'YouTube Live でのライブ配信（同時3トラック）を予定しています。',
   },
   {
     question: 'Vue Fes Japan Online 2022 に参加するには、事前登録が必要ですか？',
@@ -87,11 +87,47 @@ export const faqList = [
   },
   {
     question: '配信 URL を知るためには事前登録が必要ですか？',
-    answer: 'いいえ、事前登録なしでも公式 YouTube チャンネル、公式 Twitter などでお知らせします。',
+    answer:
+      'いいえ、事前登録なしでも <a href="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA" class="inner-link" target="_blank">公式 YouTube チャンネル</a> 、 <a href="https://twitter.com/vuefes" class="faq_inner-link" target="_blank">公式 Twitter</a> などでお知らせします。',
   },
   {
     question: '事前登録はいつから始まりますか？',
-    answer: '',
+    answer: '2022/8/1（月）12:00 より事前登録チケットを発売開始予定です。',
+  },
+  {
+    question: '事前登録はどのように行いますか？',
+    answer:
+      'ブラウザから簡単にご登録いただけます。販売プラットフォームには <a href="https://passmarket.yahoo.co.jp/" class="inner-link" target="_blank">PassMarket</a> の利用を予定しています。',
+  },
+  {
+    question: '支払い方法を教えてください。',
+    answer:
+      'PayPay残高払い、クレジットカード、コンビニ決済をお選びいただけます。詳しくは <a href="https://support.yahoo-net.jp/SccPassmarket/s/article/H000008357" class="inner-link" target="_blank">PassMarketのヘルプページ</a> をご覧ください。',
+  },
+  {
+    question: '領収書の発行はできますか？',
+    answer:
+      '販売プラットフォームであるPassMarketでは領収書を発行できません。ただし購入完了時にメールが送信されますのでご活用ください。',
+  },
+  {
+    question: 'キャンセル、返金はできますか？',
+    answer:
+      '決済後のキャンセル、返金は一切できません。また、個人スポンサー権の譲渡もできません。あらかじめご了承ください。',
+  },
+  {
+    question: '事前登録チケットを購入しましたが、メールが届きません。',
+    answer:
+      '迷惑メールとして扱われている可能性があります。迷惑メールに振り分けられていないかご確認ください。それでも届いていない場合、Vue Fes Japan Online 2022 の <a href="#form" class="inner-link">お問い合わせフォーム</a> よりお問い合わせください。',
+  },
+  {
+    question: '個人スポンサーになりましたが、名前はいつ掲載されますか？',
+    answer:
+      '9月下旬ごろを予定しています。事情により前後する可能性がありますので、あらかじめご了承ください。',
+  },
+  {
+    question: '個人スポンサーになりたいのですが、名前の掲載やギフトボックスは不要です。',
+    answer:
+      'お申し出ありがとうございます。お名前の掲載、ギフトボックスの送付ともに希望者のみに実施していますので、不要な方はチケット購入フォームでお知らせください。',
   },
 ]
 

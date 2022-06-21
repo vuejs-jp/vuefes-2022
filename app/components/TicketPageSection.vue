@@ -90,7 +90,9 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
           <accordion-view>
             <div slot="title">{{ faq.question }}</div>
             <div slot="content">
-              <p>{{ faq.answer }}</p>
+              <!--eslint-disable-next-line -->
+              <p v-html="faq.answer" />
+              <!--eslint-enable-next-line -->
             </div>
           </accordion-view>
         </div>
