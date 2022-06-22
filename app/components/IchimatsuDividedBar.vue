@@ -18,6 +18,8 @@ const colorClass = computed(() => {
     return 'bg-ichimatsu-hiwamoegi'
   case 'silver-tree':
     return 'bg-ichimatsu-silver-tree'
+  case 'tohoh':
+    return 'bg-ichimatsu-tohoh'
   default:
     return 'bg-ichimatsu-white'
   }

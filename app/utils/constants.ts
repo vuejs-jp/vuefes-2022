@@ -49,6 +49,88 @@ export const tweetLink = 'Vue Fes Japan の Twitter'
 export const introduction =
   'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
 
+export const promotionInfo =
+  'Vue Fes Japan Online 2022 は、2022/8/1（月）12:00 より事前登録チケットを発売開始予定です。事前登録をしていただくと、Vue Fes Japan の最新情報や当日の配信 URL、セッションに関する情報などをメールでお知らせします。'
+
+export const promotionCaution =
+  '※ご購入いただいた費用は、すべて Vue Fes Japan の運営、または Vue.js 日本ユーザーグループの活動のために大切に使わせていただきます。'
+
+export const ticketPlans = [
+  { value: 'preregister', title: '一般チケット', price: 0 },
+  { value: 'personal_sponsor', title: '一般＋アフターパーティーチケット', price: 10000 },
+]
+
+export const giftboxInfo =
+  '個人スポンサー用の事前登録チケットをご購入いただくと、特典として限定ギフトボックスをお届けします。ギフトボックスには以下の内容を同梱します。'
+
+export const giftboxCaution =
+  '※画像はすべてイメージです。\n' +
+  '※ギフトボックスの内容は予告なく変更される可能性がありますので、あらかじめご了承ください。'
+
+export const gifts = [
+  { value: 't-shirt', title: 'Vue Fes Japan 個人スポンサー専用Tシャツ （サイズ：XS～XXXL）' },
+  { value: 'snack', title: 'Vue Fes Japan オリジナルお菓子' },
+  { value: 'ecobag', title: 'Vue Fes Japan 特製エコバッグ' },
+  { value: 'novelty', title: 'スポンサー各社様の特製ノベルティ' },
+  { value: 'letter', title: 'Vue Fes Japan 実行委員会からのお礼のお手紙' },
+]
+
+export const faqList = [
+  {
+    question: 'Vue Fes Japan Online 2022 はどのように配信されますか？',
+    answer: 'YouTube Live でのライブ配信（同時3トラック）を予定しています。',
+  },
+  {
+    question: 'Vue Fes Japan Online 2022 に参加するには、事前登録が必要ですか？',
+    answer:
+      'いいえ、事前登録なしでも無料でご覧いただけます。事前登録をしていただくと、Vue Fes Japan の最新情報や当日の配信 URL、セッションに関する情報などをメールでお知らせしますので、大変便利です。',
+  },
+  {
+    question: '配信 URL を知るためには事前登録が必要ですか？',
+    answer:
+      'いいえ、事前登録なしでも <a href="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA" class="inner-link" target="_blank">公式 YouTube チャンネル</a> 、 <a href="https://twitter.com/vuefes" class="faq_inner-link" target="_blank">公式 Twitter</a> などでお知らせします。',
+  },
+  {
+    question: '事前登録はいつから始まりますか？',
+    answer: '2022/8/1（月）12:00 より事前登録チケットを発売開始予定です。',
+  },
+  {
+    question: '事前登録はどのように行いますか？',
+    answer:
+      'ブラウザから簡単にご登録いただけます。販売プラットフォームには <a href="https://passmarket.yahoo.co.jp/" class="inner-link" target="_blank">PassMarket</a> の利用を予定しています。',
+  },
+  {
+    question: '支払い方法を教えてください。',
+    answer:
+      'PayPay残高払い、クレジットカード、コンビニ決済をお選びいただけます。詳しくは <a href="https://support.yahoo-net.jp/SccPassmarket/s/article/H000008357" class="inner-link" target="_blank">PassMarketのヘルプページ</a> をご覧ください。',
+  },
+  {
+    question: '領収書の発行はできますか？',
+    answer:
+      '販売プラットフォームであるPassMarketでは領収書を発行できません。ただし購入完了時にメールが送信されますのでご活用ください。',
+  },
+  {
+    question: 'キャンセル、返金はできますか？',
+    answer:
+      '決済後のキャンセル、返金は一切できません。また、個人スポンサー権の譲渡もできません。あらかじめご了承ください。',
+  },
+  {
+    question: '事前登録チケットを購入しましたが、メールが届きません。',
+    answer:
+      '迷惑メールとして扱われている可能性があります。迷惑メールに振り分けられていないかご確認ください。それでも届いていない場合、Vue Fes Japan Online 2022 の <a href="#form" class="inner-link">お問い合わせフォーム</a> よりお問い合わせください。',
+  },
+  {
+    question: '個人スポンサーになりましたが、名前はいつ掲載されますか？',
+    answer:
+      '9月下旬ごろを予定しています。事情により前後する可能性がありますので、あらかじめご了承ください。',
+  },
+  {
+    question: '個人スポンサーになりたいのですが、名前の掲載やギフトボックスは不要です。',
+    answer:
+      'お申し出ありがとうございます。お名前の掲載、ギフトボックスの送付ともに希望者のみに実施していますので、不要な方はチケット購入フォームでお知らせください。',
+  },
+]
+
 export const tweetLabel = '@vuefes  #vuefes'
 
 export const tweetUrl = 'https://twitter.com/vuefes'
