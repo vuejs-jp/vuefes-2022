@@ -88,7 +88,7 @@ export const faqList = [
   {
     question: '配信 URL を知るためには事前登録が必要ですか？',
     answer:
-      'いいえ、事前登録なしでも <a href="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA" class="inner-link" target="_blank">公式 YouTube チャンネル</a> 、 <a href="https://twitter.com/vuefes" class="faq_inner-link" target="_blank">公式 Twitter</a> などでお知らせします。',
+      'いいえ、事前登録なしでも <a href="https://www.youtube.com/channel/UC6KPwA1kZJtQYdlh8_2hxCA" class="inner-link" target="_blank">公式 YouTube チャンネル</a> 、 <a href="https://twitter.com/vuefes" class="inner-link" target="_blank">公式 Twitter</a> などでお知らせします。',
   },
   {
     question: '事前登録はいつから始まりますか？',

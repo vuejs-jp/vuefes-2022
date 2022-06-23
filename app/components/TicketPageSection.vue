@@ -3,7 +3,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import SubTitle from '~/components/SubTitle.vue'
 import ExplainText from '~/components/ExplainText.vue'
 import AccordionView from '~/components/AccordionView.vue'
-import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotionInfo, ticketPlans } from '~/utils/constants'
+import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotionInfo, ticketPlans, ticketUrl } from '~/utils/constants'
 </script>
 
 <template>
@@ -26,9 +26,9 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
           <div
             v-for="ticketPlan in ticketPlans"
             :key="ticketPlan.value"
-            class="relative px-4 mx-8 w-full md:mb-[8vw] md:w-[40%]"
+            class="relative px-4 mx-8 w-[40%] 3xl:w-[84%] md:mb-[8vw] md:w-[32%]"
           >
-            <div class="flex absolute top-[50%] left-[1.2vw] flex-col justify-center items-center w-[60vw] h-[30vw] text-center align-middle border border-vue-blue md:left-0 md:w-[460px] md:h-[280px]">
+            <div class="flex absolute top-[35%] lg:top-[45%] left-[1.2vw] flex-col justify-center text-center text-sm md:text-lg items-center w-[250px] h-[200px] align-middle border border-vue-blue md:left-[0vw] md:w-[27vw] md:h-[280px]">
               <h3 class="pb-4 md:pb-12">{{ ticketPlan.title }}</h3>
               <p>
                 <span class="text-lg font-bold md:text-5xl">
@@ -39,11 +39,11 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
                 </span>
               </p>
             </div>
-            <div class="z-10 pb-[32.5vw] w-full md:pb-[140px]">
+            <div class="z-10 pb-[32.5vw] md:pb-[140px]">
               <img
                 :src="`/img/${ticketPlan.value}_bannar.png`"
                 :alt="`${ticketPlan.title}用バナー`"
-                class="w-[42rem] md:w-[500px]"
+                class="w-[280px] md:w-[42vw]"
                 loading="lazy"
               >
             </div>
