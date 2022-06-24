@@ -26,9 +26,9 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
           <div
             v-for="ticketPlan in ticketPlans"
             :key="ticketPlan.value"
-            class="relative px-4 mx-8 w-[40%] 3xl:w-[84%] md:mb-[8vw] md:w-[32%]"
+            class="relative px-4 mx-8 w-[40%] md:mb-[8vw] md:w-[32%] 3xl:w-[84%]"
           >
-            <div class="flex absolute top-[35%] lg:top-[45%] left-[1.2vw] flex-col justify-center text-center text-sm md:text-lg items-center w-[250px] h-[200px] align-middle border border-vue-blue md:left-[0vw] md:w-[27vw] md:h-[280px]">
+            <div class="flex absolute top-[35%] left-[1.2vw] flex-col justify-center items-center w-[250px] h-[200px] text-sm text-center align-middle border border-vue-blue md:left-[0vw] md:w-[27vw] md:h-[280px] md:text-lg lg:top-[45%]">
               <h3 class="pb-4 md:pb-12">{{ ticketPlan.title }}</h3>
               <p>
                 <span class="text-lg font-bold md:text-5xl">
