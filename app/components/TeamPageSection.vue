@@ -38,6 +38,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
               <img
                 :alt="`${staff.name} logo`"
                 :src="`/staff/${staff.image}`"
+                loading="lazy"
                 class="mb-1 w-full"
               >
               <p class="text-sm text-center">{{ staff.name }}</p>
@@ -47,6 +48,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
             <img
               :alt="`${staff.name} logo`"
               :src="`/staff/${staff.image}`"
+              loading="lazy"
               class="mb-1 w-full"
             >
             <p class="text-sm text-center">{{ staff.name }}</p>
