@@ -14,8 +14,10 @@
     <sponsors-page-section />
     <ichimatsu-divided-bar color="silver-tree" />
     <form-page-section />
-    <ichimatsu-divided-bar color="sangosyu" />
-    <team-page-section />
+    <template v-if="SHOW_TEAM">
+      <ichimatsu-divided-bar color="sangosyu" />
+      <team-page-section />
+    </template>
     <ichimatsu-divided-bar color="vue-blue" />
     <footer-page-section />
   </div>
@@ -32,5 +34,5 @@ import TeamPageSection from '~/components/TeamPageSection.vue'
 import FormPageSection from '~/components/FormPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
-import { SHOW_TICKET } from '~/utils/feature.constants'
+import { SHOW_TICKET, SHOW_TEAM } from '~/utils/feature.constants'
 </script>
