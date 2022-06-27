@@ -3,8 +3,8 @@ import { staffList } from '~/utils/staffs.constants'
 import SectionTitle from '~/components/SectionTitle.vue'
 
 const showStaffs = computed(() => staffList.filter((staff) => staff.image !== '').sort((a, b) => {
-  if (a.name < b.name) return -1
-  if (a.name > b.name) return 1
+  if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
+  if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
   return 0
 }))
 </script>
