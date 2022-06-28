@@ -7,6 +7,25 @@ import {
 import SectionTitle from '~/components/SectionTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
+import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
+import SpeakerLTSection from '~/components/SpeakerLTSection.vue'
+
+const mock_speaker = {
+  id: '1',
+  name_jp: '名前入ります．',
+  name_jp_kana: '日本語カナ',
+  name_en: '',
+  bio: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
+  session: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
+  title: 'タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．',
+  company: '社名等入ります．社名等入ります．',
+  twitter: '',
+  facebook: '',
+  connpass: '',
+  github: '',
+  related_url: '',
+  image: 'https://placehold.jp/150x150.png'
+}
 </script>
 
 <template>
@@ -72,6 +91,14 @@ import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
           </a>
           をご確認ください。
         </p>
+        <section class="grid grid-cols-2 gap-x-4 gap-y-6 mt-20 md:grid-cols-3 md:gap-10 lg:grid-cols-5 lg:gap-6">
+          <SpeakerPageBlock
+            v-for="i in 15"
+            :key="i"
+            :speaker="mock_speaker"
+          />
+        </section>
+        <SpeakerLTSection />
       </div>
     </div>
   </section>
