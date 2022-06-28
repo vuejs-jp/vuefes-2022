@@ -33,12 +33,17 @@ module.exports = {
       boxShadow: {
         submit: '0px 10px 20px rgba(0, 0, 0, 0.1)',
         'submit-hover': '0 0 0 rgba(#000000, 0.2)',
+        card: '0px 10px 20px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0px 10px 20px rgba(#000000, 0.2)',
       },
       borderRadius: {
         '4xl': '100px',
       },
       fontFamily: {
         'kokuryu-heading': ['kokuryu', 'sans-serif'],
+      },
+      aspectRatio: {
+        '16/9': '16 / 9',
       },
     },
     backgroundImage: {
@@ -50,15 +55,17 @@ module.exports = {
         'linear-gradient(45deg, #90b44b 25%, transparent 25%, transparent 75%, #90b44b 75%), linear-gradient(45deg, #90b44b 25%, transparent 25%, transparent 75%, #90b44b 75%)',
       'ichimatsu-silver-tree':
         'linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%), linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%)',
-      suponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
+      sponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
       submit: 'linear-gradient(91.03deg, #33A6B8 0%, #42B983 100.01%)',
       'submit-border': 'linear-gradient(90deg, #42b983 0%, #33a6b8 100%)',
     },
     backgroundSize: {
+      cover: 'cover',
       40: '40px 40px',
       80: '80px 80px',
     },
     backgroundPosition: {
+      center: 'center',
       'vertical-20': '0 0, 20px 20px',
       'vertical-40': '0 0, 40px 40px',
     },
