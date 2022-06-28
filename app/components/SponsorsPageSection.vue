@@ -1,52 +1,158 @@
 <script setup lang="ts">
-import {
-  sponsorsDescriptionText,
-  generalSponsorsApplicationUrl,
-  sponsorsDocumentUrl,
-  tweetUrl,
-  tweetLink,
-} from '~/utils/constants'
+import SponsorList from '~/components/sponsors/SponsorList.vue'
+import { ISponsor, Rank } from '~/types/sponsors'
 import SectionTitle from '~/components/SectionTitle.vue'
-import LinkButtonField from '~/components/forms/LinkButtonField.vue'
+
+import Image01 from '!url-loader!~/assets/img/animation/image05.png'
+const sponsors: ISponsor[] = [
+  {
+    id: '1234',
+    name_jp: 'Sponsor_1',
+    name_jp_kana: 'スポンサー_1',
+    name_en: 'Sponsor_1',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'platinum',
+  },
+  {
+    id: '2345',
+    name_jp: 'Sponsor_2',
+    name_jp_kana: 'スポンサー_2',
+    name_en: 'Sponsor_2',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'platinum',
+  },
+  {
+    id: '12345634',
+    name_jp: 'Sponsor_3',
+    name_jp_kana: 'スポンサー_3',
+    name_en: 'Sponsor_3',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'platinum',
+  },
+
+  {
+    id: '1234',
+    name_jp: 'Sponsor_1',
+    name_jp_kana: 'スポンサー_1',
+    name_en: 'Sponsor_1',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'gold',
+  },
+  {
+    id: '2345',
+    name_jp: 'Sponsor_2',
+    name_jp_kana: 'スポンサー_2',
+    name_en: 'Sponsor_2',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'gold',
+  },
+  {
+    id: '12345634',
+    name_jp: 'Sponsor_3',
+    name_jp_kana: 'スポンサー_3',
+    name_en: 'Sponsor_3',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'gold',
+  },
+  {
+    id: '12345123',
+    name_jp: 'Sponsor_4',
+    name_jp_kana: 'スポンサー_4',
+    name_en: 'Sponsor_4',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'gold',
+  },
+  {
+    id: '123456789',
+    name_jp: 'Sponsor_1',
+    name_jp_kana: 'スポンサー_1',
+    name_en: 'Sponsor_1',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'gold',
+  },
+  {
+    id: 'asdfasdf',
+    name_jp: 'Sponsor_2',
+    name_jp_kana: 'スポンサー_2',
+    name_en: 'Sponsor_2',
+    twitter: '@vuefes',
+    facebook: 'vuefes',
+    image: Image01,
+    corporate_url: '#',
+    rank: 'gold',
+  },
+  //   {
+  //   id: 'asdfasdfqwer',
+  //   name_jp: 'Sponsor_3',
+  //   name_jp_kana: 'スポンサー_3',
+  //   name_en: 'Sponsor_3',
+  //   twitter: '@vuefes',
+  //   facebook: 'vuefes',
+  //   image: Image01,
+  //   corporate_url: '#',
+  //   rank: 'gold',
+  // },
+  //   {
+  //   id: 'asdfzxcv',
+  //   name_jp: 'Sponsor_4',
+  //   name_jp_kana: 'スポンサー_4',
+  //   name_en: 'Sponsor_4',
+  //   twitter: '@vuefes',
+  //   facebook: 'vuefes',
+  //   image: Image01,
+  //   corporate_url: '#',
+  //   rank: 'gold',
+  // }
+]
+
+const platinumSponsors = sponsors.filter(sponsor => sponsor.rank === 'platinum')
+const goldSponsors = sponsors.filter(sponsor => sponsor.rank === 'gold')
+const silverSponsors = sponsors.filter(sponsor => sponsor.rank === 'silver')
+const bronzeSponsors = sponsors.filter(sponsor => sponsor.rank === 'bronze')
+const mediaSponsors = sponsors.filter(sponsor => sponsor.rank === 'media')
 </script>
 
 <template>
   <section
     id="sponsors"
-    class="py-10 px-5 bg-suponsors md:px-10 lg:p-20"
+    class="py-10 px-5 bg-sponsors md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
-      <div class="px-5 mx-auto max-w-[43.75rem]">
+      <div class="mx-auto max-w-[41.875rem] sm:max-w-[51.25rem] md:max-w-[73.75rem]">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Sponsors"
           title-yamato="スポンサー"
         />
-        <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
-          {{ sponsorsDescriptionText }}
-        </p>
-        <p class="mb-10 text-sm font-bold leading-7 text-vue-blue lg:text-lg lg:leading-8">
-          ※申し込み受付は終了しました。多数のお申し込みをいただき、ありがとうございました。
-        </p>
-        <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
-          最新情報は、
-          <a
-            :href="tweetUrl"
-            target="_blank"
-            rel="noreferrer"
-            class="underline hover:opacity-60 transition-opacity"
-          >
-            {{ tweetLink }}
-          </a>
-          をご確認ください。
-        </p>
-        <div class="mb-0 text-center">
-          <LinkButtonField
-            :link="sponsorsDocumentUrl"
-            title-label="スポンサー資料を開く"
-            :is-external-link="true"
-          />
-        </div>
+        <SponsorList :sponsors="platinumSponsors" />
+        <SponsorList :sponsors="goldSponsors" />
+        <SponsorList :sponsors="silverSponsors" />
+        <SponsorList :sponsors="bronzeSponsors" />
+        <SponsorList :sponsors="mediaSponsors" />
       </div>
     </div>
   </section>

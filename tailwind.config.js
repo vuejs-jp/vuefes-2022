@@ -41,6 +41,8 @@ module.exports = {
       boxShadow: {
         submit: '0px 10px 20px rgba(0, 0, 0, 0.1)',
         'submit-hover': '0 0 0 rgba(#000000, 0.2)',
+        card: '0px 10px 20px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0px 10px 20px rgba(#000000, 0.2)',
       },
       borderRadius: {
         '4xl': '100px',
@@ -55,6 +57,9 @@ module.exports = {
         25: '1.5625rem', // 25px
         35: '2.1875rem', // 35px
         50: '3.125rem', // 50px
+      },
+      aspectRatio: {
+        '16/9': '16 / 9',
       },
     },
     backgroundImage: {
@@ -72,7 +77,7 @@ module.exports = {
         'linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%), linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%)',
       'ichimatsu-asagi':
         'linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%), linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%)',
-      suponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
+      sponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
       store: 'linear-gradient(180deg, #33A6B8 0%, rgba(255, 255, 255, 0) 100%)',
       staffs: 'linear-gradient(180deg, #F17C67 0%, rgba(196, 196, 196, 0) 100%)',
       ticket: 'linear-gradient(180deg, #FFC408 0%, rgba(255, 255, 255, 0) 100%)',
@@ -81,10 +86,12 @@ module.exports = {
       'submit-border': 'linear-gradient(90deg, #42b983 0%, #33a6b8 100%)',
     },
     backgroundSize: {
+      cover: 'cover',
       40: '40px 40px',
       80: '80px 80px',
     },
     backgroundPosition: {
+      center: 'center',
       'vertical-20': '0 0, 20px 20px',
       'vertical-40': '0 0, 40px 40px',
     },
