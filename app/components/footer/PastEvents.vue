@@ -11,7 +11,7 @@ import { websiteLinks } from '~/utils/constants'
       rel="noreferrer"
       :href="website.url"
       :title="website.description"
-      class="text-xs leading-4 hover:text-gray-500 underline focus:underline focus:outline-none transition cursor-pointer lg:text-lg"
+      class="text-xs leading-4 hover:text-gray-500 underline transition cursor-pointer lg:text-lg"
     >
       {{ website.title }}
     </a>

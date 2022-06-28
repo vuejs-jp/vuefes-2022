@@ -4,11 +4,13 @@
     :class="{ 'bg-white/90': showBackgroundColor }"
   >
     <nav class="flex justify-between items-center">
-      <img
-        class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-[200px] lg:h-9"
-        :src="`/icon/vuefes_logo.svg`"
-        :alt="conferenceTitle"
-      >
+      <nuxt-link to="/">
+        <img
+          class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-[200px] lg:h-9"
+          :src="`/icon/vuefes_logo.svg`"
+          :alt="conferenceTitle"
+        >
+      </nuxt-link>
       <p
         class="after:block flex grow items-center pt-[1vw] after:ml-[1.95vw] after:w-[6.49vw] after:h-px text-[1.69vw] font-bold text-vue-blue after:border-b after:border-vue-blue lg:pt-2 lg:text-base"
       >
