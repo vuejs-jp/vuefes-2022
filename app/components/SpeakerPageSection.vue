@@ -51,7 +51,7 @@ import SpeakerPageHeading from '~/components/SpeakerPageHeading.vue'
           text="募集スケジュール"
         />
         <p class="mb-8 text-sm leading-7 text-vue-blue lg:mb-16 lg:text-lg lg:leading-8">
-          応募期限: 2022/6/30（木）23:59:59 まで
+          応募期限: 2022/7/18（月）23:59:59 まで
         </p>
         <div class="mb-8 text-center lg:mb-16">
           <LinkButtonField
