@@ -1,6 +1,8 @@
 <template>
-  <section class="p-10 mt-20 border border-vue-blue">
-    <p class="mx-24 -mt-[3.6rem] mb-8 text-3xl font-bold text-center text-vue-blue bg-img">LT募集について</p>
+  <section class="p-4 mt-20 border border-vue-blue lg:p-10">
+    <p class="mx-auto -mt-[2.0rem] mb-8 w-3/5 text-xl font-bold text-center text-vue-blue lg:mx-24 lg:-mt-[3.6rem] lg:text-3xl bg-img">
+      LT募集について
+    </p>
     <p class="mb-4 text-sm leading-7 text-vue-blue lg:mb-8 lg:text-lg lg:leading-8">
       Vue Fes Japan Online 2022 ではLT発表者を募集します。
       テーマは「Vue または Vue を取り巻くエコシステムに関する内容」、登壇時間は5分です。

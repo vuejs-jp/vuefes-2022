@@ -2,30 +2,60 @@
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
 import SessionSection from '~/components/SessionSection.vue'
+
+interface ISession {
+  id: string
+  title: string
+  description: string
+  area: string
+  type: string
+  started_at: string
+  ended_at: string
+  time: string
+  speaker: string
+  tags?: string
+  slide_url?: string
+  fortee_url?: string
+  youtube_url?: string
+}
 interface ISpeaker {
   id: string
   name_jp: string
   name_jp_kana: string
   name_en: string
   bio: string
-  session: string
+  session: ISession
   title: string
   company: string
-  twitter: string
-  facebook: string
-  connpass: string
-  github: string
-  related_url: string
+  twitter?: string
+  facebook?: string
+  connpass?: string
+  github?: string
+  related_url?: string
   image: string
 }
 // mock用のSpeaker
 const mock_speaker = reactive<ISpeaker>({
   id: '1',
-  name_jp: '名前入ります．',
+  name_jp: '名前入ります．名前入ります',
   name_jp_kana: '日本語カナ',
   name_en: '',
   bio: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
-  session: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
+  session: {
+    id: '1',
+    title: 'タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．',
+    description: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
+    area: 'string',
+    type: 'string',
+    started_at: 'string',
+    ended_at: 'string',
+    time: '00',
+    speaker: 'string',
+    tags: 'string',
+    slide_url: 'string',
+    fortee_url: 'string',
+    youtube_url: 'string',
+  },
   title: 'タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．',
   company: '社名等入ります．社名等入ります．',
   twitter: '',
