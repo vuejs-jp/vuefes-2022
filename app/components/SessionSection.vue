@@ -1,38 +1,7 @@
 <script setup lang="ts">
 import { CustomPropType } from '~/types/shims-vue'
 import LinkButtonField from '~/components/forms/LinkButtonField'
-
-interface ISession {
-  id: string
-  title: string
-  description: string
-  area: string
-  type: string
-  started_at: string
-  ended_at: string
-  time: string
-  speaker: string
-  tags?: string
-  slide_url?: string
-  fortee_url?: string
-  youtube_url?: string
-}
-interface ISpeaker {
-  id: string
-  name_jp: string
-  name_jp_kana: string
-  name_en: string
-  bio: string
-  session: ISession
-  title: string
-  company: string
-  twitter?: string
-  facebook?: string
-  connpass?: string
-  github?: string
-  related_url?: string
-  image: string
-}
+import { ISpeaker } from '~/types/interface'
 
 const props = defineProps({
   speaker: {

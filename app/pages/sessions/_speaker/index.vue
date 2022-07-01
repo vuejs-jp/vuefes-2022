@@ -2,38 +2,8 @@
 import SectionTitle from '~/components/SectionTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
 import SessionSection from '~/components/SessionSection.vue'
+import { ISpeaker } from '~/types/interface'
 
-interface ISession {
-  id: string
-  title: string
-  description: string
-  area: string
-  type: string
-  started_at: string
-  ended_at: string
-  time: string
-  speaker: string
-  tags?: string
-  slide_url?: string
-  fortee_url?: string
-  youtube_url?: string
-}
-interface ISpeaker {
-  id: string
-  name_jp: string
-  name_jp_kana: string
-  name_en: string
-  bio: string
-  session: ISession
-  title: string
-  company: string
-  twitter?: string
-  facebook?: string
-  connpass?: string
-  github?: string
-  related_url?: string
-  image: string
-}
 // mock用のSpeaker
 const mock_speaker = reactive<ISpeaker>({
   id: '1',
