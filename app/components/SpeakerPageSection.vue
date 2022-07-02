@@ -2,6 +2,7 @@
 import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
 import SpeakerLTSection from '~/components/SpeakerLTSection.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
+import { SHOW_SPEAKER_LIST } from '~/utils/feature.constants'
 
 const mock_speaker = {
   id: '1',
@@ -9,15 +10,17 @@ const mock_speaker = {
   name_jp_kana: '日本語カナ',
   name_en: '',
   bio: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
-  session: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
-  title: 'タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．',
+  session:
+    '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
+  title:
+    'タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．',
   company: '社名等入ります．社名等入ります．',
   twitter: '',
   facebook: '',
   connpass: '',
   github: '',
   related_url: '',
-  image: 'https://placehold.jp/150x150.png'
+  image: 'https://placehold.jp/150x150.png',
 }
 </script>
 
@@ -33,13 +36,17 @@ const mock_speaker = {
           title="Speakers"
           title-yamato="スピーカー"
         />
-        <section class="grid grid-cols-2 gap-x-4 gap-y-6 mt-20 md:grid-cols-3 md:gap-10 lg:grid-cols-5 lg:gap-6">
-          <SpeakerPageBlock
-            v-for="i in 15"
-            :key="i"
-            :speaker="mock_speaker"
-          />
-        </section>
+        <template v-if="SHOW_SPEAKER_LIST">
+          <section
+            class="grid grid-cols-2 gap-x-4 gap-y-6 mt-20 md:grid-cols-3 md:gap-10 lg:grid-cols-5 lg:gap-6"
+          >
+            <SpeakerPageBlock
+              v-for="i in 15"
+              :key="i"
+              :speaker="mock_speaker"
+            />
+          </section>
+        </template>
         <SpeakerLTSection />
       </div>
     </div>
