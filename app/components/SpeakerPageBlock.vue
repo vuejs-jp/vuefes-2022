@@ -24,7 +24,7 @@ const props = defineProps({
       loading="lazy"
     >
     <p class="text-xs">{{ props.speaker.title }}</p>
-    <p class="text-lg font-bold lg:text-[22px]">{{ props.speaker.name }}</p>
+    <p class="text-lg font-bold lg:text-[1.375rem]">{{ props.speaker.name }}</p>
   </div>
   <!-- </router-link> -->
 </template>
