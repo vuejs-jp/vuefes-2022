@@ -4,25 +4,6 @@ import SpeakerLTSection from '~/components/SpeakerLTSection.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { SHOW_SPEAKER_LIST } from '~/utils/feature.constants'
 import { speakers } from '~/utils/speakers.constants'
-
-const mock_speaker = {
-  id: '1',
-  name_jp: '名前入ります．',
-  name_jp_kana: '日本語カナ',
-  name_en: '',
-  bio: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
-  session:
-    '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
-  title:
-    'タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．',
-  company: '社名等入ります．社名等入ります．',
-  twitter: '',
-  facebook: '',
-  connpass: '',
-  github: '',
-  related_url: '',
-  image: 'https://placehold.jp/150x150.png',
-}
 </script>
 
 <template>
