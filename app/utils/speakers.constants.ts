@@ -1,32 +1,32 @@
 export const speakers = [
   {
     name: 'Evan You',
-    title: 'Creator of Vue',
+    title: 'Vue クリエーター',
     image: '/speaker/evan.jpeg',
   },
   {
     name: 'Eduardo San Martin Morote',
-    title: 'Creator of Pinia',
+    title: 'Pinia クリエーター',
     image: '/speaker/eduardo.jpeg',
   },
   {
     name: 'Sebastien Chopin',
-    title: 'CEO at NuxtLabs',
+    title: 'NuxtLabs CEO',
     image: '/speaker/sebastien.jpeg',
   },
   {
     name: 'Matias Capeletto',
-    title: 'Vite Core Team member',
+    title: 'Vite コアチームメンバー',
     image: '/speaker/matias.jpeg',
   },
   {
     name: 'Anthony Fu',
-    title: 'Vue, Vite, Nuxt Core Team',
+    title: 'Vue, Vite, Nuxt コアチームメンバー',
     image: '/speaker/anthony.jpg',
   },
   {
     name: 'Jessica Sachs',
-    title: 'Staff Engineer at Cypress',
+    title: 'Cypress スタッフエンジニア',
     image: '/speaker/jess.jpg',
   },
 ]
