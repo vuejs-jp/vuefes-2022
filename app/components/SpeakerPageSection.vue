@@ -3,25 +3,7 @@ import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
 import SpeakerLTSection from '~/components/SpeakerLTSection.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { SHOW_SPEAKER_LIST } from '~/utils/feature.constants'
-
-const mock_speaker = {
-  id: '1',
-  name_jp: '名前入ります．',
-  name_jp_kana: '日本語カナ',
-  name_en: '',
-  bio: '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
-  session:
-    '本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．本文はいります．',
-  title:
-    'タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．タイトルが入ります．',
-  company: '社名等入ります．社名等入ります．',
-  twitter: '',
-  facebook: '',
-  connpass: '',
-  github: '',
-  related_url: '',
-  image: 'https://placehold.jp/150x150.png',
-}
+import { speakers } from '~/utils/speakers.constants'
 </script>
 
 <template>
@@ -30,7 +12,7 @@ const mock_speaker = {
     class="px-5 md:px-10 lg:px-20"
   >
     <div class="py-20 lg:py-40">
-      <div class="mx-auto md:max-w-[43.75rem] lg:max-w-[78.75rem]">
+      <div class="mx-auto mb-20 md:max-w-[43.75rem] lg:max-w-[78.75rem]">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Speakers"
@@ -38,12 +20,12 @@ const mock_speaker = {
         />
         <template v-if="SHOW_SPEAKER_LIST">
           <section
-            class="grid grid-cols-2 gap-x-4 gap-y-6 mt-20 md:grid-cols-3 md:gap-10 lg:grid-cols-5 lg:gap-6"
+            class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20"
           >
             <SpeakerPageBlock
-              v-for="i in 15"
-              :key="i"
-              :speaker="mock_speaker"
+              v-for="speaker in speakers"
+              :key="speaker.name"
+              :speaker="speaker"
             />
           </section>
         </template>

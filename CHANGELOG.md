@@ -3,8 +3,8 @@
 ## [ver.2022.8.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.8.1)
 
 - ✅ チームセクションの追加
-   - 各スタッフ画像の追加
-- ✅ LT募集を追加 
+  - 各スタッフ画像の追加
+- ✅ LT 募集を追加
 - ✅ Tailwind CSS のカスタム属性に纏わる軽微な修正
 
 ## [ver.2022.7.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.7.1)
