@@ -11,17 +11,19 @@ export function useAnimationParts() {
 
   // 図形生成のアニメーション
   const createAnimation = (refs, attr) => {
-    gsap.to(refs, PARTS_CREATE_TIME, {
+    gsap.to(refs, {
       attr: { ...attr },
       ease: Power2.easeOut,
+      duration: PARTS_CREATE_TIME,
     })
   }
 
   // 図形切り替えのアニメーション
   const fadeAnimation = (refs, attr) => {
-    gsap.to(refs, PARTS_FADE_TIME, {
+    gsap.to(refs, {
       attr: { ...attr },
       ease: Power2.easeOut,
+      duration: PARTS_FADE_TIME,
     })
   }
 
