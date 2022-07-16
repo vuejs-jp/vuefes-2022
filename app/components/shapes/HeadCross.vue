@@ -48,7 +48,7 @@ export default {
   },
 
   setup(props, setupContext) {
-    const useAnimeParts = useAnimationParts()
+    const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
     const refs = setupContext.refs
 
     const KEY_FRAME1 = ['0 -60 0 -60 0 -60', '-54 -60 54 -60 0 -6']
@@ -56,22 +56,22 @@ export default {
     const KEY_FRAME3 = ['0 60 0 60 0 60', '54 60 -54 60 0 6']
     const KEY_FRAME4 = ['60 0 60 0 60 0', '60 54 60 -54 6 0']
 
-    const transform = useAnimeParts.transform(props)
+    const transform = transformPosition(props)
 
     const createAnimations = () => {
       setTimeout(() => {
-        useAnimeParts.createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
-        useAnimeParts.createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
-        useAnimeParts.createAnimation(refs.shape3, { points: KEY_FRAME3[1] })
-        useAnimeParts.createAnimation(refs.shape4, { points: KEY_FRAME4[1] })
+        createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
+        createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
+        createAnimation(refs.shape3, { points: KEY_FRAME3[1] })
+        createAnimation(refs.shape4, { points: KEY_FRAME4[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      useAnimeParts.fadeAnimation(refs.shape1, { points:KEY_FRAME1[0] })
-      useAnimeParts.fadeAnimation(refs.shape2, { points:KEY_FRAME2[0] })
-      useAnimeParts.fadeAnimation(refs.shape3, { points:KEY_FRAME3[0] })
-      useAnimeParts.fadeAnimation(refs.shape4, { points:KEY_FRAME4[0] })
+      fadeAnimation(refs.shape1, { points:KEY_FRAME1[0] })
+      fadeAnimation(refs.shape2, { points:KEY_FRAME2[0] })
+      fadeAnimation(refs.shape3, { points:KEY_FRAME3[0] })
+      fadeAnimation(refs.shape4, { points:KEY_FRAME4[0] })
     }
 
     onMounted(() => {
