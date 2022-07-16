@@ -9,40 +9,43 @@ const props = defineProps({
     required: true
   }
 })
+
+const speakerInfo = computed(() => props.speaker)
 </script>
 <template>
-  <section class="px-5 pb-20 mx-auto max-w-[43.75rem] text-vue-blue">
-    <span class="py-1 px-2 text-sm font-extrabold leading-7 text-white bg-vue-blue">
-      {{ props.speaker.session.time }}min
+  <section class="mx-auto max-w-[43.75rem] px-5 pb-20 text-vue-blue">
+    <span class="bg-vue-blue py-1 px-2 text-sm font-extrabold leading-7 text-white">
+      {{ speakerInfo.session.time }}min
     </span>
     <h3 class="mt-3 mb-7 text-lg font-bold leading-8 text-vue-blue lg:max-w-[45rem] lg:text-lg">
-      {{ props.speaker.session.title }}
+      {{ speakerInfo.session.title }}
     </h3>
     <p class="mb-4 text-sm leading-7 lg:mb-8 lg:leading-8">
-      {{ props.speaker.session.description }}
+      {{ speakerInfo.session.description }}
     </p>
-    <div class="p-6 space-y-6 border border-vue-blue md:grid md:grid-cols-7 md:p-10">
-      <p class="h-1/2 text-[1.25rem] font-extrabold text-center md:flex md:col-span-2 md:items-center md:mt-[-1.5rem]">
+    <div class="space-y-6 border border-vue-blue p-6 md:grid md:grid-cols-7 md:p-10">
+      <p class="h-1/2 text-center text-[1.25rem] font-extrabold md:col-span-2 md:mt-[-1.5rem] md:flex md:items-center">
         Speaker Profile
       </p>
       <div class="md:col-span-5">
         <div class="mb-6 md:flex md:space-x-6">
           <img
-            class="mx-auto w-32 h-32 md:mx-0"
+            class="mx-auto h-32 w-32 md:mx-0"
             alt="thumbnail"
-            :src="props.speaker.image"
+            :src="speakerInfo.image"
           >
           <div class="text-center md:text-left">
             <p class="mt-3 text-sm opacity-60 md:mt-2 md:text-[0.25rem]">
-              {{ props.speaker.company }}
+              {{ speakerInfo.company }}
             </p>
             <p class="mt-2 text-lg font-bold text-vue-blue md:text-sm">
-              {{ props.speaker.name_jp }}
+              {{ speakerInfo.name_jp }}
             </p>
-            <span class="flex justify-center mx-auto mt-3 mb-6 space-x-5 md:justify-start md:mt-6 md:space-x-3">
+            <span class="mx-auto mt-3 mb-6 flex justify-center space-x-5 md:mt-6 md:justify-start md:space-x-3">
               <a
+                :aria-label="`${speakerInfo.name_jp}のTwitterアカウント`"
                 target="_blank"
-                :href="`https://twitter.com/${props.speaker.twitter}`"
+                :href="`https://twitter.com/${speakerInfo.twitter}`"
               >
                 <img
                   class="w-8 md:w-5"
@@ -51,20 +54,21 @@ const props = defineProps({
                 >
               </a>
               <a
+                :aria-label="`${speakerInfo.name_jp}のGitHubアカウント`"
                 target="_blank"
-                :href="`https://github.com/${props.speaker.github}`"
+                :href="`https://github.com/${speakerInfo.github}`"
               >
                 <img
                   class="w-8 md:w-5"
                   src="/icon/github_logo-invert.svg"
-                  alt="Twitterのlogo"
+                  alt="Githubのlogo"
                 >
               </a>
             </span>
           </div>
         </div>
         <p class="mb-4 text-sm leading-6 lg:mb-8">
-          {{ props.speaker.bio }}
+          {{ speakerInfo.bio }}
         </p>
       </div>
     </div>

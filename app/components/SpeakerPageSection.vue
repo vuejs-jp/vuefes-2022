@@ -20,7 +20,7 @@ import { speakers } from '~/utils/speakers.constants'
         />
         <template v-if="SHOW_SPEAKER_LIST">
           <section
-            class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20"
+            class="mb-14 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:mb-20 lg:grid-cols-5"
           >
             <SpeakerPageBlock
               v-for="speaker in speakers"

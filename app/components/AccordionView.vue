@@ -12,7 +12,7 @@ const open = () => {
 <template>
   <div class="py-10 px-2.5">
     <div
-      class="flex justify-between w-full text-sm leading-7 cursor-pointer lg:text-lg lg:leading-8"
+      class="flex w-full cursor-pointer justify-between text-sm leading-7 lg:text-lg lg:leading-8"
       @click="open"
       @keyup="open"
     >

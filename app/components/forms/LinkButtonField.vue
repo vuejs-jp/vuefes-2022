@@ -23,13 +23,13 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
 
 <template>
   <div
-    class="inline-block before:block relative before:-z-10 w-full before:w-full max-w-[30rem] h-16 before:h-full before:bg-submit-border rounded-4xl before:rounded-4xl shadow-submit hover:shadow-submit-hover transition lg:h-[4.5rem]"
+    class="relative inline-block h-16 w-full max-w-[30rem] rounded-4xl shadow-submit transition before:-z-10 before:block before:h-full before:w-full before:rounded-4xl before:bg-submit-border hover:shadow-submit-hover lg:h-[4.5rem]"
   >
-    <div class="flex absolute top-0 justify-center items-center p-px w-full h-full">
+    <div class="absolute top-0 flex h-full w-full items-center justify-center p-px">
       <a
         v-if="isExternalLink"
         :href="link"
-        class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
+        class="flex h-full w-full items-center justify-center rounded-4xl bg-submit text-xl font-bold text-white transition-opacity focus:ring-4 focus:ring-blue-300 lg:text-2xl"
         target="_blank"
         rel="noopener"
       >
@@ -38,7 +38,7 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
       <nuxt-link
         v-else
         :to="link"
-        class="flex justify-center items-center w-full h-full text-xl font-bold text-white bg-submit rounded-4xl focus:ring-4 focus:ring-blue-300 transition-opacity lg:text-2xl"
+        class="flex h-full w-full items-center justify-center rounded-4xl bg-submit text-xl font-bold text-white transition-opacity focus:ring-4 focus:ring-blue-300 lg:text-2xl"
       >
         {{ titleLabel }}
       </nuxt-link>
