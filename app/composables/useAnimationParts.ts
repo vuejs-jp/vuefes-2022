@@ -5,7 +5,7 @@ export function useAnimationParts() {
   const PARTS_FADE_TIME = 0.2
 
   // 図形の位置
-  const transform = (props) => {
+  const transformPosition = (props) => {
     return `translate(${props.parts.x}, ${props.parts.y}) rotate(${props.parts.rotate})`
   }
 
@@ -28,7 +28,7 @@ export function useAnimationParts() {
   }
 
   return {
-    transform,
+    transformPosition,
     createAnimation,
     fadeAnimation,
   }

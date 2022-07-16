@@ -58,13 +58,13 @@ export default {
   },
 
   setup(props, setupContext) {
-    const useAnimeParts = useAnimationParts()
+    const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
     const refs = setupContext.refs
 
     const KEY_FRAME = [0, 60 * (2 ^ 0.5)]
     const CLIP_ID = `photo-clip${props.parts.key}`
 
-    const transform = useAnimeParts.transform(props)
+    const transform = transformPosition(props)
 
     const imageSrc = computed(() => {
       const images = {
@@ -80,12 +80,12 @@ export default {
 
     const createAnimations = () => {
       setTimeout(() => {
-        useAnimeParts.createAnimation(refs.shape, { r: KEY_FRAME[1] })
+        createAnimation(refs.shape, { r: KEY_FRAME[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      useAnimeParts.fadeAnimation(refs.shape, { r: KEY_FRAME[0] })
+      fadeAnimation(refs.shape, { r: KEY_FRAME[0] })
     }
 
     onMounted(() => {
