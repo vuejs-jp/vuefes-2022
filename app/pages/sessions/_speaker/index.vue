@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import SectionTitle from '~/components/SectionTitle.vue'
+// import SectionTitle from '~/components/SectionTitle.vue'
+import PageTitle from '~~/app/components/PageTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
 import SessionSection from '~/components/SessionSection.vue'
+import FooterPageSection from '~/components/FooterPageSection.vue'
+import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { ISpeaker } from '~/types/interface'
 
 // mock用のSpeaker
@@ -38,12 +41,14 @@ const mock_speaker = reactive<ISpeaker>({
 </script>
 <template>
   <div>
-    <nav-page-section />
-    <SectionTitle
-      class="mb-10 lg:mb-20"
+    <nav-page-section class="mb-[50px]" />
+    <PageTitle
+      class="mb-[40px] md:mb-[100px]"
       title="Session"
       title-yamato="セッション"
     />
     <SessionSection :speaker="mock_speaker" />
+    <ichimatsu-divided-bar color="vue-blue" />
+    <footer-page-section />
   </div>
 </template>

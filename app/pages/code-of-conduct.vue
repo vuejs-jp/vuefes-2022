@@ -3,7 +3,7 @@ import { conferenceTitle, ogCoCDescription } from '~/utils/constants'
 import Endpoints from '~/utils/endpoints.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import NavPageSection from '~/components/NavPageSection.vue'
-import PrivacyPolicyAndCocSectionTitle from '~/components/PrivacyPolicyAndCocSectionTitle.vue'
+import PageTitle from '~/components/PageTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
@@ -11,7 +11,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 export default {
   components: {
     NavPageSection,
-    PrivacyPolicyAndCocSectionTitle,
+    PageTitle,
     LinkButtonField,
     IchimatsuDividedBar,
     FooterPageSection
@@ -39,14 +39,13 @@ export default {
 <template>
   <div>
     <nav-page-section />
-    <PrivacyPolicyAndCocSectionTitle
+    <PageTitle
       class="mb-10 lg:mb-20"
       title="Code of Conduct"
       title-yamato="行動規範"
-      title-type="Coc"
     />
     <div
-      class="mx-auto max-w-[43.75rem] px-5 text-sm leading-7 text-vue-blue lg:max-w-[73.75rem] lg:text-lg lg:leading-8"
+      class="px-5 mx-auto max-w-[43.75rem] text-sm leading-7 text-vue-blue lg:max-w-[73.75rem] lg:text-lg lg:leading-8"
     >
       <p class="mb-16">
         Vue Fes Japan Online 2022
@@ -74,7 +73,7 @@ export default {
       <p class="mb-8">
         もしあなたが差別やハラスメント行為を受けたと感じた場合や、誰かがハラスメント行為を受けていることに気づいた場合、またはその懸念がある場合は、すぐに<nuxt-link
           :to="{ path: '/', hash: '#form' }"
-          class="cursor-pointer underline transition hover:text-gray-500"
+          class="hover:text-gray-500 underline transition cursor-pointer"
         >
           お問い合わせフォーム
         </nuxt-link>からご連絡ください。
@@ -88,7 +87,7 @@ export default {
       <p class="mb-20">
         Vue.js 日本ユーザーグループへのお問い合わせは、<nuxt-link
           :to="{ path: '/', hash: '#form' }"
-          class="cursor-pointer underline transition hover:text-gray-500"
+          class="hover:text-gray-500 underline transition cursor-pointer"
         >
           お問い合わせフォーム
         </nuxt-link>よりお願いいたします。

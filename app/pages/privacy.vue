@@ -3,7 +3,7 @@ import { conferenceTitle, ogPrivacyDescription } from '~/utils/constants'
 import Endpoints from '~/utils/endpoints.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import NavPageSection from '~/components/NavPageSection.vue'
-import PrivacyPolicyAndCocSectionTitle from '~/components/PrivacyPolicyAndCocSectionTitle.vue'
+import PageTitle from '~/components/PageTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
@@ -11,7 +11,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 export default {
   components: {
     NavPageSection,
-    PrivacyPolicyAndCocSectionTitle,
+    PageTitle,
     LinkButtonField,
     IchimatsuDividedBar,
     FooterPageSection
@@ -39,14 +39,13 @@ export default {
 <template>
   <div>
     <nav-page-section />
-    <PrivacyPolicyAndCocSectionTitle
+    <PageTitle
       class="mb-10 lg:mb-20"
       title="Privacy Policy"
       title-yamato="プライバシーポリシー"
-      title-type="PrivacyPolicy"
     />
     <div
-      class="mx-auto max-w-[43.75rem] px-5 text-sm leading-7 text-vue-blue lg:max-w-[73.75rem] lg:text-lg lg:leading-8"
+      class="px-5 mx-auto max-w-[43.75rem] text-sm leading-7 text-vue-blue lg:max-w-[73.75rem] lg:text-lg lg:leading-8"
     >
       <p class="mb-8">
         Vue Fes Japan Online 2022（以下、
@@ -66,10 +65,10 @@ export default {
         当カンファレンスは、個人情報の入手を適法かつ公正な手段によって行うものとし、ユーザーの意思に反する不正な入手を行わないものとします。
       </p>
       <p class="mb-8">当カンファレンスでは、ユーザーの以下の個人情報を取り扱います。</p>
-      <ul class="mb-16 list-disc pl-12">
+      <ul class="pl-12 mb-16 list-disc">
         <li>
           メールアドレス
-          <ul class="mb-4 list-circle pl-12">
+          <ul class="pl-12 mb-4 list-circle">
             <li class="mt-4">配送が伴うサービスのお申し込みフォームで入力されたお名前</li>
             <li>本ウェブサイトで入力されたメールアドレス</li>
             <li>スポンサーお申し込みフォームで入力されたメールアドレス</li>
@@ -78,14 +77,14 @@ export default {
         </li>
         <li>
           名前
-          <ul class="mb-4 list-circle pl-12">
+          <ul class="pl-12 mb-4 list-circle">
             <li class="mt-4">スポンサーお申し込みフォームで入力されたご担当者名</li>
             <li>CFP お申し込みフォームで入力されたお名前</li>
           </ul>
         </li>
         <li>
           住所、電話番号
-          <ul class="mb-4 list-circle pl-12">
+          <ul class="pl-12 mb-4 list-circle">
             <li class="mt-4">配送が伴うサービスのお申し込みフォームで入力された住所、電話番号</li>
           </ul>
         </li>
@@ -95,7 +94,7 @@ export default {
       <p class="mb-8">
         当カンファレンスは、ユーザーから収集した個人情報を、以下の目的で利用するものとします。
       </p>
-      <ul class="mb-16 list-decimal pl-12">
+      <ul class="pl-12 mb-16 list-decimal">
         <li>当カンファレンスの更新情報、関連情報をご提供する場合</li>
         <li>当カンファレンスに関するご案内、お問い合わせ等へ対応する場合</li>
         <li>ユーザーに対して当カンファレンスに対する意見、感想のご提供を求める場合</li>
@@ -131,7 +130,7 @@ export default {
       <p class="mb-8">
         当カンファレンスは、収集した個人情報を個人情報保護法に基づき業務委託先以外の第三者に対して開示又は提供しないものとします。ただし、以下に該当する場合は、この限りではありません。
       </p>
-      <ul class="mb-16 list-disc pl-12">
+      <ul class="pl-12 mb-16 list-disc">
         <li>法令により開示が認められている場合</li>
         <li>法令により開示を求められた場合</li>
         <li>
@@ -164,7 +163,7 @@ export default {
         が設定されることがあります。当カンファレンスで利用している Third Party
         のサービスは以下のとおりです。
       </p>
-      <ul class="mb-8 list-disc pl-12">
+      <ul class="pl-12 mb-8 list-disc">
         <li>Google Analytics</li>
         <li>Google フォーム</li>
         <li>Google プレゼンテーション</li>
@@ -177,14 +176,14 @@ export default {
       <p class="mb-8">
         当該運営会社のプライバシーポリシーや Cookie に関する説明は、以下をご参照ください。
       </p>
-      <ul class="mb-16 list-disc pl-12">
+      <ul class="pl-12 mb-16 list-disc">
         <li>
           Google 社の
           <a
             target="_blank"
             rel="noreferrer"
             href="https://policies.google.com/privacy?hl=ja"
-            class="cursor-pointer underline transition hover:text-gray-500"
+            class="hover:text-gray-500 underline transition cursor-pointer"
           >プライバシーポリシー</a>
         </li>
         <li>
@@ -193,7 +192,7 @@ export default {
             target="_blank"
             rel="noreferrer"
             href="https://fortee.jp/site/privacy"
-            class="cursor-pointer underline transition hover:text-gray-500"
+            class="hover:text-gray-500 underline transition cursor-pointer"
           >プライバシーポリシー</a>
         </li>
       </ul>
@@ -227,7 +226,7 @@ export default {
           target="_blank"
           rel="noreferrer"
           href="mailto:vuefes+privacy@gmail.com"
-          class="cursor-pointer underline transition hover:text-gray-500"
+          class="hover:text-gray-500 underline transition cursor-pointer"
         >vuefes+privacy@gmail.com</a>
         にお問い合わせください。
       </p>
@@ -236,7 +235,7 @@ export default {
       <p class="mb-8">
         当カンファレンスは、収集した個人情報を個人情報保護法に基づき業務委託先以外の第三者に対して開示又は提供しないものとします。ただし、以下に該当する場合は、この限りではありません。
       </p>
-      <ul class="mb-20 list-disc pl-12">
+      <ul class="pl-12 mb-20 list-disc">
         <li>2022年5月11日 制定・施行</li>
       </ul>
 

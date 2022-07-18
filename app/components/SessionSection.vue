@@ -13,42 +13,43 @@ const props = defineProps({
 const speakerInfo = computed(() => props.speaker)
 </script>
 <template>
-  <section class="mx-auto max-w-[43.75rem] px-5 pb-20 text-vue-blue">
-    <span class="bg-vue-blue py-1 px-2 text-sm font-extrabold leading-7 text-white">
+  <section class="px-5 mx-auto max-w-[900px] text-vue-blue">
+    <span class="inline-block py-1 px-4 mb-[15px] text-sm font-extrabold text-white bg-vue-blue md:text-lg">
       {{ speakerInfo.session.time }}min
     </span>
-    <h3 class="mt-3 mb-7 text-lg font-bold leading-8 text-vue-blue lg:max-w-[45rem] lg:text-lg">
+    <h3 class="mb-[40px] text-xl font-bold leading-8 md:mb-[50px] md:text-[25px]">
       {{ speakerInfo.session.title }}
     </h3>
-    <p class="mb-4 text-sm leading-7 lg:mb-8 lg:leading-8">
+    <p class="mb-[40px] text-base leading-8 md:mb-[100px] md:text-lg md:leading-9">
       {{ speakerInfo.session.description }}
     </p>
-    <div class="space-y-6 border border-vue-blue p-6 md:grid md:grid-cols-7 md:p-10">
-      <p class="h-1/2 text-center text-[1.25rem] font-extrabold md:col-span-2 md:mt-[-1.5rem] md:flex md:items-center">
+    <div class="p-5 border border-vue-blue md:flex md:p-[50px] ">
+      <p class="shrink-0 mb-5 text-sm font-extrabold text-center md:mt-[60px] md:mr-[50px] md:text-[22px]">
         Speaker Profile
       </p>
-      <div class="md:col-span-5">
-        <div class="mb-6 md:flex md:space-x-6">
+      <div>
+        <div class="mb-[30px] md:flex md:mb-0">
           <img
-            class="mx-auto h-32 w-32 md:mx-0"
+            class="mx-auto mb-[20px] w-[110px] h-[110px] md:mr-[30px] md:ml-0 md:w-[150px] md:h-[150px]"
             alt="thumbnail"
             :src="speakerInfo.image"
           >
-          <div class="text-center md:text-left">
-            <p class="mt-3 text-sm opacity-60 md:mt-2 md:text-[0.25rem]">
+          <div class="text-center md: md:pt-[20px] md:text-left">
+            <p class="mb-[10px] text-[11px] opacity-60 md:text-sm">
               {{ speakerInfo.company }}
             </p>
-            <p class="mt-2 text-lg font-bold text-vue-blue md:text-sm">
+            <p class="mb-[20px] text-[15px] font-bold md:text-xl">
               {{ speakerInfo.name_jp }}
             </p>
-            <span class="mx-auto mt-3 mb-6 flex justify-center space-x-5 md:mt-6 md:justify-start md:space-x-3">
+            <span class="flex justify-center md:justify-start">
               <a
                 :aria-label="`${speakerInfo.name_jp}のTwitterアカウント`"
                 target="_blank"
+                class="mr-[20px]"
                 :href="`https://twitter.com/${speakerInfo.twitter}`"
               >
                 <img
-                  class="w-8 md:w-5"
+                  class="w-6 md:w-[22px]"
                   src="/icon/twitter_logo.svg"
                   alt="Twitterのlogo"
                 >
@@ -59,7 +60,7 @@ const speakerInfo = computed(() => props.speaker)
                 :href="`https://github.com/${speakerInfo.github}`"
               >
                 <img
-                  class="w-8 md:w-5"
+                  class="w-6 md:w-[22px]"
                   src="/icon/github_logo-invert.svg"
                   alt="Githubのlogo"
                 >
@@ -67,12 +68,12 @@ const speakerInfo = computed(() => props.speaker)
             </span>
           </div>
         </div>
-        <p class="mb-4 text-sm leading-6 lg:mb-8">
+        <p class="text-sm leading-7 md:text-base md:leading-8">
           {{ speakerInfo.bio }}
         </p>
       </div>
     </div>
-    <div class="mt-12 text-center lg:mt-16">
+    <div class="mt-[50px] mb-[80px] text-center md:mt-[100px] md:mb-[160px]">
       <LinkButtonField
         link="/"
         title-label="トップに戻る"
