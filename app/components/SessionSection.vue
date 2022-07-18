@@ -13,32 +13,32 @@ const props = defineProps({
 const speakerInfo = computed(() => props.speaker)
 </script>
 <template>
-  <section class="px-5 mx-auto max-w-[900px] text-vue-blue">
-    <span class="inline-block py-1 px-4 mb-[15px] text-sm font-extrabold text-white bg-vue-blue md:text-lg">
+  <section class="px-5 mx-auto max-w-[56.25rem] text-vue-blue">
+    <span class="inline-block py-1 px-4 mb-2.5 text-sm font-extrabold text-white bg-vue-blue md:text-lg">
       {{ speakerInfo.session.time }}min
     </span>
-    <h3 class="mb-[40px] text-xl font-bold leading-8 md:mb-[50px] md:text-[25px]">
+    <h3 class="mb-5 text-xl font-bold leading-8 md:text-[1.5625rem]">
       {{ speakerInfo.session.title }}
     </h3>
-    <p class="mb-[40px] text-base leading-8 md:mb-[100px] md:text-lg md:leading-9">
+    <p class="mb-8 text-base leading-8 md:mb-20 md:text-lg md:leading-9">
       {{ speakerInfo.session.description }}
     </p>
-    <div class="p-5 border border-vue-blue md:flex md:p-[50px] ">
-      <p class="shrink-0 mb-5 text-sm font-extrabold text-center md:mt-[60px] md:mr-[50px] md:text-[22px]">
+    <div class="p-5 border border-vue-blue md:flex md:p-[3.125rem]">
+      <p class="shrink-0 mb-5 text-sm font-extrabold text-center md:mt-[3.75rem] md:mr-[3.125rem] md:text-[1.375rem]">
         Speaker Profile
       </p>
       <div>
-        <div class="mb-[30px] md:flex md:mb-0">
+        <div class="mb-5 md:flex md:mb-0">
           <img
-            class="mx-auto mb-[20px] w-[110px] h-[110px] md:mr-[30px] md:ml-0 md:w-[150px] md:h-[150px]"
+            class="mx-auto mb-5 w-28 h-28 md:mr-8 md:ml-0 md:w-[9.375rem] md:h-[9.375rem]"
             :alt="`${speakerInfo.name}の写真`"
             :src="speakerInfo.image"
           >
-          <div class="text-center md: md:pt-[20px] md:text-left">
-            <p class="mb-[10px] text-[11px] opacity-60 md:text-sm">
+          <div class="text-center md: md:pt-5 md:text-left">
+            <p class="text-[0.6875rem] opacity-60 md:text-sm">
               {{ speakerInfo.title }}
             </p>
-            <p class="mb-[20px] text-[15px] font-bold md:text-xl">
+            <p class="mb-4 text-[0.9375rem] font-bold md:text-xl">
               {{ speakerInfo.name }}
             </p>
             <span class="flex justify-center md:justify-start">
@@ -46,11 +46,11 @@ const speakerInfo = computed(() => props.speaker)
                 :aria-label="`${speakerInfo.name}のTwitterアカウント`"
                 target="_blank"
                 rel="noreferrer"
-                class="mr-[20px]"
+                class="mr-5"
                 :href="`https://twitter.com/${speakerInfo.twitter}`"
               >
                 <img
-                  class="w-6 md:w-[22px]"
+                  class="w-6"
                   src="/icon/twitter_logo.svg"
                   alt="Twitterのlogo"
                 >
@@ -62,7 +62,7 @@ const speakerInfo = computed(() => props.speaker)
                 :href="`https://github.com/${speakerInfo.github}`"
               >
                 <img
-                  class="w-6 md:w-[22px]"
+                  class="w-6"
                   src="/icon/github_logo-invert.svg"
                   alt="Githubのlogo"
                 >
@@ -75,7 +75,7 @@ const speakerInfo = computed(() => props.speaker)
         </p>
       </div>
     </div>
-    <div class="mt-[50px] mb-[80px] text-center md:mt-[100px] md:mb-[160px]">
+    <div class="mt-12 mb-20 text-center md:mt-24 md:mb-40">
       <LinkButtonField
         link="/"
         title-label="トップに戻る"

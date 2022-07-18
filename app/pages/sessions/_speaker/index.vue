@@ -14,9 +14,9 @@ const speaker = computed(() => {
 </script>
 <template>
   <div>
-    <nav-page-section class="mb-[50px]" />
+    <nav-page-section class="mb-12" />
     <PageTitle
-      class="mb-[40px] md:mb-[100px]"
+      class="mb-10 md:mb-24"
       title="Session"
       title-yamato="セッション"
     />
