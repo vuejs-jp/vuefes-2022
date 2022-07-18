@@ -17,7 +17,7 @@ const props = defineProps({
 const speakerInfo = computed(() => props.speaker)
 </script>
 <template>
-  <router-link :to="`/sessions/${props.speaker.name_jp}`">
+  <router-link :to="`/sessions/${props.speaker.id}`">
     <div class="text-vue-blue">
       <img
         class="mb-2.5 w-full"

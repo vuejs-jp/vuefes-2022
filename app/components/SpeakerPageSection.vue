@@ -24,7 +24,7 @@ import { speakers } from '~/utils/speakers.constants'
           >
             <SpeakerPageBlock
               v-for="speaker in speakers"
-              :key="speaker.name"
+              :key="speaker.id"
               :speaker="speaker"
             />
           </section>

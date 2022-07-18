@@ -31,20 +31,21 @@ const speakerInfo = computed(() => props.speaker)
         <div class="mb-[30px] md:flex md:mb-0">
           <img
             class="mx-auto mb-[20px] w-[110px] h-[110px] md:mr-[30px] md:ml-0 md:w-[150px] md:h-[150px]"
-            alt="thumbnail"
+            :alt="`${speakerInfo.name}の写真`"
             :src="speakerInfo.image"
           >
           <div class="text-center md: md:pt-[20px] md:text-left">
             <p class="mb-[10px] text-[11px] opacity-60 md:text-sm">
-              {{ speakerInfo.company }}
+              {{ speakerInfo.title }}
             </p>
             <p class="mb-[20px] text-[15px] font-bold md:text-xl">
-              {{ speakerInfo.name_jp }}
+              {{ speakerInfo.name }}
             </p>
             <span class="flex justify-center md:justify-start">
               <a
-                :aria-label="`${speakerInfo.name_jp}のTwitterアカウント`"
+                :aria-label="`${speakerInfo.name}のTwitterアカウント`"
                 target="_blank"
+                rel="noreferrer"
                 class="mr-[20px]"
                 :href="`https://twitter.com/${speakerInfo.twitter}`"
               >
@@ -55,8 +56,9 @@ const speakerInfo = computed(() => props.speaker)
                 >
               </a>
               <a
-                :aria-label="`${speakerInfo.name_jp}のGitHubアカウント`"
+                :aria-label="`${speakerInfo.name}のGitHubアカウント`"
                 target="_blank"
+                rel="noreferrer"
                 :href="`https://github.com/${speakerInfo.github}`"
               >
                 <img
@@ -69,7 +71,7 @@ const speakerInfo = computed(() => props.speaker)
           </div>
         </div>
         <p class="text-sm leading-7 md:text-base md:leading-8">
-          {{ speakerInfo.bio }}
+          {{ speakerInfo.description }}
         </p>
       </div>
     </div>
