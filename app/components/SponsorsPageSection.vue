@@ -13,10 +13,10 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 <template>
   <section
     id="sponsors"
-    class="bg-suponsors py-10 px-5 md:px-10 lg:p-20"
+    class="py-10 px-5 bg-suponsors md:px-10 lg:p-20"
   >
-    <div class="bg-white py-20 lg:py-40">
-      <div class="mx-auto max-w-[43.75rem] px-5">
+    <div class="py-20 bg-white lg:py-40">
+      <div class="px-5 mx-auto max-w-[43.75rem]">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Sponsors"
@@ -38,7 +38,7 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
             href="https://fortee.jp/"
             target="_blank"
             rel="noreferrer"
-            class="underline transition-opacity hover:opacity-60"
+            class="underline hover:opacity-60 transition-opacity"
           >
             Fortee
           </a>
@@ -60,7 +60,7 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
             :href="tweetUrl"
             target="_blank"
             rel="noreferrer"
-            class="underline transition-opacity hover:opacity-60"
+            class="underline hover:opacity-60 transition-opacity"
           >
             {{ tweetLink }}
           </a>

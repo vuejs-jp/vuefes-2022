@@ -14,10 +14,10 @@ import SectionTitle from '~/components/SectionTitle.vue'
 <template>
   <section
     id="message"
-    class="bg-white py-20 lg:py-40"
+    class="py-20 bg-white lg:py-40"
   >
     <div
-      class="mx-auto max-w-[43.75rem] px-5 lg:flex lg:max-w-[74.375rem] lg:items-center lg:justify-between"
+      class="px-5 mx-auto max-w-[43.75rem] lg:flex lg:justify-between lg:items-center lg:max-w-[74.375rem]"
     >
       <SectionTitle
         class="mb-10 lg:mr-6 lg:mb-20"
@@ -35,7 +35,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
             href="https://twitter.com/kazu_pon"
             target="_blank"
             rel="noreferrer"
-            class="underline transition-opacity hover:opacity-60"
+            class="underline hover:opacity-60 transition-opacity"
           >{{ representativeTwitterID }}</a>）
         </p>
       </div>

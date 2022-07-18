@@ -9,10 +9,10 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
 <template>
   <section
     id="ticket"
-    class="bg-ticket py-10 px-5 md:px-10 lg:p-20"
+    class="py-10 px-5 bg-ticket md:px-10 lg:p-20"
   >
-    <div class="bg-white py-20 lg:py-40">
-      <div class="mx-auto max-w-[43.75rem] px-5 lg:max-w-[74.375rem]">
+    <div class="py-20 bg-white lg:py-40">
+      <div class="px-5 mx-auto max-w-[43.75rem] lg:max-w-[74.375rem]">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Ticket"
@@ -22,13 +22,13 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
           class="mx-auto max-w-[43.75rem]"
           :explain="promotionInfo"
         />
-        <div class="flex w-full flex-wrap justify-center">
+        <div class="flex flex-wrap justify-center w-full">
           <div
             v-for="ticketPlan in ticketPlans"
             :key="ticketPlan.value"
-            class="relative mx-8 w-[40%] px-4 md:mb-[8vw] md:w-[32%] 3xl:w-[84%]"
+            class="relative px-4 mx-8 w-[40%] md:mb-[8vw] md:w-[32%] 3xl:w-[84%]"
           >
-            <div class="absolute top-[35%] left-[1.2vw] flex h-[200px] w-[250px] flex-col items-center justify-center border border-vue-blue text-center align-middle text-sm md:left-[0vw] md:h-[280px] md:w-[27vw] md:text-lg lg:top-[45%]">
+            <div class="flex absolute top-[35%] left-[1.2vw] flex-col justify-center items-center w-[250px] h-[200px] text-sm text-center align-middle border border-vue-blue md:left-[0vw] md:w-[27vw] md:h-[280px] md:text-lg lg:top-[45%]">
               <h3 class="pb-4 md:pb-12">{{ ticketPlan.title }}</h3>
               <p>
                 <span class="text-lg font-bold md:text-5xl">
@@ -58,13 +58,13 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
           class="mx-auto max-w-[43.75rem]"
           :explain="giftboxInfo"
         />
-        <div class="flex w-full flex-wrap justify-center">
+        <div class="flex flex-wrap justify-center w-full">
           <div
             v-for="gift in gifts"
             :key="gift.value"
-            class="relative mb-[8vw] w-[50%] px-4 md:w-[30%]"
+            class="relative px-4 mb-[8vw] w-[50%] md:w-[30%]"
           >
-            <div class="w-full pb-5">
+            <div class="pb-5 w-full">
               <img
                 :src="`/img/${gift.value}_sample.png`"
                 :alt="`${gift.title}用サンプル`"
@@ -72,7 +72,7 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
                 loading="lazy"
               >
             </div>
-            <div class="flex items-center justify-center md:w-[300px] 3xl:w-[120px]">
+            <div class="flex justify-center items-center md:w-[300px] 3xl:w-[120px]">
               <h3>{{ gift.title }}</h3>
             </div>
           </div>

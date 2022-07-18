@@ -41,14 +41,14 @@ const onMouseLeave = (value: string) => {
 
 <template>
   <div
-    class="grid grid-cols-[max-content_max-content] justify-center gap-2.5 lg:grid-cols-[max-content_max-content_max-content_max-content] lg:gap-5"
+    class="grid grid-cols-[max-content_max-content] gap-2.5 justify-center lg:grid-cols-[max-content_max-content_max-content_max-content] lg:gap-5"
   >
     <a
       v-for="network in networkLinks"
       :key="network.value"
       :href="network.url"
       :title="network.description"
-      class="flex h-10 w-40 items-center justify-center rounded-full border-2 text-base font-bold shadow-sm transition hover:bg-white hover:text-vue-blue lg:h-[3.375rem] lg:w-[13.75rem] lg:text-lg"
+      class="flex justify-center items-center w-40 h-10 text-base font-bold hover:text-vue-blue hover:bg-white rounded-full border-2 shadow-sm transition lg:w-[13.75rem] lg:h-[3.375rem] lg:text-lg"
       target="_blank"
       rel="noopener"
       @mouseover="onMouseOver(network.value)"
