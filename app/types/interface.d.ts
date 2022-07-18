@@ -15,9 +15,7 @@ export interface ISession {
 }
 export interface ISpeaker {
   id: string
-  name_jp: string
-  name_jp_kana: string
-  name_en: string
+  name: string
   bio: string
   session: ISession
   title: string

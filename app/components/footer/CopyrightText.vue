@@ -5,7 +5,7 @@ import { copyrightDetail } from '~/utils/constants'
 <template>
   <!-- eslint-disable vue/no-v-html -->
   <p
-    class="text-center text-xs lg:text-base"
+    class="text-xs text-center lg:text-base"
     v-html="copyrightDetail"
   />
   <!-- eslint-enable -->

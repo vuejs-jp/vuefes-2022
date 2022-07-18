@@ -12,9 +12,9 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
 <template>
   <section
     id="team"
-    class="bg-staffs py-10 px-5 md:px-10 lg:p-20"
+    class="py-10 px-5 bg-staffs md:px-10 lg:p-20"
   >
-    <div class="bg-white py-20 px-5 lg:py-40">
+    <div class="py-20 px-5 bg-white lg:py-40">
       <div class="mx-auto max-w-[43.75rem] lg:max-w-[73.75rem]">
         <SectionTitle
           class="mb-10 lg:mb-20"
@@ -24,7 +24,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
         <p class="mb-10 text-sm leading-7 text-vue-blue md:text-center lg:mb-14 lg:text-lg lg:leading-8">
           Vue Fes Japan Online 2022 は、Vue.js 日本ユーザーグループのスタッフによって企画・運営されています。
         </p>
-        <div class="mx-auto grid grid-cols-3 gap-3 md:grid-cols-5 lg:grid-cols-7 lg:gap-5">
+        <div class="grid grid-cols-3 gap-3 mx-auto md:grid-cols-5 lg:grid-cols-7 lg:gap-5">
           <div
             v-for="(staff, index) in showStaffs"
             :key="index"
@@ -42,7 +42,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
                   loading="lazy"
                   class="mb-1 w-full lg:mb-2"
                 >
-                <p class="text-center text-sm text-vue-blue">{{ staff.name }}</p>
+                <p class="text-sm text-center text-vue-blue">{{ staff.name }}</p>
               </a>
             </template>
             <template v-else>
@@ -52,7 +52,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
                 loading="lazy"
                 class="mb-1 w-full lg:mb-2"
               >
-              <p class="text-center text-sm text-vue-blue">{{ staff.name }}</p>
+              <p class="text-sm text-center text-vue-blue">{{ staff.name }}</p>
             </template>
           </div>
         </div>

@@ -7,7 +7,7 @@
     <nuxt-link
       to="/"
       title="トップへ戻る"
-      class="flex items-center justify-center"
+      class="flex justify-center items-center"
     >
       Oooops, something is wrong \ {{ error.statusCode }} / error
     </nuxt-link>
