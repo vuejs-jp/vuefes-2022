@@ -5,7 +5,7 @@ export interface ISponsor {
   name_jp: string
   name_jp_kana: string
   name_en: string
-  bio: string
+  bio?: string
   twitter: string
   facebook: string
   image: string
