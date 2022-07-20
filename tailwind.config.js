@@ -51,11 +51,18 @@ module.exports = {
         'linear-gradient(45deg, #35495e 25%, transparent 25%, transparent 75%, #35495e 75%), linear-gradient(45deg, #35495e 25%, transparent 25%, transparent 75%, #35495e 75%)',
       'ichimatsu-white':
         'linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%)',
+      'ichimatsu-tohoh':
+        'linear-gradient(45deg, #FFC408 25%, transparent 25%, transparent 75%, #FFC408 75%), linear-gradient(45deg, #FFC408 25%, transparent 25%, transparent 75%, #FFC408 75%)',
       'ichimatsu-hiwamoegi':
         'linear-gradient(45deg, #90b44b 25%, transparent 25%, transparent 75%, #90b44b 75%), linear-gradient(45deg, #90b44b 25%, transparent 25%, transparent 75%, #90b44b 75%)',
       'ichimatsu-silver-tree':
         'linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%), linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%)',
+      'ichimatsu-sangosyu':
+        'linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%), linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%)',
       sponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
+      staffs: 'linear-gradient(180deg, #F17C67 0%, rgba(196, 196, 196, 0) 100%)',
+      ticket: 'linear-gradient(180deg, #FFC408 0%, rgba(255, 255, 255, 0) 100%)',
+      speakers: 'linear-gradient(90deg, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 0%) 100%)',
       submit: 'linear-gradient(91.03deg, #33A6B8 0%, #42B983 100.01%)',
       'submit-border': 'linear-gradient(90deg, #42b983 0%, #33a6b8 100%)',
     },

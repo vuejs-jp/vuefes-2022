@@ -3,7 +3,7 @@ import { conferenceTitle, ogCoCDescription } from '~/utils/constants'
 import Endpoints from '~/utils/endpoints.constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import NavPageSection from '~/components/NavPageSection.vue'
-import PrivacyPolicyAndCocSectionTitle from '~/components/PrivacyPolicyAndCocSectionTitle.vue'
+import PageTitle from '~/components/PageTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
@@ -11,7 +11,7 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 export default {
   components: {
     NavPageSection,
-    PrivacyPolicyAndCocSectionTitle,
+    PageTitle,
     LinkButtonField,
     IchimatsuDividedBar,
     FooterPageSection
@@ -39,11 +39,10 @@ export default {
 <template>
   <div>
     <nav-page-section />
-    <PrivacyPolicyAndCocSectionTitle
+    <PageTitle
       class="mb-10 lg:mb-20"
       title="Code of Conduct"
       title-yamato="行動規範"
-      title-type="Coc"
     />
     <div
       class="px-5 mx-auto max-w-[43.75rem] text-sm leading-7 text-vue-blue lg:max-w-[73.75rem] lg:text-lg lg:leading-8"
