@@ -46,7 +46,7 @@ const speakerInfo = computed(() => props.speaker)
                 :aria-label="`${speakerInfo.name}のTwitterアカウント`"
                 target="_blank"
                 rel="noreferrer"
-                class="mr-5"
+                class="flex mr-5"
                 :href="`https://twitter.com/${speakerInfo.twitter}`"
               >
                 <img
