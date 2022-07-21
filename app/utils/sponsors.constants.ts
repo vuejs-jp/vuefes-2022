@@ -3,23 +3,23 @@ import { ISponsor, Rank } from '../types/sponsors'
 
 export const sponsorSupportLevelTitle = (rank: Rank) => {
   switch (rank) {
-  case 'platinum':
-    return 'Platinum'
-  case 'gold':
-    return 'Gold'
-  case 'silver':
-    return 'Silver'
-  case 'bronze':
-    return 'Bronze'
-  case 'media':
-    return 'Media'
-  case 'specialMedia':
-    return 'Special Media'
-  case 'broadcaster':
-    return '配信'
-  default:
-    const _missing: never = rank
-    return ''
+    case 'platinum':
+      return 'Platinum'
+    case 'gold':
+      return 'Gold'
+    case 'silver':
+      return 'Silver'
+    case 'bronze':
+      return 'Bronze'
+    case 'media':
+      return 'Media'
+    case 'specialMedia':
+      return 'Special Media'
+    case 'broadcaster':
+      return '配信'
+    default:
+      const _missing: never = rank
+      return ''
   }
 }
 
@@ -391,7 +391,6 @@ export const sponsors: ISponsor[] = [
     corporate_url: '#',
     rank: 'bronze',
   },
-
 
   {
     id: 'asdfasdf',
