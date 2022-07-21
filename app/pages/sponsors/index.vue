@@ -31,7 +31,7 @@ const platinumSponsors = sponsors.filter(sponsor => sponsor.rank === 'platinum')
 const goldSponsors = sponsors.filter(sponsor => sponsor.rank === 'gold')
 const silverSponsors = sponsors.filter(sponsor => sponsor.rank === 'silver')
 const bronzeSponsors = sponsors.filter(sponsor => sponsor.rank === 'bronze')
-const specialMediaSponsors = sponsors.filter(sponsor => sponsor.rank === 'SpecialMedia')
+const specialMediaSponsors = sponsors.filter(sponsor => sponsor.rank === 'specialMedia')
 const mediaSponsors = sponsors.filter(sponsor => sponsor.rank === 'media')
 const broadcastSponsors = sponsors.filter(sponsor => sponsor.rank === 'broadcaster')
 
@@ -69,7 +69,7 @@ const broadcastSponsors = sponsors.filter(sponsor => sponsor.rank === 'broadcast
       <LinkOutlineButtonField
         class="w-full max-w-[20rem] md:max-w-[13.75rem]"
         title-label="Special Media"
-        link="/sponsors/#SpecialMedia"
+        link="/sponsors/#Special Media"
       />
       <LinkOutlineButtonField
         class="w-full max-w-[20rem] md:max-w-[13.75rem]"
