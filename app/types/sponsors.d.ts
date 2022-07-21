@@ -1,4 +1,11 @@
-export type Rank = 'platinum' | 'gold' | 'silver' | 'bronze' | 'specialMedia' | 'media' | 'broadcaster'
+export type Rank =
+  | 'platinum'
+  | 'gold'
+  | 'silver'
+  | 'bronze'
+  | 'specialMedia'
+  | 'media'
+  | 'broadcaster'
 
 export interface ISponsor {
   id: string
