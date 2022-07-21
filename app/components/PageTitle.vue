@@ -16,11 +16,11 @@ const props = defineProps({
 <template>
   <div class="shrink-0 text-center text-vue-blue">
     <div
-      class="custom-yamato font-kokuryu-heading opacity-10"
+      class="font-kokuryu-heading opacity-10 custom-yamato"
     >
       {{ titleYamato }}
     </div>
-    <h1 class="custom-title mt-[-6vw] font-extrabold md:-mt-14">
+    <h1 class="mt-[-6vw] font-extrabold md:-mt-14 custom-title">
       {{ title }}
     </h1>
   </div>
