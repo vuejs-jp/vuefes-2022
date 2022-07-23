@@ -16,6 +16,10 @@ const props = defineProps({
     type: String,
     required: true
   },
+  disabled: {
+    type: Boolean,
+    default: false
+  }
 })
 
 const emit = defineEmits<ILinkButtonFieldEmit>()
@@ -23,6 +27,7 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
 
 <template>
   <div
+    :class="{ 'opacity-30': disabled , 'pointer-events-none': disabled }"
     class="inline-block before:block relative before:-z-10 w-full before:w-full max-w-[30rem] h-16 before:h-full before:bg-submit-border rounded-4xl before:rounded-4xl shadow-submit hover:shadow-submit-hover transition lg:h-[4.5rem]"
   >
     <div class="flex absolute top-0 justify-center items-center p-px w-full h-full">

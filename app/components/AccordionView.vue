@@ -10,28 +10,27 @@ const open = () => {
 </script>
 
 <template>
-  <div class="py-10 px-2.5">
+  <div class="mb-[20px] last:border-0 border-b border-vue-blue">
     <div
-      class="flex justify-between w-full text-sm leading-7 cursor-pointer lg:text-lg lg:leading-8"
+      class="flex gap-5 justify-between items-center mb-[20px] cursor-pointer"
       @click="open"
       @keyup="open"
     >
-      <slot name="title" />
-      <transition
-        name="rotate"
-        mode="out-in"
-      >
-        <OpenSvg v-if="isOpen" />
-        <CloseSvg v-if="!isOpen" />
-      </transition>
-    </div>
-    <transition name="open">
-      <div
+      <p class="text-[15px] font-bold text-left text-vue-blue"><slot name="title" /></p>
+      <CloseSvg
         v-if="isOpen"
-        class="pt-10 text-sm leading-7 lg:text-lg lg:leading-8"
-      >
-        <slot name="content" />
-      </div>
-    </transition>
+        class="shrink-0"
+      />
+      <OpenSvg
+        v-if="!isOpen"
+        class="shrink-0"
+      />
+    </div>
+    <div
+      v-if="isOpen"
+      class="mb-[20px]"
+    >
+      <slot name="content" />
+    </div>
   </div>
 </template>
