@@ -97,7 +97,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
             <template slot="content">
               <!-- eslint-disable vue/no-v-html -->
               <p
-                class="text-13 leading-5 text-vue-blue md:text-base md:leading-6"
+                class="pb-5 text-13 leading-5 text-vue-blue md:pb-10 md:text-base md:leading-6"
                 v-html="faq.answer"
               />
               <!-- eslint-enaable vue/no-v-html -->
