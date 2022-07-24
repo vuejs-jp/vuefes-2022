@@ -10,8 +10,6 @@
       <ichimatsu-divided-bar color="tohoh" />
       <ticket-page-section />
     </div>
-    <ichimatsu-divided-bar color="white" />
-    <speaker-page-section />
     <ichimatsu-divided-bar color="asagi" />
     <store-page-section />
     <ichimatsu-divided-bar color="hiwamoegi" />
