@@ -70,9 +70,12 @@ const speakerInfo = computed(() => props.speaker)
             </span>
           </div>
         </div>
-        <p class="text-sm leading-7 md:text-base md:leading-8">
-          {{ speakerInfo.description }}
-        </p>
+        <!-- eslint-disable vue/no-v-html -->
+        <p
+          class="text-sm leading-7 md:text-base md:leading-8"
+          v-html="speakerInfo.description"
+        />
+        <!-- eslint-enaable vue/no-v-html -->
       </div>
     </div>
     <div class="mt-12 mb-20 text-center md:mt-24 md:mb-40">
