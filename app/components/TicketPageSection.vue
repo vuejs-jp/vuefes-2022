@@ -71,7 +71,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
               class="mb-5 even:ml-[10%] w-[45%] md:mb-14 md:even:ml-0 md:w-[30%]"
             >
               <img
-                :src="`/img/${gift.value}_sample.png`"
+                :src="`/img/${gift.value}_sample.jpg`"
                 :alt="`${gift.title}用サンプル画像`"
                 loading="lazy"
                 class="mb-1.5 md:mb-2.5"
