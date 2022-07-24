@@ -15,7 +15,7 @@ import {
     class="py-10 px-5 bg-store md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
-      <div class="px-5 mx-auto">
+      <div class="px-5 mx-auto max-w-[1300px]">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Vue Fes Store"
@@ -32,18 +32,20 @@ import {
             {{ productShippingSchedule }}
           </p>
         </div>
-        <div class="flex flex-wrap gap-16 justify-between mx-auto mb-10 w-4/5 lg:mb-20">
+        <div class="flex flex-wrap gap-14 justify-around mx-auto mb-10 lg:mb-20">
           <div
             v-for="(goods, index) in goodsList"
             :key="index"
-            class="w-full md:w-1/3 lg:w-1/4"
+            class="w-full md:w-[45%] lg:w-[30%]"
           >
-            <img
-              :alt="`${goods.name}のサンプル画像`"
-              :src="`/store/${goods.image}`"
-              loading="lazy"
-              class="mb-10 w-full md:mb-7"
-            >
+            <div class="mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
+              <img
+                :alt="`${goods.name}のサンプル画像`"
+                :src="`/store/${goods.image}`"
+                loading="lazy"
+                class="block object-contain mx-auto h-full"
+              >
+            </div>
             <p class="text-2xl font-bold text-center text-vue-blue">
               {{ goods.name }}
             </p>
@@ -59,7 +61,7 @@ import {
             />
           </div>
         </div>
-        <div class="mx-auto w-4/5">
+        <div class="mx-auto">
           <p class="text-sm font-bold leading-7 text-vue-blue lg:text-lg lg:leading-8">
             {{ storeSupplement }}
           </p>
