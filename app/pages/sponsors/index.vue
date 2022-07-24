@@ -4,28 +4,9 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import LinkOutlineButtonField from '~/components/forms/LinkOutlineButtonField.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import SponsorListBio from '~/components/sponsors/SponsorListBio.vue'
-import { conferenceTitle, ogSponsorDescription } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import Endpoints from '~/utils/endpoints.constants'
 import { sponsors } from '~/utils/sponsors.constants'
-
-// useHead({
-//   title: `スポンサーの一覧 | ${conferenceTitle}`,
-//   meta: [
-//     ...generalOg(
-//       `スポンサーの一覧 | ${conferenceTitle}`,
-//       ogSponsorDescription,
-//       `${Endpoints.BASE_URL}sponsors`,
-//     ),
-//     ...twitterOg(
-//       `スポンサーの一覧 | ${conferenceTitle}`,
-//       ogSponsorDescription,
-//       `${Endpoints.BASE_URL}sponsors`,
-//     )
-//   ]
-// })
-
-
 
 const platinumSponsors = sponsors.filter(sponsor => sponsor.rank === 'platinum')
 const goldSponsors = sponsors.filter(sponsor => sponsor.rank === 'gold')
@@ -36,7 +17,28 @@ const mediaSponsors = sponsors.filter(sponsor => sponsor.rank === 'media')
 const broadcastSponsors = sponsors.filter(sponsor => sponsor.rank === 'broadcaster')
 
 </script>
-
+<script lang="ts">
+import { conferenceTitle, ogSponsorDescription } from '~/utils/constants'
+export default {
+  setup(){
+    useHead({
+      title: `スポンサーの一覧 | ${conferenceTitle}`,
+      meta: [
+        ...generalOg(
+          `スポンサーの一覧 | ${conferenceTitle}`,
+          ogSponsorDescription,
+          `${Endpoints.BASE_URL}sponsors`,
+        ),
+        ...twitterOg(
+          `スポンサーの一覧 | ${conferenceTitle}`,
+          ogSponsorDescription,
+          `${Endpoints.BASE_URL}sponsors`,
+        )
+      ]
+    })
+  }
+}
+</script>
 <template>
   <div class="mx-[3.125rem] md:mx-[8.75rem] lg:mx-[23.125rem]">
     <NavPageSection />
