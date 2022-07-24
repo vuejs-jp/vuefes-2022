@@ -31,7 +31,7 @@ const sponsorCardClass = computed(() => {
 <template>
   <div
     v-if="sponsors.length"
-    class="mb-[5rem]"
+    class="mb-[5rem] text-sponsor"
   >
     <h2
       :id="supportLevelTitle"
