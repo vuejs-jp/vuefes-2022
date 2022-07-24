@@ -55,16 +55,12 @@ export const promotionInfo =
 export const promotionCaution =
   '※ご購入いただいた費用は、すべて Vue Fes Japan の運営、または Vue.js 日本ユーザーグループの活動のために大切に使わせていただきます。'
 
-export const ticketPlans = [
-  { value: 'preregister', title: '一般チケット', price: 0 },
-  { value: 'personal_sponsor', title: '一般＋アフターパーティーチケット', price: 10000 },
-]
-
 export const giftboxInfo =
   '個人スポンサー用の事前登録チケットをご購入いただくと、特典として限定ギフトボックスをお届けします。ギフトボックスには以下の内容を同梱します。'
 
-export const giftboxCaution =
-  '※画像はすべてイメージです。\n' +
+export const giftboxCaution1 = '※画像はすべてイメージです。'
+
+export const giftboxCaution2 =
   '※ギフトボックスの内容は予告なく変更される可能性がありますので、あらかじめご了承ください。'
 
 export const gifts = [
@@ -72,7 +68,7 @@ export const gifts = [
   { value: 'snack', title: 'Vue Fes Japan<br>オリジナルお菓子' },
   { value: 'ecobag', title: 'Vue Fes Japan<br>特製エコバッグ' },
   { value: 'novelty', title: 'スポンサー各社様の<br>特製ノベルティ' },
-  { value: 'letter', title: 'Vue Fes Japan 実行委員会からのお礼のお手紙' },
+  { value: 'letter', title: 'Vue Fes Japan 実行委員会<br>からのお礼のお手紙' },
 ]
 
 export const faqList = [

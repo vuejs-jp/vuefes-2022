@@ -10,13 +10,14 @@ const open = () => {
 </script>
 
 <template>
-  <div class="mb-[20px] last:border-0 border-b border-vue-blue">
+  <div class="mb-5 last:border-0 border-b border-vue-blue md:mb-10">
     <div
-      class="flex gap-5 justify-between items-center mb-[20px] cursor-pointer"
+      class="flex gap-5 justify-between items-center mb-5 cursor-pointer md:mb-10"
+      tabindex="0"
       @click="open"
       @keyup="open"
     >
-      <p class="text-[15px] font-bold text-left text-vue-blue"><slot name="title" /></p>
+      <p class="text-15 font-bold text-left text-vue-blue md:text-lg"><slot name="title" /></p>
       <CloseSvg
         v-if="isOpen"
         class="shrink-0"
@@ -28,7 +29,7 @@ const open = () => {
     </div>
     <div
       v-if="isOpen"
-      class="mb-[20px]"
+      class="mb-5 md:mb-10"
     >
       <slot name="content" />
     </div>

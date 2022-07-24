@@ -25,10 +25,18 @@ module.exports = {
         35: '140px',
         90: '360px',
         153: '610px',
+        7.5: '1.875rem', // 30px
+        12.5: '3.125rem', // 50px
+        15: '3.75rem', // 60px
+        22.5: '5.625rem', // 90px
       },
       width: {
         170: '42rem',
         192: '54rem',
+      },
+      maxWidth: {
+        700: '43.75rem', // 700px
+        1190: '74.375rem', // 1190px
       },
       boxShadow: {
         submit: '0px 10px 20px rgba(0, 0, 0, 0.1)',
@@ -39,6 +47,14 @@ module.exports = {
       },
       fontFamily: {
         'kokuryu-heading': ['kokuryu', 'sans-serif'],
+      },
+      fontSize: {
+        11: '0.6875rem', // 11px
+        13: '0.8125rem', // 13px
+        15: '0.9375rem', // 15px
+        25: '1.5625rem', // 25px
+        35: '2.1875rem', // 35px
+        50: '3.125rem', // 50px
       },
     },
     backgroundImage: {
