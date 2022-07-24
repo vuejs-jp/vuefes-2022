@@ -5,11 +5,26 @@ import SessionSection from '~/components/SessionSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { speakers } from '~/utils/speakers.constants'
+import { generalOg, twitterOg } from '~/utils/og.constants'
+import { conferenceTitle, linkUrl } from '~/utils/constants'
 
 const route = useRoute()
 
 const speaker = computed(() => {
   return speakers.find(speaker => speaker.id === route.params.speaker)
+})
+
+const url = `https://vuefes.jp/2022/sessions/${speaker.value.id}`
+const title = `${speaker.value.session.title}（${speaker.value.name}） | ${conferenceTitle}`
+const description = `${conferenceTitle} のセッション情報です。スピーカーの ${speaker.value.name} が、「${speaker.value.session.title}」を発表します。`
+const ogImageUrl = `${linkUrl}speaker-og-images/${speaker.value.id}.jpg`
+
+useNuxt2Meta({
+  title,
+  meta: [
+    ...generalOg(title, description, url, ogImageUrl),
+    ...twitterOg(title, description, ogImageUrl),
+  ]
 })
 </script>
 <template>

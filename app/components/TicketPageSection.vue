@@ -26,9 +26,9 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
           <div
             v-for="ticketPlan in ticketPlans"
             :key="ticketPlan.value"
-            class="relative px-4 mx-8 w-[40%] md:mb-[8vw] md:w-[32%] 3xl:w-[84%]"
+            class="relative px-4 mx-8 w-[187vw] md:mb-[8vw] md:w-[480px]"
           >
-            <div class="flex absolute top-[35%] left-[1.2vw] flex-col justify-center items-center w-[250px] h-[200px] text-sm text-center align-middle border border-vue-blue md:left-[0vw] md:w-[27vw] md:h-[280px] md:text-lg lg:top-[45%]">
+            <div class="flex absolute top-[35%] left-[1.2vw] flex-col justify-center items-center w-[240px] h-[120px] text-sm text-center align-middle border border-vue-blue md:left-[0vw] md:w-[36vw] md:h-[54vh] md:text-lg lg:top-[45%] 3xl:w-[40vw]">
               <h3 class="pb-4 md:pb-12">{{ ticketPlan.title }}</h3>
               <p>
                 <span class="text-lg font-bold md:text-5xl">
@@ -72,7 +72,7 @@ import { faqList, giftboxCaution, giftboxInfo, gifts, promotionCaution, promotio
                 loading="lazy"
               >
             </div>
-            <div class="flex justify-center items-center md:w-[300px] 3xl:w-[120px]">
+            <div class="flex justify-center items-center text-center md:w-[180px] 3xl:w-[120px]">
               <h3>{{ gift.title }}</h3>
             </div>
           </div>

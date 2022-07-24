@@ -1,5 +1,13 @@
 import { conferenceTitle, ogDescription, linkUrl, vuefesTwitterID } from './constants'
 
+/**
+ * OG 情報を取得する
+ * @param title タイトル
+ * @param description 説明文
+ * @param url URL
+ * @param image 画像
+ * @returns
+ */
 export const generalOg = (title?: string, description?: string, url?: string, image?: string) => [
   {
     hid: 'description',
@@ -34,10 +42,22 @@ export const generalOg = (title?: string, description?: string, url?: string, im
   {
     hid: 'og:image',
     name: 'og:image',
-    content: `${linkUrl}img/og-image.png`,
+    content: image ? image : `${linkUrl}img/og-image.png`,
+  },
+  {
+    hid: 'og:image:secure_url',
+    name: 'og:image:secure_url',
+    content: image ? image : `${linkUrl}img/og-image.png`,
   },
 ]
 
+/**
+ * Twitter OG 情報を取得する
+ * @param title タイトル
+ * @param description 説明文
+ * @param image 画像
+ * @returns
+ */
 export const twitterOg = (title?: string, description?: string, image?: string) => [
   {
     hid: 'twitter:description',
@@ -72,6 +92,6 @@ export const twitterOg = (title?: string, description?: string, image?: string) 
   {
     hid: 'twitter:image',
     name: 'twitter:image',
-    content: `${linkUrl}img/og-image.png`,
+    content: image ? image : `${linkUrl}img/og-image.png`,
   },
 ]

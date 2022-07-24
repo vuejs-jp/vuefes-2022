@@ -9,8 +9,8 @@ export const speakers = [
     twitter: 'youyuxi',
     github: 'yyx990803',
     session: {
-      title: '未定',
-      description: '未定',
+      title: 'キーノート',
+      description: '調整中',
       time: 40,
     },
   },
@@ -27,7 +27,7 @@ export const speakers = [
       title: 'State Alchemy with Pinia',
       description:
         'Pinia might be a light library with a simple API but it takes advantage of many Vue Reactivity concepts like Effect Scopes, that are unknown by most. In this talk we will go through some of the internals of Pinia, understanding them and discovering how to enhance our usage of Pinia.',
-      time: 40,
+      time: 20,
     },
   },
   {
@@ -44,7 +44,7 @@ export const speakers = [
       title: 'From Zero to One',
       description:
         'Live coding session about making a full blown deployed application with Nuxt 3.',
-      time: 40,
+      time: 20,
     },
   },
   {
@@ -59,7 +59,7 @@ export const speakers = [
     session: {
       title: 'Vite 3 and Beyond',
       description: 'New Vite features in Vite 3, state of Core dev, and what is next.',
-      time: 40,
+      time: 20,
     },
   },
   {
@@ -71,9 +71,9 @@ export const speakers = [
     twitter: 'antfu7',
     github: 'antfu',
     session: {
-      title: '未定',
-      description: '未定',
-      time: 40,
+      title: '調整中',
+      description: '調整中',
+      time: 20,
     },
   },
   {
@@ -86,9 +86,9 @@ export const speakers = [
     twitter: '_JessicaSachs',
     github: 'JessicaSachs',
     session: {
-      title: '未定',
-      description: '未定',
-      time: 40,
+      title: '調整中',
+      description: '調整中',
+      time: 20,
     },
   },
 ]
