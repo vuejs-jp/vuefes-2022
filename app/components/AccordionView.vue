@@ -7,31 +7,62 @@ const isOpen = ref(false)
 const open = () => {
   isOpen.value = !isOpen.value
 }
+
+const start = (el: HTMLElement) => {
+  el.style.height = el.scrollHeight + 'px'
+}
+
+const end = (el: HTMLElement) => {
+  el.style.height = ''
+}
 </script>
 
 <template>
-  <div class="py-10 px-2.5">
+  <div class="mb-5 last:border-0 border-b border-vue-blue md:px-6 md:mb-10">
     <div
-      class="flex justify-between w-full text-sm leading-7 cursor-pointer lg:text-lg lg:leading-8"
+      class="flex gap-5 justify-between items-center pb-5 cursor-pointer md:pb-10"
+      tabindex="0"
       @click="open"
       @keyup="open"
     >
-      <slot name="title" />
-      <transition
-        name="rotate"
-        mode="out-in"
-      >
-        <OpenSvg v-if="isOpen" />
-        <CloseSvg v-if="!isOpen" />
-      </transition>
-    </div>
-    <transition name="open">
-      <div
+      <p class="text-15 font-bold text-left text-vue-blue md:text-lg"><slot name="title" /></p>
+      <CloseSvg
         v-if="isOpen"
-        class="pt-10 text-sm leading-7 lg:text-lg lg:leading-8"
+        class="shrink-0"
+      />
+      <OpenSvg
+        v-if="!isOpen"
+        class="shrink-0"
+      />
+    </div>
+    <transition
+      name="accordion"
+      @enter="start"
+      @after-enter="end"
+      @before-leave="start"
+      @after-leave="end"
+    >
+      <div
+        v-show="isOpen"
+        class=""
       >
         <slot name="content" />
       </div>
     </transition>
   </div>
 </template>
+
+<style scoped>
+.accordion-enter-active,
+.accordion-leave-active {
+  will-change: height, opacity;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.accordion-enter,
+.accordion-leave-to {
+  height: 0 !important;
+  opacity: 0;
+}
+</style>

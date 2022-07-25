@@ -43,22 +43,22 @@ export default {
     }
   },
   setup(props, setupContext) {
-    const useAnimeParts = useAnimationParts()
+    const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
     const refs = setupContext.refs
 
-    const transform = useAnimeParts.transform(props)
+    const transform = transformPosition(props)
 
 
     const createAnimations = () => {
       setTimeout(() => {
-        useAnimeParts.createAnimation(refs.shape1, { height: 55 })
-        useAnimeParts.createAnimation(refs.shape2, { y: 5, height: 55 })
+        createAnimation(refs.shape1, { height: 55 })
+        createAnimation(refs.shape2, { y: 5, height: 55 })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      useAnimeParts.fadeAnimation(refs.shape1, { y: -60, height: 0 })
-      useAnimeParts.fadeAnimation(refs.shape1, { y: 60, height: 0 })
+      fadeAnimation(refs.shape1, { y: -60, height: 0 })
+      fadeAnimation(refs.shape1, { y: 60, height: 0 })
     }
 
     onMounted(() => {

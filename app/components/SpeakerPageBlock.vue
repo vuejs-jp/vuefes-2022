@@ -2,8 +2,8 @@
 import { CustomPropType } from '~/types/shims-vue'
 
 interface IProps {
-  name_jp: string
-  company: string
+  name: string
+  title: string
   image: string
 }
 
@@ -13,17 +13,20 @@ const props = defineProps({
     required: true
   }
 })
+
+const speakerInfo = computed(() => props.speaker)
 </script>
 <template>
-  <router-link :to="`/sessions/${props.speaker.name_jp}`">
-    <div class="w-full">
+  <router-link :to="`/sessions/${props.speaker.id}`">
+    <div class="text-vue-blue">
       <img
-        class="w-full"
-        alt="thumbnail"
-        :src="props.speaker.image"
+        class="mb-2.5 w-full"
+        :alt="`${speakerInfo.name}の写真`" 
+        :src="speakerInfo.image"
+        loading="lazy"
       >
-      <p class="mt-3 text-sm opacity-60 md:mt-2 lg:mt-1 lg:text-[0.25rem]">{{ props.speaker.company }}</p>
-      <p class="text-lg font-bold text-vue-blue lg:text-sm">{{ props.speaker.name_jp }}</p>
+      <p class="text-xs">{{ speakerInfo.title }}</p>
+      <p class="text-lg font-bold lg:text-[1.375rem]">{{ speakerInfo.name }}</p>
     </div>
   </router-link>
 </template>

@@ -38,13 +38,13 @@ export default {
   },
 
   setup(props, setupContext) {
-    const useAnimeParts = useAnimationParts()
+    const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
     const refs = setupContext.refs
 
     const KEY_FRAME1 = ['-60 -60 -60 -60 -60 -60', '-60 -60 54 -60 -60 54']
     const KEY_FRAME2 = ['60 60 60 60 60 60', '60 60 -54 60 60 -54']
 
-    const transform = useAnimeParts.transform(props)
+    const transform = transformPosition(props)
 
     // ランダムで色を返す
     const getFillColor = () => {
@@ -58,14 +58,14 @@ export default {
 
     const createAnimations = () => {
       setTimeout(() => {
-        useAnimeParts.createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
-        useAnimeParts.createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
+        createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
+        createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      useAnimeParts.fadeAnimation(refs.shape1, { points: KEY_FRAME1[0] })
-      useAnimeParts.fadeAnimation(refs.shape2, { points: KEY_FRAME2[0] })
+      fadeAnimation(refs.shape1, { points: KEY_FRAME1[0] })
+      fadeAnimation(refs.shape2, { points: KEY_FRAME2[0] })
     }
 
     onMounted(() => {
