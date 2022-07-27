@@ -4,7 +4,7 @@ import SubTitle from '~/components/SubTitle.vue'
 import ExplainText from '~/components/ExplainText.vue'
 import AccordionView from '~/components/AccordionView.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField'
-import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotionCaution, promotionInfo } from '~/utils/constants'
+import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotionCaution, promotionInfo, promotionInfo2, promotionInfo3 } from '~/utils/constants'
 </script>
 
 <template>
@@ -49,11 +49,19 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
             </div>
           </div>
         </div>
-        <p class="mb-10 text-xs font-bold leading-5 text-vue-blue md:mb-22.5 md:text-base">{{ promotionCaution }}</p>
+        <p class="mb-10 text-xs leading-5 text-vue-blue md:mb-22.5 md:text-base">{{ promotionCaution }}</p>
+        <ExplainText
+          class="mx-auto mb-7.5 max-w-700"
+          :explain="promotionInfo2"
+        />
+        <ExplainText
+          class="mx-auto mb-7.5 max-w-700 md:mb-20"
+          :explain="promotionInfo3"
+        />
         <div class="mb-12.5 text-center md:mb-22.5">
           <LinkButtonField
             link="/"
-            title-label="事前登録チケットを購入する"
+            title-label="8/1(月) 12:00 より発売開始"
             is-external-link
             disabled
           />
@@ -84,8 +92,8 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
               <!-- eslint-enaable vue/no-v-html -->
             </div>
           </div>
-          <p class="text-xs font-bold leading-5 text-vue-blue md:text-base md:leading-7">{{ giftboxCaution1 }}</p>
-          <p class="text-xs font-bold leading-5 text-vue-blue md:text-base md:leading-7">{{ giftboxCaution2 }}</p>
+          <p class="text-xs leading-5 text-vue-blue md:text-base md:leading-7">{{ giftboxCaution1 }}</p>
+          <p class="text-xs leading-5 text-vue-blue md:text-base md:leading-7">{{ giftboxCaution2 }}</p>
         </section>
         <section class="mx-auto max-w-700">
           <SubTitle class="mb-14">FAQ</SubTitle>
