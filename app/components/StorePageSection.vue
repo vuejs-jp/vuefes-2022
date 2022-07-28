@@ -32,11 +32,11 @@ import {
             {{ productShippingSchedule }}
           </p>
         </div>
-        <div class="flex flex-wrap gap-14 justify-around mx-auto mb-10 lg:mb-20">
+        <div class="flex flex-wrap gap-14 justify-between mx-auto mb-10 lg:mb-20">
           <div
             v-for="(goods, index) in goodsList"
             :key="index"
-            class="w-full md:w-[45%] lg:w-[30%]"
+            class="w-full md:w-[45%] xl:w-[30%]"
           >
             <div class="mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
               <img
