@@ -61,7 +61,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
         <div class="mb-12.5 text-center md:mb-22.5">
           <LinkButtonField
             link="/"
-            title-label="8/1(月) 12:00 より発売開始"
+            title-label="8/3(水) 12:00 より発売開始"
             is-external-link
             disabled
           />
