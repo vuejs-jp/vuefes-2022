@@ -13,7 +13,7 @@ const imageStyle = computed(() => `background-image: url(${props.sponsor.image})
 
 <template>
   <nuxt-link
-    :to="`/sponsors/${sponsor.id}`"
+    :to="`/sponsors/#${sponsor.id}`"
     class="aspect-16/9 bg-center bg-cover shadow-card hover:shadow-card-hover transition"
     :style="imageStyle"
   />
