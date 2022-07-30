@@ -10,6 +10,8 @@
       <ichimatsu-divided-bar color="tohoh" />
       <ticket-page-section />
     </div>
+    <ichimatsu-divided-bar color="asagi" />
+    <store-page-section />
     <ichimatsu-divided-bar color="hiwamoegi" />
     <sponsors-page-section />
     <ichimatsu-divided-bar color="silver-tree" />
@@ -29,6 +31,7 @@ import TopPageSection from '~/components/TopPageSection.vue'
 import MessagePageSection from '~/components/MessagePageSection.vue'
 import TicketPageSection from '~/components/TicketPageSection.vue'
 import SpeakerPageSection from '~/components/SpeakerPageSection.vue'
+import StorePageSection from '~/components/StorePageSection.vue'
 import SponsorsPageSection from '~/components/SponsorsPageSection.vue'
 import TeamPageSection from '~/components/TeamPageSection.vue'
 import FormPageSection from '~/components/FormPageSection.vue'
