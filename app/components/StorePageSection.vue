@@ -43,7 +43,7 @@ import {
                 :alt="`${goods.name}のサンプル画像`"
                 :src="`/store/${goods.image}`"
                 loading="lazy"
-                class="block object-contain mx-auto h-full"
+                class="block object-contain mx-auto max-h-full"
               >
             </div>
             <p class="text-2xl font-bold text-center text-vue-blue">
