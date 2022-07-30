@@ -10,7 +10,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
 <template>
   <section
     id="ticket"
-    class="py-10 px-5 bg-ticket md:p-20 md:px-10"
+    class="py-10 px-5 bg-ticket md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white md:py-40">
       <div class="px-5 mx-auto max-w-700 md:max-w-1190">

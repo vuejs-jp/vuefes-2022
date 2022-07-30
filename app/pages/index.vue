@@ -10,10 +10,10 @@
       <ichimatsu-divided-bar color="asagi" />
       <store-page-section />
     </template>
-    <div v-if="SHOW_TICKET">
+    <template v-if="SHOW_TICKET">
       <ichimatsu-divided-bar color="tohoh" />
       <ticket-page-section />
-    </div>
+    </template>
     <ichimatsu-divided-bar color="hiwamoegi" />
     <sponsors-page-section />
     <ichimatsu-divided-bar color="silver-tree" />
