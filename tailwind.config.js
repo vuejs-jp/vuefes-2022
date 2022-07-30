@@ -70,7 +70,10 @@ module.exports = {
         'linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%), linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%)',
       'ichimatsu-sangosyu':
         'linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%), linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%)',
+      'ichimatsu-asagi':
+        'linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%), linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%)',
       suponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
+      store: 'linear-gradient(180deg, #33A6B8 0%, rgba(255, 255, 255, 0) 100%)',
       staffs: 'linear-gradient(180deg, #F17C67 0%, rgba(196, 196, 196, 0) 100%)',
       ticket: 'linear-gradient(180deg, #FFC408 0%, rgba(255, 255, 255, 0) 100%)',
       speakers: 'linear-gradient(90deg, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 0%) 100%)',
@@ -94,6 +97,7 @@ module.exports = {
     screens: {
       md: '771px',
       lg: '981px',
+      xl: '1200px',
       '3xl': '1921px',
     },
   },
