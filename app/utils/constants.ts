@@ -10,6 +10,8 @@ export const ogCoCDescription =
 
 export const ogPrivacyDescription = 'Vue Fes Japan Online 2022 のプライバシーポリシーです。'
 
+export const ogSponsorDescription = 'Vue Fes Japan Online 2022 のスポンサーの一覧'
+
 export const linkUrl = 'https://vuefes.jp/2022/'
 
 export const vuefesTwitterID = '@vuefes'

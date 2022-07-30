@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { CustomPropType } from '~/types/shims-vue'
-import SponsorLogo from '~/components/sponsors/SponsorCard.vue'
+import SponsorLogo from '~/components/sponsors/SponsorLogo.vue'
 import { sponsorSupportLevelTitle } from '~/utils/sponsors.constants'
 
 const props = defineProps({
@@ -32,7 +32,7 @@ const sponsorCardClass = computed(() => {
 
 <template>
   <div
-    v-if="sponsors.length"
+    v-if="sponsors"
     class="mb-[5rem]"
   >
     <h2 class="mb-[2.47rem] text-2xl font-bold text-center"><nuxt-link :to="`/sponsors#${supportLevelTitle}`">{{ supportLevelTitle }}</nuxt-link></h2>
@@ -43,7 +43,6 @@ const sponsorCardClass = computed(() => {
       <SponsorLogo
         v-for="sponsor in sponsors"
         :key="sponsor.id"
-        class=""
         :class="sponsorCardClass"
         :sponsor="sponsor"
       />

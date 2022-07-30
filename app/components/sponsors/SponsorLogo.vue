@@ -12,13 +12,14 @@ const props = defineProps({
 
 <template>
   <nuxt-link
-    :to="`/sponsors/#${sponsor.name_en}`"
+    v-if="sponsor"
+    :id="sponsor.name_jp"
+    :to="`/sponsors/#${sponsor.name_jp}`"
     class="shadow-card hover:shadow-card-hover transition"
   >
     <img
-      :src="props.sponsor.image"
+      :src="props.sponsor.image.src"
       :alt="props.sponsor.name_jp"
-      v-bind="$attrs"
       class="aspect-16/9 object-cover w-full bg-center"
     >
   </nuxt-link>

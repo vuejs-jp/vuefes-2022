@@ -1,13 +1,12 @@
 /* Write main styles */
 
-@use "fonts";
+@use 'fonts';
 
 body {
-  font-family:
-    "din-2014", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", Meiryo,
+  font-family: 'din-2014', 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', Meiryo,
     sans-serif;
   overflow-x: hidden;
-  background-image: url("/img/bg.png");
+  background-image: url('/img/bg.png');
   background-position: center;
   background-repeat: repeat;
   background-attachment: fixed;

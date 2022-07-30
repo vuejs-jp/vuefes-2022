@@ -12,6 +12,7 @@ const props = defineProps({
 const supportLevelTitle = computed(() => {
   return sponsorSupportLevelTitle(props.sponsors?.[0]?.rank)
 })
+const supportLevelAnchor = computed(() => props.sponsors?.[0]?.rank)
 const sponsorRankClass = computed(() => {
   const rank = props.sponsors?.[0]?.rank
   if (rank === 'platinum') {
@@ -30,11 +31,11 @@ const sponsorCardClass = computed(() => {
 
 <template>
   <div
-    v-if="sponsors.length"
+    v-if="sponsors"
     class="mb-[5rem] text-sponsor"
   >
     <h2
-      :id="supportLevelTitle"
+      :id="supportLevelAnchor"
       class="mb-[2.47rem] text-2xl font-bold"
     >
       {{ supportLevelTitle }}
@@ -45,17 +46,24 @@ const sponsorCardClass = computed(() => {
     >
       <div
         v-for="sponsor in sponsors"
-        :key="sponsor.name_en"
+        :key="sponsor.name"
         :class="sponsorCardClass"
       >
         <SponsorLogo
-          :id="sponsor.name_en"
-          class=""
           :sponsor="sponsor"
         />
-        <h3>{{ sponsor.name_jp }}</h3>
-        <nuxt-link :to="sponsor.corporate_url">{{ sponsor.corporate_url }}</nuxt-link>
-        <p v-if="sponsor.bio">{{ sponsor.bio }}</p>
+        <h3 class="mt-[1.5rem] mb-[0.625rem] font-[1.5rem] font-bold text-sponsor">{{ sponsor.name_jp }}</h3>
+        <a
+          :href="sponsor.corporate_url"
+          target="_blank"
+          rel="noopener"
+        >{{ sponsor.corporate_url }}</a>
+        <p
+          v-if="sponsor.bio"
+          class="mt-[1.5rem]"
+        >
+          {{ sponsor.bio }}
+        </p>
       </div>
     </div>
   </div>
