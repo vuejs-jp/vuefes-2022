@@ -18,4 +18,5 @@ export interface ISponsor {
   image: string
   corporate_url: string
   rank: Rank
+  order: number
 }

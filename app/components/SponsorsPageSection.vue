@@ -2,15 +2,13 @@
 import SponsorList from '~/components/sponsors/SponsorList.vue'
 import { ISponsor, Rank } from '~/types/sponsors'
 import SectionTitle from '~/components/SectionTitle.vue'
-import { sponsors } from '~/utils/sponsors.constants'
+import { useSponsorsCMS } from '~/composables/useCMS'
 
-const platinumSponsors = sponsors.filter(sponsor => sponsor.rank === 'platinum')
-const goldSponsors = sponsors.filter(sponsor => sponsor.rank === 'gold')
-const silverSponsors = sponsors.filter(sponsor => sponsor.rank === 'silver')
-const bronzeSponsors = sponsors.filter(sponsor => sponsor.rank === 'bronze')
-const specialMediaSponsors = sponsors.filter(sponsor => sponsor.rank === 'SpecialMedia')
-const mediaSponsors = sponsors.filter(sponsor => sponsor.rank === 'media')
-const broadcastSponsors = sponsors.filter(sponsor => sponsor.rank === 'broadcaster')
+const sponsors = ref(null)
+const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+fetchContent().then((response) => {
+  sponsors.value = response
+})
 </script>
 
 <template>
@@ -25,13 +23,15 @@ const broadcastSponsors = sponsors.filter(sponsor => sponsor.rank === 'broadcast
           title="Sponsors"
           title-yamato="スポンサー"
         />
-        <SponsorList :sponsors="platinumSponsors" />
-        <SponsorList :sponsors="goldSponsors" />
-        <SponsorList :sponsors="silverSponsors" />
-        <SponsorList :sponsors="bronzeSponsors" />
-        <SponsorList :sponsors="specialMediaSponsors" />
-        <SponsorList :sponsors="mediaSponsors" />
-        <SponsorList :sponsors="broadcastSponsors" />
+        <template v-if="sponsors">
+          <SponsorList :sponsors="sponsors.platinum" />
+          <SponsorList :sponsors="sponsors.gold" />
+          <SponsorList :sponsors="sponsors.silver" />
+          <SponsorList :sponsors="sponsors.bronze" />
+          <SponsorList :sponsors="sponsors.specialMedia" />
+          <SponsorList :sponsors="sponsors.media" />
+          <SponsorList :sponsors="sponsors.broadcaster" />
+        </template>
       </div>
     </div>
   </section>
