@@ -15,13 +15,13 @@ import {
     class="py-10 px-5 bg-store md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
-      <div class="px-5 mx-auto max-w-[1300px]">
+      <div class="px-5 mx-auto max-w-1190">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Vue Fes Store"
           title-yamato="ストア"
         />
-        <div class="mx-auto mb-10 w-4/5 lg:mb-20 lg:w-1/2">
+        <div class="mx-auto mb-10 max-w-700 lg:mb-20">
           <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
             {{ storeDescription }}
           </p>
