@@ -79,10 +79,10 @@ export const speakers = [
   {
     id: 'Jess',
     name: 'Jessica Sachs',
-    title: 'Cypress スタッフエンジニア',
+    title: 'PathAI スタッフエンジニア',
     image: '/speaker/jess.jpg',
     description:
-      'Jess is a Staff Engineer at Cypress where she’s building a new generation of frontend testing tools. She’s been coding for more than 10 years and now works professionally within the Open Source community. She is a Core Team Member of both Cypress and Faker and a contributor to Vue and Vitest. She’s also an educator at Vue Mastery.',
+      'Jess is a Staff Software Engineer at <a class="inner-link" href="https://www.pathai.com/" target="_blank" rel="noreferrer">PathAI</a> where she’s building their component library, Anodyne. She’s been coding for more than 10 years and now works professionally within the Open Source community. She is a Core Team Member of both Cypress ambassador and <a class="inner-link" href="https://fakerjs.dev/" target="_blank" rel="noreferrer">Faker</a> and a contributor to <a class="inner-link" href="https://vuejs.org/" target="_blank" rel="noreferrer">Vue</a> and <a class="inner-link" href="https://vitest.dev/" target="_blank" rel="noreferrer">Vitest</a>. She’s also an educator at Vue Mastery.',
     twitter: '_JessicaSachs',
     github: 'JessicaSachs',
     session: {
