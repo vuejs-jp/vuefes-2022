@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [ver.2022.10.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.10.1)
+
+- チケットセクションの追加
+
 ## [ver.2022.9.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.9.2)
 
 - Jessica Sachs さんのプロフィールを更新
