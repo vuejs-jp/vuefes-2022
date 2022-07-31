@@ -10,8 +10,8 @@ export const storeDescription =
   'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store が今年も登場します。完全受注生産で、オンラインにてご注文いただくと、当日までにご自宅にお届けします。オリジナルグッズを揃えて、Vue Fes Japan を盛り上げましょう！'
 
 // TODO: ご注文受付期間の修正
-export const orderAcceptancePeriod = 'ご注文受付期間：●/●～●/●'
-export const productShippingSchedule = '商品発送予定：9月下旬ごろ'
+export const orderAcceptancePeriod = 'ご注文受付期間：近日開始予定'
+export const productShippingSchedule = '商品発送予定：10月上旬ごろ'
 
 export const goodsList: IGoods[] = [
   {
@@ -57,7 +57,7 @@ export const goodsList: IGoods[] = [
   {
     image: 'mobile_battery.png',
     name: 'モバイルバッテリー',
-    price: '1,000円',
+    price: '4,000円',
     description:
       'ポップな柄が散りばめられたモバイルバッテリーです。外出先のバッテリー切れに備えられます。cheero製ですので、過充電や過放電などの安全性も安心です。',
     specification: '電池容量：5000mAh\n充電時間：約4時間\n付属品：microUSBケーブル',
@@ -80,9 +80,9 @@ export const goodsList: IGoods[] = [
   },
   // TODO: ステッカーの説明・仕様を追加
   {
-    image: 'sticker.png',
-    name: 'ステッカー',
-    price: '500円',
+    image: 'sample.png',
+    name: '',
+    price: '0円',
     description: '説明...',
     specification: '仕様...',
   },

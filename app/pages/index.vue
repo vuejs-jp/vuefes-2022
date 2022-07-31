@@ -6,13 +6,13 @@
     <message-page-section />
     <ichimatsu-divided-bar color="white" />
     <speaker-page-section />
-    <template v-if="SHOW_STORE">
-      <ichimatsu-divided-bar color="asagi" />
-      <store-page-section />
-    </template>
     <template v-if="SHOW_TICKET">
       <ichimatsu-divided-bar color="tohoh" />
       <ticket-page-section />
+    </template>
+    <template v-if="SHOW_STORE">
+      <ichimatsu-divided-bar color="asagi" />
+      <store-page-section />
     </template>
     <ichimatsu-divided-bar color="hiwamoegi" />
     <sponsors-page-section />
