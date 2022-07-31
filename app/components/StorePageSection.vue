@@ -36,7 +36,7 @@ import {
           <div
             v-for="(goods, index) in goodsList"
             :key="index"
-            class="w-full md:w-[45%] xl:w-[30%]"
+            class="last:hidden w-full md:w-[45%] xl:last:block xl:last:invisible xl:w-[30%]"
           >
             <div class="mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
               <img
@@ -62,7 +62,7 @@ import {
           </div>
         </div>
         <div class="mx-auto">
-          <p class="text-sm font-bold leading-7 text-vue-blue lg:text-lg lg:leading-8">
+          <p class="text-xs leading-5 text-vue-blue md:text-base">
             {{ storeSupplement }}
           </p>
         </div>
