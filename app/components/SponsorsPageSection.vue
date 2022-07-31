@@ -17,7 +17,7 @@ fetchContent().then((response) => {
     class="py-10 px-5 bg-sponsors md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
-      <div class="mx-auto max-w-[41.875rem] sm:max-w-[51.25rem] md:max-w-[73.75rem]">
+      <div class="mx-auto max-w-[41.875rem] sm:max-w-[51.25rem] md:max-w-[73.75rem] lg:max-w-[78.75rem]">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Sponsors"

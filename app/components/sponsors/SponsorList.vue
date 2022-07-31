@@ -16,9 +16,9 @@ const supportLevelTitle = computed(() => {
 const sponsorRankClass = computed(() => {
   const rank = props.sponsors?.[0]?.rank
   if (rank === 'platinum') {
-    return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+    return ''
   }
-  return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+  return ''
 })
 const sponsorCardClass = computed(() => {
   const rank = props.sponsors?.[0]?.rank
@@ -37,7 +37,7 @@ const sponsorCardClass = computed(() => {
   >
     <h2 class="mb-[2.47rem] text-2xl font-bold text-center"><nuxt-link :to="`/sponsors#${supportLevelTitle}`">{{ supportLevelTitle }}</nuxt-link></h2>
     <div
-      class="grid gap-[2.375rem] sm:gap-[2.375rem] justify-center md:gap-[3.75rem]"
+      class="flex flex-wrap gap-[2.375rem] sm:gap-[2.375rem] justify-center md:gap-[3.75rem]"
       :class="sponsorRankClass"
     >
       <SponsorLogo
