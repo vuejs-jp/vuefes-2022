@@ -9,15 +9,22 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import SponsorListBio from '~/components/sponsors/SponsorListBio.vue'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import Endpoints from '~/utils/endpoints.constants'
+import { SHOW_SPONSOR_LIST } from '~~/app/utils/feature.constants'
 
-const sponsors = ref(null)
-const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
-fetchContent().then((response) => {
-  sponsors.value = response
-})
+
+if (SHOW_SPONSOR_LIST) {
+  const sponsors = ref(null)
+  const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+  fetchContent().then((response) => {
+    sponsors.value = response
+  })
+}
 </script>
 <template>
-  <div class="mx-[3.125rem] md:mx-[8.75rem] lg:mx-[23.125rem] lg:max-w-1190">
+  <div
+    v-if="SHOW_SPONSOR_LIST"
+    class="mx-[3.125rem] md:mx-[8.75rem] lg:mx-[23.125rem] lg:max-w-1190"
+  >
     <NavPageSection />
     <SectionTitle
       class="mb-10 lg:mb-20"
