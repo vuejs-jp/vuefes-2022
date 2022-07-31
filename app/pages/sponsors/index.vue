@@ -17,7 +17,7 @@ fetchContent().then((response) => {
 })
 </script>
 <template>
-  <div class="mx-[3.125rem] md:mx-[8.75rem] lg:mx-[23.125rem]">
+  <div class="mx-[3.125rem] md:mx-[8.75rem] lg:mx-[23.125rem] lg:max-w-1190">
     <NavPageSection />
     <SectionTitle
       class="mb-10 lg:mb-20"
