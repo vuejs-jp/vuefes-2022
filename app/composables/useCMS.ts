@@ -5,7 +5,7 @@ import { ISponsor } from '../types/sponsors'
 export function useCMS<T>(options: { modelUid: string }) {
   const runtimeConfig = useRuntimeConfig()
   const client = createClient({
-    spaceUid: 'vuejs-jp',
+    spaceUid: runtimeConfig.SPACE_UID,
     token: runtimeConfig.CMS_TOKEN,
     apiType: 'cdn',
   })
@@ -24,7 +24,7 @@ export function useCMS<T>(options: { modelUid: string }) {
 export function useSponsorsCMS() {
   const runtimeConfig = useRuntimeConfig()
   const client = createClient({
-    spaceUid: 'vuejs-jp',
+    spaceUid: runtimeConfig.SPACE_UID,
     token: runtimeConfig.CMS_TOKEN,
     apiType: 'cdn',
   })
