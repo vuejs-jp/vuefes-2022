@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [ver.2022.11.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.11.1)
+
+- ストアセクションを公開
+
 ## [ver.2022.10.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.10.2)
 
 - チケットセクション枠幅が他のセクションと異なっていたので修正
