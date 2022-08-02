@@ -58,6 +58,9 @@ export const promotionInfo2 =
 export const promotionInfo3 =
   'チケットに関するお問い合わせは、<a class="inner-link" href="#form">お問い合わせフォーム</a>よりお問い合わせください。なおFAQもご用意していますので、お問い合わせ前にご確認をお願いいたします。'
 
+export const promotionInfo4 =
+  '個人スポンサー用事前登録チケットは先着 100 名様のみお申し込み可能です。特典のギフトボックス送付の関係上、9/3(土) 12:00 に締め切らせていただきます。一般参加用事前登録チケットは 9/3 以降もお申し込み可能です。'
+
 export const promotionCaution =
   '※ご購入いただいた費用は、すべて Vue Fes Japan の運営、または Vue.js 日本ユーザーグループの活動のために大切に使わせていただきます。'
 
