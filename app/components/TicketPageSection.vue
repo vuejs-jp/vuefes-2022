@@ -4,7 +4,7 @@ import SubTitle from '~/components/SubTitle.vue'
 import ExplainText from '~/components/ExplainText.vue'
 import AccordionView from '~/components/AccordionView.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField'
-import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotionCaution, promotionInfo, promotionInfo2, promotionInfo3 } from '~/utils/constants'
+import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotionCaution, promotionInfo, promotionInfo2, promotionInfo3, promotionInfo4 } from '~/utils/constants'
 </script>
 
 <template>
@@ -55,15 +55,18 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           :explain="promotionInfo2"
         />
         <ExplainText
+          class="mx-auto mb-7.5 max-w-700 font-bold"
+          :explain="promotionInfo4"
+        />
+        <ExplainText
           class="mx-auto mb-7.5 max-w-700 md:mb-20"
           :explain="promotionInfo3"
         />
         <div class="mb-12.5 text-center md:mb-22.5">
           <LinkButtonField
-            link="/"
-            title-label="8/3(水) 12:00 より発売開始"
+            link="https://passmarket.yahoo.co.jp/event/show/detail/02j5vbqweig21.html"
+            title-label="事前登録チケットを購入する"
             is-external-link
-            disabled
           />
         </div>
         <section class="mb-12.5 md:mb-22.5">
