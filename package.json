@@ -57,6 +57,7 @@
     "node": "16.14.2"
   },
   "dependencies": {
-    "gsap": "^3.10.2"
+    "gsap": "^3.10.2",
+    "newt-client-js": "^3.1.0"
   }
 }
