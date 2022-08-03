@@ -5,28 +5,30 @@ export function useAnimationParts() {
   const PARTS_FADE_TIME = 0.2
 
   // 図形の位置
-  const transform = (props) => {
+  const transformPosition = (props) => {
     return `translate(${props.parts.x}, ${props.parts.y}) rotate(${props.parts.rotate})`
   }
 
   // 図形生成のアニメーション
   const createAnimation = (refs, attr) => {
-    gsap.to(refs, PARTS_CREATE_TIME, {
+    gsap.to(refs, {
       attr: { ...attr },
       ease: Power2.easeOut,
+      duration: PARTS_CREATE_TIME,
     })
   }
 
   // 図形切り替えのアニメーション
   const fadeAnimation = (refs, attr) => {
-    gsap.to(refs, PARTS_FADE_TIME, {
+    gsap.to(refs, {
       attr: { ...attr },
       ease: Power2.easeOut,
+      duration: PARTS_FADE_TIME,
     })
   }
 
   return {
-    transform,
+    transformPosition,
     createAnimation,
     fadeAnimation,
   }

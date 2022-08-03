@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     buildAssetsDir: '/_nuxt/',
     baseURL: isProd ? '/2022/' : '/',
   },
+
   target: 'static',
   css: ['~/assets/main.scss'],
   head: {
@@ -52,6 +53,8 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     kokuryuFontId: process.env.NUXT_KOKURYU_FONT_ID,
     gtagId: process.env.NUXT_GTAG_ID,
+    CMS_TOKEN: process.env.NUXT_NEWT_CDN_TOKEN,
+    SPACE_UID: process.env.NUXT_SPACE_UID,
   },
   build: {
     extractCSS: true,
