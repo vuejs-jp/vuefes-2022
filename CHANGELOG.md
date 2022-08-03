@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [ver.2022.11.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.11.2)
+
+- チケットセクションのリンクをアクティブ化
+- チケットセクションの文言追加
+
 ## [ver.2022.11.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.11.1)
 
 - ストアセクションを公開
