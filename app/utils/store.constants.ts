@@ -65,7 +65,7 @@ export const goodsList: IGoods[] = [
   {
     image: 'vue_fes_don.png',
     name: 'Vue Fes 丼',
-    price: '3,000円',
+    price: '3,500円',
     description:
       '食事の時にも Vue Fes Japan を感じられる、つや感のあるどんぶりです。ミニサイズのラーメンや、丼ものと相性抜群。',
     specification: 'サイズ：直径17cm',
