@@ -12,8 +12,8 @@ import {
 } from '~/utils/constants'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 
+const sponsors = ref(null)
 if (SHOW_SPONSOR_LIST) {
-  const sponsors = ref(null)
   const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
   fetchContent().then((response) => {
     sponsors.value = response
@@ -29,7 +29,7 @@ if (SHOW_SPONSOR_LIST) {
     <div class="py-20 bg-white lg:py-40">
       <div
         v-if="SHOW_SPONSOR_LIST"
-        class="mx-auto max-w-[41.875rem] sm:max-w-[51.25rem] md:max-w-[73.75rem] lg:max-w-[78.75rem]"
+        class="mx-auto max-w-[41.875rem] sm:max-w-[51.25rem] md:max-w-[73.75rem] lg:max-w-1190"
       >
         <SectionTitle
           class="mb-10 lg:mb-20"

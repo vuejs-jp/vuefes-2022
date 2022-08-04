@@ -13,19 +13,13 @@ const props = defineProps({
 const supportLevelTitle = computed(() => {
   return sponsorSupportLevelTitle(props.sponsors?.[0]?.rank)
 })
-const sponsorRankClass = computed(() => {
-  const rank = props.sponsors?.[0]?.rank
-  if (rank === 'platinum') {
-    return ''
-  }
-  return ''
-})
+
 const sponsorCardClass = computed(() => {
   const rank = props.sponsors?.[0]?.rank
   if (rank === 'platinum') {
-    return 'w-full max-w-[35.625rem] sm:max-w-[18.6875rem] md:max-w-[23rem]'
+    return 'w-[78vw] md:w-[43%] lg:w-[31%] lg:max-w-[368px] md:mb-[4%]'
   }
-  return 'w-full max-w-[16.625rem] sm:max-w-[13rem] md:max-w-[13rem] lg:max-w-[16.65rem]'
+  return 'w-[36vw] md:w-[27%] lg:w-[22.5%] lg:max-w-[266px] md:mb-[4%] lg:mb-[3%]'
 })
 
 </script>
@@ -33,12 +27,11 @@ const sponsorCardClass = computed(() => {
 <template>
   <div
     v-if="sponsors"
-    class="mb-[5rem]"
+    class="mb-10 last:mb-0 md:mb-20"
   >
-    <h2 class="mb-[2.47rem] text-2xl font-bold text-center"><nuxt-link :to="`/sponsors#${supportLevelTitle}`">{{ supportLevelTitle }}</nuxt-link></h2>
+    <h3 class="mb-4 text-xl font-bold text-center text-vue-blue md:mb-10 md:text-3xl">{{ supportLevelTitle }}</h3>
     <div
-      class="flex flex-wrap gap-[2.375rem] sm:gap-[2.375rem] justify-center md:gap-[3.75rem]"
-      :class="sponsorRankClass"
+      class="flex flex-wrap gap-[5.33vw] justify-center px-5 md:gap-[4%] lg:gap-[3%]"
     >
       <SponsorLogo
         v-for="sponsor in sponsors"
