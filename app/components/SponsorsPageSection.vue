@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SponsorList from '~/components/sponsors/SponsorList.vue'
-import { ISponsor, Rank } from '~/types/sponsors'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { useSponsorsCMS } from '~/composables/useCMS'
 import { SHOW_SPONSOR_LIST } from '~/utils/feature.constants'
@@ -29,7 +28,7 @@ if (SHOW_SPONSOR_LIST) {
     <div class="py-20 bg-white lg:py-40">
       <div
         v-if="SHOW_SPONSOR_LIST"
-        class="mx-auto max-w-[41.875rem] sm:max-w-[51.25rem] md:max-w-[73.75rem] lg:max-w-1190"
+        class="mx-auto max-w-1190"
       >
         <SectionTitle
           class="mb-10 lg:mb-20"
@@ -48,7 +47,7 @@ if (SHOW_SPONSOR_LIST) {
       </div>
       <div
         v-else
-        class="px-5 mx-auto max-w-[43.75rem]"
+        class="px-5 mx-auto max-w-700"
       >
         <SectionTitle
           class="mb-10 lg:mb-20"

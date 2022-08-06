@@ -30,6 +30,17 @@ if (SHOW_SPONSOR_LIST) {
     sponsors.value = response
   })
 }
+
+const links = [
+  { label: 'Platinum', link: '#platinum' },
+  { label: 'Gold', link: '#gold' },
+  { label: 'Silver', link: '#silver' },
+  { label: 'Bronze', link: '#bronze' },
+  { label: 'Special Media', link: '#specialMedia' },
+  { label: 'Media', link: '#media' },
+  // { label: '配信', link: '#broadcaster' },
+]
+
 </script>
 <template>
   <div>
@@ -43,36 +54,17 @@ if (SHOW_SPONSOR_LIST) {
       v-if="SHOW_SPONSOR_LIST"
       class="px-5 mx-auto max-w-1190"
     >
-      <div class="grid grid-cols-2 gap-4 mb-12 md:grid-cols-3 md:mb-24 lg:grid-cols-5">
-        <LinkOutlineButtonField
-          title-label="Platinum"
-          link="#platinum"
-        />
-        <LinkOutlineButtonField
-          title-label="Gold"
-          link="#gold"
-        />
-        <LinkOutlineButtonField
-          title-label="Silver"
-          link="#silver"
-        />
-        <LinkOutlineButtonField
-          title-label="Bronze"
-          link="#bronze"
-        />
-        <LinkOutlineButtonField
-          title-label="Special Media"
-          link="#specialMedia"
-        />
-        <LinkOutlineButtonField
-          title-label="Media"
-          link="#media"
-        />
-        <!-- <LinkOutlineButtonField
-          title-label="配信"
-          link="#broadcaster"
-        /> -->
-      </div>
+      <ul class="grid grid-cols-2 gap-4 mb-12 md:grid-cols-3 md:mb-24 lg:grid-cols-5">
+        <li
+          v-for="link in links"
+          :key="link.label"
+        >
+          <LinkOutlineButtonField
+            :title-label="link.label"
+            :link="link.link"
+          />
+        </li>
+      </ul>
       <template v-if="sponsors">
         <SponsorListBio :sponsors="sponsors.platinum" />
         <SponsorListBio :sponsors="sponsors.gold" />
