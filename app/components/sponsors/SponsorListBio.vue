@@ -36,7 +36,7 @@ const sponsorCardClass = computed(() => {
   >
     <h2
       :id="supportLevelAnchor"
-      class="mb-6 text-xl font-bold md:text-3xl"
+      class="mb-6 font-yu-gothic text-xl font-bold md:text-3xl"
     >
       {{ supportLevelTitle }}
     </h2>

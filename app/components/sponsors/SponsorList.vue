@@ -29,7 +29,7 @@ const sponsorCardClass = computed(() => {
     v-if="sponsors"
     class="mb-10 last:mb-0 md:mb-20"
   >
-    <h3 class="mb-4 text-xl font-bold text-center text-vue-blue md:mb-10 md:text-3xl">{{ supportLevelTitle }}</h3>
+    <h3 class="mb-4 font-yu-gothic text-xl font-bold text-center text-vue-blue md:mb-10 md:text-3xl">{{ supportLevelTitle }}</h3>
     <div
       class="flex flex-wrap gap-[5.33vw] justify-center px-5 md:gap-[4%] lg:gap-[3%]"
     >
