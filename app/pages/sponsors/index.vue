@@ -23,13 +23,8 @@ useNuxt2Meta({
   ]
 })
 
-const sponsors = ref(null)
-if (SHOW_SPONSOR_LIST) {
-  const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
-  fetchContent().then((response) => {
-    sponsors.value = response
-  })
-}
+const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 
 const links = [
   { label: 'Platinum', link: '#platinum' },
