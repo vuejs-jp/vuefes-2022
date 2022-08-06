@@ -36,7 +36,7 @@ const sponsorRankClass = computed(() => {
     >
       <div
         v-for="sponsor in sponsors"
-        :id="sponsor.name_jp"
+        :id="sponsor.name_en"
         :key="sponsor.name"
         class="mb-14 md:mb-7"
       >
@@ -49,7 +49,7 @@ const sponsorRankClass = computed(() => {
             :src="sponsor.image.src"
             :alt="`${sponsor.name_jp}のロゴ`"
             loading="lazy"
-            class="mb-5 w-full"
+            class="aspect-video mb-5 w-full"
           >
         </a>
         <h3 class="text-lg font-bold leading-5 md:text-2xl">{{ sponsor.name_jp }}</h3>

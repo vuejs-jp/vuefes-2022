@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { CustomPropType } from '~/types/shims-vue'
-import ISponsor from '~/types/sponsors'
+import { ISponsor } from '~~/app/types/sponsors'
 
 const props = defineProps({
   sponsor: {
@@ -11,10 +11,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <nuxt-link
+  <a
     v-if="sponsor"
     :id="sponsor.name_jp"
-    to="/sponsors"
+    :href="`/sponsors#${sponsor.name_en}`"
     class="shadow-card hover:shadow-card-hover transition"
   >
     <img
@@ -22,5 +22,5 @@ const props = defineProps({
       :alt="props.sponsor.name_jp"
       class="aspect-16/9 object-cover w-full bg-center"
     >
-  </nuxt-link>
+  </a>
 </template>
