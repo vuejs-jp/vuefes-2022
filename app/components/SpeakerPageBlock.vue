@@ -20,7 +20,7 @@ const speakerInfo = computed(() => props.speaker)
   <router-link :to="`/sessions/${props.speaker.id}`">
     <div class="text-vue-blue">
       <img
-        class="mb-2.5 w-full"
+        class="aspect-square mb-2.5 w-full"
         :alt="`${speakerInfo.name}の写真`" 
         :src="speakerInfo.image"
         loading="lazy"
