@@ -19,7 +19,7 @@ const props = defineProps({
   >
     <img
       :src="props.sponsor.image.src"
-      :alt="props.sponsor.name_jp"
+      :alt="`${props.sponsor.name_jp}のロゴ`"
       class="aspect-16/9 object-cover w-full bg-center"
     >
   </a>
