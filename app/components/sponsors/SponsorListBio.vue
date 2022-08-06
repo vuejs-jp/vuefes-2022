@@ -59,13 +59,20 @@ const sponsorRankClass = computed(() => {
           rel="noopener"
           class="inline-block mb-4 text-sm underline break-all hover:opacity-40 transition md:text-lg"
         >{{ sponsor.corporate_url }}</a>
+        <!-- eslint-disable vue/no-v-html -->
         <p
           v-if="sponsor.bio"
           class="text-sm leading-6 break-all md:text-lg md:leading-8"
-        >
-          {{ sponsor.bio }}
-        </p>
+          v-html="sponsor.bio"
+        />
+        <!-- eslint-enable vue/no-v-html -->
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+::v-deep .link {
+  @apply underline hover:opacity-40 transition
+}
+</style>
