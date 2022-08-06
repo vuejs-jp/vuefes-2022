@@ -85,7 +85,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
                 :src="`/img/${gift.value}_sample.jpg`"
                 :alt="`${gift.title}用サンプル画像`"
                 loading="lazy"
-                class="mb-1.5 md:mb-2.5"
+                class="aspect-square mb-1.5 md:mb-2.5"
               >
               <!-- eslint-disable vue/no-v-html -->
               <p
