@@ -20,20 +20,10 @@ const sponsorRankClass = computed(() => {
   }
   return 'grid-cols-2 gap-4 md:grid-cols-3 md:gap-7 lg:grid-cols-4'
 })
-const sponsorCardClass = computed(() => {
-  const rank = props.sponsors?.[0]?.rank
-  if (rank === 'platinum') {
-    return ''
-  }
-  return ''
-})
 </script>
 
 <template>
-  <div
-    v-if="sponsors"
-    class="text-vue-blue md:mb-16"
-  >
+  <div class="text-vue-blue md:mb-16">
     <h2
       :id="supportLevelAnchor"
       class="mb-6 font-yu-gothic text-xl font-bold md:text-3xl"
@@ -49,7 +39,6 @@ const sponsorCardClass = computed(() => {
         :id="sponsor.name_jp"
         :key="sponsor.name"
         class="mb-14 md:mb-7"
-        :class="sponsorCardClass"
       >
         <a
           :href="sponsor.corporate_url"
@@ -68,13 +57,14 @@ const sponsorCardClass = computed(() => {
           :href="sponsor.corporate_url"
           target="_blank"
           rel="noopener"
-          class="inline-block mb-4 text-sm underline break-all md:text-lg"
+          class="inline-block mb-4 text-sm underline break-all hover:opacity-40 transition md:text-lg"
         >{{ sponsor.corporate_url }}</a>
         <p
           v-if="sponsor.bio"
           class="text-sm leading-6 break-all md:text-lg md:leading-8"
-          v-html="sponsor.bio"
-        />
+        >
+          {{ sponsor.bio }}
+        </p>
       </div>
     </div>
   </div>
