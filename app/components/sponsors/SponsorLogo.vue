@@ -14,7 +14,7 @@ const props = defineProps({
   <nuxt-link
     v-if="sponsor"
     :id="sponsor.name_jp"
-    :to="`/sponsors/#${sponsor.name_jp}`"
+    to="/sponsors"
     class="shadow-card hover:shadow-card-hover transition"
   >
     <img
