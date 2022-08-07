@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [ver.2022.12.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.12.1)
+
+- スポンサー一覧を公開
+
 ## [ver.2022.11.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.11.2)
 
 - チケットセクションのリンクをアクティブ化
