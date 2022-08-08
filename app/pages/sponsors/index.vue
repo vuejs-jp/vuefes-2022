@@ -33,7 +33,7 @@ const links = [
   { label: 'Bronze', link: '#bronze' },
   { label: 'Special Media', link: '#specialMedia' },
   { label: 'Media', link: '#media' },
-  // { label: '配信', link: '#broadcaster' },
+  { label: '配信', link: '#broadcaster' },
 ]
 
 </script>
@@ -67,7 +67,7 @@ const links = [
         <SponsorListBio :sponsors="sponsors.bronze" />
         <SponsorListBio :sponsors="sponsors.specialMedia" />
         <SponsorListBio :sponsors="sponsors.media" />
-        <!-- <SponsorListBio :sponsors="sponsors.broadcaster" /> -->
+        <SponsorListBio :sponsors="sponsors.broadcaster" />
         <div class="mb-20 text-center">
           <LinkButtonField
             link="/"
