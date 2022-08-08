@@ -47,7 +47,7 @@ const sponsorRankClass = computed(() => {
         >
           <img
             :src="sponsor.image.src"
-            :alt="`${sponsor.name_jp}のロゴ`"
+            :alt="sponsor.name_jp"
             loading="lazy"
             class="aspect-video mb-5 w-full"
           >
