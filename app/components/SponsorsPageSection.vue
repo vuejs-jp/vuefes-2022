@@ -42,7 +42,7 @@ if (SHOW_SPONSOR_LIST) {
           <SponsorList :sponsors="sponsors.bronze" />
           <SponsorList :sponsors="sponsors.specialMedia" />
           <SponsorList :sponsors="sponsors.media" />
-          <!-- <SponsorList :sponsors="sponsors.broadcaster" /> -->
+          <SponsorList :sponsors="sponsors.broadcaster" />
         </template>
       </div>
       <div
