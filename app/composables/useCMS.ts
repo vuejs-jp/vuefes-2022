@@ -5,8 +5,8 @@ import { ISponsor } from '../types/sponsors'
 export function useCMS<T>(options: { modelUid: string }) {
   const runtimeConfig = useRuntimeConfig()
   const client = createClient({
-    spaceUid: runtimeConfig.SPACE_UID,
-    token: runtimeConfig.CMS_TOKEN,
+    spaceUid: runtimeConfig.newtSpaceUid,
+    token: runtimeConfig.newtCdnToken,
     apiType: 'cdn',
   })
   const appUid = 'vuefes-2022'
@@ -24,8 +24,8 @@ export function useCMS<T>(options: { modelUid: string }) {
 export function useSponsorsCMS() {
   const runtimeConfig = useRuntimeConfig()
   const client = createClient({
-    spaceUid: runtimeConfig.SPACE_UID,
-    token: runtimeConfig.CMS_TOKEN,
+    spaceUid: runtimeConfig.newtSpaceUid,
+    token: runtimeConfig.newtCdnToken,
     apiType: 'cdn',
   })
   const appUid = 'vuefes-2022'
