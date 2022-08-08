@@ -20,7 +20,7 @@ export const goodsList: IGoods[] = [
     price: '3,500円',
     description:
       'カタカナフォントが印象的な Vue Fes Japan オリジナル Tシャツです。型崩れしにくく、洗濯で伸び縮みしにくい生地を使用しています。',
-    specification: 'カラー：ホワイト\nサイズ：S / M / L / XL',
+    specification: 'カラー：ホワイト\nサイズ：S / M / L / XL / XXL / XXXL',
   },
   {
     image: 'parker.png',
