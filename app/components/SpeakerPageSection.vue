@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
-import SpeakerLTSection from '~/components/SpeakerLTSection.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { SHOW_SPEAKER_LIST } from '~/utils/feature.constants'
 import { speakers } from '~/utils/speakers.constants'
@@ -29,7 +28,6 @@ import { speakers } from '~/utils/speakers.constants'
             />
           </section>
         </template>
-        <SpeakerLTSection />
       </div>
     </div>
   </section>

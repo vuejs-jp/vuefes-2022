@@ -22,5 +22,11 @@ module.exports = {
     'declaration-block-trailing-semicolon': null,
     'no-descending-specificity': null,
     'value-list-comma-newline-after': null, // Prettier と競合するため
+    'selector-pseudo-element-no-unknown': [
+      true,
+      {
+        ignorePseudoElements: ['v-deep'],
+      },
+    ],
   },
 }

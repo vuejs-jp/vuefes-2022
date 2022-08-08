@@ -40,4 +40,14 @@ import FormPageSection from '~/components/FormPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { SHOW_TICKET, SHOW_TEAM, SHOW_STORE } from '~/utils/feature.constants'
+import { conferenceTitle } from '../utils/constants'
+import { generalOg, twitterOg } from '../utils/og.constants'
+
+useNuxt2Meta({
+  title: conferenceTitle,
+  meta: [
+    ...generalOg(),
+    ...twitterOg(),
+  ],
+})
 </script>

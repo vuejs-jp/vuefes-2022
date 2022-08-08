@@ -1,22 +1,54 @@
 <script setup lang="ts">
+import SponsorList from '~/components/sponsors/SponsorList.vue'
+import SectionTitle from '~/components/SectionTitle.vue'
+import { useSponsorsCMS } from '~/composables/useCMS'
+import { SHOW_SPONSOR_LIST } from '~/utils/feature.constants'
 import {
   sponsorsDescriptionText,
-  generalSponsorsApplicationUrl,
   sponsorsDocumentUrl,
   tweetUrl,
   tweetLink,
 } from '~/utils/constants'
-import SectionTitle from '~/components/SectionTitle.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
+
+const sponsors = ref(null)
+if (SHOW_SPONSOR_LIST) {
+  const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+  fetchContent().then((response) => {
+    sponsors.value = response
+  })
+}
 </script>
 
 <template>
   <section
     id="sponsors"
-    class="py-10 px-5 bg-suponsors md:px-10 lg:p-20"
+    class="py-10 px-5 bg-sponsors md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
-      <div class="px-5 mx-auto max-w-[43.75rem]">
+      <div
+        v-if="SHOW_SPONSOR_LIST"
+        class="mx-auto max-w-1190"
+      >
+        <SectionTitle
+          class="mb-10 lg:mb-20"
+          title="Sponsors"
+          title-yamato="スポンサー"
+        />
+        <template v-if="sponsors">
+          <SponsorList :sponsors="sponsors.platinum" />
+          <SponsorList :sponsors="sponsors.gold" />
+          <SponsorList :sponsors="sponsors.silver" />
+          <SponsorList :sponsors="sponsors.bronze" />
+          <SponsorList :sponsors="sponsors.specialMedia" />
+          <SponsorList :sponsors="sponsors.media" />
+          <!-- <SponsorList :sponsors="sponsors.broadcaster" /> -->
+        </template>
+      </div>
+      <div
+        v-else
+        class="px-5 mx-auto max-w-700"
+      >
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Sponsors"
