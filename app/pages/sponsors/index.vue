@@ -1,88 +1,83 @@
 <script setup lang="ts">
-import { conferenceTitle, ogSponsorDescription } from '~/utils/constants'
-import { useSponsorsCMS } from '~/composables/useCMS'
-
 import NavPageSection from '~/components/NavPageSection.vue'
-import SectionTitle from '~/components/SectionTitle.vue'
 import LinkOutlineButtonField from '~/components/forms/LinkOutlineButtonField.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import SponsorListBio from '~/components/sponsors/SponsorListBio.vue'
-import { generalOg, twitterOg } from '~/utils/og.constants'
-import Endpoints from '~/utils/endpoints.constants'
+import PageTitle from '~/components/PageTitle.vue'
+import FooterPageSection from '~/components/FooterPageSection.vue'
+import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
+import { useSponsorsCMS } from '~/composables/useCMS'
 import { SHOW_SPONSOR_LIST } from '~~/app/utils/feature.constants'
+import { conferenceTitle } from '~~/app/utils/constants'
+import { generalOg, twitterOg } from '~~/app/utils/og.constants'
 
+const title = `スポンサー一覧 | ${conferenceTitle}`
+const url = 'https://vuefes.jp/2022/sponsors'
+const description = `${conferenceTitle} のスポンサー情報です。`
 
-if (SHOW_SPONSOR_LIST) {
-  const sponsors = ref(null)
-  const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
-  fetchContent().then((response) => {
-    sponsors.value = response
-  })
-}
+useNuxt2Meta({
+  title,
+  meta: [
+    ...generalOg(title, description, url),
+    ...twitterOg(title, description),
+  ]
+})
+
+const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
+
+const links = [
+  { label: 'Platinum', link: '#platinum' },
+  { label: 'Gold', link: '#gold' },
+  { label: 'Silver', link: '#silver' },
+  { label: 'Bronze', link: '#bronze' },
+  { label: 'Special Media', link: '#specialMedia' },
+  { label: 'Media', link: '#media' },
+  // { label: '配信', link: '#broadcaster' },
+]
+
 </script>
 <template>
-  <div
-    v-if="SHOW_SPONSOR_LIST"
-    class="mx-[3.125rem] md:mx-[8.75rem] lg:mx-[23.125rem] lg:max-w-1190"
-  >
+  <div>
     <NavPageSection />
-    <SectionTitle
-      class="mb-10 lg:mb-20"
+    <PageTitle
+      class="mb-10 md:mb-20"
       title="Sponsors"
       title-yamato="スポンサー"
     />
-    <div class="flex flex-wrap gap-[1.25rem] mb-[6.25rem]">
-      <LinkOutlineButtonField
-        class="w-full max-w-[20rem] md:max-w-[13.75rem]"
-        title-label="Platinum"
-        link="/sponsors/#Platinum"
-      />
-      <LinkOutlineButtonField
-        class="w-full max-w-[20rem] md:max-w-[13.75rem]"
-        title-label="Gold"
-        link="/sponsors/#Gold"
-      />
-      <LinkOutlineButtonField
-        class="w-full max-w-[20rem] md:max-w-[13.75rem]"
-        title-label="Silver"
-        link="/sponsors/#Silver"
-      />
-      <LinkOutlineButtonField
-        class="w-full max-w-[20rem] md:max-w-[13.75rem]"
-        title-label="Bronze"
-        link="/sponsors/#Bronze"
-      />
-      <LinkOutlineButtonField
-        class="w-full max-w-[20rem] md:max-w-[13.75rem]"
-        title-label="Special Media"
-        link="/sponsors/#specialMedia"
-      />
-      <LinkOutlineButtonField
-        class="w-full max-w-[20rem] md:max-w-[13.75rem]"
-        title-label="Media"
-        link="/sponsors/#media"
-      />
-      <LinkOutlineButtonField
-        class="w-full max-w-[20rem] md:max-w-[13.75rem]"
-        title-label="配信"
-        link="/sponsors/#broadcaster"
-      />
+    <div
+      v-if="SHOW_SPONSOR_LIST"
+      class="px-5 mx-auto max-w-1190"
+    >
+      <ul class="grid grid-cols-2 gap-4 mb-12 md:grid-cols-3 md:mb-24 lg:grid-cols-5">
+        <li
+          v-for="link in links"
+          :key="link.label"
+        >
+          <LinkOutlineButtonField
+            :title-label="link.label"
+            :link="link.link"
+          />
+        </li>
+      </ul>
+      <template v-if="sponsors">
+        <SponsorListBio :sponsors="sponsors.platinum" />
+        <SponsorListBio :sponsors="sponsors.gold" />
+        <SponsorListBio :sponsors="sponsors.silver" />
+        <SponsorListBio :sponsors="sponsors.bronze" />
+        <SponsorListBio :sponsors="sponsors.specialMedia" />
+        <SponsorListBio :sponsors="sponsors.media" />
+        <!-- <SponsorListBio :sponsors="sponsors.broadcaster" /> -->
+        <div class="mb-20 text-center">
+          <LinkButtonField
+            link="/"
+            title-label="トップに戻る"
+            :is-external-link="false"
+          />
+        </div>
+      </template>
     </div>
-    <template v-if="sponsors">
-      <SponsorListBio :sponsors="sponsors.platinum" />
-      <SponsorListBio :sponsors="sponsors.gold" />
-      <SponsorListBio :sponsors="sponsors.silver" />
-      <SponsorListBio :sponsors="sponsors.bronze" />
-      <SponsorListBio :sponsors="sponsors.specialMedia" />
-      <SponsorListBio :sponsors="sponsors.media" />
-      <SponsorListBio :sponsors="sponsors.broadcaster" />
-      <div class="mt-12 mb-20 text-center md:mt-24 md:mb-40">
-        <LinkButtonField
-          link="/sponsors"
-          title-label="トップに戻る"
-          :is-external-link="false"
-        />
-      </div>
-    </template>
+    <IchimatsuDividedBar color="vue-blue" />
+    <FooterPageSection />
   </div>
 </template>

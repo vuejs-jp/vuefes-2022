@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SponsorList from '~/components/sponsors/SponsorList.vue'
-import { ISponsor, Rank } from '~/types/sponsors'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { useSponsorsCMS } from '~/composables/useCMS'
 import { SHOW_SPONSOR_LIST } from '~/utils/feature.constants'
@@ -12,8 +11,8 @@ import {
 } from '~/utils/constants'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 
+const sponsors = ref(null)
 if (SHOW_SPONSOR_LIST) {
-  const sponsors = ref(null)
   const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
   fetchContent().then((response) => {
     sponsors.value = response
@@ -29,7 +28,7 @@ if (SHOW_SPONSOR_LIST) {
     <div class="py-20 bg-white lg:py-40">
       <div
         v-if="SHOW_SPONSOR_LIST"
-        class="mx-auto max-w-[41.875rem] sm:max-w-[51.25rem] md:max-w-[73.75rem] lg:max-w-[78.75rem]"
+        class="mx-auto max-w-1190"
       >
         <SectionTitle
           class="mb-10 lg:mb-20"
@@ -43,12 +42,12 @@ if (SHOW_SPONSOR_LIST) {
           <SponsorList :sponsors="sponsors.bronze" />
           <SponsorList :sponsors="sponsors.specialMedia" />
           <SponsorList :sponsors="sponsors.media" />
-          <SponsorList :sponsors="sponsors.broadcaster" />
+          <!-- <SponsorList :sponsors="sponsors.broadcaster" /> -->
         </template>
       </div>
       <div
         v-else
-        class="px-5 mx-auto max-w-[43.75rem]"
+        class="px-5 mx-auto max-w-700"
       >
         <SectionTitle
           class="mb-10 lg:mb-20"
