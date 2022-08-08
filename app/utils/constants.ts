@@ -198,7 +198,10 @@ export const websiteLinks = [
 ]
 
 export const menuLinks = [
-  // FIXME: uncomment when resolving issue #7
-  // { displayName: 'Team', uri: '#team' },
+  { displayName: 'Speaker', uri: '#speakers' },
+  { displayName: 'Ticket', uri: '#ticket' },
+  { displayName: 'Store', uri: '#store' },
+  { displayName: 'Sponsor', uri: '#sponsors' },
+  { displayName: 'Team', uri: '#team' },
   { displayName: 'Contact', uri: '#form' },
 ]
