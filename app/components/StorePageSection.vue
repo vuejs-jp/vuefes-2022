@@ -4,7 +4,6 @@ import {
   storeDescription,
   storeDescription2,
   storeDescription3,
-  storeDescription4,
   orderAcceptancePeriod,
   productShippingSchedule,
   goodsList,
@@ -31,9 +30,6 @@ import {
           <p class="mb-6 paragraph">
             {{ storeDescription2 }}
           </p>
-          <p class="mb-6 paragraph">
-            {{ storeDescription3 }}
-          </p>
           <p class="paragraph">
             {{ orderAcceptancePeriod }}
           </p>
@@ -44,7 +40,7 @@ import {
             ■送料について
           </p>
           <p class="paragraph">
-            {{ storeDescription4 }}
+            {{ storeDescription3 }}
           </p>
         </div>
         <div class="flex flex-wrap gap-14 justify-between mx-auto mb-10 lg:mb-20">
