@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [ver.2022.12.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.12.2)
+
+- T シャツのサイズを追加
+- グッズをクリックしたら STORES の商品ページに遷移するように修正
+- ストアセクションの文言を修正
+
 ## [ver.2022.12.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.12.1)
 
 - スポンサー一覧を公開
