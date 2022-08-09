@@ -11,13 +11,8 @@ import {
 } from '~/utils/constants'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 
-const sponsors = ref(null)
-if (SHOW_SPONSOR_LIST) {
-  const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
-  fetchContent().then((response) => {
-    sponsors.value = response
-  })
-}
+const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 </script>
 
 <template>
