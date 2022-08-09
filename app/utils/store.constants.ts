@@ -11,12 +11,9 @@ export const storeDescription =
   'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store が今年も登場します。完全受注生産で、オンラインにてご注文いただくと、当日までにご自宅にお届けします。オリジナルグッズを揃えて、Vue Fes Japan を盛り上げましょう！'
 
 export const storeDescription2 =
-  'グッズ販売における利益は、すべて Vue Fes Japan の運営、または Vue.js 日本ユーザーグループの活動のために大切に使わせていただきます。これらのグッズを皆様のお手元に届けることが、ボランティアとしてグッズ制作に携わったデザイナーや、運営スタッフの活力にもなります。ぜひお買い求めいただき、Vue.js 日本ユーザーグループをご支援いただけますと幸いです。'
-
-export const storeDescription3 =
   'なお、今回販売するVue Fes Japan オリジナルグッズは注文後に生産を行うため、お届けまでにお時間を頂戴します。ご了承の上、お買い求めいただきますようお願いいたします。'
 
-export const storeDescription4 =
+export const storeDescription3 =
   '送料は商品別に設定されておりますので、ストアをご確認ください。国内配送の料金は沖縄及び離島への配送を除き一律となります。一度に複数の商品を購入した場合は、その購入された商品内の「最も高い送料」が適用されます。'
 
 export const orderAcceptancePeriod = 'ご注文受付期間：8月10日(水) 〜 9月上旬ごろ'
