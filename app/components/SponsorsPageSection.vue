@@ -37,7 +37,7 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
           <SponsorList :sponsors="sponsors.bronze" />
           <SponsorList :sponsors="sponsors.specialMedia" />
           <SponsorList :sponsors="sponsors.media" />
-          <SponsorList :sponsors="sponsors.broadcaster" />
+          <SponsorList :sponsors="sponsors.streaming" />
         </template>
       </div>
       <div
