@@ -15,8 +15,8 @@ export const sponsorSupportLevelTitle = (rank: Rank) => {
       return 'Media'
     case 'specialMedia':
       return 'Special Media'
-    case 'broadcaster':
-      return '配信'
+    case 'streaming':
+      return 'Streaming'
     default:
       const _missing: never = rank
       return ''
