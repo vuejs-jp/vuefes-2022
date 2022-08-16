@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-0 z-10 py-[5vw] px-[3vw] lg:py-10"
+    class="sticky top-0 z-10 py-[5vw] px-[3vw] lg:py-10 bg-nav"
     :class="{ 'bg-white/90': showBackgroundColor }"
   >
     <nav class="flex justify-between items-center">
