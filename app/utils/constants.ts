@@ -202,6 +202,6 @@ export const menuLinks = [
   { displayName: 'Ticket', uri: '#ticket' },
   { displayName: 'Store', uri: '#store' },
   { displayName: 'Sponsor', uri: '#sponsors' },
-  { displayName: 'Team', uri: '#team' },
   { displayName: 'Contact', uri: '#form' },
+  { displayName: 'Team', uri: '#team' },
 ]
