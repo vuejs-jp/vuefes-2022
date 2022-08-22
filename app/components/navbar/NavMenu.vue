@@ -35,7 +35,7 @@ const localIsOpen = computed({
       v-if="localIsOpen"
       class="absolute inset-x-0 top-[13.51vw] bottom-0 z-10 w-full h-screen"
     >
-      <ul class="flex flex-col space-y-6 ">
+      <ul class="flex flex-col space-y-6" :class="{ 'bg-white/90': localIsOpen }">
         <li
           v-for="(link, index) in menuLinks"
           :key="index"
