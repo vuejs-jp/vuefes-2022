@@ -47,14 +47,14 @@ import {
           <div
             v-for="(goods, index) in goodsList"
             :key="index"
-            class="last:hidden w-full md:w-[45%] xl:last:block xl:last:invisible xl:w-[30%]"
+            class="w-full md:w-[45%] xl:w-[30%]"
           >
             <a
               :href="goods.url"
               target="_blank"
               rel="noreferrer"
             >
-              <div class="mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
+              <div class="flex mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
                 <img
                   :alt="`${goods.name}のサンプル画像`"
                   :src="`/store/${goods.image}`"
