@@ -76,5 +76,7 @@ const sponsorRankClass = computed(() => {
   @apply underline hover:opacity-40 transition
 
 
+
+
 }
 </style>

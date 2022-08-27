@@ -66,6 +66,10 @@ module.exports = {
       aspectRatio: {
         '16/9': '16 / 9',
       },
+      gridTemplateColumns: {
+        'md-timetable': '150px repeat(3, minmax(0, 1fr))',
+        timetable: '270px repeat(3, minmax(0, 1fr))',
+      },
     },
     backgroundImage: {
       'ichimatsu-vue-blue':
