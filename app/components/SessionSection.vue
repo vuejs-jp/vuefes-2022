@@ -20,9 +20,12 @@ const speakerInfo = computed(() => props.speaker)
     <h3 class="mb-5 text-xl font-bold leading-8 md:text-[1.5625rem]">
       {{ speakerInfo.session.title }}
     </h3>
-    <p class="mb-8 text-base leading-8 md:mb-20 md:text-lg md:leading-9">
-      {{ speakerInfo.session.description }}
-    </p>
+    <!-- eslint-disable vue/no-v-html -->
+    <p
+      class="mb-8 text-base leading-8 md:mb-20 md:text-lg md:leading-9"
+      v-html="speakerInfo.session.description"
+    />
+    <!-- eslint-enaable vue/no-v-html -->
     <div class="p-5 border border-vue-blue md:flex md:p-[3.125rem]">
       <p class="shrink-0 mb-5 text-sm font-extrabold text-center md:mt-[3.75rem] md:mr-[3.125rem] md:text-[1.375rem]">
         Speaker Profile
@@ -43,6 +46,7 @@ const speakerInfo = computed(() => props.speaker)
             </p>
             <span class="flex justify-center md:justify-start">
               <a
+                v-if="speakerInfo.twitter"
                 :aria-label="`${speakerInfo.name}のTwitterアカウント`"
                 target="_blank"
                 rel="noreferrer"
@@ -56,6 +60,7 @@ const speakerInfo = computed(() => props.speaker)
                 >
               </a>
               <a
+                v-if="speakerInfo.github"
                 :aria-label="`${speakerInfo.name}のGitHubアカウント`"
                 target="_blank"
                 rel="noreferrer"
