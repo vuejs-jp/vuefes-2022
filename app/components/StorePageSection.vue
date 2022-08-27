@@ -92,5 +92,6 @@ import {
 .paragraph {
   @apply text-sm leading-7 lg:text-lg lg:leading-8 text-vue-blue
 
+
 }
 </style>

@@ -19,6 +19,10 @@ module.exports = {
         'anime-hiwamoegi': '#93AF5E',
         'anime-sangosyou': '#D47373',
         'anime-tohoh': '#E7C350',
+        'timetable-timeslot': 'rgba(52, 73, 94, 0.7);',
+        'track-a': '#33A6B8',
+        'track-b': '#F17C67',
+        'track-c': '#FFC408',
       },
       spacing: {
         14: '50px',
