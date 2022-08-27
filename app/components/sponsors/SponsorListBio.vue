@@ -74,9 +74,5 @@ const sponsorRankClass = computed(() => {
 <style scoped>
 ::v-deep .link {
   @apply underline hover:opacity-40 transition
-
-
-
-
 }
 </style>

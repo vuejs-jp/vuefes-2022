@@ -216,23 +216,25 @@ const timeslots = [
         <div class="flex flex-col col-span-3 row-span-2 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-b md:col-span-1 lg:text-lg"><p>15:10 - 15:30</p><h3>メインセッション</h3><p class="mt-2.5">15:10 - 15:30</p><h3>メインセッション</h3></div>
         <div class="flex col-span-3 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-c md:col-span-1 lg:text-lg"><p>15:10 - 15:30</p><h3>メインセッション</h3></div>
         <div class="flex col-span-3 row-span-5 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-c md:col-span-1 lg:text-lg"><p>15:35 - 17:35</p><h3>ハンズオン</h3></div>
-     
-     
+
         <p class="col-span-3 py-7 min-h-[5rem] text-lg text-center text-white align-middle bg-timetable-timeslot md:col-span-1 lg:text-2xl">
           16:00 - 16:20
         </p>
         <div class="flex col-span-3 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-a md:col-span-1 lg:text-lg"><h3>メインセッション</h3></div>
         <div class="flex col-span-3 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-b md:col-span-1 lg:text-lg"><h3>メインセッション</h3></div>
+        
         <p class="col-span-3 py-7 min-h-[5rem] text-lg text-center text-white align-middle bg-timetable-timeslot md:col-span-1 lg:text-2xl">
           16:25 - 16:45
         </p>
         <div class="flex col-span-3 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-a md:col-span-1 lg:text-lg"><h3>メインセッション</h3></div>
         <div class="flex col-span-3 justify-center items-center px-1 min-h-[5rem] text-base border-t-2 border-track-b md:col-span-1 lg:text-lg -sponsor/[.03]"><h3>メインセッション</h3></div>
+        
         <p class="col-span-3 py-7 min-h-[5rem] text-lg text-center text-white align-middle bg-timetable-timeslot md:col-span-1 lg:text-2xl">
           16:50 - 17:10
         </p>
         <div class="flex col-span-3 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-a md:col-span-1 lg:text-lg"><h3>メインセッション</h3></div>
         <div class="flex col-span-3 justify-center items-center px-1 min-h-[5rem] text-base bg-sponsor/[.03] border-t-2 border-track-b md:col-span-1 lg:text-lg"><h3>メインセッション</h3></div>
+        
         <p class="col-span-3 py-7 min-h-[5rem] text-lg text-center text-white align-middle bg-timetable-timeslot md:col-span-1 lg:text-2xl">
           17:15 - 17:35
         </p>
