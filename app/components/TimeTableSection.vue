@@ -202,7 +202,7 @@ const timeslots = [
             <TrackLabel
               v-for="(tracks, timeslotIndex) in timeslot.events"
               :key="timeslotIndex"
-              class="col-span-3 last:mb-2.5"
+              class="col-span-3 last:mb-2.5 md:col-span-1 md:last:mb-0"
               :is-sponsor-event="timeslot.isSponsorEvent"
               :track-index="timeslotIndex"
             >
@@ -211,26 +211,26 @@ const timeslots = [
           </template>
         </div>
         <div
-          class="grid grid-cols-1 gap-y-2.5 mx-auto mb-2.5 md:grid-cols-md-timetable md:gap-2.5 xl:grid-cols-timetable xl:max-w-[1260px]"
+          class="grid grid-cols-1 gap-y-2.5 mx-auto mb-2.5 md:grid-cols-md-timetable md:gap-2.5 md:mb-0 xl:grid-cols-timetable xl:max-w-[1260px]"
         >
           <p class="timeslot">
             15:10 - 15:55
           </p>
           <TrackLabel
-            class="col-span-3 row-span-2 justify-center md:col-span-1"
+            class="col-span-3 row-span-2 justify-center md:col-span-1 md:row-span-1"
             :track-index="0"
           >
             <h3 class=" text-center">ぬるほどVue<br>コンポーネント</h3>
           </TrackLabel>
           <TrackLabel
-            class="col-span-3 row-span-2 md:col-span-1"
+            class="col-span-3 row-span-2 md:col-span-1 md:row-span-1"
             :track-index="1"
           >
             <p>15:10 - 15:30</p><h3 class="">メインセッション</h3><p class="mt-2.5">15:10 - 15:30</p><h3 class="">メインセッション</h3>
           </TrackLabel>
 
           <TrackLabel
-            class="col-span-3 row-span-6 mb-2.5 md:col-span-1"
+            class="col-span-3 row-span-5 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="2"
           >
             <p>15:35 - 17:35</p><h3 class="">ハンズオン</h3>
@@ -248,7 +248,7 @@ const timeslots = [
             <h3 class="">メインセッション</h3>
           </TrackLabel>
           <TrackLabel
-            class="col-span-3 mb-2.5 md:col-span-1"
+            class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
             <h3 class="">メインセッション</h3>
@@ -264,7 +264,7 @@ const timeslots = [
             <h3 class="">メインセッション</h3>
           </TrackLabel>
           <TrackLabel
-            class="col-span-3 mb-2.5 md:col-span-1"
+            class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
             <h3 class="">メインセッション</h3>
@@ -280,7 +280,7 @@ const timeslots = [
             <h3 class="">メインセッション</h3>
           </TrackLabel>
           <TrackLabel
-            class="col-span-3 mb-2.5 md:col-span-1"
+            class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
             <h3 class="">メインセッション</h3>
@@ -296,7 +296,7 @@ const timeslots = [
             <h3 class="">メインセッション</h3>
           </TrackLabel>
           <TrackLabel
-            class="col-span-3 mb-2.5 md:col-span-1"
+            class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
             <h3 class="">メインセッション</h3>
@@ -307,7 +307,7 @@ const timeslots = [
           </p>
 
           <div class="multi-track">
-            <h3>Peephole</h3>
+            <h3 class="md:py-2.5">Peephole</h3>
           </div>
         </div>
       </div>
@@ -316,14 +316,16 @@ const timeslots = [
 </template>
 <style scoped>
 .text-timetable {
-  @apply text-sm leading-7 lg:text-lg lg:leading-8
+  @apply text-sm leading-7 lg:text-lg lg:leading-8;
 }
 
 .timeslot {
-  @apply text-sm leading-7 lg:text-lg lg:leading-8 text-white text-center bg-timetable-timeslot col-span-3 md:col-span-1
+  @apply text-sm leading-7 lg:text-lg lg:leading-8 text-white text-center
+    bg-timetable-timeslot col-span-3 md:col-span-1 md:pt-2;
 }
 
 .multi-track {
-  @apply text-sm leading-7 lg:text-lg lg:leading-8 text-center lg:text-lg col-span-3 bg-sponsor/[0.03]
+  @apply text-sm leading-7 lg:text-lg lg:leading-8 text-center lg:text-lg
+    col-span-3 bg-sponsor/[0.03];
 }
 </style>

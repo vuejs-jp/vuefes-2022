@@ -25,16 +25,16 @@ const trackContainerClass = computed(() => {
   switch (props.trackIndex) {
   case 0:
     return props.isSponsorEvent
-      ? 'border-2 md:border-4 border-track-a text-track-a items-center justify-center text-center'
-      : 'bg-sponsor/[.03]'
+      ? 'border-2 md:border border-track-a text-track-a items-center justify-center text-center'
+      : 'bg-sponsor/[.03] border-t border-track-a'
   case 1:
     return props.isSponsorEvent
-      ? 'border-2 md:border-4 border-track-b text-track-b items-center justify-center text-center'
-      : 'bg-sponsor/[.03]'
+      ? 'border-2 md:border border-track-b text-track-b items-center justify-center text-center'
+      : 'bg-sponsor/[.03] border-t border-track-b'
   case 2:
     return props.isSponsorEvent
-      ? 'border-2 md:border-4 border-track-c text-track-c items-center justify-center text-center'
-      : 'bg-sponsor/[.03]'
+      ? 'border-2 md:border border-track-c text-track-c items-center justify-center text-center'
+      : 'bg-sponsor/[.03] border-t border-track-c'
   default:
     return ''
   }
