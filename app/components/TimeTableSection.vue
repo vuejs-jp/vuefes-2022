@@ -207,18 +207,18 @@ ebiryu
           </p>
           <template v-if="timeslot.isAllTrackEvent">
             <div class="flex flex-col col-span-3 justify-center items-center py-3.5 font-bold text-center bg-sponsor/[.03] md:mb-0">
-              <h3 class="">{{ timeslot.events[0].title }}<br>{{ timeslot.events[0].subTitle }}</h3>
+              <h3>{{ timeslot.events[0].title }}<br>{{ timeslot.events[0].subTitle }}</h3>
             </div>
           </template>
           <template v-else>
             <TrackLabel
               v-for="(tracks, timeslotIndex) in timeslot.events"
               :key="timeslotIndex"
-              class="col-span-3 last:mb-2.5 md:col-span-1 md:last:mb-0 whitespace-pre-wrap"
+              class="col-span-3 last:mb-2.5 whitespace-pre-wrap md:col-span-1 md:last:mb-0"
               :is-sponsor-event="timeslot.isSponsorEvent"
               :track-index="timeslotIndex"
             >
-              <h3 class="">{{ tracks.title }}<br>{{ tracks.subTitle }}</h3>
+              <h3>{{ tracks.title }}<br>{{ tracks.subTitle }}</h3>
             </TrackLabel>
           </template>
         </div>
@@ -232,7 +232,7 @@ ebiryu
             class="col-span-3 md:col-span-1 md:row-span-1"
             :track-index="0"
           >
-            <p class="text-base">14:20 - 14:40</p><h3 class="">施策を止めるな！Vue2からVue3への移行<br />志賀 奎太</h3><p class="mt-2.5 text-base">14:45 - 15:05</p><h3 class="">十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング<br />tbashiyy</h3>
+            <p class="text-base">14:20 - 14:40</p><h3>施策を止めるな！Vue2からVue3への移行<br>志賀 奎太</h3><p class="mt-2.5 text-base">14:45 - 15:05</p><h3>十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング<br>tbashiyy</h3>
           </TrackLabel>
           <TrackLabel
             class="col-span-3 justify-center md:col-span-1 md:row-span-1"
@@ -245,7 +245,7 @@ ebiryu
             class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="2"
           >
-            <p class="text-base">14:20 - 14:40</p><h3 class="">JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する<br />川俣 涼</h3><p class="mt-2.5 text-base">14:45 - 15:05</p><h3 class="">Guillaume Chau</h3>
+            <p class="text-base">14:20 - 14:40</p><h3>JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する<br>川俣 涼</h3><p class="mt-2.5 text-base">14:45 - 15:05</p><h3>Guillaume Chau</h3>
           </TrackLabel>
 
           <p class="timeslot">
@@ -261,14 +261,14 @@ ebiryu
             class="col-span-3 row-span-2 md:col-span-1 md:row-span-1"
             :track-index="1"
           >
-            <p class="text-base">15:10 - 15:30</p><h3 class="">Nuxt モジュールの作り方を知って 開発した機能を再利用しよう<br />田中弘治</h3><p class="mt-2.5 text-base">15:10 - 15:30</p><h3 class="">eslint-plugin-vueを使用して継続的にVue3移行する<br />太田 洋介</h3>
+            <p class="text-base">15:10 - 15:30</p><h3>Nuxt モジュールの作り方を知って 開発した機能を再利用しよう<br>田中弘治</h3><p class="mt-2.5 text-base">15:10 - 15:30</p><h3>eslint-plugin-vueを使用して継続的にVue3移行する<br>太田 洋介</h3>
           </TrackLabel>
 
           <TrackLabel
             class="col-span-3 row-span-5 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="2"
           >
-            <p class="text-base">15:10 - 15:30</p><h3 class="">Nuxt モジュールの作り方を知って 開発した機能を再利用しよう<br />田中弘治</h3>
+            <p class="text-base">15:10 - 15:30</p><h3>Nuxt モジュールの作り方を知って 開発した機能を再利用しよう<br>田中弘治</h3>
             <p class="mt-2.5 text-base">15:35 - 17:35</p><h3 class="mt-2.5 text-center">ハンズオン</h3>
           </TrackLabel>
 
@@ -280,13 +280,13 @@ ebiryu
             class="col-span-3 md:col-span-1"
             :track-index="0"
           >
-            <h3 class="">安全に開発効率を上げるための Vue 2.7 移行<br />watsuyo</h3>
+            <h3>安全に開発効率を上げるための Vue 2.7 移行<br>watsuyo</h3>
           </TrackLabel>
           <TrackLabel
             class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
-            <h3 class="">Sebastien Chopin</h3>
+            <h3>Sebastien Chopin</h3>
           </TrackLabel>
 
           <p class="timeslot">
@@ -296,13 +296,13 @@ ebiryu
             class="col-span-3 md:col-span-1"
             :track-index="0"
           >
-            <h3 class="">Matias Capeletto</h3>
+            <h3>Matias Capeletto</h3>
           </TrackLabel>
           <TrackLabel
             class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
-            <h3 class="">NuxtJSによるJamstack構築とNuxt 3でどう変わるのか<br/>菅家 大地</h3>
+            <h3>NuxtJSによるJamstack構築とNuxt 3でどう変わるのか<br>菅家 大地</h3>
           </TrackLabel>
 
           <p class="timeslot">
@@ -312,13 +312,13 @@ ebiryu
             class="col-span-3 md:col-span-1"
             :track-index="0"
           >
-            <h3 class="">Jessica Sachs</h3>
+            <h3>Jessica Sachs</h3>
           </TrackLabel>
           <TrackLabel
             class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
-            <h3 class="">デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成<br />みゅーとん</h3>
+            <h3>デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成<br>みゅーとん</h3>
           </TrackLabel>
 
           <p class="timeslot">
@@ -328,13 +328,13 @@ ebiryu
             class="col-span-3 md:col-span-1"
             :track-index="0"
           >
-            <h3 class="">社内用共通コンポーネントのビジュアルリグレッションテストにStorybookとChromaticを選択した話<br />プログラミングをするパンダ</h3>
+            <h3>社内用共通コンポーネントのビジュアルリグレッションテストにStorybookとChromaticを選択した話<br>プログラミングをするパンダ</h3>
           </TrackLabel>
           <TrackLabel
             class="col-span-3 mb-2.5 md:col-span-1 md:mb-0"
             :track-index="1"
           >
-            <h3 class="">Anthony Fu</h3>
+            <h3>Anthony Fu</h3>
           </TrackLabel>
 
           <p class="timeslot">
