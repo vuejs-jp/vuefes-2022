@@ -1,4 +1,4 @@
-export default function useDebounce(callback: Function, timeout: number = 50) {
+export default function useDebounce(callback: Function, timeout: number = 0) {
   let threshold
 
   return (...args) => {

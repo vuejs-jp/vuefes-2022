@@ -1,8 +1,5 @@
 <template>
-  <header
-    class="sticky top-0 z-10 py-[5vw] px-[3vw] lg:py-10 bg-nav"
-    :class="{ 'bg-white/90': showBackgroundColor }"
-  >
+  <header class="py-[5vw] px-[3vw] lg:py-10">
     <nav class="flex justify-between items-center">
       <div class="flex">
         <nuxt-link to="/">
@@ -19,10 +16,24 @@
         </p>
       </div>
       <nav-menu
+        class="xl:hidden"
         :is-open="isOpen"
         @open="toggleOpen(true)"
         @close="toggleOpen(false)"
       />
+      <ul class="hidden space-x-6 xl:flex">
+        <li
+          v-for="(link, index) in menuLinks"
+          :key="index"
+        >
+          <nuxt-link
+            :to="`/${link.uri}`"
+            class="text-xl"
+          >
+            {{ link.displayName }}
+          </nuxt-link>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -30,31 +41,13 @@
 <script setup lang="ts">
 import { conferenceTitle, subtitle } from '~/utils/constants'
 import NavMenu from '~/components/navbar/NavMenu.vue'
-import { onMounted, onUnmounted } from '#imports'
-import useScrollWatcher, { ScrollEvent } from '~/composables/useScrollWatcher'
-import useDebounce from '~/composables/useDebounce'
+import { menuLinks } from '~/utils/constants'
 
-const debounce = useDebounce((scrollEvent: ScrollEvent) => {
-  if (isOpen.value) {
-    showBackgroundColor.value = true
-    return
-  }
-  showBackgroundColor.value = scrollEvent.y !== 0
-})
 
-const { mount, unmount } = useScrollWatcher(debounce)
-const showBackgroundColor = ref(false)
-onMounted(() => {
-  mount()
-})
-
-onUnmounted(() => {
-  unmount()
-})
 const isOpen = ref(false)
 
 function toggleOpen(opened:boolean) {
-  showBackgroundColor.value = opened
   isOpen.value = opened
+  document.querySelector('html').style.overflow = opened ? 'hidden' : ''
 }
 </script>
