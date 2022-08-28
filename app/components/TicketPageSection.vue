@@ -23,7 +23,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           class="mx-auto mb-7.5 max-w-700 md:mb-20"
           :explain="promotionInfo"
         />
-        <div class="mb-5 md:flex md:gap-[5%] md:justify-center md:mb-0 md:min-h-[38.4vw]">
+        <div class="mb-5 md:flex md:gap-[5%] md:justify-center md:mb-0">
           <div class="mb-7.5">
             <div class="px-6 md:px-14">
               <div class="aspect-[247/161]">

@@ -21,14 +21,14 @@
         @open="toggleOpen(true)"
         @close="toggleOpen(false)"
       />
-      <ul class="hidden space-x-6 xl:flex">
+      <ul class="hidden space-x-6 text-vue-blue xl:flex">
         <li
           v-for="(link, index) in menuLinks"
           :key="index"
         >
           <nuxt-link
             :to="`/${link.uri}`"
-            class="text-xl"
+            class="text-xl hover:opacity-60 transition-opacity"
           >
             {{ link.displayName }}
           </nuxt-link>

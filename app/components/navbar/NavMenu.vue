@@ -22,7 +22,10 @@ const localIsOpen = computed({
 
 <template>
   <div>
-    <button @click="localIsOpen = true">
+    <button
+      type="button"
+      @click="localIsOpen = true"
+    >
       <img
         alt="オープンボタン"
         src="~/assets/img/menu-open.svg"
@@ -35,6 +38,7 @@ const localIsOpen = computed({
       >
         <div class="py-[5vw] px-[3vw] text-right">
           <button
+            type="button"
             class="cursor-pointer"
             @click="localIsOpen = false"
           >
