@@ -5,7 +5,8 @@ const showNav = ref(false)
 const nav = ref(null)
 
 const callback = () => {
-  showNav.value = window.pageYOffset > nav.value.$el.clientHeight
+  // 画面トップから50pxスクロールしたら表示する。
+  showNav.value = window.pageYOffset > 50
 }
 
 onMounted(() => {
@@ -20,7 +21,7 @@ onUnmounted(() => {
 <template>
   <NavPageSection
     ref="nav"
-    class="fixed z-10 w-full bg-white/90 nav-hidden"
+    class="fixed z-10 w-full bg-nav nav-hidden"
     :class="{'nav-show': showNav}"
   />
 </template>
