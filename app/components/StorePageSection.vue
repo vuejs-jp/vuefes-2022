@@ -54,7 +54,7 @@ import {
               target="_blank"
               rel="noreferrer"
             >
-              <div class="flex mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
+              <div class="aspect-square flex mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
                 <img
                   :alt="`${goods.name}のサンプル画像`"
                   :src="`/store/${goods.image}`"
