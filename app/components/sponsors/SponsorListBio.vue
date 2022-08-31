@@ -26,7 +26,7 @@ const sponsorRankClass = computed(() => {
   <div class="mb-12 text-vue-blue md:mb-16">
     <h2
       :id="supportLevelAnchor"
-      class="pt-32 -mt-32 mb-6 font-yu-gothic text-xl font-bold md:text-3xl"
+      class="pt-[16.4vw] mt-[-16.4vw] mb-6 font-yu-gothic text-xl font-bold md:pt-32 md:-mt-32 md:text-3xl"
     >
       {{ supportLevelTitle }}
     </h2>
@@ -38,7 +38,7 @@ const sponsorRankClass = computed(() => {
         v-for="sponsor in sponsors"
         :id="sponsor.name_en"
         :key="sponsor.name"
-        class="pt-32 -mt-32 mb-2 md:mb-7"
+        class="pt-[16.4vw] mt-[-16.4vw] mb-2 md:pt-32 md:-mt-32 md:mb-7"
       >
         <a
           :href="sponsor.corporate_url"
