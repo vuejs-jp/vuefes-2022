@@ -4,24 +4,25 @@ import NavPageSection from '../NavPageSection.vue'
 const showNav = ref(false)
 const nav = ref(null)
 
-const callback = () => {
+const checkShowNav = () => {
   // 画面トップから50pxスクロールしたら表示する。
   showNav.value = window.pageYOffset > 50
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', callback)
+  checkShowNav()
+  window.addEventListener('scroll', checkShowNav)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', callback)
+  window.removeEventListener('scroll', checkShowNav)
 })
 </script>
 
 <template>
   <NavPageSection
     ref="nav"
-    class="fixed z-10 w-full bg-nav nav-hidden"
+    class="fixed z-10 w-full bg-white/90 nav-hidden"
     :class="{'nav-show': showNav}"
   />
 </template>

@@ -198,10 +198,10 @@ export const websiteLinks = [
 ]
 
 export const menuLinks = [
-  { displayName: 'Speaker', uri: '#speakers' },
+  { displayName: 'Speakers', uri: '#speakers' },
   { displayName: 'Ticket', uri: '#ticket' },
   { displayName: 'Store', uri: '#store' },
-  { displayName: 'Sponsor', uri: '#sponsors' },
+  { displayName: 'Sponsors', uri: '#sponsors' },
   { displayName: 'Contact', uri: '#form' },
   { displayName: 'Team', uri: '#team' },
 ]
