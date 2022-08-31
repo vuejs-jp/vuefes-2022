@@ -21,7 +21,7 @@ onUnmounted(() => {
 <template>
   <NavPageSection
     ref="nav"
-    class="fixed z-10 w-full bg-nav nav-hidden"
+    class="fixed z-10 w-full bg-white/90 nav-hidden"
     :class="{'nav-show': showNav}"
   />
 </template>
