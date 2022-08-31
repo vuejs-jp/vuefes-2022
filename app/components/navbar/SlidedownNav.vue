@@ -4,17 +4,18 @@ import NavPageSection from '../NavPageSection.vue'
 const showNav = ref(false)
 const nav = ref(null)
 
-const callback = () => {
+const checkShowNav = () => {
   // 画面トップから50pxスクロールしたら表示する。
   showNav.value = window.pageYOffset > 50
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', callback)
+  checkShowNav()
+  window.addEventListener('scroll', checkShowNav)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', callback)
+  window.removeEventListener('scroll', checkShowNav)
 })
 </script>
 
