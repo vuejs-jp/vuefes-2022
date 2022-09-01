@@ -1,7 +1,11 @@
 export default function (to, from, savedPosition) {
   if (to.hash) {
     console.log(to.hash)
-    return { selector: to.hash }
+    if ('scrollBehavior' in document.documentElement.style) {
+      return { selector: to.hash, behavior: 'smooth' }
+    } else {
+      return { selector: to.hash }
+    }
   } else {
     return { x: 0, y: 0 }
   }
