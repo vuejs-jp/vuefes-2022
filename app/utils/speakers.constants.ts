@@ -26,7 +26,7 @@ export const speakers = [
     session: {
       title: 'State Alchemy with Pinia',
       description:
-        'Pinia might be a light library with a simple API but it takes advantage of many Vue Reactivity concepts like Effect Scopes, that are unknown by most. In this talk we will go through some of the internals of Pinia, understanding them and discovering how to enhance our usage of Pinia.',
+        '<p>Pinia might be a light library with a simple API but it takes advantage of many Vue Reactivity concepts like Effect Scopes, that are unknown by most. In this talk we will go through some of the internals of Pinia, understanding them and discovering how to enhance our usage of Pinia.</p>',
       time: 20,
     },
   },
@@ -43,7 +43,7 @@ export const speakers = [
     session: {
       title: 'From Zero to One',
       description:
-        'Live coding session about making a full blown deployed application with Nuxt 3.',
+        '<p>Live coding session about making a full blown deployed application with Nuxt 3.</p>',
       time: 20,
     },
   },
@@ -58,7 +58,7 @@ export const speakers = [
     web: 'https://patak.dev/',
     session: {
       title: 'Vite 3 and Beyond',
-      description: 'New Vite features in Vite 3, state of Core dev, and what is next.',
+      description: '<p>New Vite features in Vite 3, state of Core dev, and what is next.</p>',
       time: 20,
     },
   },
@@ -103,7 +103,7 @@ export const speakers = [
     session: {
       title: 'Vue2 Vue3 マイグレーション 令和最新 最強',
       description:
-        'Vue1時代から開発を続けてきた1000コンポーネント規模のプロジェクトを3ヶ月でVue3に移行した話をします。Vue3化は変更点が大きいため移行コストが問題になりますが、なぜ、どのようにして行ったのか、作業につまづいたところ、どのようなメリットがあったかなどを振り返って話します。',
+        '<p>Vue1時代から開発を続けてきた1000コンポーネント規模のプロジェクトを3ヶ月でVue3に移行した話をします。Vue3化は変更点が大きいため移行コストが問題になりますが、なぜ、どのようにして行ったのか、作業につまづいたところ、どのようなメリットがあったかなどを振り返って話します。</p>',
       time: 20,
     },
   },
@@ -120,10 +120,10 @@ export const speakers = [
     github: 'yamanoku',
     session: {
       title: 'Vue.js でアクセシブルなコンポーネントをつくるために',
-      description: `昨今 Web 開発において、アクセシビリティを重視することはそれほど珍しくなくなってきました。<br>
+      description: `<p>昨今 Web 開発において、アクセシビリティを重視することはそれほど珍しくなくなってきました。<br>
       最新の Vue.js 公式ドキュメントでもアクセシビリティに関する項目が追加されました。<br>
       しかしながらアクセシビリティ対応に関しては、間違った知識のままはじめるとアクセシブルでなくなる可能性もあります。<br>
-      この発表ではそうした間違いや疑問を解消し Vue.js でのアクセシビリティ向上に取り組みやすくするやり方を発表いたします。`,
+      この発表ではそうした間違いや疑問を解消し Vue.js でのアクセシビリティ向上に取り組みやすくするやり方を発表いたします。</p>`,
       time: 20,
     },
   },
@@ -138,9 +138,9 @@ export const speakers = [
     github: 'ota-meshi',
     session: {
       title: 'eslint-plugin-vueを使用して継続的にVue3移行する',
-      description: `Vue2のアプリケーションをVue3に移行するニーズは増えてきていると思いますが、複数のアプリケーションを移行する場合、手動で実施するのはコストもかかりますし、Vue2をメインに使用してきたエンジニアが、新しいVue3でのアプリケーション開発で古い機能を使ってしてしまうというリスクもあります。<br>
+      description: `<p>Vue2のアプリケーションをVue3に移行するニーズは増えてきていると思いますが、複数のアプリケーションを移行する場合、手動で実施するのはコストもかかりますし、Vue2をメインに使用してきたエンジニアが、新しいVue3でのアプリケーション開発で古い機能を使ってしてしまうというリスクもあります。<br>
       eslint-plugin-vueは古い書き方を検知し、場合によって自動的にVue3の新しい書き方に書き換えることで、継続的にVue3移行を助けます。<br>
-      セッションでは、自社の開発するアプリケーションで実際にeslint-plugin-vueを使用してVue3移行を進めた話とともに、eslint-plugin-vueのVue3移行を助けるチェックルールや、自社のアプリケーション専用に独自に作成したカスタムルールの一部も紹介できればと考えています。`,
+      セッションでは、自社の開発するアプリケーションで実際にeslint-plugin-vueを使用してVue3移行を進めた話とともに、eslint-plugin-vueのVue3移行を助けるチェックルールや、自社のアプリケーション専用に独自に作成したカスタムルールの一部も紹介できればと考えています。</p>`,
       time: 20,
     },
   },
@@ -155,9 +155,9 @@ export const speakers = [
     github: 'shigasy',
     session: {
       title: '施策を止めるな！Vue2からVue3への移行',
-      description: `Vue3が正式リリースして約2年が経ちます。「そろそろウチのプロジェクトもVue3にしたい」と思う気持ちはありつつ、メインの施策を優先してしまい移行のための時間を取れないことが往々にしてあります。<br>
+      description: `<p>Vue3が正式リリースして約2年が経ちます。「そろそろウチのプロジェクトもVue3にしたい」と思う気持ちはありつつ、メインの施策を優先してしまい移行のための時間を取れないことが往々にしてあります。<br>
       そのような中、Rettyではチームと連携して「メインの施策を止めることなく」「大きな不具合を起こすことなく」Vue3に移行することができました。<br>
-      チームで作業する時のポイントや具体的なVue3への移行手順、移行する前に知っておけば良かったことなどをご紹介します。`,
+      チームで作業する時のポイントや具体的なVue3への移行手順、移行する前に知っておけば良かったことなどをご紹介します。</p>`,
       time: 20,
     },
   },
@@ -173,7 +173,18 @@ export const speakers = [
     github: 'tbashiyy',
     session: {
       title: '十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング',
-      description: 'todo',
+      description: `
+        <p>ブラウザの高速化された昨今でも、Vue.js/Vuexで大量のレコードや要素を扱うにはちょっとした試行錯誤が必要です。<br>
+        弊社のVue.jsプロジェクトでは、初回ローディング時にほぼ全てのデータをフロントエンドで読み込み処理します。今年に入り十数万件のデータを扱うこととなりました。試しにテストしてみると、緩やかな時の流れの世界がそこにはありました。しかし、チーム総出でチューニングを行った結果、Vue.jsはいきいきと動き出したのです！<br>
+        本セッションでは、パフォーマンスチューニングで得られたプラクティスをご紹介します。</p>
+        <ul>
+        <li>Chrome DevToolsの活用</li>
+        <li>リアクティブのコントロール</li>
+        <li>Intersection Observerを使った表示の制限</li>
+        <li>繰り返し使用するコンポーネントの関数型コンポーネント化etc…</li>
+        </ul>
+        <p>※Vue2.Xでの事例となります。</p>
+      `,
       time: 20,
     },
   },
@@ -188,7 +199,20 @@ export const speakers = [
     github: 'monsat',
     session: {
       title: 'Nuxt モジュールの作り方を知って 開発した機能を再利用しよう',
-      description: 'todo',
+      description: `
+        <p>Nuxt 3 は Nuxt Kit により、モジュール作成がより効率的になりました。<br>
+        モジュールは使ったことはあるけど、作ったことはないという方もいるかもしれません。<br>
+        モジュールの作り方を知れば、時間をかけて開発した機能を、再利用して使い回すことが可能です。<br>
+        本セッションでは、ゼロからモジュール開発を体験していただきます。</p>
+        <p>使う側から、作る側へ。みんなで Vue.js や Nuxt のエコシステムを広げていきましょう。</p>
+        <ul>
+        <li>プラグインと Nuxt モジュール、両者の役割</li>
+        <li>Nuxt モジュールの使い方</li>
+        <li>モジュール開発、最初の一歩</li>
+        <li>カスタマイズしやすくなった Nuxt 3 の Hooks (Nuxt Hooks と App Hooks)</li>
+        <li>シンプルで実践的なモジュール開発例</li>
+        </ul>
+      `,
       time: 20,
     },
   },
@@ -205,8 +229,8 @@ export const speakers = [
     github: 'mew-ton',
     session: {
       title: 'デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成',
-      description: `弊社では将来的に弊社独自のデザインシステムの設計の後、既存のプロジェクトをすべて置き換えていく予定となっています。<br>
-      私は、直近立ち上がった新規プロジェクトにて、将来的にデザインシステムに置き換わることが確実であることを前提として、変化に強く、テストコードによる品質を担保できるNuxt3プロジェクト開発基盤を作りましたので、本セッションにて共有できればと思います。`,
+      description: `<p>弊社では将来的に弊社独自のデザインシステムの設計の後、既存のプロジェクトをすべて置き換えていく予定となっています。<br>
+      私は、直近立ち上がった新規プロジェクトにて、将来的にデザインシステムに置き換わることが確実であることを前提として、変化に強く、テストコードによる品質を担保できるNuxt3プロジェクト開発基盤を作りましたので、本セッションにて共有できればと思います。</p>`,
       time: 20,
     },
   },
@@ -221,7 +245,20 @@ export const speakers = [
     github: 't0yohei',
     session: {
       title: '負債まみれのレガシーフロントエンド画面を Vue.js でリプレイスした話',
-      description: 'todo',
+      description: `
+        <p>とある Rails のテンプレート + CoffeeScript で構築された画面を、 Vue.js でリプレイスしました。<br>
+        その際の知見を、具体的な工夫や悩んだポイント、実際の遭遇した技術的負債の話を交えて共有できればと思います。<br>
+        本セッションのキーワードは以下になります。</p>
+        <ul>
+        <li>Vue3 の script setup + TypeScript に始まる開発体験の良さ</li>
+        <li>Container Component、Layout Component などの開発プラクティス</li>
+        <li>Storybook、 StoryShots(VRT) によるフロントエンド DX</li>
+        <li>あるべき姿に至るまでの長い道のりと取捨選択</li>
+        <li>命令的 UI から宣言的 UI へのパラダイムの変更</li>
+        <li>Ajax のリクエストを送ると、json にシリアライズされた html が帰ってくる API のエンドポイント</li>
+        <li>忍耐力</li>
+        </ul>
+      `,
       time: 20,
     },
   },
@@ -236,10 +273,10 @@ export const speakers = [
     github: 'kawamataryo',
     session: {
       title: 'JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する',
-      description: `昨今のフロントエンド開発では、型による安全性と開発者体験の向上が見込めるTypeScript（以下TS）の採用がほぼ標準となっています。<br>
+      description: `<p>昨今のフロントエンド開発では、型による安全性と開発者体験の向上が見込めるTypeScript（以下TS）の採用がほぼ標準となっています。<br>
       しかしReactに比べTSへの対応が遅れたVue.jsのプロダクトでは、まだTS化が出来ていないものや、型チェックが緩いままのものが数多くあると思います。<br>
       本セッションでは、JSからTSへ移行したVue.jsプロダクトにて、自作ツールや計測ダッシュボードを駆使して斬新的に型チェックを強化していった過程についてお話します。<br>
-現在、Vue.jsプロダクトのTS化、型チェックの強化を検討している方の参考になれば嬉しいです。`,
+現在、Vue.jsプロダクトのTS化、型チェックの強化を検討している方の参考になれば嬉しいです。</p>`,
       time: 20,
     },
   },
@@ -255,7 +292,7 @@ export const speakers = [
     session: {
       title: '「こわくない」Vuetifyで始めるOSSコントリビュート',
       description:
-        'Vuetifyに"コントリビュート"する手順についてお話しします。開発環境の構築からPR作成・マージされるところまで、分かりやすく丁寧に解説します。OSS開発・コントリビュートにトライしたい方のお力になれば嬉しいです。',
+        '<p>Vuetifyに"コントリビュート"する手順についてお話しします。開発環境の構築からPR作成・マージされるところまで、分かりやすく丁寧に解説します。OSS開発・コントリビュートにトライしたい方のお力になれば嬉しいです。</p>',
       time: 20,
     },
   },
@@ -270,7 +307,18 @@ export const speakers = [
     github: 'watsuyo',
     session: {
       title: '安全に開発効率を上げるための Vue 2.7 移行',
-      description: 'todo',
+      description: `
+        <p>株式会社 iCARE では、Vue 2.6 で開発しているプロダクトを、 Vue 2.7 を経由してから Vue 3 に移行する計画を立てました。<br>
+        以下の内容を発表します。</p>
+        <ul>
+        <li>なぜ移行先は Vue 3 でなく、Vue 2.7 を選んだのか</li>
+        <li>Vue 2.7 を経由することによって軽減される負担とリスク</li>
+        <li>開発スピードを落とせない環境下で、バージョン移行を実現するために必要なこと</li>
+        <li>Vue 2.6 から Vue 2.7 への移行コストはどれくらいなのか</li>
+        <li>移行の費用対効果</li>
+        <li>移行の感想と反省</li>
+        </ul>
+      `,
       time: 20,
     },
   },
@@ -286,9 +334,9 @@ export const speakers = [
     github: 'KanDai',
     session: {
       title: 'NuxtJSによるJamstack構築とNuxt 3でどう変わるのか',
-      description: `モダンなWebアプリやWebサイト構築のアーキテクチャとして数年前からJamstackが注目されています。Vue.jsでもNuxtJSのSSG(Static Site Generation)やGridsomeのようなフレームワークを使うことでJamstackのサイトを構築できます。<br>
+      description: `<p>モダンなWebアプリやWebサイト構築のアーキテクチャとして数年前からJamstackが注目されています。Vue.jsでもNuxtJSのSSG(Static Site Generation)やGridsomeのようなフレームワークを使うことでJamstackのサイトを構築できます。<br>
       このセッションでは、実際にNuxtJS(v2)とmicroCMSを使ったサイト構築で得た知見として、NuxtJSでJamstackサイトを構築する際に必要な基礎知識やシステム構成、規模が大きくなった時のビルド周りの最適化、運用に関するヒントや実際に苦労したポイントなどを紹介します。<br>
-      その上で、今夏リリース予定のNuxt3のSSG周りの変更点を、実際のコードなどを交えながら紹介していきます。`,
+      その上で、今夏リリース予定のNuxt3のSSG周りの変更点を、実際のコードなどを交えながら紹介していきます。</p>`,
       time: 20,
     },
   },
@@ -306,7 +354,33 @@ export const speakers = [
     session: {
       title:
         '社内用共通コンポーネントのビジュアルリグレッションテストにStorybookとChromaticを選択した話',
-      description: 'todo',
+      description: `
+        <p>
+          Vue を取り巻くエコシステム（ツール）とその運用の話です。<br>
+          <br>
+          ■ 概要<br>
+          社内のコンポーネントライブラリに対してStorybookとChromaticでビジュアルリグレッションテストを導入して、見た目のデグレを防止している話をします。<br>
+          <br>
+          ■ 詳細<br>
+          Chromaticとは、Storybookのメンテナーが作成しているStorybook用のツールです。<br>
+          ストーリーごとのスクリーンショットを撮影し、差分を画像で比較してくれる機能を備えています。<br>
+          <br>
+          以下の課題を解決することを目的にして Chromatic を導入しました。
+          <ul>
+          <li>既存のコンポーネントを改修した際に発生する DOM、CSS に起因する表示崩れを自動で検知できないこと</li>
+          <li>依存モジュールのバージョンアップに時間がかかること</li>
+          </ul>
+          その結果、両方の課題を解決できた上に作業が楽になったという話をします。<br>
+          また、なぜ他のテストではなくてビジュアルリグレッションテストを導入したのか、その意思決定の過程についても紹介します。<br>
+          <br>
+          なお、本発表は以下の3記事の内容を合わせて再構成したものになる予定です。
+          <ul>
+          <li><a class="inner-link" target="_blank" rel="noopener" href="https://devblog.thebase.in/entry/2021/12/08/203039">「Storybook と Chromatic でビジュアルリグレッションテストを実施する」</a></li>
+          <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/process-of-introduction-of-chromatic">「ビジュアルリグレッションテストのツールを導入するまでの意思決定プロセス」</a></li>
+          <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/typescript-compiler-api-storybook">「TypeScript Compiler API で40の Storybook コンポーネントを storiesOf から CSF（Component Story Format）に置換した」</a></li>
+          </ul>
+        </p>
+      `,
       time: 20,
     },
   },
@@ -321,10 +395,10 @@ export const speakers = [
     github: '8845musign',
     session: {
       title: '不確実性のある将来に対応するためのデザイン戦略',
-      description: `ソフトウェア開発には不確実性がつきものです。初期フェーズにおいてはUIの過度の一貫性や、多機能なコンポーネントはプロダクトの将来を狭める可能性があります。 また、デザイナーである私はデザインのすべてを掌握したいと考えます。ですが、現実には多くの人の手によってデザインは成長していきます。<br>
+      description: `<p>ソフトウェア開発には不確実性がつきものです。初期フェーズにおいてはUIの過度の一貫性や、多機能なコンポーネントはプロダクトの将来を狭める可能性があります。 また、デザイナーである私はデザインのすべてを掌握したいと考えます。ですが、現実には多くの人の手によってデザインは成長していきます。<br>
       私はルールやパーツの「責務を絞る」ことで、将来の不確実性に対応しつつ最低限の一貫性を担保できると考えています。Tailwindに代表されるユーティリティクラスのアプローチや、Every Layoutのコンポジションレイアウトなど、いくつかの選択肢があります。<br>
       そして、さまざまな粒度のレイヤーにおいて「デザインの道具」を提供していくことで、スキル・職種を問わずにデザインへ取り組みやすくなるかもしれません。<br>
-      本セッションでは、私が関わっているVue.jsのプロジェクトでの取り組みをご説明します。`,
+      本セッションでは、私が関わっているVue.jsのプロジェクトでの取り組みをご説明します。</p>`,
       time: 20,
     },
   },
