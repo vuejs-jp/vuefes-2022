@@ -16,7 +16,7 @@ export const storeDescription2 =
 export const storeDescription3 =
   '送料は商品別に設定されておりますので、ストアをご確認ください。国内配送の料金は沖縄及び離島への配送を除き一律となります。一度に複数の商品を購入した場合は、その購入された商品内の「最も高い送料」が適用されます。'
 
-export const orderAcceptancePeriod = 'ご注文受付期間：8月10日(水) 〜 9月上旬ごろ'
+export const orderAcceptancePeriod = 'ご注文受付期間：8月10日(水) 〜 9月3日(土) 12:00'
 export const productShippingSchedule = '商品発送予定：10月上旬ごろ'
 
 export const goodsList: IGoods[] = [

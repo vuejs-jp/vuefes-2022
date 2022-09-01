@@ -196,3 +196,12 @@ export const websiteLinks = [
     description: 'Check the website of Vue Fes Japan 2018.',
   },
 ]
+
+export const menuLinks = [
+  { displayName: 'Speakers', uri: '#speakers' },
+  { displayName: 'Ticket', uri: '#ticket' },
+  { displayName: 'Store', uri: '#store' },
+  { displayName: 'Sponsors', uri: '#sponsors' },
+  { displayName: 'Contact', uri: '#form' },
+  { displayName: 'Team', uri: '#team' },
+]
