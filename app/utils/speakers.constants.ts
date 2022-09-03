@@ -95,7 +95,7 @@ export const speakers = [
     id: 'miyaoka',
     name: 'miyaoka',
     title: '株式会社STUDIO フロントエンドエンジニア',
-    image: 'https://avatars.githubusercontent.com/u/1443118?v=4',
+    image: '/speaker/miyaoka.jpeg',
     description:
       'ノーコードデザインツールのSTUDIOで、フロントエンド技術を利用したGUIツールの開発をしています',
     twitter: 'miyaoka',
@@ -111,8 +111,7 @@ export const speakers = [
     id: 'yamanoku',
     name: 'やまのく',
     title: 'フロントエンドデザイナー',
-    image:
-      'https://media.discordapp.net/attachments/1006889898881593384/1009452307613745233/icon05.png?width=654&height=654',
+    image: '/speaker/yamanoku.png',
     description: `1児の父で猫3匹と大型犬1頭の飼い主。<br>
     株式会社クラウドワークスに所属する傍ら Web 技術を活用したユーザビリティ向上について考えてます。<br>
     Vue.js には関連する OSS のドキュメント翻訳での貢献をしています。`,
@@ -131,7 +130,7 @@ export const speakers = [
     id: 'ota-meshi',
     name: '太田 洋介',
     title: 'フューチャー株式会社 Technology Innovation Group シニアアーキテクト',
-    image: 'https://github.com/ota-meshi.png',
+    image: '/speaker/ota-meshi.jpeg',
     description:
       'eslint-plugin-vueのメンテナー。Vue.js Core Team メンバー。Stylelint、Stylus、Intlifyのチームメンバー。Google Open Source Peer Bonus 2022受賞。',
     twitter: 'omoteota',
@@ -148,7 +147,7 @@ export const speakers = [
     id: 'shigasy',
     name: '志賀 奎太',
     title: 'Retty株式会社 Webエンジニア',
-    image: 'https://drive.google.com/file/d/1H3KzIZJ33KgMKDavJLgpoRvQJF4bZ8bf/view?usp=sharing',
+    image: '/speaker/shigasy.jpg',
     description: `Retty株式会社に新卒で入社。toC領域でリニューアルプロジェクトなどを経て、現在はtoB領域の開発に従事。<br>
     趣味はeスポーツ観戦。`,
     twitter: '',
@@ -165,7 +164,7 @@ export const speakers = [
     id: 'tbashiyy',
     name: 'tbashiyy',
     title: '株式会社イエソド エンジニア',
-    image: 'https://pbs.twimg.com/profile_images/1174707889010704384/GjyZWTMm_400x400.jpg',
+    image: '/speaker/tbashiyy.jpeg',
     description: `株式会社イエソドのエンジニア。<br>
     Vue.js + TypeScript、Server-Side Kotlinを利用してプロダクト作りに励んでいます。<br>
     型のある言語が好みです。趣味はビール片手に料理すること。`,
@@ -189,10 +188,10 @@ export const speakers = [
     },
   },
   {
-    id: 'ktanaka',
+    id: 'monsat',
     name: '田中弘治',
     title: '株式会社ダイレクトサーチジャパン 代表取締役',
-    image: 'https://avatars.githubusercontent.com/u/85702',
+    image: '/speaker/monsat.png',
     description:
       'コワーキングスペース茅場町 Co-Edo を運営するかたわら、フロントエンドエンジニアとして開発も行っています。開発はすべて独学で行い、独立後は受託開発を本業としています。 Vue.js 3, Nuxt 3, TypeScript, Firebase, Stripe API, GitHub API 等を活用した開発をおもに行っています。',
     twitter: 'ktanaka',
@@ -220,8 +219,7 @@ export const speakers = [
     id: 'mew-ton',
     name: 'みゅーとん',
     title: '株式会社hacomono 基盤開発',
-    image:
-      'https://media.discordapp.net/attachments/1006889898881593384/1010815863915556944/ico_v4.png',
+    image: '/speaker/mew-ton.jpg',
     description: `趣味で3Dアバターを使って楽器演奏などをしています。<br>
     仕事では、株式会社hacomono でフロントエンドの開発基盤の実装を主に担当しています。<br>
     手間最小で最大限テストできるフロントエンドの開発基盤設計を日々模索しています。`,
@@ -238,7 +236,7 @@ export const speakers = [
     id: 't0yohei',
     name: 'とよへい',
     title: '株式会社クラウドワークス web エンジニア',
-    image: 'https://avatars.githubusercontent.com/u/30691457?v=4',
+    image: '/speaker/t0yohei.jpeg',
     description:
       'Vue.js に出会ってフロントエンド開発の楽しさを知った人。新卒で SIer に入社後、株式会社クラウドワークスに転職。以後 Rails + CoffeeScript, Vue.js な web アプリケーションの開発、 Vue.js の社内布教を行う。最近は新規事業開発の何でも屋さん。',
     twitter: 't0yohei',
@@ -266,7 +264,7 @@ export const speakers = [
     id: 'kawamataryo',
     name: '川俣 涼',
     title: 'LAPRAS株式会社 ソフトウェアエンジニア',
-    image: 'https://avatars.githubusercontent.com/u/11070996?v=4',
+    image: '/speaker/kawamataryo.jpg',
     description:
       'LAPRAS株式会社のソフトウェアエンジニア。新卒で地元茨城県の消防本部に就職し、消防隊、救急隊として6年間勤務。その後、妻の仕事の手伝いで始めたHP制作をきっかけにエンジニアへ転職。エムスリー株式会社、株式会社Misocaを経て現職に。趣味は懸垂。',
     twitter: 'KawamataRyo',
@@ -284,7 +282,7 @@ export const speakers = [
     id: 'kenji7157',
     name: '川野邉 賢二',
     title: 'ENECHANGE株式会社 フロントエンドエンジニア',
-    image: 'https://pbs.twimg.com/profile_images/1559881324680577024/8KfoefK9_400x400.jpg',
+    image: '/speaker/kenji7157.jpeg',
     description:
       '新卒から受託開発企業、SES企業を経験した後に、ENECHANGE株式会社で「エネルギーの未来をつくる」フロントエンドエンジニアとして従事。趣味はランニング・個人開発。お手やわらかに。',
     twitter: 'kenji7157',
@@ -300,7 +298,7 @@ export const speakers = [
     id: 'watsuyo',
     name: 'watsuyo',
     title: '株式会社 iCARE フロントエンドエンジニア, PjM',
-    image: 'https://pbs.twimg.com/profile_images/1339430665792626689/8cE0aCDB.jpg',
+    image: '/speaker/watsuyo.jpeg',
     description:
       'iCAREのフロントエンドエンジニア、PjM。 産業技術大学院大学情報アーキテクチャコース在学中。Vue.js や TypeScript を使用したプロダクトやデザインシステムを開発。最近は、PjM も担当。趣味は、美味しい焼肉とお寿司を食べること。',
     twitter: 'watsuyo_2',
@@ -323,10 +321,10 @@ export const speakers = [
     },
   },
   {
-    id: 'kan_dai',
+    id: 'KanDai',
     name: '菅家 大地',
     title: '株式会社プレイド デザインエンジニア',
-    image: 'https://avatars.githubusercontent.com/u/3655103?v=4',
+    image: '/speaker/KanDai.jpg',
     description: `株式会社プレイドでデザインエンジニアとしてVue３やReactを使った開発をしています。<br>
     Webコンサルティング会社のデザイナー、株式会社TAMのフロントエンドエンジニアを経て現職。<br>
     2019年に宮城県に移住。仙台でフロントエンド系のコミュニティの運営をしています。`,
@@ -341,11 +339,10 @@ export const speakers = [
     },
   },
   {
-    id: 'Panda_Program',
+    id: 'KushibikiMashu',
     name: 'プログラミングをするパンダ',
     title: 'BASE株式会社 シニアエンジニア',
-    image:
-      'https://media.discordapp.net/attachments/1006889898881593384/1011771156212236358/f_04_400_400.png',
+    image: '/speaker/KushibikiMashu.png',
     description: `新卒で就職した日系大手企業を退職した後、Web系の開発会社に転職してエンジニアとしてキャリアを始める。<br>
     その後、弁護士ドットコム株式会社でレガシーシステムの改善、SaaS事業の新規開発・運用などを経験した後、2021年にフロントエンドエンジニアとしてBASE株式会社に入社。<br>
     社外活動では、技術ブログを執筆したり Software Design 2022年3月号のTDD特集に寄稿するなど情報発信を行なっている。アジャイル開発（XP、スクラム）とTDDが好き。現在DevOpsを勉強中。`,
@@ -355,40 +352,34 @@ export const speakers = [
       title:
         '社内用共通コンポーネントのビジュアルリグレッションテストにStorybookとChromaticを選択した話',
       description: `
-        <p>
-          Vue を取り巻くエコシステム（ツール）とその運用の話です。<br>
-          <br>
-          ■ 概要<br>
-          社内のコンポーネントライブラリに対してStorybookとChromaticでビジュアルリグレッションテストを導入して、見た目のデグレを防止している話をします。<br>
-          <br>
-          ■ 詳細<br>
-          Chromaticとは、Storybookのメンテナーが作成しているStorybook用のツールです。<br>
-          ストーリーごとのスクリーンショットを撮影し、差分を画像で比較してくれる機能を備えています。<br>
-          <br>
-          以下の課題を解決することを目的にして Chromatic を導入しました。
-          <ul>
-          <li>既存のコンポーネントを改修した際に発生する DOM、CSS に起因する表示崩れを自動で検知できないこと</li>
-          <li>依存モジュールのバージョンアップに時間がかかること</li>
-          </ul>
-          その結果、両方の課題を解決できた上に作業が楽になったという話をします。<br>
-          また、なぜ他のテストではなくてビジュアルリグレッションテストを導入したのか、その意思決定の過程についても紹介します。<br>
-          <br>
-          なお、本発表は以下の3記事の内容を合わせて再構成したものになる予定です。
-          <ul>
-          <li><a class="inner-link" target="_blank" rel="noopener" href="https://devblog.thebase.in/entry/2021/12/08/203039">「Storybook と Chromatic でビジュアルリグレッションテストを実施する」</a></li>
-          <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/process-of-introduction-of-chromatic">「ビジュアルリグレッションテストのツールを導入するまでの意思決定プロセス」</a></li>
-          <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/typescript-compiler-api-storybook">「TypeScript Compiler API で40の Storybook コンポーネントを storiesOf から CSF（Component Story Format）に置換した」</a></li>
-          </ul>
-        </p>
+        <p>Vue を取り巻くエコシステム（ツール）とその運用の話です。</p>
+        <p>■ 概要</p>
+        <p>社内のコンポーネントライブラリに対してStorybookとChromaticでビジュアルリグレッションテストを導入して、見た目のデグレを防止している話をします。</p>
+        <p>■ 詳細</p>
+        <p>Chromaticとは、Storybookのメンテナーが作成しているStorybook用のツールです。<br>
+        ストーリーごとのスクリーンショットを撮影し、差分を画像で比較してくれる機能を備えています。<br>
+        以下の課題を解決することを目的にして Chromatic を導入しました。</p>
+        <ul>
+        <li>既存のコンポーネントを改修した際に発生する DOM、CSS に起因する表示崩れを自動で検知できないこと</li>
+        <li>依存モジュールのバージョンアップに時間がかかること</li>
+        </ul>
+        <p>その結果、両方の課題を解決できた上に作業が楽になったという話をします。<br>
+        また、なぜ他のテストではなくてビジュアルリグレッションテストを導入したのか、その意思決定の過程についても紹介します。<br>
+        なお、本発表は以下の3記事の内容を合わせて再構成したものになる予定です。</p>
+        <ul>
+        <li><a class="inner-link" target="_blank" rel="noopener" href="https://devblog.thebase.in/entry/2021/12/08/203039">「Storybook と Chromatic でビジュアルリグレッションテストを実施する」</a></li>
+        <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/process-of-introduction-of-chromatic">「ビジュアルリグレッションテストのツールを導入するまでの意思決定プロセス」</a></li>
+        <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/typescript-compiler-api-storybook">「TypeScript Compiler API で40の Storybook コンポーネントを storiesOf から CSF（Component Story Format）に置換した」</a></li>
+        </ul>
       `,
       time: 20,
     },
   },
   {
-    id: 'yesodco_yoko',
+    id: '8845musign',
     name: '腹筋ローラーの力を信じろ',
     title: '株式会社イエソド デザイナー&フロントエンドエンジニア',
-    image: 'https://drive.google.com/file/d/1Qi1DHsnzriawsqcazOb9godOBfGofjL9/view?usp=sharing',
+    image: '/speaker/8845musign.jpg',
     description:
       '株式会社イエソド。デザインとエンジニアリングの両側面からWebサイト制作・Webサービス開発に従事。また、『Every Layout -モジュラーなレスポンシブデザインを実現するCSS設計論』を共同監訳。システム運用からディレクション、デザイン、開発の幅広い経験を活かして活動中。',
     twitter: 'yesodco_yoko',
