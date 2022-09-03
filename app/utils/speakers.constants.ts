@@ -106,6 +106,7 @@ export const speakers = [
       time: 20,
     },
   },
+  // 国内スピーカー
   {
     id: 'miyaoka',
     name: 'miyaoka',
@@ -406,6 +407,80 @@ export const speakers = [
       そして、さまざまな粒度のレイヤーにおいて「デザインの道具」を提供していくことで、スキル・職種を問わずにデザインへ取り組みやすくなるかもしれません。<br>
       本セッションでは、私が関わっているVue.jsのプロジェクトでの取り組みをご説明します。</p>`,
       time: 20,
+    },
+  },
+  // LT
+  {
+    id: 'oreo',
+    name: 'oreo',
+    title: '株式会社iCARE フロントエンドエンジニア',
+    image: '/speaker/oreo2990.jpeg',
+    description:
+      '新卒で商社に入社し、水産業や林業といった生活産業部門のリスク管理業務に5年間従事。自身が行なってきた与信管理自動化ツールに出会ったことがきっかけで、プログラミングに興味を持ちエンジニアにジョブチェンジ。2021年9月から現職に。趣味はブログ執筆とモルック。',
+    twitter: 'oreo2991',
+    github: 'oreo2990',
+    session: {
+      title: 'レガシーなMPAアプリケーションをwebpackからviteに移行する話',
+      description: `<p>株式会社iCAREでは、Vue2.6(※2.7に移行中)+Composition APIで開発を行っており、vue2系では比較的モダンな構成です。一方、Ruby on RailsのView毎にVueインスタンスを生成するMPAであり、アプリケーション全体の構成としては、レガシーな構造になっています。
+      エントリーポイントが多いことによる弊害で、サービス拡大に伴いビルド時間は長くなり、最近では開発サーバーの立ち上げに約2分も掛かるようになりました。これを改善すべく、Vue2.7化と併せてビルドシステムのWebpackからViteへの移行を試みています。
+      SPAへのVite導入等に関しては記事がありますが、レガシーなMPAアプリケーションでのVite移行に関する記事はあまりなく、移行できるか？等の不安や疑問を抱きながら実装を進めています。本LTでは、この取り組みを通して得た知見を共有させて頂きます。</p>`,
+      time: 5,
+    },
+  },
+  {
+    id: 'ebiryu',
+    name: 'ebiryu',
+    title: 'ストックマーク株式会社 ソフトウェアエンジニア',
+    image: '/speaker/ebiryu.jpg',
+    description:
+      'ストックマーク株式会社で、主にフロントエンドの開発をしています。<br>型やテストのある開発環境やテスト可能なコンポーネント設計、デザインシステムの運用に関心があります。',
+    twitter: 'ebiryu65',
+    github: 'ebiryu',
+    session: {
+      title: 'provide/injectを用いたローカルな状態管理',
+      description: `
+      <p>フロントエンドの状態管理というとVuex、Piniaによるグローバルな状態管理の手法がよく取り上げられます。しかし、開発を進めていると、Atomic Designでいうmoleculesやorganisms規模のコンポーネントに状態を持たせたい、などローカルな状態管理が欲しくなる場面も発生します。</p>
+      <p>このとき、コンポーネント内で状態を定義すると外から状態の参照や操作をすることが難しくなってしまいます。これを解決するために、親コンポーネントの状態をpropsやv-modelで渡すと、状態管理の責務が親に移りコードの見通しが悪くなります。</p>
+      <p>本LTでは、Composition APIのprovide/injectを活用してローカルな状態を管理する方法を紹介します。Composition APIのinjectを用いると外からの状態操作をオプショナルにできるため、実装がシンプルになります。</p>
+      `,
+      time: 5,
+    },
+  },
+  {
+    id: 'l4dybird',
+    name: '掛水優輝',
+    title: '株式会社デジタルバリュー ディベロッパー',
+    image: '/speaker/l4dybird.jpeg',
+    description:
+      '新卒から地方IT企業を経験した後、株式会社デジタルバリューにてフロントエンドエンジニアとしてインターネットバンキングの開発に携わっており Nuxt2 + Composition API で開発をしています。<br>プライベートでは C# を用いて Discord Bot を開発しています。最近は Vitest にお熱。',
+    twitter: 'GekiUmaOsushi',
+    github: 'l4dybird',
+    session: {
+      title: 'Nuxt2 + Composition API から Nuxt Bridge へのマイグレーションのすゝめ',
+      description: `
+      <p>Nuxt3 のリリースが近づくにつれて既存で開発している Nuxt2 アプリケーションを Nuxt Bridge へマイグレーションをする必要が出てきています。</p>
+      <p>Nuxt2 でも Nuxt Bridge へのマイグレーションに備えて準備できる事がある為、今回は unplugin-auto-import を利用した AutoImport の導入について知見を共有できればと思います。</p>
+      `,
+      time: 5,
+    },
+  },
+  {
+    id: 'FurusawaKaoru',
+    name: '古澤 棟熏(ふるさわ かおる)',
+    title: 'ユアマイスター株式会社 フロントエンドエンジニア',
+    image: '/speaker/FurusawaKaoru.gif',
+    description:
+      '新卒で金融系の受託会社に就職した後により困難にチャレンジするためにユアマイスター株式会社に転職。最近はVue.jsやNuxtを使いながらリプレースや新機能を開発しています。',
+    twitter: 'firirice',
+    github: 'FurusawaKaoru',
+    session: {
+      title: 'Nuxt Content v2でエンジニアブログを作っている話',
+      description: `
+      <p>Nuxtの公式モジュールで強力なヘッドレスCMSのNuxt ContentがNuxt3のRCに続いて、5月25日にV2がリリースされました。 こちらを利用し、一からエンジニアブログを開発している中で私が開発体験がいいと感じて便利だと思った機能についてお話します。</p>
+      <p>Nuxt Content V2はNuxt3に対応したモジュールのため、Nuxt3を前提にお話しますが、セッションではNuxt3については触れない予定です。<br>
+      また、V1は触ったことがないためV1と比較してよくなった点などは話せないかもしれないのでご了承ください。</p>
+      `,
+      time: 5,
     },
   },
 ]
