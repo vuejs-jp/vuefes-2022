@@ -49,7 +49,7 @@ const speakerInfo = computed(() => props.speaker)
                 v-if="speakerInfo.twitter"
                 :aria-label="`${speakerInfo.name}のTwitterアカウント`"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener"
                 class="flex mr-5"
                 :href="`https://twitter.com/${speakerInfo.twitter}`"
               >
@@ -63,7 +63,7 @@ const speakerInfo = computed(() => props.speaker)
                 v-if="speakerInfo.github"
                 :aria-label="`${speakerInfo.name}のGitHubアカウント`"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener"
                 :href="`https://github.com/${speakerInfo.github}`"
               >
                 <img

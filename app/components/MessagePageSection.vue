@@ -34,7 +34,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
           {{ representative }}（<a
             href="https://twitter.com/kazu_pon"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener"
             class="underline hover:opacity-60 transition-opacity"
           >{{ representativeTwitterID }}</a>）
         </p>
