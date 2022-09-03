@@ -369,19 +369,19 @@ export const speakers = [
         '社内用共通コンポーネントのビジュアルリグレッションテストにStorybookとChromaticを選択した話',
       description: `
         <p>Vue を取り巻くエコシステム（ツール）とその運用の話です。</p>
-        <p>■ 概要</p>
-        <p>社内のコンポーネントライブラリに対してStorybookとChromaticでビジュアルリグレッションテストを導入して、見た目のデグレを防止している話をします。</p>
-        <p>■ 詳細</p>
-        <p>Chromaticとは、Storybookのメンテナーが作成しているStorybook用のツールです。<br>
-        ストーリーごとのスクリーンショットを撮影し、差分を画像で比較してくれる機能を備えています。<br>
-        以下の課題を解決することを目的にして Chromatic を導入しました。</p>
+        <p>■ 概要<br>
+        社内のコンポーネントライブラリに対してStorybookとChromaticでビジュアルリグレッションテストを導入して、見た目のデグレを防止している話をします。</p>
+        <p>■ 詳細<br>
+        Chromaticとは、Storybookのメンテナーが作成しているStorybook用のツールです。<br>
+        ストーリーごとのスクリーンショットを撮影し、差分を画像で比較してくれる機能を備えています。</p>
+        <p>以下の課題を解決することを目的にして Chromatic を導入しました。</p>
         <ul>
         <li>既存のコンポーネントを改修した際に発生する DOM、CSS に起因する表示崩れを自動で検知できないこと</li>
         <li>依存モジュールのバージョンアップに時間がかかること</li>
         </ul>
         <p>その結果、両方の課題を解決できた上に作業が楽になったという話をします。<br>
-        また、なぜ他のテストではなくてビジュアルリグレッションテストを導入したのか、その意思決定の過程についても紹介します。<br>
-        なお、本発表は以下の3記事の内容を合わせて再構成したものになる予定です。</p>
+        また、なぜ他のテストではなくてビジュアルリグレッションテストを導入したのか、その意思決定の過程についても紹介します。</p>
+        <p>なお、本発表は以下の3記事の内容を合わせて再構成したものになる予定です。</p>
         <ul>
         <li><a class="inner-link" target="_blank" rel="noopener" href="https://devblog.thebase.in/entry/2021/12/08/203039">「Storybook と Chromatic でビジュアルリグレッションテストを実施する」</a></li>
         <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/process-of-introduction-of-chromatic">「ビジュアルリグレッションテストのツールを導入するまでの意思決定プロセス」</a></li>

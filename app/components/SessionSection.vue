@@ -99,4 +99,8 @@ const speakerInfo = computed(() => props.speaker)
   margin: revert;
   padding: revert;
 }
+
+.description ::v-deep p + p {
+  margin-top: 2em;
+}
 </style>
