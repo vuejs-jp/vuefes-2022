@@ -8,16 +8,7 @@ interface IGoods {
 }
 
 export const storeDescription =
-  'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store が今年も登場します。完全受注生産で、オンラインにてご注文いただくと、当日までにご自宅にお届けします。オリジナルグッズを揃えて、Vue Fes Japan を盛り上げましょう！'
-
-export const storeDescription2 =
-  'なお、今回販売するVue Fes Japan オリジナルグッズは注文後に生産を行うため、お届けまでにお時間を頂戴します。ご了承の上、お買い求めいただきますようお願いいたします。'
-
-export const storeDescription3 =
-  '送料は商品別に設定されておりますので、ストアをご確認ください。国内配送の料金は沖縄及び離島への配送を除き一律となります。一度に複数の商品を購入した場合は、その購入された商品内の「最も高い送料」が適用されます。'
-
-export const orderAcceptancePeriod = 'ご注文受付期間：8月10日(水) 〜 9月3日(土) 12:00'
-export const productShippingSchedule = '商品発送予定：10月上旬ごろ'
+  'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store のご注文受付期間は終了しました。商品の発送は9月下旬ごろを予定しています。到着をお楽しみに！'
 
 export const goodsList: IGoods[] = [
   {
