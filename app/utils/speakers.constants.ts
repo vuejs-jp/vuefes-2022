@@ -71,8 +71,9 @@ export const speakers = [
     twitter: 'antfu7',
     github: 'antfu',
     session: {
-      title: '調整中',
-      description: '調整中',
+      title: 'Patterns of VueUse',
+      description:
+        '<p>Patterns and best practices we have learnt during the past two years of building VueUse.</p>',
       time: 20,
     },
   },
@@ -88,6 +89,20 @@ export const speakers = [
     session: {
       title: '調整中',
       description: '調整中',
+      time: 20,
+    },
+  },
+  {
+    id: 'Akryum',
+    name: 'Guillaume Chau',
+    title: 'Vue コアチームメンバー',
+    image: '/speaker/Akryum.jpeg',
+    description: 'Open Source contributor, Engineer @ Livestorm.',
+    twitter: 'Akryum',
+    github: 'Akryum',
+    session: {
+      title: 'How Vite enables Histoire',
+      description: 'A deep dive about how Histoire works.',
       time: 20,
     },
   },
