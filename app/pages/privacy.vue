@@ -181,7 +181,7 @@ export default {
           Google 社の
           <a
             target="_blank"
-            rel="noreferrer"
+            rel="noopener"
             href="https://policies.google.com/privacy?hl=ja"
             class="hover:text-gray-500 underline transition cursor-pointer"
           >プライバシーポリシー</a>
@@ -190,7 +190,7 @@ export default {
           Fortee 社の
           <a
             target="_blank"
-            rel="noreferrer"
+            rel="noopener"
             href="https://fortee.jp/site/privacy"
             class="hover:text-gray-500 underline transition cursor-pointer"
           >プライバシーポリシー</a>
@@ -224,7 +224,7 @@ export default {
         開示等のお申出、ご意見、ご質問、苦情のお申出その他個人情報の取扱いに関するお問い合わせは、メールにて
         <a
           target="_blank"
-          rel="noreferrer"
+          rel="noopener"
           href="mailto:vuefes+privacy@gmail.com"
           class="hover:text-gray-500 underline transition cursor-pointer"
         >vuefes+privacy@gmail.com</a>
