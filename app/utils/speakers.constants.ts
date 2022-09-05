@@ -92,20 +92,20 @@ export const speakers = [
       time: 20,
     },
   },
-  {
-    id: 'Akryum',
-    name: 'Guillaume Chau',
-    title: 'Vue コアチームメンバー',
-    image: '/speaker/Akryum.jpeg',
-    description: 'Open Source contributor, Engineer @ Livestorm.',
-    twitter: 'Akryum',
-    github: 'Akryum',
-    session: {
-      title: 'How Vite enables Histoire',
-      description: 'A deep dive about how Histoire works.',
-      time: 20,
-    },
-  },
+  // {
+  //   id: 'Akryum',
+  //   name: 'Guillaume Chau',
+  //   title: 'Vue コアチームメンバー',
+  //   image: '/speaker/Akryum.jpeg',
+  //   description: 'Open Source contributor, Engineer @ Livestorm.',
+  //   twitter: 'Akryum',
+  //   github: 'Akryum',
+  //   session: {
+  //     title: 'How Vite enables Histoire',
+  //     description: 'A deep dive about how Histoire works.',
+  //     time: 20,
+  //   },
+  // },
   // 国内スピーカー
   {
     id: 'miyaoka',
