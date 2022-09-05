@@ -16,7 +16,7 @@ const eventInfo = computed(() => props.event)
 
 <template>
   <div>
-    <SubTitle class="mb-14">
+    <SubTitle class="mb-7 md:mb-14">
       {{ eventInfo.title }}
     </SubTitle>
     <div

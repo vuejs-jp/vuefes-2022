@@ -15,7 +15,7 @@ import {
         託児サポート
       </h3>
     </div>
-    <div class="p-10 -mt-4 text-vue-blue border border-vue-blue md:p-20 lg:-mt-5">
+    <div class="py-10 px-5 -mt-4 text-vue-blue border border-vue-blue md:p-20 lg:-mt-5">
       <img
         src="/events/childcare.png"
         alt="託児サポートのイメージ画像"
@@ -23,7 +23,7 @@ import {
         class="mb-10"
       >
       <ExplainText
-        class="mb-10"
+        class="mb-5 md:mb-10"
         :explain="childcareDescription"
       />
       <div class="pl-5 mb-10 lg:pl-10">
@@ -37,10 +37,6 @@ import {
           </li>
         </ul>
       </div>
-      <ExplainText
-        class="mb-10 lg:mb-20"
-        :explain="childcareLinkText"
-      />
       <div class="text-center">
         <LinkButtonField
           link="https://docs.google.com/forms/d/e/1FAIpQLSeOteOtPhi_HA4i9Ba9RSq6OK7lCmJJCn4YiK2YgRUGDM5TSQ/viewform"

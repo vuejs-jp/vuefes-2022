@@ -31,7 +31,7 @@ import {
           :event="event"
           class="mb-10 lg:mb-20"
         />
-        <ChildcareDetail />
+        <ChildcareDetail class="pt-10" />
       </div>
     </div>
   </section>
