@@ -25,24 +25,32 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
         />
         <div class="mb-5 md:flex md:gap-[5%] md:justify-center md:mb-0">
           <div class="mb-7.5">
-            <img
-              src="/img/preregister_bannar.jpg"
-              alt=""
-              class="px-6 mx-auto md:px-14"
-              loading="lazy"
-            >
+            <div class="px-6 md:px-14">
+              <div class="aspect-[247/161]">
+                <img
+                  src="/img/preregister_bannar.jpg"
+                  alt=""
+                  class="w-full"
+                  loading="lazy"
+                >
+              </div>
+            </div>
             <div class="pt-[26.67vw] mt-[-21.33vw] text-center text-vue-blue border border-vue-blue md:pt-[32.29%] md:mt-[-25.69%]">
               <h3 class="mb-5 text-xs md:mb-5 md:text-base lg:mb-7.5 lg:text-xl">事前登録チケット 一般参加用</h3>
               <p class="mb-5 text-25 font-bold md:mb-10 md:text-35 lg:mb-15 lg:text-50">無料</p>
             </div>
           </div>
           <div>
-            <img
-              src="/img/personal_sponsor_bannar.jpg"
-              alt=""
-              class="px-6 mx-auto md:px-14"
-              loading="lazy"
-            >
+            <div class="px-6 md:px-14">
+              <div class="aspect-[247/161]">
+                <img
+                  src="/img/personal_sponsor_bannar.jpg"
+                  alt=""
+                  class="w-full"
+                  loading="lazy"
+                >
+              </div>
+            </div>
             <div class="pt-[26.67vw] mt-[-21.33vw] text-center text-vue-blue border border-vue-blue md:pt-[32.29%] md:mt-[-25.69%]">
               <h3 class="mb-5 text-xs md:mb-5 md:text-base lg:mb-7.5 lg:text-xl">事前登録チケット 個人スポンサー用</h3>
               <p class="mb-5 md:mb-10 lg:mb-15"><span class="mr-1.5 text-25 font-bold md:text-35 lg:text-50">10,000</span><span class="md:text-3xl">円</span></p>
@@ -81,12 +89,13 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
               :key="gift.value"
               class="mb-5 even:ml-[10%] w-[45%] md:mb-14 md:even:ml-0 md:w-[30%]"
             >
-              <img
-                :src="`/img/${gift.value}_sample.jpg`"
-                :alt="`${gift.title}用サンプル画像`"
-                loading="lazy"
-                class="aspect-square mb-1.5 md:mb-2.5"
-              >
+              <div class="aspect-square mb-1.5 md:mb-2.5">
+                <img
+                  :src="`/img/${gift.value}_sample.jpg`"
+                  :alt="`${gift.title}用サンプル画像`"
+                  loading="lazy"
+                >
+              </div>
               <!-- eslint-disable vue/no-v-html -->
               <p
                 class="text-11 font-bold text-center md:text-base"

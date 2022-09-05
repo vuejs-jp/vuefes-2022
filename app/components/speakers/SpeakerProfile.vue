@@ -16,54 +16,53 @@ const speakerInfo = computed(() => props.speakerProfile)
   <div>
     <div class="mb-5 md:flex md:mb-0">
       <img
-        class="mx-auto mb-5 w-28 h-28 md:mr-8 md:ml-0 md:w-[9.375rem] md:h-[9.375rem]"
+        class="mx-auto mb-5 w-28 h-28 md:mr-8 md:ml-0 md:w-37.5 md:h-37.5"
         :alt="`${speakerInfo.name}の写真`"
         :src="speakerInfo.image"
       >
       <div class="text-center md: md:pt-5 md:text-left">
-        <p class="text-[0.6875rem] opacity-60 md:text-sm">
+        <p class="text-11 opacity-60 md:text-sm">
           {{ speakerInfo.title }}
         </p>
-        <p class="mb-4 text-[0.9375rem] font-bold md:text-xl">
+        <p class="mb-4 text-15 font-bold md:text-xl">
           {{ speakerInfo.name }}
         </p>
         <span class="flex justify-center md:justify-start">
-          <template v-if="speakerInfo.twitter">
-            <a
-              :aria-label="`${speakerInfo.name}のTwitterアカウント`"
-              target="_blank"
-              rel="noreferrer"
-              class="flex mr-5"
-              :href="`https://twitter.com/${speakerInfo.twitter}`"
+          <a
+            v-if="speakerInfo.twitter"
+            :aria-label="`${speakerInfo.name}のTwitterアカウント`"
+            target="_blank"
+            rel="noopener"
+            class="flex mr-5"
+            :href="`https://twitter.com/${speakerInfo.twitter}`"
+          >
+            <img
+              class="w-6"
+              src="/icon/twitter_logo.svg"
+              alt="Twitterのlogo"
             >
-              <img
-                class="w-6"
-                src="/icon/twitter_logo.svg"
-                alt="Twitterのlogo"
-              >
-            </a>
-          </template>
-          <template v-if="speakerInfo.github">
-            <a
-              :aria-label="`${speakerInfo.name}のGitHubアカウント`"
-              target="_blank"
-              rel="noreferrer"
-              :href="`https://github.com/${speakerInfo.github}`"
+          </a>
+          <a
+            v-if="speakerInfo.github"
+            :aria-label="`${speakerInfo.name}のGitHubアカウント`"
+            target="_blank"
+            rel="noopener"
+            :href="`https://github.com/${speakerInfo.github}`"
+          >
+            <img
+              class="w-6"
+              src="/icon/github_logo-invert.svg"
+              alt="Githubのlogo"
             >
-              <img
-                class="w-6"
-                src="/icon/github_logo-invert.svg"
-                alt="Githubのlogo"
-              >
-            </a>
-          </template>
+          </a>
         </span>
       </div>
     </div>
     <!-- eslint-disable vue/no-v-html -->
     <p
-      class="text-sm leading-7 md:text-base md:leading-8"
+      class="text-xs leading-6 md:text-base md:leading-7"
       v-html="speakerInfo.description"
     />
+    <!-- eslint-enaable vue/no-v-html -->
   </div>
 </template>

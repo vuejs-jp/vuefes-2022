@@ -60,7 +60,7 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
           <a
             :href="tweetUrl"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener"
             class="underline hover:opacity-60 transition-opacity"
           >
             {{ tweetLink }}
