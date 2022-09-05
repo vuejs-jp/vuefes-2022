@@ -8,7 +8,7 @@ interface IGoods {
 }
 
 export const storeDescription =
-  'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store のご注文受付期間は終了しました。商品の発送は9月下旬ごろを予定しています。到着をお楽しみに！'
+  'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store のご注文受付期間は終了しました。商品の発送は10月上旬ごろを予定しています。到着をお楽しみに！'
 
 export const goodsList: IGoods[] = [
   {
