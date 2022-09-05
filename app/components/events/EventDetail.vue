@@ -32,7 +32,7 @@ const eventInfo = computed(() => props.event)
           <a
             :href="logo.link"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener"
           >
             <img
               :src="logo.src"

@@ -13,8 +13,8 @@ export const eventList: IEvent[] = [
     title: 'OSS はじめのいっぽ',
     // TODO: ロゴが確定次第修正
     logoList: [],
-    description:
-      'Vue のコミュニティを通して OSS に関わろう！OSS をやったことがある人もやったことがない人も、先輩たちを参考にはじめのいっぽを踏み出そう！',
+    description: `Vue.js をはじめ、多くの OSS は利用者からのフィードバックやコントリビューションによって成り立っています。しかし、協力の意思はあっても、実際どのように参加していけばいいのかわからない方も多いのではないでしょうか？<br>
+      このセッションでは、実際に Vue.js 日本ユーザーグループにて OSS 開発に参加・協力しているメンバーが、バグ報告やパッチ提供、OSS 開発への参加やドキュメントサポート、そしてコミュニティの運営など、数多くのコントリビューターとどのように進めているのかをご紹介します。`,
     // TODO: スピーカーが確定次第修正
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_OSS,
     speakerProfileList: [
@@ -62,7 +62,7 @@ export const eventList: IEvent[] = [
       },
     ],
     description:
-      'miyaocast + お元気ですか.fm の Vue Fes 合同企画開催です！Vue でコンポーネントをつくるときにどんなことを考えているのか、エンジニア＆デザイナー目線で語ります。Vue3 で開発がどう変わったか、デザインシステム開発についてなど、ざっくばらんなテーマが聴けます！',
+      '<a class="underline hover:opacity-40 transition" href="https://podcasts.apple.com/us/podcast/id1540114737" target="_blank" rel="noopener">miyaocast</a> + <a class="underline hover:opacity-40 transition" href="https://anchor.fm/ogenkidesuka-fm/episodes/fm-vol-01-e15tku0" target="_blank" rel="noopener">お元気ですか.fm</a> の Vue Fes 合同企画開催です！Vue でコンポーネントをつくるときにどんなことを考えているのか、エンジニア＆デザイナー目線で語ります。Vue3 で開発がどう変わったか、デザインシステム開発についてなど、ざっくばらんなテーマが聴けます！',
     // TODO: スピーカーが確定次第修正
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_VUE,
     speakerProfileList: [
@@ -141,7 +141,7 @@ export const eventList: IEvent[] = [
 ]
 
 export const childcareDescription =
-  '当日何らかの託児サービスを利用した方には、Vue Fes 運営で費用を補助いたします。'
+  '今年の Vue Fes では視聴者のお父さんお母さんが集中してカンファレンスを楽しめるよう、託児サポートをご用意いたしました！<br>当日何らかの託児サービスを利用した方には、Vue Fes 運営で費用を補助いたします。'
 export const childcareCostSupportConditions = [
   '当日利用したと分かる託児サービスの領収書を保管してください',
   '運営で補助費用の上限額は15,000円です',

@@ -41,11 +41,11 @@ import {
         class="mb-10 lg:mb-20"
         :explain="childcareLinkText"
       />
-      <!-- TODO: リンク先が決まり次第修正 -->
       <div class="text-center">
         <LinkButtonField
-          link=""
+          link="https://docs.google.com/forms/d/e/1FAIpQLSeOteOtPhi_HA4i9Ba9RSq6OK7lCmJJCn4YiK2YgRUGDM5TSQ/viewform"
           title-label="託児サポートに申し込む"
+          is-external-link
         />
       </div>
     </div>
