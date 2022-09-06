@@ -37,8 +37,7 @@ const eventInfo = computed(() => props.event)
             <img
               :src="logo.src"
               :alt="logo.alt"
-              loading="lazy"
-              class="object-contain w-full"
+              class="aspect-square w-full"
             >
           </a>
         </template>
@@ -46,7 +45,6 @@ const eventInfo = computed(() => props.event)
           <img
             :src="logo.src"
             :alt="logo.alt"
-            loading="lazy"
             class="object-contain w-full"
           >
         </template>

@@ -16,12 +16,13 @@ import {
       </h3>
     </div>
     <div class="py-10 px-5 -mt-4 text-vue-blue border border-vue-blue md:p-20 lg:-mt-5">
-      <img
-        src="/events/childcare.png"
-        alt="託児サポートのイメージ画像"
-        loading="lazy"
-        class="mb-10"
-      >
+      <div class="aspect-[738/269] mb-10">
+        <img
+          src="/events/childcare.png"
+          alt="託児サポートのイメージ画像"
+          loading="lazy"
+        >
+      </div>
       <ExplainText
         class="mb-5 md:mb-10"
         :explain="childcareDescription"
