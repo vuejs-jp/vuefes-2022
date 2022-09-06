@@ -147,4 +147,7 @@ export const childcareCostSupportConditions = [
   '運営で補助費用の上限額は15,000円です',
   '補助費用は後日運営から口座振り込みします',
 ]
-export const childcareLinkText = '託児サービスのお申し込みはこちら'
+export const childcareNote =
+  '申し込みされた方には vuefes@gmail.com のメールアドレスで10月17日までに領収書と口座情報確認のメールをお送りさせていただきます。'
+export const childcareCaution =
+  '※ 託児サポートの申込者は先着20名で締め切らせていただきます。予めご了承ください。'

@@ -4,7 +4,8 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import {
   childcareDescription,
   childcareCostSupportConditions,
-  childcareLinkText
+  childcareNote,
+  childcareCaution
 } from '~/utils/events.constants'
 </script>
 
@@ -43,8 +44,14 @@ import {
           link="https://docs.google.com/forms/d/e/1FAIpQLSeOteOtPhi_HA4i9Ba9RSq6OK7lCmJJCn4YiK2YgRUGDM5TSQ/viewform"
           title-label="託児サポートに申し込む"
           is-external-link
+          class="mb-5 md:mb-10"
         />
       </div>
+      <ExplainText
+        class="mb-5"
+        :explain="childcareNote"
+      />
+      <p class="text-sm font-bold leading-7 md:text-base">{{ childcareCaution }}</p>
     </div>
   </div>
 </template>
