@@ -84,7 +84,10 @@ module.exports = {
         'linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%), linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%)',
       'ichimatsu-asagi':
         'linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%), linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%)',
+      'ichimatsu-typescript-blue':
+        'linear-gradient(45deg, #4374AA 25%, transparent 25%, transparent 75%, #4374AA 75%), linear-gradient(45deg, #4374AA 25%, transparent 25%, transparent 75%, #4374AA 75%)',
       sponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
+      events: 'linear-gradient(180deg, #4374AA 0%, rgba(255, 255, 255, 0) 100%)',
       store: 'linear-gradient(180deg, #33A6B8 0%, rgba(255, 255, 255, 0) 100%)',
       staffs: 'linear-gradient(180deg, #F17C67 0%, rgba(196, 196, 196, 0) 100%)',
       ticket: 'linear-gradient(180deg, #FFC408 0%, rgba(255, 255, 255, 0) 100%)',

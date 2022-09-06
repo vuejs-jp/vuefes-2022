@@ -1,44 +1,41 @@
 export const speakers = [
   {
     id: 'yyx990803',
-    name: 'Evan You',
-    title: 'Vue クリエーター',
-    image: '/speaker/evan.jpeg',
-    description:
-      'Evan is an independent open source developer and is the creator / project lead of Vue and Vite.',
-    twitter: 'youyuxi',
-    github: 'yyx990803',
     session: {
       title: 'キーノート',
       description: '調整中',
       time: 40,
     },
+    profile: {
+      image: '/speaker/evan.jpeg',
+      title: 'Vue クリエーター',
+      name: 'Evan You',
+      twitter: 'youyuxi',
+      github: 'yyx990803',
+      description:
+        'Evan is an independent open source developer and is the creator / project lead of Vue and Vite.',
+    },
   },
   {
     id: 'posva',
-    name: 'Eduardo San Martin Morote',
-    title: 'Pinia クリエーター',
-    image: '/speaker/eduardo.jpeg',
-    description:
-      'Eduardo is a Frontend Nerd who works on the Vue.js Core Team, with a special focus on the Vue Router.',
-    twitter: 'posva',
-    github: 'posva',
     session: {
       title: 'State Alchemy with Pinia',
       description:
         '<p>Pinia might be a light library with a simple API but it takes advantage of many Vue Reactivity concepts like Effect Scopes, that are unknown by most. In this talk we will go through some of the internals of Pinia, understanding them and discovering how to enhance our usage of Pinia.</p>',
       time: 20,
     },
+    profile: {
+      image: '/speaker/eduardo.jpeg',
+      title: 'Pinia クリエーター',
+      name: 'Eduardo San Martin Morote',
+      twitter: 'posva',
+      github: 'posva',
+      description:
+        'Eduardo is a Frontend Nerd who works on the Vue.js Core Team, with a special focus on the Vue Router.',
+    },
   },
   {
     id: 'Atinux',
-    name: 'Sebastien Chopin',
-    title: 'NuxtLabs CEO',
-    image: '/speaker/sebastien.jpeg',
-    description:
-      'Author of Nuxt and CEO at NuxtLabs. I am passionate about open source and developer experience. I strive to make the web faster and create the flow feeling for developers by making the best tools to express their full creativity.',
-    twitter: 'Atinux',
-    github: 'Atinux',
     linkedin: 'atinux',
     session: {
       title: 'From Zero to One',
@@ -46,94 +43,106 @@ export const speakers = [
         '<p>Live coding session about making a full blown deployed application with Nuxt 3.</p>',
       time: 20,
     },
+    profile: {
+      image: '/speaker/sebastien.jpeg',
+      title: 'NuxtLabs CEO',
+      name: 'Sebastien Chopin',
+      twitter: 'Atinux',
+      github: 'Atinux',
+      description:
+        'Author of Nuxt and CEO at NuxtLabs. I am passionate about open source and developer experience. I strive to make the web faster and create the flow feeling for developers by making the best tools to express their full creativity.',
+    },
   },
   {
     id: 'patak',
-    name: 'Matias Capeletto',
-    title: 'Vite コアチームメンバー',
-    image: '/speaker/matias.jpeg',
-    description: 'A collaborative being, working full time on the Vite ecosystem @StackBlitz.',
-    twitter: 'patak_dev',
-    github: 'patak-dev',
     web: 'https://patak.dev/',
     session: {
       title: 'Vite 3 and Beyond',
       description: '<p>New Vite features in Vite 3, state of Core dev, and what is next.</p>',
       time: 20,
     },
+    profile: {
+      image: '/speaker/matias.jpeg',
+      title: 'Vite コアチームメンバー',
+      name: 'Matias Capeletto',
+      twitter: 'patak_dev',
+      github: 'patak-dev',
+      description: 'A collaborative being, working full time on the Vite ecosystem @StackBlitz.',
+    },
   },
   {
     id: 'anfu',
-    name: 'Anthony Fu',
-    title: 'Vue, Vite, Nuxt コアチームメンバー',
-    image: '/speaker/anthony.jpg',
-    description: 'Anthony is a fanatical open sourceror. DX and ecosystem for Vue, Vite and Nuxt.',
-    twitter: 'antfu7',
-    github: 'antfu',
     session: {
       title: 'Patterns of VueUse',
       description:
         '<p>Patterns and best practices we have learnt during the past two years of building VueUse.</p>',
       time: 20,
     },
+    profile: {
+      image: '/speaker/anthony.jpg',
+      title: 'Vue, Vite, Nuxt コアチームメンバー',
+      name: 'Anthony Fu',
+      twitter: 'antfu7',
+      github: 'antfu',
+      description:
+        'Anthony is a fanatical open sourceror. DX and ecosystem for Vue, Vite and Nuxt.',
+    },
   },
   {
     id: 'Jess',
-    name: 'Jessica Sachs',
-    title: 'PathAI スタッフエンジニア',
-    image: '/speaker/jess.jpg',
-    description:
-      'Jess is a Staff Software Engineer at <a class="inner-link" href="https://www.pathai.com/" target="_blank" rel="noopener">PathAI</a> where she’s building their component library, Anodyne. She’s been coding for more than 10 years and now works professionally within the Open Source community. She is a Core Team Member of both Cypress ambassador and <a class="inner-link" href="https://fakerjs.dev/" target="_blank" rel="noopener">Faker</a> and a contributor to <a class="inner-link" href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a> and <a class="inner-link" href="https://vitest.dev/" target="_blank" rel="noopener">Vitest</a>. She’s also an educator at Vue Mastery.',
-    twitter: '_JessicaSachs',
-    github: 'JessicaSachs',
     session: {
       title: 'Cypress 10 and Component Testing',
       description:
         '<p>An overview of Cypress 10\'s elegant re-designed UI and brand-new testing type: Component Testing! In this talk we will use TDD to build a modal using the new "Create from Component" feature. We will learn the benefits to using Cypress\'s driver and assertions over headless test runners.</p>',
       time: 20,
     },
+    profile: {
+      name: 'Jessica Sachs',
+      title: 'PathAI スタッフエンジニア',
+      image: '/speaker/jess.jpg',
+      description:
+        'Jess is a Staff Software Engineer at <a class="inner-link" href="https://www.pathai.com/" target="_blank" rel="noopener">PathAI</a> where she’s building their component library, Anodyne. She’s been coding for more than 10 years and now works professionally within the Open Source community. She is a Core Team Member of both Cypress ambassador and <a class="inner-link" href="https://fakerjs.dev/" target="_blank" rel="noopener">Faker</a> and a contributor to <a class="inner-link" href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a> and <a class="inner-link" href="https://vitest.dev/" target="_blank" rel="noopener">Vitest</a>. She’s also an educator at Vue Mastery.',
+      twitter: '_JessicaSachs',
+      github: 'JessicaSachs',
+    },
   },
   {
     id: 'Akryum',
-    name: 'Guillaume Chau',
-    title: 'Vue コアチームメンバー',
-    image: '/speaker/Akryum.jpeg',
-    description: 'Open Source contributor, Engineer @ Livestorm.',
-    twitter: 'Akryum',
-    github: 'Akryum',
     session: {
       title: 'How Vite enables Histoire',
       description: 'A deep dive about how Histoire works.',
       time: 20,
     },
+    profile: {
+      name: 'Guillaume Chau',
+      title: 'Vue コアチームメンバー',
+      image: '/speaker/Akryum.jpeg',
+      description: 'Open Source contributor, Engineer @ Livestorm.',
+      twitter: 'Akryum',
+      github: 'Akryum',
+    },
   },
   // 国内スピーカー
   {
     id: 'miyaoka',
-    name: 'miyaoka',
-    title: '株式会社STUDIO フロントエンドエンジニア',
-    image: '/speaker/miyaoka.jpeg',
-    description:
-      'ノーコードデザインツールのSTUDIOで、フロントエンド技術を利用したGUIツールの開発をしています',
-    twitter: 'miyaoka',
-    github: 'miyaoka',
     session: {
       title: 'Vue2 Vue3 マイグレーション 令和最新 最強',
       description:
         '<p>Vue1時代から開発を続けてきた1000コンポーネント規模のプロジェクトを3ヶ月でVue3に移行した話をします。Vue3化は変更点が大きいため移行コストが問題になりますが、なぜ、どのようにして行ったのか、作業につまづいたところ、どのようなメリットがあったかなどを振り返って話します。</p>',
       time: 20,
     },
+    profile: {
+      name: 'miyaoka',
+      title: '株式会社STUDIO フロントエンドエンジニア',
+      image: '/speaker/miyaoka.jpeg',
+      description:
+        'ノーコードデザインツールのSTUDIOで、フロントエンド技術を利用したGUIツールの開発をしています',
+      twitter: 'miyaoka',
+      github: 'miyaoka',
+    },
   },
   {
     id: 'yamanoku',
-    name: 'やまのく',
-    title: 'フロントエンドデザイナー',
-    image: '/speaker/yamanoku.png',
-    description: `1児の父で猫3匹と大型犬1頭の飼い主。<br>
-    株式会社クラウドワークスに所属する傍ら Web 技術を活用したユーザビリティ向上について考えてます。<br>
-    Vue.js には関連する OSS のドキュメント翻訳での貢献をしています。`,
-    twitter: 'yamanoku',
-    github: 'yamanoku',
     session: {
       title: 'Vue.js でアクセシブルなコンポーネントをつくるために',
       description: `<p>昨今 Web 開発において、アクセシビリティを重視することはそれほど珍しくなくなってきました。<br>
@@ -142,16 +151,19 @@ export const speakers = [
       この発表ではそうした間違いや疑問を解消し Vue.js でのアクセシビリティ向上に取り組みやすくするやり方を発表いたします。</p>`,
       time: 20,
     },
+    profile: {
+      name: 'やまのく',
+      title: 'フロントエンドデザイナー',
+      image: '/speaker/yamanoku.png',
+      description: `1児の父で猫3匹と大型犬1頭の飼い主。<br>
+      株式会社クラウドワークスに所属する傍ら Web 技術を活用したユーザビリティ向上について考えてます。<br>
+      Vue.js には関連する OSS のドキュメント翻訳での貢献をしています。`,
+      twitter: 'yamanoku',
+      github: 'yamanoku',
+    },
   },
   {
     id: 'ota-meshi',
-    name: '太田 洋介',
-    title: 'フューチャー株式会社 Technology Innovation Group シニアアーキテクト',
-    image: '/speaker/ota-meshi.jpeg',
-    description:
-      'eslint-plugin-vueのメンテナー。Vue.js Core Team メンバー。Stylelint、Stylus、Intlifyのチームメンバー。Google Open Source Peer Bonus 2022受賞。',
-    twitter: 'omoteota',
-    github: 'ota-meshi',
     session: {
       title: 'eslint-plugin-vueを使用して継続的にVue3移行する',
       description: `<p>Vue2のアプリケーションをVue3に移行するニーズは増えてきていると思いますが、複数のアプリケーションを移行する場合、手動で実施するのはコストもかかりますし、Vue2をメインに使用してきたエンジニアが、新しいVue3でのアプリケーション開発で古い機能を使ってしてしまうというリスクもあります。<br>
@@ -159,16 +171,18 @@ export const speakers = [
       セッションでは、自社の開発するアプリケーションで実際にeslint-plugin-vueを使用してVue3移行を進めた話とともに、eslint-plugin-vueのVue3移行を助けるチェックルールや、自社のアプリケーション専用に独自に作成したカスタムルールの一部も紹介できればと考えています。</p>`,
       time: 20,
     },
+    profile: {
+      name: '太田 洋介',
+      title: 'フューチャー株式会社 Technology Innovation Group シニアアーキテクト',
+      image: '/speaker/ota-meshi.jpeg',
+      description:
+        'eslint-plugin-vueのメンテナー。Vue.js Core Team メンバー。Stylelint、Stylus、Intlifyのチームメンバー。Google Open Source Peer Bonus 2022受賞。',
+      twitter: 'omoteota',
+      github: 'ota-meshi',
+    },
   },
   {
     id: 'shigasy',
-    name: '志賀 奎太',
-    title: 'Retty株式会社 Webエンジニア',
-    image: '/speaker/shigasy.jpg',
-    description: `Retty株式会社に新卒で入社。toC領域でリニューアルプロジェクトなどを経て、現在はtoB領域の開発に従事。<br>
-    趣味はeスポーツ観戦。`,
-    twitter: '',
-    github: 'shigasy',
     session: {
       title: '施策を止めるな！Vue2からVue3への移行',
       description: `<p>Vue3が正式リリースして約2年が経ちます。「そろそろウチのプロジェクトもVue3にしたい」と思う気持ちはありつつ、メインの施策を優先してしまい移行のための時間を取れないことが往々にしてあります。<br>
@@ -176,17 +190,18 @@ export const speakers = [
       チームで作業する時のポイントや具体的なVue3への移行手順、移行する前に知っておけば良かったことなどをご紹介します。</p>`,
       time: 20,
     },
+    profile: {
+      name: '志賀 奎太',
+      title: 'Retty株式会社 Webエンジニア',
+      image: '/speaker/shigasy.jpg',
+      description:
+        'Retty株式会社に新卒で入社。toC領域でリニューアルプロジェクトなどを経て、現在はtoB領域の開発に従事。<br>趣味はeスポーツ観戦。',
+      twitter: '',
+      github: 'shigasy',
+    },
   },
   {
     id: 'tbashiyy',
-    name: 'tbashiyy',
-    title: '株式会社イエソド エンジニア',
-    image: '/speaker/tbashiyy.jpeg',
-    description: `株式会社イエソドのエンジニア。<br>
-    Vue.js + TypeScript、Server-Side Kotlinを利用してプロダクト作りに励んでいます。<br>
-    型のある言語が好みです。趣味はビール片手に料理すること。`,
-    twitter: 'tbashiyy',
-    github: 'tbashiyy',
     session: {
       title: '十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング',
       description: `
@@ -203,16 +218,19 @@ export const speakers = [
       `,
       time: 20,
     },
+    profile: {
+      name: 'tbashiyy',
+      title: '株式会社イエソド エンジニア',
+      image: '/speaker/tbashiyy.jpeg',
+      description: `株式会社イエソドのエンジニア。<br>
+      Vue.js + TypeScript、Server-Side Kotlinを利用してプロダクト作りに励んでいます。<br>
+      型のある言語が好みです。趣味はビール片手に料理すること。`,
+      twitter: 'tbashiyy',
+      github: 'tbashiyy',
+    },
   },
   {
     id: 'monsat',
-    name: '田中弘治',
-    title: '株式会社ダイレクトサーチジャパン 代表取締役',
-    image: '/speaker/monsat.png',
-    description:
-      'コワーキングスペース茅場町 Co-Edo を運営するかたわら、フロントエンドエンジニアとして開発も行っています。開発はすべて独学で行い、独立後は受託開発を本業としています。 Vue.js 3, Nuxt 3, TypeScript, Firebase, Stripe API, GitHub API 等を活用した開発をおもに行っています。',
-    twitter: 'ktanaka',
-    github: 'monsat',
     session: {
       title: 'Nuxt モジュールの作り方を知って 開発した機能を再利用しよう',
       description: `
@@ -231,33 +249,37 @@ export const speakers = [
       `,
       time: 20,
     },
+    profile: {
+      name: '田中弘治',
+      title: '株式会社ダイレクトサーチジャパン 代表取締役',
+      image: '/speaker/monsat.png',
+      description:
+        'コワーキングスペース茅場町 Co-Edo を運営するかたわら、フロントエンドエンジニアとして開発も行っています。開発はすべて独学で行い、独立後は受託開発を本業としています。 Vue.js 3, Nuxt 3, TypeScript, Firebase, Stripe API, GitHub API 等を活用した開発をおもに行っています。',
+      twitter: 'ktanaka',
+      github: 'monsat',
+    },
   },
   {
     id: 'mew-ton',
-    name: 'みゅーとん',
-    title: '株式会社hacomono 基盤開発',
-    image: '/speaker/mew-ton.jpg',
-    description: `趣味で3Dアバターを使って楽器演奏などをしています。<br>
-    仕事では、株式会社hacomono でフロントエンドの開発基盤の実装を主に担当しています。<br>
-    手間最小で最大限テストできるフロントエンドの開発基盤設計を日々模索しています。`,
-    twitter: '_mew_ton',
-    github: 'mew-ton',
     session: {
       title: 'デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成',
       description: `<p>弊社では将来的に弊社独自のデザインシステムの設計の後、既存のプロジェクトをすべて置き換えていく予定となっています。<br>
       私は、直近立ち上がった新規プロジェクトにて、将来的にデザインシステムに置き換わることが確実であることを前提として、変化に強く、テストコードによる品質を担保できるNuxt3プロジェクト開発基盤を作りましたので、本セッションにて共有できればと思います。</p>`,
       time: 20,
     },
+    profile: {
+      name: 'みゅーとん',
+      title: '株式会社hacomono 基盤開発',
+      image: '/speaker/mew-ton.jpg',
+      description: `趣味で3Dアバターを使って楽器演奏などをしています。<br>
+      仕事では、株式会社hacomono でフロントエンドの開発基盤の実装を主に担当しています。<br>
+      手間最小で最大限テストできるフロントエンドの開発基盤設計を日々模索しています。`,
+      twitter: '_mew_ton',
+      github: 'mew-ton',
+    },
   },
   {
     id: 't0yohei',
-    name: 'とよへい',
-    title: '株式会社クラウドワークス web エンジニア',
-    image: '/speaker/t0yohei.jpeg',
-    description:
-      'Vue.js に出会ってフロントエンド開発の楽しさを知った人。新卒で SIer に入社後、株式会社クラウドワークスに転職。以後 Rails + CoffeeScript, Vue.js な web アプリケーションの開発、 Vue.js の社内布教を行う。最近は新規事業開発の何でも屋さん。',
-    twitter: 't0yohei',
-    github: 't0yohei',
     session: {
       title: '負債まみれのレガシーフロントエンド画面を Vue.js でリプレイスした話',
       description: `
@@ -276,16 +298,18 @@ export const speakers = [
       `,
       time: 20,
     },
+    profile: {
+      name: 'とよへい',
+      title: '株式会社クラウドワークス web エンジニア',
+      image: '/speaker/t0yohei.jpeg',
+      description:
+        'Vue.js に出会ってフロントエンド開発の楽しさを知った人。新卒で SIer に入社後、株式会社クラウドワークスに転職。以後 Rails + CoffeeScript, Vue.js な web アプリケーションの開発、 Vue.js の社内布教を行う。最近は新規事業開発の何でも屋さん。',
+      twitter: 't0yohei',
+      github: 't0yohei',
+    },
   },
   {
     id: 'kawamataryo',
-    name: '川俣 涼',
-    title: 'LAPRAS株式会社 ソフトウェアエンジニア',
-    image: '/speaker/kawamataryo.jpg',
-    description:
-      'LAPRAS株式会社のソフトウェアエンジニア。新卒で地元茨城県の消防本部に就職し、消防隊、救急隊として6年間勤務。その後、妻の仕事の手伝いで始めたHP制作をきっかけにエンジニアへ転職。エムスリー株式会社、株式会社Misocaを経て現職に。趣味は懸垂。',
-    twitter: 'KawamataRyo',
-    github: 'kawamataryo',
     session: {
       title: 'JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する',
       description: `<p>昨今のフロントエンド開発では、型による安全性と開発者体験の向上が見込めるTypeScript（以下TS）の採用がほぼ標準となっています。<br>
@@ -294,32 +318,36 @@ export const speakers = [
 現在、Vue.jsプロダクトのTS化、型チェックの強化を検討している方の参考になれば嬉しいです。</p>`,
       time: 20,
     },
+    profile: {
+      name: '川俣 涼',
+      title: 'LAPRAS株式会社 ソフトウェアエンジニア',
+      image: '/speaker/kawamataryo.jpg',
+      description:
+        'LAPRAS株式会社のソフトウェアエンジニア。新卒で地元茨城県の消防本部に就職し、消防隊、救急隊として6年間勤務。その後、妻の仕事の手伝いで始めたHP制作をきっかけにエンジニアへ転職。エムスリー株式会社、株式会社Misocaを経て現職に。趣味は懸垂。',
+      twitter: 'KawamataRyo',
+      github: 'kawamataryo',
+    },
   },
   {
     id: 'kenji7157',
-    name: '川野邉 賢二',
-    title: 'ENECHANGE株式会社 フロントエンドエンジニア',
-    image: '/speaker/kenji7157.jpeg',
-    description:
-      '新卒から受託開発企業、SES企業を経験した後に、ENECHANGE株式会社で「エネルギーの未来をつくる」フロントエンドエンジニアとして従事。趣味はランニング・個人開発。お手やわらかに。',
-    twitter: 'kenji7157',
-    github: 'kenji7157',
     session: {
       title: '「こわくない」Vuetifyで始めるOSSコントリビュート',
       description:
         '<p>Vuetifyに"コントリビュート"する手順についてお話しします。開発環境の構築からPR作成・マージされるところまで、分かりやすく丁寧に解説します。OSS開発・コントリビュートにトライしたい方のお力になれば嬉しいです。</p>',
       time: 20,
     },
+    profile: {
+      name: '川野邉 賢二',
+      title: 'ENECHANGE株式会社 フロントエンドエンジニア',
+      image: '/speaker/kenji7157.jpeg',
+      description:
+        '新卒から受託開発企業、SES企業を経験した後に、ENECHANGE株式会社で「エネルギーの未来をつくる」フロントエンドエンジニアとして従事。趣味はランニング・個人開発。お手やわらかに。',
+      twitter: 'kenji7157',
+      github: 'kenji7157',
+    },
   },
   {
     id: 'watsuyo',
-    name: 'watsuyo',
-    title: '株式会社 iCARE フロントエンドエンジニア, PjM',
-    image: '/speaker/watsuyo.jpeg',
-    description:
-      'iCAREのフロントエンドエンジニア、PjM。 産業技術大学院大学情報アーキテクチャコース在学中。Vue.js や TypeScript を使用したプロダクトやデザインシステムを開発。最近は、PjM も担当。趣味は、美味しい焼肉とお寿司を食べること。',
-    twitter: 'watsuyo_2',
-    github: 'watsuyo',
     session: {
       title: '安全に開発効率を上げるための Vue 2.7 移行',
       description: `
@@ -336,17 +364,18 @@ export const speakers = [
       `,
       time: 20,
     },
+    profile: {
+      name: 'watsuyo',
+      title: '株式会社 iCARE フロントエンドエンジニア, PjM',
+      image: '/speaker/watsuyo.jpeg',
+      description:
+        'iCAREのフロントエンドエンジニア、PjM。 産業技術大学院大学情報アーキテクチャコース在学中。Vue.js や TypeScript を使用したプロダクトやデザインシステムを開発。最近は、PjM も担当。趣味は、美味しい焼肉とお寿司を食べること。',
+      twitter: 'watsuyo_2',
+      github: 'watsuyo',
+    },
   },
   {
     id: 'KanDai',
-    name: '菅家 大地',
-    title: '株式会社プレイド デザインエンジニア',
-    image: '/speaker/KanDai.jpg',
-    description: `株式会社プレイドでデザインエンジニアとしてVue３やReactを使った開発をしています。<br>
-    Webコンサルティング会社のデザイナー、株式会社TAMのフロントエンドエンジニアを経て現職。<br>
-    2019年に宮城県に移住。仙台でフロントエンド系のコミュニティの運営をしています。`,
-    twitter: 'kan_dai',
-    github: 'KanDai',
     session: {
       title: 'NuxtJSによるJamstack構築とNuxt 3でどう変わるのか',
       description: `<p>モダンなWebアプリやWebサイト構築のアーキテクチャとして数年前からJamstackが注目されています。Vue.jsでもNuxtJSのSSG(Static Site Generation)やGridsomeのようなフレームワークを使うことでJamstackのサイトを構築できます。<br>
@@ -354,17 +383,19 @@ export const speakers = [
       その上で、今夏リリース予定のNuxt3のSSG周りの変更点を、実際のコードなどを交えながら紹介していきます。</p>`,
       time: 20,
     },
+    profile: {
+      name: '菅家 大地',
+      title: '株式会社プレイド デザインエンジニア',
+      image: '/speaker/KanDai.jpg',
+      description: `株式会社プレイドでデザインエンジニアとしてVue３やReactを使った開発をしています。<br>
+      Webコンサルティング会社のデザイナー、株式会社TAMのフロントエンドエンジニアを経て現職。<br>
+      2019年に宮城県に移住。仙台でフロントエンド系のコミュニティの運営をしています。`,
+      twitter: 'kan_dai',
+      github: 'KanDai',
+    },
   },
   {
     id: 'KushibikiMashu',
-    name: 'プログラミングをするパンダ',
-    title: 'BASE株式会社 シニアエンジニア',
-    image: '/speaker/KushibikiMashu.png',
-    description: `新卒で就職した日系大手企業を退職した後、Web系の開発会社に転職してエンジニアとしてキャリアを始める。<br>
-    その後、弁護士ドットコム株式会社でレガシーシステムの改善、SaaS事業の新規開発・運用などを経験した後、2021年にフロントエンドエンジニアとしてBASE株式会社に入社。<br>
-    社外活動では、技術ブログを執筆したり Software Design 2022年3月号のTDD特集に寄稿するなど情報発信を行なっている。アジャイル開発（XP、スクラム）とTDDが好き。現在DevOpsを勉強中。`,
-    twitter: 'Panda_Program',
-    github: 'KushibikiMashu',
     session: {
       title:
         '社内用共通コンポーネントのビジュアルリグレッションテストにStorybookとChromaticを選択した話',
@@ -391,16 +422,19 @@ export const speakers = [
       `,
       time: 20,
     },
+    profile: {
+      name: 'プログラミングをするパンダ',
+      title: 'BASE株式会社 シニアエンジニア',
+      image: '/speaker/KushibikiMashu.png',
+      description: `新卒で就職した日系大手企業を退職した後、Web系の開発会社に転職してエンジニアとしてキャリアを始める。<br>
+      その後、弁護士ドットコム株式会社でレガシーシステムの改善、SaaS事業の新規開発・運用などを経験した後、2021年にフロントエンドエンジニアとしてBASE株式会社に入社。<br>
+      社外活動では、技術ブログを執筆したり Software Design 2022年3月号のTDD特集に寄稿するなど情報発信を行なっている。アジャイル開発（XP、スクラム）とTDDが好き。現在DevOpsを勉強中。`,
+      twitter: 'Panda_Program',
+      github: 'KushibikiMashu',
+    },
   },
   {
     id: '8845musign',
-    name: '腹筋ローラーの力を信じろ',
-    title: '株式会社イエソド デザイナー&フロントエンドエンジニア',
-    image: '/speaker/8845musign.jpg',
-    description:
-      '株式会社イエソド。デザインとエンジニアリングの両側面からWebサイト制作・Webサービス開発に従事。また、『Every Layout -モジュラーなレスポンシブデザインを実現するCSS設計論』を共同監訳。システム運用からディレクション、デザイン、開発の幅広い経験を活かして活動中。',
-    twitter: 'yesodco_yoko',
-    github: '8845musign',
     session: {
       title: '不確実性のある将来に対応するためのデザイン戦略',
       description: `<p>ソフトウェア開発には不確実性がつきものです。初期フェーズにおいてはUIの過度の一貫性や、多機能なコンポーネントはプロダクトの将来を狭める可能性があります。 また、デザイナーである私はデザインのすべてを掌握したいと考えます。ですが、現実には多くの人の手によってデザインは成長していきます。<br>
@@ -409,17 +443,19 @@ export const speakers = [
       本セッションでは、私が関わっているVue.jsのプロジェクトでの取り組みをご説明します。</p>`,
       time: 20,
     },
+    profile: {
+      name: '腹筋ローラーの力を信じろ',
+      title: '株式会社イエソド デザイナー&フロントエンドエンジニア',
+      image: '/speaker/8845musign.jpg',
+      description:
+        '株式会社イエソド。デザインとエンジニアリングの両側面からWebサイト制作・Webサービス開発に従事。また、『Every Layout -モジュラーなレスポンシブデザインを実現するCSS設計論』を共同監訳。システム運用からディレクション、デザイン、開発の幅広い経験を活かして活動中。',
+      twitter: 'yesodco_yoko',
+      github: '8845musign',
+    },
   },
   // LT
   {
     id: 'oreo',
-    name: 'oreo',
-    title: '株式会社iCARE フロントエンドエンジニア',
-    image: '/speaker/oreo2990.jpeg',
-    description:
-      '新卒で商社に入社し、水産業や林業といった生活産業部門のリスク管理業務に5年間従事。自身が行なってきた与信管理自動化ツールに出会ったことがきっかけで、プログラミングに興味を持ちエンジニアにジョブチェンジ。2021年9月から現職に。趣味はブログ執筆とモルック。',
-    twitter: 'oreo2991',
-    github: 'oreo2990',
     session: {
       title: 'レガシーなMPAアプリケーションをwebpackからviteに移行する話',
       description: `<p>株式会社iCAREでは、Vue2.6(※2.7に移行中)+Composition APIで開発を行っており、vue2系では比較的モダンな構成です。一方、Ruby on RailsのView毎にVueインスタンスを生成するMPAであり、アプリケーション全体の構成としては、レガシーな構造になっています。
@@ -427,16 +463,18 @@ export const speakers = [
       SPAへのVite導入等に関しては記事がありますが、レガシーなMPAアプリケーションでのVite移行に関する記事はあまりなく、移行できるか？等の不安や疑問を抱きながら実装を進めています。本LTでは、この取り組みを通して得た知見を共有させて頂きます。</p>`,
       time: 5,
     },
+    profile: {
+      name: 'oreo',
+      title: '株式会社iCARE フロントエンドエンジニア',
+      image: '/speaker/oreo2990.jpeg',
+      description:
+        '新卒で商社に入社し、水産業や林業といった生活産業部門のリスク管理業務に5年間従事。自身が行なってきた与信管理自動化ツールに出会ったことがきっかけで、プログラミングに興味を持ちエンジニアにジョブチェンジ。2021年9月から現職に。趣味はブログ執筆とモルック。',
+      twitter: 'oreo2991',
+      github: 'oreo2990',
+    },
   },
   {
     id: 'ebiryu',
-    name: 'ebiryu',
-    title: 'ストックマーク株式会社 ソフトウェアエンジニア',
-    image: '/speaker/ebiryu.jpg',
-    description:
-      'ストックマーク株式会社で、主にフロントエンドの開発をしています。<br>型やテストのある開発環境やテスト可能なコンポーネント設計、デザインシステムの運用に関心があります。',
-    twitter: 'ebiryu65',
-    github: 'ebiryu',
     session: {
       title: 'provide/injectを用いたローカルな状態管理',
       description: `
@@ -446,16 +484,18 @@ export const speakers = [
       `,
       time: 5,
     },
+    profile: {
+      name: 'ebiryu',
+      title: 'ストックマーク株式会社 ソフトウェアエンジニア',
+      image: '/speaker/ebiryu.jpg',
+      description:
+        'ストックマーク株式会社で、主にフロントエンドの開発をしています。<br>型やテストのある開発環境やテスト可能なコンポーネント設計、デザインシステムの運用に関心があります。',
+      twitter: 'ebiryu65',
+      github: 'ebiryu',
+    },
   },
   {
     id: 'l4dybird',
-    name: '掛水優輝',
-    title: '株式会社デジタルバリュー ディベロッパー',
-    image: '/speaker/l4dybird.jpeg',
-    description:
-      '新卒から地方IT企業を経験した後、株式会社デジタルバリューにてフロントエンドエンジニアとしてインターネットバンキングの開発に携わっており Nuxt2 + Composition API で開発をしています。<br>プライベートでは C# を用いて Discord Bot を開発しています。最近は Vitest にお熱。',
-    twitter: 'GekiUmaOsushi',
-    github: 'l4dybird',
     session: {
       title: 'Nuxt2 + Composition API から Nuxt Bridge へのマイグレーションのすゝめ',
       description: `
@@ -464,16 +504,18 @@ export const speakers = [
       `,
       time: 5,
     },
+    profile: {
+      name: '掛水優輝',
+      title: '株式会社デジタルバリュー ディベロッパー',
+      image: '/speaker/l4dybird.jpeg',
+      description:
+        '新卒から地方IT企業を経験した後、株式会社デジタルバリューにてフロントエンドエンジニアとしてインターネットバンキングの開発に携わっており Nuxt2 + Composition API で開発をしています。<br>プライベートでは C# を用いて Discord Bot を開発しています。最近は Vitest にお熱。',
+      twitter: 'GekiUmaOsushi',
+      github: 'l4dybird',
+    },
   },
   {
     id: 'FurusawaKaoru',
-    name: '古澤 棟熏(ふるさわ かおる)',
-    title: 'ユアマイスター株式会社 フロントエンドエンジニア',
-    image: '/speaker/FurusawaKaoru.gif',
-    description:
-      '新卒で金融系の受託会社に就職した後により困難にチャレンジするためにユアマイスター株式会社に転職。最近はVue.jsやNuxtを使いながらリプレースや新機能を開発しています。',
-    twitter: 'firirice',
-    github: 'FurusawaKaoru',
     session: {
       title: 'Nuxt Content v2でエンジニアブログを作っている話',
       description: `
@@ -482,6 +524,15 @@ export const speakers = [
       また、V1は触ったことがないためV1と比較してよくなった点などは話せないかもしれないのでご了承ください。</p>
       `,
       time: 5,
+    },
+    profile: {
+      name: '古澤 棟熏(ふるさわ かおる)',
+      title: 'ユアマイスター株式会社 フロントエンドエンジニア',
+      image: '/speaker/FurusawaKaoru.gif',
+      description:
+        '新卒で金融系の受託会社に就職した後により困難にチャレンジするためにユアマイスター株式会社に転職。最近はVue.jsやNuxtを使いながらリプレースや新機能を開発しています。',
+      twitter: 'firirice',
+      github: 'FurusawaKaoru',
     },
   },
 ]

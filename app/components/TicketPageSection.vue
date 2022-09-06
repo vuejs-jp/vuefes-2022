@@ -26,14 +26,11 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
         <div class="mb-5 md:flex md:gap-[5%] md:justify-center md:mb-0">
           <div class="mb-7.5">
             <div class="px-6 md:px-14">
-              <div class="aspect-[247/161]">
-                <img
-                  src="/img/preregister_bannar.jpg"
-                  alt=""
-                  class="w-full"
-                  loading="lazy"
-                >
-              </div>
+              <img
+                src="/img/preregister_bannar.jpg"
+                alt=""
+                class="w-full"
+              >
             </div>
             <div class="pt-[26.67vw] mt-[-21.33vw] text-center text-vue-blue border border-vue-blue md:pt-[32.29%] md:mt-[-25.69%]">
               <h3 class="mb-5 text-xs md:mb-5 md:text-base lg:mb-7.5 lg:text-xl">事前登録チケット 一般参加用</h3>
@@ -42,14 +39,11 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           </div>
           <div>
             <div class="px-6 md:px-14">
-              <div class="aspect-[247/161]">
-                <img
-                  src="/img/personal_sponsor_bannar.jpg"
-                  alt=""
-                  class="w-full"
-                  loading="lazy"
-                >
-              </div>
+              <img
+                src="/img/personal_sponsor_bannar.jpg"
+                alt=""
+                class="w-full"
+              >
             </div>
             <div class="pt-[26.67vw] mt-[-21.33vw] text-center text-vue-blue border border-vue-blue md:pt-[32.29%] md:mt-[-25.69%]">
               <h3 class="mb-5 text-xs md:mb-5 md:text-base lg:mb-7.5 lg:text-xl">事前登録チケット 個人スポンサー用</h3>

@@ -30,7 +30,7 @@ import {
             :key="index"
             class="w-full md:w-[45%] xl:w-[30%]"
           >
-            <div class="aspect-square flex mb-10 md:mb-5 md:h-[320px] lg:h-[360px]">
+            <div class="aspect-square flex mb-10 md:mb-5">
               <img
                 :alt="`${goods.name}のサンプル画像`"
                 :src="`/store/${goods.image}`"
