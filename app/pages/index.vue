@@ -32,12 +32,12 @@ useNuxt2Meta({
     <message-page-section />
     <ichimatsu-divided-bar color="white" />
     <speaker-page-section />
+    <ichimatsu-divided-bar color="typescript-blue" />
+    <events-page-section />
     <template v-if="SHOW_TICKET">
       <ichimatsu-divided-bar color="tohoh" />
       <ticket-page-section />
     </template>
-    <ichimatsu-divided-bar color="typescript-blue" />
-    <events-page-section />
     <template v-if="SHOW_STORE">
       <ichimatsu-divided-bar color="asagi" />
       <store-page-section />
