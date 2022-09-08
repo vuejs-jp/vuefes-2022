@@ -49,7 +49,7 @@ export const sponsorsDocumentUrl =
 export const tweetLink = 'Vue Fes Japan の Twitter'
 
 export const introduction =
-  'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
+  'Vue Fes Japan にご興味をいただき、ありがとうございます。Vue Fes Japan へのご質問およびお問い合わせは、以下のフォームよりお願いいたします。通常、担当者より 3 営業日以内にご返信いたします。3 営業日以内に返信がない場合、お手数ですが <a class="inner-link" href="https://twitter.com/vuefes" target="_blank" rel="noopener">Twitter</a> のDMよりご連絡ください。なお、スポンサー、スピーカー、参加チケットについては確定次第、公式サイトでお知らせする予定です。'
 
 export const promotionInfo =
   'Vue Fes Japan Online 2022 では、事前登録チケットを販売中です。事前登録をしていただくと、Vue Fes Japan の最新情報や当日の配信 URL、セッションに関する情報などをメールでお知らせします。'
