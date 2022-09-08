@@ -199,6 +199,7 @@ export const websiteLinks = [
 
 export const menuLinks = [
   { displayName: 'Speakers', uri: '#speakers' },
+  { displayName: 'Events', uri: '#events' },
   { displayName: 'Ticket', uri: '#ticket' },
   { displayName: 'Store', uri: '#store' },
   { displayName: 'Sponsors', uri: '#sponsors' },

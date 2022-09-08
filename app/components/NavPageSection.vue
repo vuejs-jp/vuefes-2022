@@ -1,5 +1,5 @@
 <template>
-  <header class="py-[5vw] px-[3vw] lg:py-10">
+  <header class="py-[5vw] px-[2vw] lg:py-10">
     <nav class="flex justify-between items-center">
       <div class="flex">
         <nuxt-link to="/">
@@ -10,7 +10,7 @@
           >
         </nuxt-link>
         <p
-          class="flex after:block items-center pt-[1vw] after:ml-[1.95vw] after:w-[6.49vw] after:h-px text-[1.69vw] font-bold text-vue-blue after:border-b after:border-vue-blue lg:pt-2 lg:text-base"
+          class="flex after:block items-center pt-[1vw] after:ml-[1vw] after:w-[6vw] after:h-px text-[1.69vw] font-bold text-vue-blue after:border-b after:border-vue-blue lg:pt-2 lg:text-base"
         >
           {{ subtitle }}
         </p>
@@ -21,7 +21,7 @@
         @open="toggleOpen(true)"
         @close="toggleOpen(false)"
       />
-      <ul class="hidden space-x-6 text-vue-blue xl:flex">
+      <ul class="hidden space-x-5 text-vue-blue xl:flex">
         <li
           v-for="(link, index) in menuLinks"
           :key="index"
