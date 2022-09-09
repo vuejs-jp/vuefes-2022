@@ -269,7 +269,7 @@ export const speakers = [
     },
     profile: {
       name: 'みゅーとん',
-      title: '株式会社hacomono 基盤開発',
+      title: '株式会社hacomono テックリード',
       image: '/speaker/mew-ton.jpg',
       description: `趣味で3Dアバターを使って楽器演奏などをしています。<br>
       仕事では、株式会社hacomono でフロントエンドの開発基盤の実装を主に担当しています。<br>
@@ -397,8 +397,7 @@ export const speakers = [
   {
     id: 'KushibikiMashu',
     session: {
-      title:
-        '社内用共通コンポーネントのビジュアルリグレッションテストにStorybookとChromaticを選択した話',
+      title: '共通コンポーネントのテスト手法にあえてVRTを選択した話',
       description: `
         <p>Vue を取り巻くエコシステム（ツール）とその運用の話です。</p>
         <p>■ 概要<br>
