@@ -3,6 +3,9 @@ import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
 import SpeakerPageHeading from './SpeakerPageHeading.vue'
+
+const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 </script>
 
 <template>
@@ -33,14 +36,17 @@ import SpeakerPageHeading from './SpeakerPageHeading.vue'
           class="mb-5 md:mb-10"
         />
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div v-for="i in 9">
+          <div
+            v-for="sponsor in [...sponsors.platinum, ...sponsors.gold]"
+            :key="sponsor.id"
+          >
             <img
-              src="https://storage.googleapis.com/p_6280f74da671510018fd44c9/dce46775-9b1a-441c-a3b8-abdbaeb7a159%2Fmedpeer.png"
-              alt="メドピア株式会社"
+              :src="sponsor.image.src"
+              :alt="sponsor.name_jp"
               class="mb-2 md:mb-4"
               loading="lazy"
             >
-            <p class="text-lg font-bold text-vue-blue md:text-22">メドピア株式会社</p>
+            <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
           </div>
         </div>
       </div>
