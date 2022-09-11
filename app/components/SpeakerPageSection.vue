@@ -35,18 +35,23 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
           text="スポンサーセッション"
           class="mb-5 md:mb-10"
         />
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          v-if="sponsors"
+          class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+        >
           <div
             v-for="sponsor in [...sponsors.platinum, ...sponsors.gold]"
-            :key="sponsor.id"
+            :key="sponsor.name_en"
           >
-            <img
-              :src="sponsor.image.src"
-              :alt="sponsor.name_jp"
-              class="mb-2 md:mb-4"
-              loading="lazy"
-            >
-            <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
+            <router-link :to="`/sponsor-sessions/${sponsor.name_en}`">
+              <img
+                :src="sponsor.image.src"
+                :alt="sponsor.name_jp"
+                class="mb-2 md:mb-4"
+                loading="lazy"
+              >
+              <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
+            </router-link>
           </div>
         </div>
       </div>

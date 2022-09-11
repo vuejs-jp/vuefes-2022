@@ -35,7 +35,7 @@ useNuxt2Meta({
       title="Session"
       title-yamato="セッション"
     />
-    <SessionSection :speaker="speaker" />
+    <SessionSection :session-info="speaker" />
     <ichimatsu-divided-bar color="vue-blue" />
     <footer-page-section />
   </div>
