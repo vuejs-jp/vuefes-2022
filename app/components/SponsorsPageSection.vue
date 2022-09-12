@@ -32,7 +32,7 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
           </div>
         </template>
         <div class="relative py-10 px-5 mx-5 text-vue-blue border border-vue-blue md:p-15">
-          <h3 class="absolute -top-4 left-1/2 px-8 font-yu-gothic text-xl font-bold text-center bg-white -translate-x-1/2 md:-top-5 md:text-3xl top">Indivisual</h3>
+          <h3 class="absolute -top-4 left-1/2 px-8 font-yu-gothic text-xl font-bold text-center bg-white -translate-x-1/2 md:-top-5 md:text-3xl top">Individual</h3>
           <ul>
             <li
               v-for="indivisual in indivisuals"
