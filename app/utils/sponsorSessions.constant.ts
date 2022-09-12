@@ -45,8 +45,8 @@ export const sponsorSessions = [
         image: '/speaker/takuya-kishimoto.png',
         title: 'テクノロジーアーキテクト',
         name: '岸本 卓也',
-        twitter: 'shout_star',
-        github: 'shout-star',
+        twitter: '',
+        github: '',
         description:
           'プロジェクトで技術領域のリーディングを担当しており、得意領域はフロントエンド～バックエンドのアプリ部分です。主にJavaやJavaScriptと戯れつつ日々を過ごしています。',
       },
