@@ -4,6 +4,9 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
 import SpeakerPageHeading from './SpeakerPageHeading.vue'
 
+const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 'main')
+const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
+
 const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
 const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 </script>
@@ -26,7 +29,18 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
         />
         <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
           <SpeakerPageBlock
-            v-for="speaker in speakers"
+            v-for="speaker in mainSessionSpeakers"
+            :key="speaker.id"
+            :speaker="speaker"
+          />
+        </div>
+        <SpeakerPageHeading
+          text="Lightning Talk"
+          class="mb-5 md:mb-10"
+        />
+        <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
+          <SpeakerPageBlock
+            v-for="speaker in LTSpeakers"
             :key="speaker.id"
             :speaker="speaker"
           />
