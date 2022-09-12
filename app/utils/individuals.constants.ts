@@ -1,4 +1,4 @@
-export const indivisuals = [
+export const individuals = [
   'Yasunori Kirimoto',
   '竹野 哲',
   'Yuhei FUJITA',

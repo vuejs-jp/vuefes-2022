@@ -2,7 +2,7 @@
 import SponsorList from '~/components/sponsors/SponsorList.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { useSponsorsCMS } from '~/composables/useCMS'
-import { indivisuals } from '~/utils/indivisals.constants'
+import { individuals } from '~~/app/utils/individuals.constants'
 
 const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
 const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
@@ -35,11 +35,11 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
           <h3 class="absolute -top-4 left-1/2 px-8 font-yu-gothic text-xl font-bold text-center bg-white -translate-x-1/2 md:-top-5 md:text-3xl top">Individual</h3>
           <ul>
             <li
-              v-for="indivisual in indivisuals"
-              :key="indivisual"
+              v-for="individual in individuals"
+              :key="individual"
               class="inline mr-6 text-sm leading-8 md:text-xl md:leading-10"
             >
-              {{ indivisual }}
+              {{ individual }}
             </li>
           </ul>
         </div>
