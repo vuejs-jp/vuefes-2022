@@ -8,7 +8,7 @@ const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 
 const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
 
 const { fetchContent } = useSponsorsCMS()
-const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
+const { pending, data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 </script>
 
 <template>
@@ -50,14 +50,14 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
           class="mb-5 md:mb-10"
         />
         <div
-          v-if="sponsors"
+          v-if="!pending"
           class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           <div
             v-for="sponsor in [...sponsors.platinum, ...sponsors.gold]"
             :key="sponsor.name_en"
           >
-            <router-link :to="`/sponsor-sessions/${sponsor.name_en}`">
+            <n-link :to="`/sponsor-sessions/${sponsor.name_en}`">
               <img
                 :src="sponsor.image.src"
                 :alt="sponsor.name_jp"
@@ -65,7 +65,7 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
                 loading="lazy"
               >
               <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
-            </router-link>
+            </n-link>
           </div>
         </div>
       </div>
