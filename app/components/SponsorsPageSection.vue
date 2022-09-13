@@ -4,7 +4,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import { useSponsorsCMS } from '~/composables/useCMS'
 import { individuals } from '~~/app/utils/individuals.constants'
 
-const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+const { fetchContent } = useSponsorsCMS()
 const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 </script>
 

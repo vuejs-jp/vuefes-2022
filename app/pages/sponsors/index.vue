@@ -23,7 +23,7 @@ useNuxt2Meta({
   ]
 })
 
-const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+const { fetchContent } = useSponsorsCMS()
 const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 
 const links = [

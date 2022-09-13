@@ -13,7 +13,7 @@ const route = useRoute()
     
 const sessionInfo = computed(() => sponsorSessions.find(session => session.id === route.params.sponsor))
 
-const { fetchContentByName } = useSponsorsCMS({ modelUid: 'sponsor-session' })
+const { fetchContentByName } = useSponsorsCMS()
 const { data: sponsor } = useLazyAsyncData('sponsor', () => fetchContentByName(route.params.sponsor))
     
 const url = `https://vuefes.jp/2022/sponsor-sessions/${sessionInfo.value.id}`

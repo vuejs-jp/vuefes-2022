@@ -7,7 +7,7 @@ import SpeakerPageHeading from './SpeakerPageHeading.vue'
 const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 'main')
 const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
 
-const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
+const { fetchContent } = useSponsorsCMS()
 const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 </script>
 
