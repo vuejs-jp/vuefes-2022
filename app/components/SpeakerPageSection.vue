@@ -3,12 +3,16 @@ import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
 import SpeakerPageHeading from './SpeakerPageHeading.vue'
+import { ISponsor } from '../types/sponsors'
 
 const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 'main')
 const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
 
 const { fetchContent } = useSponsorsCMS()
 const { pending, data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
+
+// TODO: イエソド株式会社のスポンサーセッション情報をまだいただいていないので、一旦イエソド株式会社を除外する。
+const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.value.gold.filter((sponsor: ISponsor) => sponsor.name_en !== 'yesod')])
 </script>
 
 <template>
@@ -54,7 +58,7 @@ const { pending, data: sponsors } = useLazyAsyncData('sponsors', () => fetchCont
           class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           <div
-            v-for="sponsor in [...sponsors.platinum, ...sponsors.gold]"
+            v-for="sponsor in sessionSponsors"
             :key="sponsor.name_en"
           >
             <n-link :to="`/sponsor-sessions/${sponsor.name_en}`">

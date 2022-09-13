@@ -52,4 +52,3 @@ useNuxt2Meta({
     <footer-page-section />
   </div>
 </template>
-    
