@@ -57,7 +57,7 @@ const trackName = computed(() => {
     :class="trackContainerClass"
   >
     <div
-      class="self-start pr-2 min-w-[50%] text-xs leading-3 text-white md:hidden"
+      class="self-start pr-2 min-w-[50%] text-[12px] leading-3 text-center text-white md:hidden"
       :class="trackLabelClasses"
     >
       {{ trackName }}

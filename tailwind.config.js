@@ -20,9 +20,9 @@ module.exports = {
         'anime-sangosyou': '#D47373',
         'anime-tohoh': '#E7C350',
         'timetable-timeslot': 'rgba(52, 73, 94, 0.7);',
-        'track-a': '#33A6B8',
+        'track-a': '#90B44B',
         'track-b': '#F17C67',
-        'track-c': '#FFC408',
+        'track-c': '#3178C6',
       },
       spacing: {
         14: '50px',
