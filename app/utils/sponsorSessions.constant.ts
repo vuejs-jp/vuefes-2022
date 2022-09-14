@@ -169,7 +169,7 @@ export const sponsorSessions = [
     },
     speakers: [
       {
-        image: '/speaker/hiroyuki-fukui.png',
+        image: '/speaker/hiroyuki-fukui.jpg',
         title: 'ツール事業部 プロダクトマーケティング',
         name: '福井 潤之（フクイ ヒロユキ）',
         twitter: '',
@@ -190,7 +190,7 @@ export const sponsorSessions = [
     },
     speakers: [
       {
-        image: '/speaker/ogijun.png',
+        image: '/speaker/ogijun.jpg',
         title: 'CTO',
         name: '荻野 淳也',
         twitter: 'ogijun',
@@ -199,7 +199,7 @@ export const sponsorSessions = [
           '20年以上システム開発に携わった後、2015年からコーヒー屋に転身したものの、2021年から再び開発の現場へ。',
       },
       {
-        image: '/speaker/shoko.png',
+        image: '/speaker/shoko.jpg',
         title: 'フロントエンドエンジニア',
         name: 'Shoko',
         twitter: '',
@@ -220,7 +220,7 @@ export const sponsorSessions = [
     },
     speakers: [
       {
-        image: '/speaker/gatchan0807.png',
+        image: '/speaker/gatchan0807.jpg',
         title: 'BASE株式会社 Product Dev Division エンジニア',
         name: 'がっちゃん',
         twitter: 'gatchan0807',
