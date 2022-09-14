@@ -74,7 +74,7 @@ function trackClassByIndex(index:number, isSponsorEvent: boolean) {
             <p class="text-sm">14:20 - 14:40</p><h3>施策を止めるな！Vue2からVue3への移行</h3><p class="text-sm">志賀 奎太</p><p class="mt-2.5 text-sm">14:45 - 15:05</p><h3>十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング</h3><p class="text-sm">tbashiyy</p>
           </TrackLabel>
           <TrackLabel
-            class="speaker-track-label"
+            class="md:justify-center speaker-track-label"
             :track-index="1"
           >
             <h3 class="text-center">OSSはじめのいっぽ</h3>
@@ -87,28 +87,35 @@ function trackClassByIndex(index:number, isSponsorEvent: boolean) {
             <p class="text-base">14:20 - 14:40</p><h3>JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する</h3><p class="text-sm">川俣 涼</p><p class="mt-2.5 text-base">14:45 - 15:05</p><h3>調整中</h3><p class="text-sm">Guillaume Chau</p>
           </TrackLabel>
 
-          <p class="timeslot">
+          <p class="row-span-2 timeslot">
             15:10 - 15:55
           </p>
           <TrackLabel
-            class="speaker-track-label"
+            class="row-span-2 md:justify-center speaker-track-label"
             :track-index="0"
           >
             <h3 class=" text-center">ぬるほどVue<br>コンポーネント</h3>
           </TrackLabel>
           <TrackLabel
-            class="speaker-track-label"
+            class="row-span-2 speaker-track-label"
             :track-index="1"
           >
             <p class="text-base">15:10 - 15:30</p><h3>Nuxt モジュールの作り方を知って 開発した機能を再利用しよう</h3><p class="text-sm">田中弘治</p><p class="mt-2.5 text-base">15:10 - 15:30</p><h3>eslint-plugin-vueを使用して継続的にVue3移行する</h3><p class="text-sm">太田 洋介</p>
           </TrackLabel>
 
           <TrackLabel
-            class="row-span-5 speaker-track-label"
+            class="speaker-track-label"
             :track-index="2"
           >
             <p class="text-base">15:10 - 15:30</p><h3>Nuxt モジュールの作り方を知って 開発した機能を再利用しよう</h3><p class="text-sm">田中弘治</p>
-            <p class="mt-2.5 text-base">15:35 - 17:35</p><h3 class="mt-2.5 text-center">ハンズオン</h3>
+          </TrackLabel>
+
+          <TrackLabel
+            class="row-span-5 md:justify-center speaker-track-label"
+            :track-index="2"
+          >
+            <p class="mt-2.5 text-base">15:35 - 17:35</p>
+            <h3 class="mt-2.5 text-center">ハンズオン</h3>
           </TrackLabel>
 
           <p class="timeslot">
@@ -190,7 +197,7 @@ function trackClassByIndex(index:number, isSponsorEvent: boolean) {
 </template>
 <style scoped>
 .text-timetable {
-  @apply text-sm leading-7 lg:text-lg lg:leading-8;
+  @apply text-sm leading-7 lg:text-lg lg:leading-8 text-vue-blue;
 }
 
 .timeslot {
