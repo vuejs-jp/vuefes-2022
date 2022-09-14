@@ -111,12 +111,9 @@ function trackClassByIndex(index:number, isSponsorEvent: boolean) {
           </TrackLabel>
 
           <TrackLabel
-            class="row-span-5 md:justify-center speaker-track-label"
+            class="row-span-5 justify-start md:justify-center speaker-track-label"
             :track-index="2"
-          >
-            <p class="mt-2.5 text-base">15:35 - 17:35</p>
-            <h3 class="mt-2.5 text-center">ハンズオン</h3>
-          </TrackLabel>
+          ><p class="text-center md:text-base">15:35 - 17:35</p><h3 class="text-center">ハンズオン</h3></TrackLabel>
 
           <p class="timeslot">
             16:00 - 16:20
