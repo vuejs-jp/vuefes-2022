@@ -8,16 +8,7 @@ interface IGoods {
 }
 
 export const storeDescription =
-  'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store が今年も登場します。完全受注生産で、オンラインにてご注文いただくと、当日までにご自宅にお届けします。オリジナルグッズを揃えて、Vue Fes Japan を盛り上げましょう！'
-
-export const storeDescription2 =
-  'なお、今回販売するVue Fes Japan オリジナルグッズは注文後に生産を行うため、お届けまでにお時間を頂戴します。ご了承の上、お買い求めいただきますようお願いいたします。'
-
-export const storeDescription3 =
-  '送料は商品別に設定されておりますので、ストアをご確認ください。国内配送の料金は沖縄及び離島への配送を除き一律となります。一度に複数の商品を購入した場合は、その購入された商品内の「最も高い送料」が適用されます。'
-
-export const orderAcceptancePeriod = 'ご注文受付期間：8月10日(水) 〜 9月上旬ごろ'
-export const productShippingSchedule = '商品発送予定：10月上旬ごろ'
+  'Vue Fes Japan オリジナルグッズをお買い求めいただける Vue Fes Store のご注文受付期間は終了しました。商品の発送は10月上旬ごろを予定しています。到着をお楽しみに！'
 
 export const goodsList: IGoods[] = [
   {
@@ -92,14 +83,14 @@ export const goodsList: IGoods[] = [
     specification: 'サイズ：W200×H200mm',
     url: 'https://vuejs-jp.stores.jp/items/62d3d2499b47bf45eae53d90',
   },
-  // TODO: ステッカーの説明・仕様を追加
   {
-    image: 'sample.png',
-    name: '',
-    price: '0円',
-    description: '説明...',
-    specification: '仕様...',
-    url: '',
+    image: 'sticker.jpeg',
+    name: 'ステッカー',
+    price: '500円',
+    description:
+      'Vue.js、Vue Fes Japan、Nuxtのロゴが集まった特製ステッカーです。それぞれロゴの形に合わせて切り抜かれています。',
+    specification: 'サイズ：W164×H133mm',
+    url: 'https://vuejs-jp.stores.jp/items/62d3d28e9b47bf3d14e54747',
   },
 ]
 

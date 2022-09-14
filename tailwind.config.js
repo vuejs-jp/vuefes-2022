@@ -35,11 +35,16 @@ module.exports = {
         22.5: '5.625rem', // 90px
       },
       width: {
+        37.5: '9.375rem', // 150px
         170: '42rem',
         192: '54rem',
       },
+      height: {
+        37.5: '9.375rem', // 150px
+      },
       maxWidth: {
         700: '43.75rem', // 700px
+        900: '56.25rem', // 900px
         1190: '74.375rem', // 1190px
       },
       boxShadow: {
@@ -59,6 +64,7 @@ module.exports = {
         11: '0.6875rem', // 11px
         13: '0.8125rem', // 13px
         15: '0.9375rem', // 15px
+        22: '1.375rem', // 22px
         25: '1.5625rem', // 25px
         35: '2.1875rem', // 35px
         50: '3.125rem', // 50px
@@ -88,11 +94,15 @@ module.exports = {
         'linear-gradient(45deg, #42B983 25%, transparent 25%, transparent 75%, #42B983 75%), linear-gradient(45deg, #42B983 25%, transparent 25%, transparent 75%, #42B983 75%)',
       'ichimatsu-asagi':
         'linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%), linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%)',
+      'ichimatsu-typescript-blue':
+        'linear-gradient(45deg, #4374AA 25%, transparent 25%, transparent 75%, #4374AA 75%), linear-gradient(45deg, #4374AA 25%, transparent 25%, transparent 75%, #4374AA 75%)',
       sponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
+      events: 'linear-gradient(180deg, #4374AA 0%, rgba(255, 255, 255, 0) 100%)',
       store: 'linear-gradient(180deg, #33A6B8 0%, rgba(255, 255, 255, 0) 100%)',
       staffs: 'linear-gradient(180deg, #F17C67 0%, rgba(196, 196, 196, 0) 100%)',
       ticket: 'linear-gradient(180deg, #FFC408 0%, rgba(255, 255, 255, 0) 100%)',
       speakers: 'linear-gradient(90deg, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 0%) 100%)',
+      nav: 'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
       submit: 'linear-gradient(91.03deg, #33A6B8 0%, #42B983 100.01%)',
       timetable: 'linear-gradient(180deg, #42B983 0%, rgba(255, 255, 255, 0) 100%)',
       'submit-border': 'linear-gradient(90deg, #42b983 0%, #33a6b8 100%)',

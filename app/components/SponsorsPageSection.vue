@@ -2,14 +2,7 @@
 import SponsorList from '~/components/sponsors/SponsorList.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { useSponsorsCMS } from '~/composables/useCMS'
-import { SHOW_SPONSOR_LIST } from '~/utils/feature.constants'
-import {
-  sponsorsDescriptionText,
-  sponsorsDocumentUrl,
-  tweetUrl,
-  tweetLink,
-} from '~/utils/constants'
-import LinkButtonField from '~/components/forms/LinkButtonField.vue'
+import { individuals } from '~~/app/utils/individuals.constants'
 
 const { fetchContent } = useSponsorsCMS({ modelUid: 'sponsor' })
 const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
@@ -21,58 +14,34 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
     class="py-10 px-5 bg-sponsors md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
-      <div
-        v-if="SHOW_SPONSOR_LIST"
-        class="mx-auto max-w-1190"
-      >
+      <div class="mx-auto max-w-1190">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Sponsors"
           title-yamato="スポンサー"
         />
         <template v-if="sponsors">
-          <SponsorList :sponsors="sponsors.platinum" />
-          <SponsorList :sponsors="sponsors.gold" />
-          <SponsorList :sponsors="sponsors.silver" />
-          <SponsorList :sponsors="sponsors.bronze" />
-          <SponsorList :sponsors="sponsors.specialMedia" />
-          <SponsorList :sponsors="sponsors.media" />
-          <SponsorList :sponsors="sponsors.streaming" />
+          <div class=" mb-16 md:mb-28">
+            <SponsorList :sponsors="sponsors.platinum" />
+            <SponsorList :sponsors="sponsors.gold" />
+            <SponsorList :sponsors="sponsors.silver" />
+            <SponsorList :sponsors="sponsors.bronze" />
+            <SponsorList :sponsors="sponsors.specialMedia" />
+            <SponsorList :sponsors="sponsors.media" />
+            <SponsorList :sponsors="sponsors.streaming" />
+          </div>
         </template>
-      </div>
-      <div
-        v-else
-        class="px-5 mx-auto max-w-700"
-      >
-        <SectionTitle
-          class="mb-10 lg:mb-20"
-          title="Sponsors"
-          title-yamato="スポンサー"
-        />
-        <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
-          {{ sponsorsDescriptionText }}
-        </p>
-        <p class="mb-10 text-sm font-bold leading-7 text-vue-blue lg:text-lg lg:leading-8">
-          ※申し込み受付は終了しました。多数のお申し込みをいただき、ありがとうございました。
-        </p>
-        <p class="mb-10 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8">
-          最新情報は、
-          <a
-            :href="tweetUrl"
-            target="_blank"
-            rel="noreferrer"
-            class="underline hover:opacity-60 transition-opacity"
-          >
-            {{ tweetLink }}
-          </a>
-          をご確認ください。
-        </p>
-        <div class="mb-0 text-center">
-          <LinkButtonField
-            :link="sponsorsDocumentUrl"
-            title-label="スポンサー資料を開く"
-            :is-external-link="true"
-          />
+        <div class="relative py-10 px-5 mx-5 text-vue-blue border border-vue-blue md:p-15">
+          <h3 class="absolute -top-4 left-1/2 px-8 font-yu-gothic text-xl font-bold text-center bg-white -translate-x-1/2 md:-top-5 md:text-3xl top">Individual</h3>
+          <ul>
+            <li
+              v-for="individual in individuals"
+              :key="individual"
+              class="inline mr-6 text-sm leading-8 md:text-xl md:leading-10"
+            >
+              {{ individual }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>

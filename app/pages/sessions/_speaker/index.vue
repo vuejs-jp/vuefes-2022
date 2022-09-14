@@ -15,8 +15,8 @@ const speaker = computed(() => {
 })
 
 const url = `https://vuefes.jp/2022/sessions/${speaker.value.id}`
-const title = `${speaker.value.session.title}（${speaker.value.name}） | ${conferenceTitle}`
-const description = `${conferenceTitle} のセッション情報です。スピーカーの ${speaker.value.name} が、「${speaker.value.session.title}」を発表します。`
+const title = `${speaker.value.session.title}（${speaker.value.profile.name}） | ${conferenceTitle}`
+const description = `${conferenceTitle} のセッション情報です。スピーカーの ${speaker.value.profile.name} が、「${speaker.value.session.title}」を発表します。`
 const ogImageUrl = `${linkUrl}speaker-og-images/${speaker.value.id}.jpg`
 
 useNuxt2Meta({

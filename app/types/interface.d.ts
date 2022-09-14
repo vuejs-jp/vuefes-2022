@@ -15,15 +15,19 @@ export interface ISession {
 }
 export interface ISpeaker {
   id: string
-  name: string
   bio: string
   session: ISession
-  title: string
   company: string
-  twitter?: string
   facebook?: string
   connpass?: string
-  github?: string
   related_url?: string
+  profile: ISpeakerProfile
+}
+export interface ISpeakerProfile {
   image: string
+  title: string
+  name: string
+  twitter?: string
+  github?: string
+  description: string
 }
