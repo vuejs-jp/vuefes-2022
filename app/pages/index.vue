@@ -7,6 +7,7 @@ import SpeakerPageSection from '~/components/SpeakerPageSection.vue'
 import StorePageSection from '~/components/StorePageSection.vue'
 import SponsorsPageSection from '~/components/SponsorsPageSection.vue'
 import TeamPageSection from '~/components/TeamPageSection.vue'
+import TimeTableSection from '~/components/TimeTableSection.vue'
 import FormPageSection from '~/components/FormPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import EventsPageSection from '../components/EventsPageSection.vue'
@@ -32,6 +33,8 @@ useNuxt2Meta({
     <message-page-section />
     <ichimatsu-divided-bar color="white" />
     <speaker-page-section />
+    <ichimatsu-divided-bar color="timetable" />
+    <time-table-section />
     <ichimatsu-divided-bar color="typescript-blue" />
     <events-page-section />
     <template v-if="SHOW_TICKET">
