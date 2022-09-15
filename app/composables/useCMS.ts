@@ -41,8 +41,14 @@ export function useSponsorsCMS() {
         .reduce(groupBy('rank'), {})
     })
 
+  const fetchContentByName = (name: string) =>
+    getContents({ name_en: name }).then((sponsor) => {
+      return sponsor[0]
+    })
+
   return {
     fetchContent,
+    fetchContentByName,
   }
 }
 

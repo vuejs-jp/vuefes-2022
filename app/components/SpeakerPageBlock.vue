@@ -23,7 +23,7 @@ const speakerInfo = computed(() => props.speaker)
       <p class="text-xs">
         {{ speakerInfo.profile.title }}
       </p>
-      <p class="text-lg font-bold lg:text-[1.375rem]">
+      <p class="text-lg font-bold lg:text-22">
         {{ speakerInfo.profile.name }}
       </p>
     </div>

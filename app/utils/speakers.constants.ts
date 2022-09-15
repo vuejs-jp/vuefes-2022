@@ -5,6 +5,7 @@ export const speakers = [
       title: 'キーノート',
       description: '調整中',
       time: 40,
+      type: 'main',
     },
     profile: {
       image: '/speaker/evan.jpeg',
@@ -23,6 +24,7 @@ export const speakers = [
       description:
         '<p>Pinia might be a light library with a simple API but it takes advantage of many Vue Reactivity concepts like Effect Scopes, that are unknown by most. In this talk we will go through some of the internals of Pinia, understanding them and discovering how to enhance our usage of Pinia.</p>',
       time: 20,
+      type: 'main',
     },
     profile: {
       image: '/speaker/eduardo.jpeg',
@@ -42,6 +44,7 @@ export const speakers = [
       description:
         '<p>Live coding session about making a full blown deployed application with Nuxt 3.</p>',
       time: 20,
+      type: 'main',
     },
     profile: {
       image: '/speaker/sebastien.jpeg',
@@ -60,6 +63,7 @@ export const speakers = [
       title: 'Vite 3 and Beyond',
       description: '<p>New Vite features in Vite 3, state of Core dev, and what is next.</p>',
       time: 20,
+      type: 'main',
     },
     profile: {
       image: '/speaker/matias.jpeg',
@@ -77,6 +81,7 @@ export const speakers = [
       description:
         '<p>Patterns and best practices we have learnt during the past two years of building VueUse.</p>',
       time: 20,
+      type: 'main',
     },
     profile: {
       image: '/speaker/anthony.jpg',
@@ -95,6 +100,7 @@ export const speakers = [
       description:
         '<p>An overview of Cypress 10\'s elegant re-designed UI and brand-new testing type: Component Testing! In this talk we will use TDD to build a modal using the new "Create from Component" feature. We will learn the benefits to using Cypress\'s driver and assertions over headless test runners.</p>',
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'Jessica Sachs',
@@ -112,6 +118,7 @@ export const speakers = [
       title: 'How Vite enables Histoire',
       description: 'A deep dive about how Histoire works.',
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'Guillaume Chau',
@@ -130,6 +137,7 @@ export const speakers = [
       description:
         '<p>Vue1時代から開発を続けてきた1000コンポーネント規模のプロジェクトを3ヶ月でVue3に移行した話をします。Vue3化は変更点が大きいため移行コストが問題になりますが、なぜ、どのようにして行ったのか、作業につまづいたところ、どのようなメリットがあったかなどを振り返って話します。</p>',
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'miyaoka',
@@ -150,6 +158,7 @@ export const speakers = [
       しかしながらアクセシビリティ対応に関しては、間違った知識のままはじめるとアクセシブルでなくなる可能性もあります。<br>
       この発表ではそうした間違いや疑問を解消し Vue.js でのアクセシビリティ向上に取り組みやすくするやり方を発表いたします。</p>`,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'やまのく',
@@ -170,6 +179,7 @@ export const speakers = [
       eslint-plugin-vueは古い書き方を検知し、場合によって自動的にVue3の新しい書き方に書き換えることで、継続的にVue3移行を助けます。<br>
       セッションでは、自社の開発するアプリケーションで実際にeslint-plugin-vueを使用してVue3移行を進めた話とともに、eslint-plugin-vueのVue3移行を助けるチェックルールや、自社のアプリケーション専用に独自に作成したカスタムルールの一部も紹介できればと考えています。</p>`,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: '太田 洋介',
@@ -189,6 +199,7 @@ export const speakers = [
       そのような中、Rettyではチームと連携して「メインの施策を止めることなく」「大きな不具合を起こすことなく」Vue3に移行することができました。<br>
       チームで作業する時のポイントや具体的なVue3への移行手順、移行する前に知っておけば良かったことなどをご紹介します。</p>`,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: '志賀 奎太',
@@ -217,6 +228,7 @@ export const speakers = [
         <p>※Vue2.Xでの事例となります。</p>
       `,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'tbashiyy',
@@ -248,6 +260,7 @@ export const speakers = [
         </ul>
       `,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: '田中弘治',
@@ -266,6 +279,7 @@ export const speakers = [
       description: `<p>弊社では将来的に弊社独自のデザインシステムの設計の後、既存のプロジェクトをすべて置き換えていく予定となっています。<br>
       私は、直近立ち上がった新規プロジェクトにて、将来的にデザインシステムに置き換わることが確実であることを前提として、変化に強く、テストコードによる品質を担保できるNuxt3プロジェクト開発基盤を作りましたので、本セッションにて共有できればと思います。</p>`,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'みゅーとん',
@@ -297,6 +311,7 @@ export const speakers = [
         </ul>
       `,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'とよへい',
@@ -317,6 +332,7 @@ export const speakers = [
       本セッションでは、JSからTSへ移行したVue.jsプロダクトにて、自作ツールや計測ダッシュボードを駆使して斬新的に型チェックを強化していった過程についてお話します。<br>
 現在、Vue.jsプロダクトのTS化、型チェックの強化を検討している方の参考になれば嬉しいです。</p>`,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: '川俣 涼',
@@ -335,6 +351,7 @@ export const speakers = [
       description:
         '<p>Vuetifyに"コントリビュート"する手順についてお話しします。開発環境の構築からPR作成・マージされるところまで、分かりやすく丁寧に解説します。OSS開発・コントリビュートにトライしたい方のお力になれば嬉しいです。</p>',
       time: 20,
+      type: 'main',
     },
     profile: {
       name: '川野邉 賢二',
@@ -363,6 +380,7 @@ export const speakers = [
         </ul>
       `,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'watsuyo',
@@ -382,6 +400,7 @@ export const speakers = [
       このセッションでは、実際にNuxtJS(v2)とmicroCMSを使ったサイト構築で得た知見として、NuxtJSでJamstackサイトを構築する際に必要な基礎知識やシステム構成、規模が大きくなった時のビルド周りの最適化、運用に関するヒントや実際に苦労したポイントなどを紹介します。<br>
       その上で、今夏リリース予定のNuxt3のSSG周りの変更点を、実際のコードなどを交えながら紹介していきます。</p>`,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: '菅家 大地',
@@ -420,6 +439,7 @@ export const speakers = [
         </ul>
       `,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: 'プログラミングをするパンダ',
@@ -441,6 +461,7 @@ export const speakers = [
       そして、さまざまな粒度のレイヤーにおいて「デザインの道具」を提供していくことで、スキル・職種を問わずにデザインへ取り組みやすくなるかもしれません。<br>
       本セッションでは、私が関わっているVue.jsのプロジェクトでの取り組みをご説明します。</p>`,
       time: 20,
+      type: 'main',
     },
     profile: {
       name: '腹筋ローラーの力を信じろ',
@@ -461,6 +482,7 @@ export const speakers = [
       エントリーポイントが多いことによる弊害で、サービス拡大に伴いビルド時間は長くなり、最近では開発サーバーの立ち上げに約2分も掛かるようになりました。これを改善すべく、Vue2.7化と併せてビルドシステムのWebpackからViteへの移行を試みています。
       SPAへのVite導入等に関しては記事がありますが、レガシーなMPAアプリケーションでのVite移行に関する記事はあまりなく、移行できるか？等の不安や疑問を抱きながら実装を進めています。本LTでは、この取り組みを通して得た知見を共有させて頂きます。</p>`,
       time: 5,
+      type: 'LT',
     },
     profile: {
       name: 'oreo',
@@ -482,6 +504,7 @@ export const speakers = [
       <p>本LTでは、Composition APIのprovide/injectを活用してローカルな状態を管理する方法を紹介します。Composition APIのinjectを用いると外からの状態操作をオプショナルにできるため、実装がシンプルになります。</p>
       `,
       time: 5,
+      type: 'LT',
     },
     profile: {
       name: 'ebiryu',
@@ -502,6 +525,7 @@ export const speakers = [
       <p>Nuxt2 でも Nuxt Bridge へのマイグレーションに備えて準備できる事がある為、今回は unplugin-auto-import を利用した AutoImport の導入について知見を共有できればと思います。</p>
       `,
       time: 5,
+      type: 'LT',
     },
     profile: {
       name: '掛水優輝',
@@ -523,6 +547,7 @@ export const speakers = [
       また、V1は触ったことがないためV1と比較してよくなった点などは話せないかもしれないのでご了承ください。</p>
       `,
       time: 5,
+      type: 'LT',
     },
     profile: {
       name: '古澤 棟熏(ふるさわ かおる)',

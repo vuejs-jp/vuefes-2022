@@ -32,6 +32,7 @@ module.exports = {
       },
       width: {
         37.5: '9.375rem', // 150px
+        62.5: '15.625rem', // 250px
         170: '42rem',
         192: '54rem',
       },
@@ -42,6 +43,7 @@ module.exports = {
         700: '43.75rem', // 700px
         900: '56.25rem', // 900px
         1190: '74.375rem', // 1190px
+        1260: '78.75rem', // 1260px
       },
       boxShadow: {
         submit: '0px 10px 20px rgba(0, 0, 0, 0.1)',
