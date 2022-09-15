@@ -54,11 +54,16 @@ function trackClassByIndex(index:number, isSponsorEvent: boolean) {
               class="speaker-track-label"
               :is-sponsor-event="timeslot.isSponsorEvent"
               :track-index="timeslotIndex"
-            ><h3>{{ tracks.title }}<p
+            >
+              <h3>
+                {{ tracks.title }}<p
                   class="text-sm leading-7 lg:text-lg lg:leading-8"
                   :class="{ 'font-normal': !timeslot.isSponsorEvent }"
-                >{{ tracks.subTitle }}</p>
-              </h3></TrackLabel>
+                >
+                  {{ tracks.subTitle }}
+                </p>
+              </h3>
+            </TrackLabel>
           </template>
         </div>
         <div
@@ -113,7 +118,9 @@ function trackClassByIndex(index:number, isSponsorEvent: boolean) {
           <TrackLabel
             class="row-span-5 justify-start md:justify-center speaker-track-label"
             :track-index="2"
-          ><p class="text-center md:text-base">15:35 - 17:35</p><h3 class="text-center">ハンズオン</h3></TrackLabel>
+          >
+            <p class="text-center md:text-base">15:35 - 17:35</p><h3 class="text-center">ハンズオン</h3>
+          </TrackLabel>
 
           <p class="timeslot">
             16:00 - 16:20
@@ -209,8 +216,6 @@ function trackClassByIndex(index:number, isSponsorEvent: boolean) {
 
 .speaker-track-label {
   @apply col-span-3 last:mb-2.5 whitespace-pre-wrap md:col-span-1 md:last:mb-0
-
-
 }
 
 .speaker-track-label h3 {
