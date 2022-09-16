@@ -13,7 +13,7 @@ export const individuals = [
   '真田明',
   '田中正吾',
   'みやもとりょうや',
-  'yasudanaoya',
+  'yanskun',
   'オガワ　シンヤ',
   'noname',
   'Nekoaoken',
