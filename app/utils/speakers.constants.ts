@@ -295,7 +295,7 @@ export const speakers = [
   {
     id: 't0yohei',
     session: {
-      title: '負債まみれのレガシーフロントエンド画面を Vue.js でリプレイスした話',
+      title: '負債が溜まったレガシーフロントエンド画面を Vue.js でリプレイスした話',
       description: `
         <p>とある Rails のテンプレート + CoffeeScript で構築された画面を、 Vue.js でリプレイスしました。<br>
         その際の知見を、具体的な工夫や悩んだポイント、実際の遭遇した技術的負債の話を交えて共有できればと思います。<br>
@@ -540,7 +540,7 @@ export const speakers = [
   {
     id: 'FurusawaKaoru',
     session: {
-      title: 'Nuxt Content v2でエンジニアブログを作っている話',
+      title: 'ブログを作るならNuxt Content v2はいいぞ',
       description: `
       <p>Nuxtの公式モジュールで強力なヘッドレスCMSのNuxt ContentがNuxt3のRCに続いて、5月25日にV2がリリースされました。 こちらを利用し、一からエンジニアブログを開発している中で私が開発体験がいいと感じて便利だと思った機能についてお話します。</p>
       <p>Nuxt Content V2はNuxt3に対応したモジュールのため、Nuxt3を前提にお話しますが、セッションではNuxt3については触れない予定です。<br>
