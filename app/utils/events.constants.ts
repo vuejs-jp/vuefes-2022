@@ -13,8 +13,8 @@ export const eventList: IEvent[] = [
     title: 'OSS はじめのいっぽ',
     // TODO: ロゴが確定次第修正
     logoList: [],
-    description: `Vue.js をはじめ、多くの OSS は利用者からのフィードバックやコントリビューションによって成り立っています。しかし、協力の意思はあっても、実際どのように参加していけばいいのかわからない方も多いのではないでしょうか？<br>
-      このセッションでは、実際に Vue.js 日本ユーザーグループにて OSS 開発に参加・協力しているメンバーが、バグ報告やパッチ提供、OSS 開発への参加やドキュメントサポート、そしてコミュニティの運営など、数多くのコントリビューターとどのように進めているのかをご紹介します。`,
+    description: `<p>Vue.js をはじめ、多くの OSS は利用者からのフィードバックやコントリビューションによって成り立っています。しかし、協力の意思はあっても、実際どのように参加していけばいいのかわからない方も多いのではないでしょうか？<br>
+      このセッションでは、実際に Vue.js 日本ユーザーグループにて OSS 開発に参加・協力しているメンバーが、バグ報告やパッチ提供、OSS 開発への参加やドキュメントサポート、そしてコミュニティの運営など、数多くのコントリビューターとどのように進めているのかをご紹介します。</p>`,
     // TODO: スピーカーが確定次第修正
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_OSS,
     speakerProfileList: [
@@ -62,7 +62,7 @@ export const eventList: IEvent[] = [
       },
     ],
     description:
-      '<a class="underline hover:opacity-40 transition" href="https://podcasts.apple.com/us/podcast/id1540114737" target="_blank" rel="noopener">miyaocast</a> + <a class="underline hover:opacity-40 transition" href="https://anchor.fm/ogenkidesuka-fm/episodes/fm-vol-01-e15tku0" target="_blank" rel="noopener">お元気ですか.fm</a> の Vue Fes 合同企画開催です！Vue でコンポーネントをつくるときにどんなことを考えているのか、エンジニア＆デザイナー目線で語ります。Vue3 で開発がどう変わったか、デザインシステム開発についてなど、ざっくばらんなテーマが聴けます！',
+      '<p><a class="underline hover:opacity-40 transition" href="https://podcasts.apple.com/us/podcast/id1540114737" target="_blank" rel="noopener">miyaocast</a> + <a class="underline hover:opacity-40 transition" href="https://anchor.fm/ogenkidesuka-fm/episodes/fm-vol-01-e15tku0" target="_blank" rel="noopener">お元気ですか.fm</a> の Vue Fes 合同企画開催です！Vue でコンポーネントをつくるときにどんなことを考えているのか、エンジニア＆デザイナー目線で語ります。Vue3 で開発がどう変わったか、デザインシステム開発についてなど、ざっくばらんなテーマが聴けます！</p>',
     // TODO: スピーカーが確定次第修正
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_VUE,
     speakerProfileList: [
@@ -105,7 +105,7 @@ export const eventList: IEvent[] = [
       },
     ],
     description:
-      '数々の素晴らしいセッションを楽しんだ後は、あのスピーカーが鋭意開発中のナニカをチラ見せ&#x1f440;する新企画、Peephole（ピープホール）をお楽しみください！もしかすると世界に向けて初公開の情報もあるかも……？',
+      '<p>数々の素晴らしいセッションを楽しんだ後は、あのスピーカーが鋭意開発中のナニカをチラ見せ&#x1f440;する新企画、Peephole（ピープホール）をお楽しみください！もしかすると世界に向けて初公開の情報もあるかも……？</p>',
     // TODO: スピーカーが確定次第修正
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_PEEPHOLE,
     speakerProfileList: [
@@ -137,6 +137,20 @@ export const eventList: IEvent[] = [
           '本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。',
       },
     ],
+  },
+  {
+    title: 'Vue 3 ハンズオン',
+    logoList: [],
+    description: `
+      <p>Vue.js 日本ユーザーグループでは、これから Vue.js を学び始めたい方を支援するため、どなたでも自由にご利用いただけるハンズオンコンテンツを開発し提供しています。</p>
+      <p>このセッションは、参加されるみなさんが一緒に手を動かしながら Vue.js アプリケーション開発を体験できるハンズオン（実際にコードを書きながら学習するスタイル）です。</p>
+      <p class="mb-4">Vue.js をこれから学んでみたいという初心者の方から、Vue 3 の新しい開発方法をキャッチアップしたい経験者の方まで楽しんでいただける内容になっており、Vue.js 日本ユーザーグループスタッフによる Q&A も実施します。Vue.js を触ったことがないかたもぜひお気軽にご参加下さい！</p>
+      
+      <p>※ ご参加いただく際は以下のリンクを参考に開発環境を準備しておいてください。<br>
+      <a class="underline hover:opacity-40 transition" href="https://handson.vuejs-jp.org/setup.html" target="_blank" rel="noopener">https://handson.vuejs-jp.org/setup.html</a></p>
+    `,
+    isShowSpeakerProfile: false,
+    speakerProfileList: [],
   },
 ]
 
