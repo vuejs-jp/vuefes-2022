@@ -15,35 +15,52 @@ export const eventList: IEvent[] = [
     logoList: [],
     description: `<p>Vue.js をはじめ、多くの OSS は利用者からのフィードバックやコントリビューションによって成り立っています。しかし、協力の意思はあっても、実際どのように参加していけばいいのかわからない方も多いのではないでしょうか？<br>
       このセッションでは、実際に Vue.js 日本ユーザーグループにて OSS 開発に参加・協力しているメンバーが、バグ報告やパッチ提供、OSS 開発への参加やドキュメントサポート、そしてコミュニティの運営など、数多くのコントリビューターとどのように進めているのかをご紹介します。</p>`,
-    // TODO: スピーカーが確定次第修正
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_OSS,
     speakerProfileList: [
       {
-        image: '/events/miyaocast.png',
-        title: '社名等入ります。',
-        name: '名前入ります。',
-        twitter: '#',
-        github: '#',
+        image: '/staff/kiaking.jpeg',
+        title: '',
+        name: 'kiaking',
+        twitter: 'KiaKing85',
+        github: 'kiaking',
         description:
-          '本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。',
+          '明るく楽しく、楽観主義がモットーのWeb Designer/Developer。Vue.js Core Teamメンバー。Vuex ORM開発者。ベンチャーキャピタル グローバル・ブレインにて、Directorとして活躍中。',
       },
       {
-        image: '/events/miyaocast.png',
-        title: '社名等入ります。',
-        name: '名前入ります。',
-        twitter: '#',
-        github: '#',
+        image: '/staff/kazupon.png',
+        title: '',
+        name: 'kazupon',
+        twitter: 'kazu_pon',
+        github: 'kazupon',
         description:
-          '本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。',
+          'Vue.jsコアチームメンバー、Vue.js日本ユーザーグループ代表。Nuxtコミュニティチーム。日本におけるVue.jsの普及に務めながら、自らも国際化プラグインであるVue I18n、IntlifyのOSS開発に携わる。共著に『Vue.js入門 基礎から実践アプリケーション開発まで』（技術評論社刊）。',
       },
       {
-        image: '/events/miyaocast.png',
-        title: '社名等入ります。',
-        name: '名前入ります。',
-        twitter: '#',
-        github: '#',
+        image: '/speaker/jay-es.png',
+        title: '',
+        name: 'jay-es',
+        twitter: 'shindy_jp',
+        github: 'jay-es',
         description:
-          '本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。',
+          'Vite 日本語ドキュメントへ貢献を続けていたらメンテナーに。現在は Vue 3 新ドキュメント翻訳も担当。昨年 SolidJS のサイトを全部日本語化している。英語は話せない',
+      },
+      {
+        image: '/staff/torish14.png',
+        title: '',
+        name: 'torish14',
+        twitter: 'torish14_str',
+        github: 'torish14',
+        description:
+          '独学からハッカソン優勝を経て、フリーランスエンジニアとして活動してきました。現在は、法人の代表取締役兼デザインエンジニアとして、性教育アプリを開発中です。エンジニア歴は約 4 年で、よく使うプログラミング言語・フレームワークは、JavaScript/TypeScript/Vue.js/Nuxt.js です。低レイヤーにも興味があり、Rust や Nim も勉強中です。趣味は人間観察と「ボケて」を見ることです。',
+      },
+      {
+        image: '/staff/oreo.png',
+        title: '',
+        name: 'oreo',
+        twitter: 'oreo2991',
+        github: 'oreo2990',
+        description:
+          '新卒で商社に入社しリスク管理業務に5年間従事。自身が行なってきた与信管理の自動化ツールに出会ったことを機に、プログラミングに興味を持ち昨年9月からエンジニアにジョブチェンジ。趣味は個人開発とモルック。',
       },
     ],
   },
