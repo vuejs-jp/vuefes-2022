@@ -4,6 +4,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
 import SpeakerPageHeading from './SpeakerPageHeading.vue'
 import { ISponsor } from '../types/sponsors'
+import { SHOW_SPONSOR_SESSION } from '~/utils/feature.constants'
 
 const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 'main')
 const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
@@ -28,7 +29,7 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
           title-yamato="スピーカー"
         />
         <SpeakerPageHeading
-          text="メインセッション"
+          text="セッション"
           class="mb-5 md:mb-10"
         />
         <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
@@ -39,7 +40,7 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
           />
         </div>
         <SpeakerPageHeading
-          text="Lightning Talk"
+          text="ライトニングトーク"
           class="mb-5 md:mb-10"
         />
         <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
@@ -49,29 +50,31 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
             :speaker="speaker"
           />
         </div>
-        <SpeakerPageHeading
-          text="スポンサーセッション"
-          class="mb-5 md:mb-10"
-        />
-        <div
-          v-if="!pending"
-          class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
-        >
+        <template v-if="SHOW_SPONSOR_SESSION">
+          <SpeakerPageHeading
+            text="スポンサーセッション"
+            class="mb-5 md:mb-10"
+          />
           <div
-            v-for="sponsor in sessionSponsors"
-            :key="sponsor.name_en"
+            v-if="!pending"
+            class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
-            <n-link :to="`/sponsor-sessions/${sponsor.name_en}`">
-              <img
-                :src="sponsor.image.src"
-                :alt="sponsor.name_jp"
-                class="mb-2 md:mb-4"
-                loading="lazy"
-              >
-              <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
-            </n-link>
+            <div
+              v-for="sponsor in sessionSponsors"
+              :key="sponsor.name_en"
+            >
+              <n-link :to="`/sponsor-sessions/${sponsor.name_en}`">
+                <img
+                  :src="sponsor.image.src"
+                  :alt="sponsor.name_jp"
+                  class="mb-2 md:mb-4"
+                  loading="lazy"
+                >
+                <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
+              </n-link>
+            </div>
           </div>
-        </div>
+        </template>
       </div>
     </div>
   </section>
