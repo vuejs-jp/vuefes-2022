@@ -11,7 +11,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="p-5 border border-vue-blue md:flex md:p-12.5">
+  <div class="p-5 text-vue-blue border border-vue-blue md:flex md:p-12.5">
     <p class="shrink-0 mb-5 text-sm font-extrabold text-center md:mt-15 md:mr-12.5 md:text-22">
       Speaker Profile<template v-if="speakerProfiles.length > 1">s</template>
     </p>
