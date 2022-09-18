@@ -57,7 +57,7 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
           />
           <div
             v-if="!pending"
-            class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+            class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20"
           >
             <div
               v-for="sponsor in sessionSponsors"
@@ -65,10 +65,9 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
             >
               <n-link :to="`/sponsor-sessions/${sponsor.name_en}`">
                 <img
-                  :src="sponsor.image.src"
+                  :src="`/sponsor/${sponsor.name_en}.png`"
                   :alt="sponsor.name_jp"
                   class="mb-2 md:mb-4"
-                  loading="lazy"
                 >
                 <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
               </n-link>
