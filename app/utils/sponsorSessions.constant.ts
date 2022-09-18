@@ -77,8 +77,8 @@ export const sponsorSessions = [
     ],
   },
   {
-    id: 'hey',
-    sponsor: 'ヘイ株式会社',
+    id: 'stores',
+    sponsor: 'STORES 株式会社',
     session: {
       title: 'プロダクト開発を止めずに Composition API と TypeScript に最速で移行するための戦い',
       description: `弊社のプロダクト、ネットショップ開設サービス「STORES」は Nuxt.js で開発を行なっており、多くのページやコンポーネントは Composition API と TypeScript で書かれています。<br>
