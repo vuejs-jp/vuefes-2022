@@ -106,35 +106,25 @@ export const eventList: IEvent[] = [
     ],
     description:
       '<p>数々の素晴らしいセッションを楽しんだ後は、あのスピーカーが鋭意開発中のナニカをチラ見せ&#x1f440;する新企画、Peephole（ピープホール）をお楽しみください！もしかすると世界に向けて初公開の情報もあるかも……？</p>',
-    // TODO: スピーカーが確定次第修正
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_PEEPHOLE,
     speakerProfileList: [
       {
-        image: '/events/miyaocast.png',
-        title: '社名等入ります。',
-        name: '名前入ります。',
-        twitter: '#',
-        github: '#',
+        image: '/speaker/eduardo.jpeg',
+        title: 'Creator of Pinia',
+        name: 'Eduardo San Martin Morote',
+        twitter: 'posva',
+        github: 'posva',
         description:
-          '本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。',
+          'Vue Router のメンテナは、なにやらこれまでにない大きな機能追加を目論んでいる様子。常々課題になりがちな「バックエンドからのデータ取得」に関することだとか。イベントでのトークとしては世界初披露になるかも！？ 乞うご期待！',
       },
       {
-        image: '/events/miyaocast.png',
-        title: '社名等入ります。',
-        name: '名前入ります。',
-        twitter: '#',
-        github: '#',
+        image: '/speaker/anthony.jpg',
+        title: 'Vue, Vite, Nuxt Core Team',
+        name: 'Anthony Fu',
+        twitter: 'antfu7',
+        github: 'antfu',
         description:
-          '本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。',
-      },
-      {
-        image: '/events/miyaocast.png',
-        title: '社名等入ります。',
-        name: '名前入ります。',
-        twitter: '#',
-        github: '#',
-        description:
-          '本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。本文入ります。',
+          '噂によると今GitHubに上がっているレポジトリの50%以上が彼の制作物。なんてジョークが飛び出すほど圧倒的な活動量を誇るAnthony。彼が次に世に送り出すまだ見ぬプロジェクトをご紹介！',
       },
     ],
   },

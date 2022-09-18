@@ -5,5 +5,5 @@ export const SHOW_STORE = true
 export const SHOW_SPONSOR_LIST = true
 export const SHOW_EVENT_SPEAKER_PROFILE_OSS = false
 export const SHOW_EVENT_SPEAKER_PROFILE_VUE = false
-export const SHOW_EVENT_SPEAKER_PROFILE_PEEPHOLE = false
+export const SHOW_EVENT_SPEAKER_PROFILE_PEEPHOLE = true
 export const SHOW_TIMETABLE = false
