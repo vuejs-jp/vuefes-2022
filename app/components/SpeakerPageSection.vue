@@ -28,7 +28,7 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
           title-yamato="スピーカー"
         />
         <SpeakerPageHeading
-          text="メインセッション"
+          text="セッション"
           class="mb-5 md:mb-10"
         />
         <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
@@ -39,7 +39,7 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
           />
         </div>
         <SpeakerPageHeading
-          text="Lightning Talk"
+          text="ライトニングトーク"
           class="mb-5 md:mb-10"
         />
         <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
