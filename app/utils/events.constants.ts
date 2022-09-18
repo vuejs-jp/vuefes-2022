@@ -127,7 +127,7 @@ export const eventList: IEvent[] = [
     speakerProfileList: [
       {
         image: '/speaker/eduardo.jpeg',
-        title: 'Creator of Pinia',
+        title: 'Pinia クリエーター',
         name: 'Eduardo San Martin Morote',
         twitter: 'posva',
         github: 'posva',
@@ -136,7 +136,7 @@ export const eventList: IEvent[] = [
       },
       {
         image: '/speaker/anthony.jpg',
-        title: 'Vue, Vite, Nuxt Core Team',
+        title: 'Vue, Vite, Nuxt コアチームメンバー',
         name: 'Anthony Fu',
         twitter: 'antfu7',
         github: 'antfu',
