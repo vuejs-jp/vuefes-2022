@@ -10,9 +10,13 @@ export const eventDescription =
 
 export const eventList: IEvent[] = [
   {
-    title: 'OSS はじめのいっぽ',
-    // TODO: ロゴが確定次第修正
-    logoList: [],
+    title: 'OSS はじめの一歩',
+    logoList: [
+      {
+        src: '/events/oss-first-step.png',
+        alt: 'OSS はじめの一歩のロゴ',
+      },
+    ],
     description: `<p>Vue.js をはじめ、多くの OSS は利用者からのフィードバックやコントリビューションによって成り立っています。しかし、協力の意思はあっても、実際どのように参加していけばいいのかわからない方も多いのではないでしょうか？<br>
       このセッションでは、実際に Vue.js 日本ユーザーグループにて OSS 開発に参加・協力しているメンバーが、バグ報告やパッチ提供、OSS 開発への参加やドキュメントサポート、そしてコミュニティの運営など、数多くのコントリビューターとどのように進めているのかをご紹介します。</p>`,
     isShowSpeakerProfile: SHOW_EVENT_SPEAKER_PROFILE_OSS,
@@ -114,7 +118,6 @@ export const eventList: IEvent[] = [
   },
   {
     title: 'Peephole',
-    // TODO: リンク先が確定次第修正
     logoList: [
       {
         src: '/events/peephole.png',
