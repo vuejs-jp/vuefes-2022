@@ -19,6 +19,10 @@ module.exports = {
         'anime-hiwamoegi': '#93AF5E',
         'anime-sangosyou': '#D47373',
         'anime-tohoh': '#E7C350',
+        'timetable-timeslot': 'rgba(52, 73, 94, 0.7);',
+        'track-a': '#90B44B',
+        'track-b': '#F17C67',
+        'track-c': '#3178C6',
       },
       spacing: {
         14: '50px',
@@ -32,6 +36,7 @@ module.exports = {
       },
       width: {
         37.5: '9.375rem', // 150px
+        62.5: '15.625rem', // 250px
         170: '42rem',
         192: '54rem',
       },
@@ -42,6 +47,7 @@ module.exports = {
         700: '43.75rem', // 700px
         900: '56.25rem', // 900px
         1190: '74.375rem', // 1190px
+        1260: '78.75rem', // 1260px
       },
       boxShadow: {
         submit: '0px 10px 20px rgba(0, 0, 0, 0.1)',
@@ -68,6 +74,10 @@ module.exports = {
       aspectRatio: {
         '16/9': '16 / 9',
       },
+      gridTemplateColumns: {
+        'md-timetable': '150px repeat(3, minmax(0, 1fr))',
+        timetable: '270px repeat(3, minmax(0, 1fr))',
+      },
     },
     backgroundImage: {
       'ichimatsu-vue-blue':
@@ -82,6 +92,8 @@ module.exports = {
         'linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%), linear-gradient(45deg, #5ab088 25%, transparent 25%, transparent 75%, #5ab088 75%)',
       'ichimatsu-sangosyu':
         'linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%), linear-gradient(45deg, #F17C67 25%, transparent 25%, transparent 75%, #F17C67 75%)',
+      'ichimatsu-timetable':
+        'linear-gradient(45deg, #42B983 25%, transparent 25%, transparent 75%, #42B983 75%), linear-gradient(45deg, #42B983 25%, transparent 25%, transparent 75%, #42B983 75%)',
       'ichimatsu-asagi':
         'linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%), linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%)',
       'ichimatsu-typescript-blue':
@@ -94,6 +106,7 @@ module.exports = {
       speakers: 'linear-gradient(90deg, rgb(255 255 255 / 100%) 0%, rgb(255 255 255 / 0%) 100%)',
       nav: 'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
       submit: 'linear-gradient(91.03deg, #33A6B8 0%, #42B983 100.01%)',
+      timetable: 'linear-gradient(180deg, #42B983 0%, rgba(255, 255, 255, 0) 100%)',
       'submit-border': 'linear-gradient(90deg, #42b983 0%, #33a6b8 100%)',
     },
     backgroundSize: {

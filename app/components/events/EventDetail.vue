@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import SubTitle from '~/components/SubTitle.vue'
-import SpeakerProfile from '~/components/speakers/SpeakerProfile.vue'
 import type { CustomPropType } from '~/types/shims-vue'
 import { IEvent } from '~/types/events'
+import SpeakerProfiles from '../speakers/SpeakerProfiles.vue'
 
 const props = defineProps({
   event: {
@@ -51,29 +51,13 @@ const eventInfo = computed(() => props.event)
       </div>
     </div>
     <!-- eslint-disable vue/no-v-html -->
-    <div class="mb-14">
-      <p
-        class="text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8"
-        v-html="eventInfo.description"
-      />
-    </div>
+    <div
+      class="mb-14 text-sm leading-7 text-vue-blue lg:text-lg lg:leading-8"
+      v-html="eventInfo.description"
+    />
+    <!-- eslint-enable vue/no-v-html -->
     <template v-if="eventInfo.isShowSpeakerProfile">
-      <div class="p-5 border border-vue-blue md:flex md:p-[3.125rem]">
-        <p class="shrink-0 mb-5 text-sm font-extrabold text-center md:mt-[3.75rem] md:mr-[3.125rem] md:text-[1.375rem]">
-          Speaker Profile
-        </p>
-        <div>
-          <div
-            v-for="(speakerProfile, index) in eventInfo.speakerProfileList"
-            :key="index"
-            class="mb-14 last:mb-0"
-          >
-            <SpeakerProfile
-              :speaker-profile="speakerProfile"
-            />
-          </div>
-        </div>
-      </div>
+      <SpeakerProfiles :speaker-profiles="eventInfo.speakerProfileList" />
     </template>
   </div>
 </template>
