@@ -96,7 +96,7 @@ export const speakers = [
   {
     id: 'Jess',
     session: {
-      title: 'Cypress 10 and Component Testing',
+      title: 'Component Testing',
       description:
         '<p>An overview of Cypress 10\'s elegant re-designed UI and brand-new testing type: Component Testing! In this talk we will use TDD to build a modal using the new "Create from Component" feature. We will learn the benefits to using Cypress\'s driver and assertions over headless test runners.</p>',
       time: 20,
