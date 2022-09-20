@@ -12,8 +12,7 @@ const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
 const { fetchContent } = useSponsorsCMS()
 const { pending, data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 
-// TODO: イエソド株式会社のスポンサーセッション情報をまだいただいていないので、一旦イエソド株式会社を除外する。
-const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.value.gold.filter((sponsor: ISponsor) => sponsor.name_en !== 'yesod')])
+const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.value.gold])
 </script>
 
 <template>
