@@ -22,7 +22,7 @@ export const sponsorSessions = [
   },
   {
     id: 'future',
-    sponsor: 'フーチャー株式会社',
+    sponsor: 'フューチャー株式会社',
     session: {
       title: '業務システムでVue.jsを活用するための取り組み',
       description: `2017年、フューチャーでは、業務システム開発において、初めてVue.jsを採用しました。<br>
@@ -135,25 +135,28 @@ export const sponsorSessions = [
       },
     ],
   },
-  // {
-  //   id: 'yesod',
-  //   sponsor: '株式会社イエソド',
-  //   session: {
-  //     title: '',
-  //     description: '',
-  //     time: 20,
-  //   },
-  //   speakers: [
-  //     {
-  //       image: '',
-  //       title: '',
-  //       name: '',
-  //       twitter: '',
-  //       github: '',
-  //       description: '',
-  //     },
-  //   ],
-  // },
+  {
+    id: 'yesod',
+    sponsor: '株式会社イエソド',
+    session: {
+      title: 'WebSockets with Vue.js',
+      description: `
+      本セッションは、株式会社イエソドのスポンサーセッションです。弊社サービスの「YESOD」を軽く紹介しつつ、複数人同時編集を将来的に実現するために導入したWebSocketsのVue.js上での扱いと軽いデモを行います。<br>
+      株式会社イエソドでは、「企業の人・組織・情報にまつわる非効率をなくす」をミッションに、コーポレート部門の業務を根本から改善する人・組織の時系列マスタデータストアSaaS「YESOD」を開発しています。`,
+      time: 20,
+    },
+    speakers: [
+      {
+        image: '/speaker/chimerast.jpg',
+        title: '代表取締役 兼 フルスタックエンジニア',
+        name: '竹内 秀行',
+        twitter: 'yesodco_ceo',
+        github: 'chimerast',
+        description:
+          'Vue.js v0.11を2015年ぐらいから業務で使い始めて今に至る。株式会社イエソド代表 兼 フルスタックエンジニア。ガジェット集めが大好き。細かい経歴は名前でググってください。',
+      },
+    ],
+  },
   {
     id: 'grapecity',
     sponsor: 'グレープシティ株式会社',
