@@ -15,7 +15,10 @@ const eventInfo = computed(() => props.event)
 </script>
 
 <template>
-  <div>
+  <div
+    :id="eventInfo.id"
+    class="pt-[17vw] mt-[-17vw] md:pt-32 md:-mt-32"
+  >
     <SubTitle class="mb-7 md:mb-14">
       {{ eventInfo.title }}
     </SubTitle>

@@ -10,6 +10,7 @@ export const eventDescription =
 
 export const eventList: IEvent[] = [
   {
+    id: 'oss-first-step',
     title: 'OSS はじめの一歩',
     logoList: [
       {
@@ -69,6 +70,7 @@ export const eventList: IEvent[] = [
     ],
   },
   {
+    id: 'naruhodo-vue-component',
     title: 'なるほど Vue コンポーネント',
     logoList: [
       {
@@ -117,6 +119,7 @@ export const eventList: IEvent[] = [
     ],
   },
   {
+    id: 'peephole',
     title: 'Peephole',
     logoList: [
       {
@@ -149,6 +152,7 @@ export const eventList: IEvent[] = [
     ],
   },
   {
+    id: 'vue3-handson',
     title: 'Vue 3 ハンズオン',
     logoList: [],
     description: `

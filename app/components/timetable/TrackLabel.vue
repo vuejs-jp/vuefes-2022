@@ -25,16 +25,16 @@ const trackContainerClass = computed(() => {
   switch (props.trackIndex) {
   case 0:
     return props.isSponsorEvent
-      ? 'border-2 md:border border-track-a text-track-a items-center justify-center text-center'
-      : 'bg-sponsor/[.03] md:border-t border-track-a'
+      ? 'border-2 border-track-a text-track-a md:flex items-center justify-center text-center h-full'
+      : 'bg-sponsor md:border-t-2 border-track-a'
   case 1:
     return props.isSponsorEvent
-      ? 'border-2 md:border border-track-b text-track-b items-center justify-center text-center'
-      : 'bg-sponsor/[.03] md:border-t border-track-b'
+      ? 'border-2 border-track-b text-track-b md:flex items-center justify-center text-center h-full'
+      : 'bg-sponsor md:border-t-2 border-track-b'
   case 2:
     return props.isSponsorEvent
-      ? 'border-2 md:border border-track-c text-track-c items-center justify-center text-center'
-      : 'bg-sponsor/[.03] md:border-t border-track-c'
+      ? 'border-2 border-track-c text-track-c md:flex items-center justify-center text-center h-full'
+      : 'bg-sponsor md:border-t-2 border-track-c'
   default:
     return ''
   }
@@ -52,17 +52,17 @@ const trackName = computed(() => {
 })
 </script>
 <template>
-  <div
-    class="flex flex-col md:pb-0"
-    :class="trackContainerClass"
-  >
+  <div :class="trackContainerClass">
     <div
-      class="self-start pr-2 min-w-[50%] text-[12px] leading-3 text-center text-white md:hidden"
+      class="py-[7px] w-[50%] text-xs font-bold text-center text-white md:hidden"
       :class="trackLabelClasses"
     >
       {{ trackName }}
     </div>
-    <div class="p-2">
+    <div
+      class="p-4"
+      :class="isSponsorEvent ? 'md:p-0' : 'md:p-6'"
+    >
       <slot />
     </div>
   </div>
