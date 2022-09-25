@@ -36,7 +36,7 @@ const localIsOpen = computed({
         v-if="localIsOpen"
         class="fixed top-0 left-0 z-10 w-screen h-screen text-vue-blue bg-white"
       >
-        <div class="py-[5vw] px-[3vw] text-right">
+        <div class="px-[3vw] pt-[5vw] text-right">
           <button
             type="button"
             class="cursor-pointer"
