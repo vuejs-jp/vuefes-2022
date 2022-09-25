@@ -52,7 +52,7 @@ const localIsOpen = computed({
           <li
             v-for="link in menuLinks"
             :key="link.displayName"
-            class="block py-8 text-center border-b last:border-b-0 border-vue-blue"
+            class="block py-6 text-center border-b last:border-b-0 border-vue-blue"
           >
             <!-- eslint-disable vue/no-deprecated-v-on-native-modifier -->
             <nuxt-link
