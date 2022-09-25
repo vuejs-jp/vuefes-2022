@@ -16,12 +16,12 @@
         </p>
       </div>
       <nav-menu
-        class="xl:hidden"
+        class="xxl:hidden"
         :is-open="isOpen"
         @open="toggleOpen(true)"
         @close="toggleOpen(false)"
       />
-      <ul class="hidden space-x-5 text-vue-blue xl:flex">
+      <ul class="hidden space-x-5 text-vue-blue xxl:flex">
         <li
           v-for="(link, index) in menuLinks"
           :key="index"

@@ -134,6 +134,7 @@ module.exports = {
       md: '771px',
       lg: '981px',
       xl: '1200px',
+      xxl: '1320px',
       '3xl': '1921px',
     },
   },
