@@ -6,6 +6,7 @@ export type Rank =
   | 'specialMedia'
   | 'media'
   | 'streaming'
+  | 'dinner'
 
 export interface ISponsor {
   id: string
