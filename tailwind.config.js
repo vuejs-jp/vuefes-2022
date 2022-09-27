@@ -11,7 +11,7 @@ module.exports = {
         tohoh: '#FFC408',
         hiwamoegi: '#90B44B',
         tsuchi: '#E5E5E5',
-        sponsor: '#34495E',
+        sponsor: '#F5F6F7',
         // アニメーションで使用する色
         'anime-typescript-blue': '#4374AA',
         'anime-asagi': '#4D9EAA',
@@ -41,7 +41,11 @@ module.exports = {
         192: '54rem',
       },
       height: {
+        18: '4.5rem', // 72px
         37.5: '9.375rem', // 150px
+      },
+      minHeight: {
+        10: '2.5rem', // 40px
       },
       maxWidth: {
         700: '43.75rem', // 700px
@@ -67,6 +71,7 @@ module.exports = {
         13: '0.8125rem', // 13px
         15: '0.9375rem', // 15px
         22: '1.375rem', // 22px
+        23: '1.4375rem', // 23px
         25: '1.5625rem', // 25px
         35: '2.1875rem', // 35px
         50: '3.125rem', // 50px
@@ -76,7 +81,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         'md-timetable': '150px repeat(3, minmax(0, 1fr))',
-        timetable: '270px repeat(3, minmax(0, 1fr))',
+        timetable: '260px repeat(3, minmax(0, 1fr))',
       },
     },
     backgroundImage: {
@@ -129,6 +134,7 @@ module.exports = {
       md: '771px',
       lg: '981px',
       xl: '1200px',
+      xxl: '1320px',
       '3xl': '1921px',
     },
   },

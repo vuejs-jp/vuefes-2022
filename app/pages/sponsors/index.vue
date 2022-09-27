@@ -31,6 +31,7 @@ const links = [
   { label: 'Gold', link: '#gold' },
   { label: 'Silver', link: '#silver' },
   { label: 'Bronze', link: '#bronze' },
+  { label: 'Dinner', link: '#dinner' },
   { label: 'Special Media', link: '#specialMedia' },
   { label: 'Media', link: '#media' },
   { label: 'Streming', link: '#streaming' },
@@ -65,6 +66,7 @@ const links = [
         <SponsorListBio :sponsors="sponsors.gold" />
         <SponsorListBio :sponsors="sponsors.silver" />
         <SponsorListBio :sponsors="sponsors.bronze" />
+        <SponsorListBio :sponsors="sponsors.dinner" />
         <SponsorListBio :sponsors="sponsors.specialMedia" />
         <SponsorListBio :sponsors="sponsors.media" />
         <SponsorListBio :sponsors="sponsors.streaming" />

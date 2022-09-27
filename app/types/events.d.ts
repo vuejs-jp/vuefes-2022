@@ -1,6 +1,7 @@
 import { ISpeakerProfile } from '~/types/interface'
 
 export interface IEvent {
+  id: string
   title: string
   logoList: ILogo[]
   description: string
