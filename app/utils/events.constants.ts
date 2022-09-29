@@ -149,6 +149,15 @@ export const eventList: IEvent[] = [
         description:
           '噂によると今GitHubに上がっているレポジトリの50%以上が彼の制作物。なんてジョークが飛び出すほど圧倒的な活動量を誇るAnthony。彼が次に世に送り出すまだ見ぬプロジェクトをご紹介！',
       },
+      {
+        image: '/speaker/yaeeelglx.jpg',
+        title: 'NuxtLabs リード開発者',
+        name: 'Yaël Guilloux',
+        twitter: 'yaeeelglx',
+        github: 'Tahul',
+        description:
+          'ついに Vue コンポーネントの style に CSS in TS 、そしてデザイントークンでデザインできる世界がやってくる?! NuxtLabs でリード開発者として @nuxt/content や vueuse のメンバーとして vueuse/motion などのデザイン向けのユーティリティを作っている Yaël 氏が今開発中のプロジェクトをご紹介！',
+      },
     ],
   },
   {
