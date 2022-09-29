@@ -10,6 +10,15 @@ export const eventDescription =
 
 export const eventList: IEvent[] = [
   {
+    id: 'lets-ask-evan-you',
+    title: 'Evan You に聞こう',
+    logoList: [],
+    description: `<p>みなさんからの質問に、Evan You がライブで答えてくれる Q&A コーナーです。もちろん日本語で質問OK。事前、もしくは当日にハッシュタグ #vuefes_qa をつけて質問をツイートしてください。<br>
+    ※時間の都合上、すべての質問にはお答えできませんので、あらかじめご了承ください。</p>`,
+    isShowSpeakerProfile: false,
+    speakerProfileList: [],
+  },
+  {
     id: 'oss-first-step',
     title: 'OSS はじめの一歩',
     logoList: [
@@ -148,6 +157,15 @@ export const eventList: IEvent[] = [
         github: 'antfu',
         description:
           '噂によると今GitHubに上がっているレポジトリの50%以上が彼の制作物。なんてジョークが飛び出すほど圧倒的な活動量を誇るAnthony。彼が次に世に送り出すまだ見ぬプロジェクトをご紹介！',
+      },
+      {
+        image: '/speaker/yaeeelglx.jpg',
+        title: 'NuxtLabs リード開発者',
+        name: 'Yaël Guilloux',
+        twitter: 'yaeeelglx',
+        github: 'Tahul',
+        description:
+          'ついに Vue コンポーネントの style に CSS in TS 、そしてデザイントークンでデザインできる世界がやってくる?! NuxtLabs でリード開発者として @nuxt/content や vueuse のメンバーとして vueuse/motion などのデザイン向けのユーティリティを作っている Yaël 氏が今開発中のプロジェクトをご紹介！',
       },
     ],
   },
