@@ -10,6 +10,15 @@ export const eventDescription =
 
 export const eventList: IEvent[] = [
   {
+    id: 'lets-ask-evan-you',
+    title: 'Evan You に聞こう',
+    logoList: [],
+    description: `<p>みなさんからの質問に、Evan You がライブで答えてくれる Q&A コーナーです。もちろん日本語で質問OK。事前、もしくは当日にハッシュタグ #vuefes_qa をつけて質問をツイートしてください。<br>
+    ※時間の都合上、すべての質問にはお答えできませんので、あらかじめご了承ください。</p>`,
+    isShowSpeakerProfile: false,
+    speakerProfileList: [],
+  },
+  {
     id: 'oss-first-step',
     title: 'OSS はじめの一歩',
     logoList: [
