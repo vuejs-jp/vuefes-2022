@@ -2,17 +2,29 @@
 import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
+import { ISpeaker } from '~/types/interface'
 import SpeakerPageHeading from './SpeakerPageHeading.vue'
-import { ISponsor } from '../types/sponsors'
 import { SHOW_SPONSOR_SESSION } from '~/utils/feature.constants'
 
+const shuffleArray = ([...array]) => {
+  for (let i = array.length - 1; i >= 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]
+  }
+  return array
+}
+
 const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 'main')
-const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
+const evan = mainSessionSpeakers.find(speaker => speaker.type === 'evan')
+const foreignSpeakers = shuffleArray(mainSessionSpeakers.filter(speaker => speaker.type === 'foreign')) as ISpeaker[]
+const domesticSpeakers = shuffleArray(mainSessionSpeakers.filter(speaker => speaker.type === 'domestic')) as ISpeaker[]
+const shuffledMainSessionSpeakers = [evan].concat(foreignSpeakers, domesticSpeakers)
+const LTSpeakers = shuffleArray(speakers.filter(speaker => speaker.session.type === 'LT'))
 
 const { fetchContent } = useSponsorsCMS()
 const { pending, data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 
-const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.value.gold])
+const sessionSponsors = (computed(() => shuffleArray([...sponsors.value.platinum, ...sponsors.value.gold])))
 </script>
 
 <template>
@@ -33,7 +45,7 @@ const sessionSponsors = computed(() => [...sponsors.value.platinum, ...sponsors.
         />
         <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
           <SpeakerPageBlock
-            v-for="speaker in mainSessionSpeakers"
+            v-for="speaker in shuffledMainSessionSpeakers"
             :key="speaker.id"
             :speaker="speaker"
           />

@@ -1,13 +1,8 @@
 export interface ISession {
-  id: string
   title: string
   description: string
-  area: string
   type: string
-  started_at: string
-  ended_at: string
-  time: string
-  speaker: string
+  time: number
   tags?: string
   slide_url?: string
   fortee_url?: string
@@ -15,13 +10,14 @@ export interface ISession {
 }
 export interface ISpeaker {
   id: string
-  bio: string
+  type: 'evan' | 'foreign' | 'domestic'
   session: ISession
-  company: string
+  profile: ISpeakerProfile
   facebook?: string
   connpass?: string
   related_url?: string
-  profile: ISpeakerProfile
+  linkedin?: string
+  web?: string
 }
 export interface ISpeakerProfile {
   image: string
