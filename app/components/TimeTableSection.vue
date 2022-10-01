@@ -77,8 +77,8 @@ import ExplainText from '~/components/ExplainText.vue'
             </TrackLabel>
           </div>
           <div
-            v-for="(timeslot, index) in platinumSponsorSessions"
-            :key="index"
+            v-for="timeslot in platinumSponsorSessions"
+            :key="timeslot.time"
             class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260"
           >
             <p class="timeslot">{{ timeslot.time }}</p>
@@ -112,8 +112,8 @@ import ExplainText from '~/components/ExplainText.vue'
             </div>
           </div>
           <div
-            v-for="(timeslot, index) in goldSponsorSessions"
-            :key="index"
+            v-for="timeslot in goldSponsorSessions"
+            :key="timeslot.time"
             class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260"
           >
             <p class="timeslot">{{ timeslot.time }}</p>
