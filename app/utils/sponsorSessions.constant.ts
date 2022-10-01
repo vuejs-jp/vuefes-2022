@@ -216,7 +216,7 @@ export const sponsorSessions = [
     id: 'base',
     sponsor: 'BASE株式会社',
     session: {
-      title: 'BASEのフロントエンド組織が2.5倍の人数になってどう変わったのか',
+      title: 'BASEのフロントエンド組織の人数が2.5倍になって起きた変化',
       description: `2020年9月に公開されたテックブログ「<a class="inner-link" href="https://devblog.thebase.in/entry/2020/09/17/110000" target="_blank" rel="noopener">BASEにおけるVue.jsのこれまでとこれから</a>」から2年経ち、当時から比べるとフロントエンド組織の人数が2.5倍に増加しました。<br>
       本セッションでは、記事公開から2年の間の組織の変遷と合わせて、人数増加に伴って拡大したBASEのVue.jsのコードベースのmonorepo化と、既存のVue資産の運用と今後の展望についてお話をします。`,
       time: 20,

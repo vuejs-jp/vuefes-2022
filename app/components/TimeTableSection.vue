@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import SectionTitle from '~/components/SectionTitle.vue'
 import TrackLabel from '~/components/timetable/TrackLabel.vue'
-import { timeslots } from '~/utils/timeslots.constants'
+import { platinumSponsorSessions, goldSponsorSessions } from '~/utils/timeslots.constants'
+import ExplainText from '~/components/ExplainText.vue'
 </script>
 
 <template>
@@ -15,323 +16,501 @@ import { timeslots } from '~/utils/timeslots.constants'
         title="Time Table"
         title-yamato="タイムテーブル"
       />
-      <div class="px-5 mx-auto max-w-1190 text-vue-blue xl:text-xl">
-        <div class="hidden sm:grid grid-cols-1 gap-2.5 mx-auto mb-2.5 h-18 md:grid md:grid-cols-md-timetable lg:grid xl:grid xl:grid-cols-timetable xl:max-w-1260">
-          <div />
-          <div class="flex flex-col justify-center items-center py-4 px-2 font-bold text-center text-white bg-track-a">メドピア<br class="lg:hidden">トラック</div>
-          <div class="flex flex-col justify-center items-center py-4 px-2 font-bold text-center text-white bg-track-b">FUTURE<br class="lg:hidden">トラック</div>
-          <div class="flex flex-col justify-center items-center py-4 px-2 font-bold text-center text-white bg-track-c">クラウドサイン<br class="lg:hidden">トラック</div>
-        </div>
-        <div
-          v-for="(timeslot, index) in timeslots"
-          :key="index"
-          class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260"
-        >
-          <p class="timeslot">
-            {{ timeslot.time }}
-          </p>
-          <template v-if="timeslot.isAllTrackEvent">
+      <div class="px-5 mx-auto max-w-1190 text-vue-blue">
+        <div class="mb-4 xl:text-xl">
+          <div class="hidden sm:grid grid-cols-1 gap-2.5 mx-auto mb-2.5 h-18 md:grid md:grid-cols-md-timetable lg:grid xl:grid xl:grid-cols-timetable xl:max-w-1260">
+            <div />
+            <div class="flex flex-col justify-center items-center py-4 px-2 font-bold text-center text-white bg-track-a">メドピア<br class="lg:hidden">トラック</div>
+            <div class="flex flex-col justify-center items-center py-4 px-2 font-bold text-center text-white bg-track-b">FUTURE<br class="lg:hidden">トラック</div>
+            <div class="flex flex-col justify-center items-center py-4 px-2 font-bold text-center text-white bg-track-c">クラウドサイン<br class="lg:hidden">トラック</div>
+          </div>
+          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
+            <p class="timeslot">9:30 - 10:00</p>
             <div class="flex flex-col col-span-3 justify-center items-center py-2 font-bold bg-sponsor">
-              <p v-if="timeslot.events[0].link"><n-link :to="timeslot.events[0].link">{{ timeslot.events[0].title }}<br>{{ timeslot.events[0].subTitle }}</n-link></p>
-              <p v-else>{{ timeslot.events[0].title }}<br>{{ timeslot.events[0].subTitle }}</p>
+              <p>配信開始（待機時間）</p>
             </div>
-          </template>
-          <template v-else>
-            <n-link
+          </div>
+          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
+            <p class="timeslot">10:00 - 10:10</p>
+            <div class="flex flex-col col-span-3 justify-center items-center py-2 text-center bg-sponsor">
+              <p><span class="font-bold">オープニング｜川口和也</span><br class="md:hidden"><span class="text-sm">（Vue.js 日本ユーザーグループ 代表）</span></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 xl:grid-cols-timetable xl:max-w-1260">
+            <p class="timeslot">10:10 - 11:00</p>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <n-link
+                to="/sessions/yyx990803"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">キーノート｜Evan You</p>
+              </n-link>
+              <p class="text-sm">音声：同時通訳による日本語のみ</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="1"
+            >
+              <n-link
+                to="/sessions/yyx990803"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">キーノート｜Evan You</p>
+              </n-link>
+              <p class="text-sm">音声：英語のみ</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="2"
+            >
+              <n-link
+                to="/sessions/yyx990803"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">キーノート｜Evan You</p>
+              </n-link>
+              <p class="text-sm">音声：同時通訳による日本語＋英語</p>
+            </TrackLabel>
+          </div>
+          <div
+            v-for="timeslot in platinumSponsorSessions"
+            :key="timeslot.time"
+            class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260"
+          >
+            <p class="timeslot">{{ timeslot.time }}</p>
+            <TrackLabel
               v-for="(tracks, timeslotIndex) in timeslot.events"
               :key="timeslotIndex"
-              :to="tracks.link"
+              is-sponsor-event
+              :track-index="timeslotIndex"
               class="speaker-track-label"
             >
-              <TrackLabel
-                :is-sponsor-event="timeslot.isSponsorEvent"
-                :track-index="timeslotIndex"
+              <p class="mb-1 text-sm">{{ tracks.title }}</p>
+              <n-link
+                :to="tracks.link"
+                class="hover:opacity-60 transition-opacity"
               >
-                <p :class="{'font-bold': !timeslot.isSponsorEvent}">{{ tracks.title }}</p>
-                <p :class="{'text-sm': !timeslot.isSponsorEvent}">{{ tracks.subTitle }}</p>
-              </TrackLabel>
-            </n-link>
-          </template>
-        </div>
-        <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-2.5 md:grid-cols-md-timetable md:gap-2.5 md:mb-0 xl:grid-cols-timetable xl:max-w-1260">
-          <p class="timeslot">13:30 - 13:50</p>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="0"
+                <p class="mb-1 font-bold underline">{{ tracks.sessionTitle }}</p>
+              </n-link>
+              <p class="text-sm">{{ tracks.subTitle }}</p>
+            </TrackLabel>
+          </div>
+          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
+            <p class="timeslot">11:20 - 12:00</p>
+            <div class="flex flex-col col-span-3 justify-center items-center py-2 font-bold bg-sponsor">
+              <p>
+                <n-link
+                  to="#lets-ask-evan-you"
+                  class="underline hover:opacity-60 transition-opacity"
+                >
+                  Evan You に聞こう
+                </n-link>
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
+            <p class="timeslot">12:00 - 12:30</p>
+            <div class="flex flex-col col-span-3 justify-center items-center py-2 font-bold bg-sponsor">
+              <p>ランチタイム</p>
+            </div>
+          </div>
+          <div
+            v-for="timeslot in goldSponsorSessions"
+            :key="timeslot.time"
+            class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260"
           >
-            <n-link to="/sessions/t0yohei">
-              <p class="mb-1 font-bold">負債が溜まったレガシーフロントエンド画面を Vue.js でリプレイスした話</p>
+            <p class="timeslot">{{ timeslot.time }}</p>
+            <TrackLabel
+              v-for="(tracks, timeslotIndex) in timeslot.events"
+              :key="timeslotIndex"
+              is-sponsor-event
+              :track-index="timeslotIndex"
+              class="speaker-track-label"
+            >
+              <p class="mb-1 text-sm">{{ tracks.title }}</p>
+              <n-link
+                :to="tracks.link"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">{{ tracks.sessionTitle }}</p>
+              </n-link>
+              <p class="text-sm">{{ tracks.subTitle }}</p>
+            </TrackLabel>
+          </div>          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
+            <p class="timeslot">13:00 - 13:30</p>
+            <div class="flex flex-col col-span-3 justify-center items-center py-2 font-bold bg-sponsor">
+              <p>ランチタイム</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-2.5 md:grid-cols-md-timetable md:gap-2.5 md:mb-0 xl:grid-cols-timetable xl:max-w-1260">
+            <p class="timeslot">13:30 - 13:50</p>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <n-link
+                to="/sessions/t0yohei"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">負債が溜まったレガシーフロントエンド画面を Vue.js でリプレイスした話</p>
+              </n-link>
               <p class="text-sm">とよへい</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="1"
-          >
-            <n-link to="/sessions/8845musign">
-              <p class="mb-1 font-bold">不確実性のある将来に対応するためのデザイン戦略</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="1"
+            >
+              <n-link
+                to="/sessions/8845musign"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">不確実性のある将来に対応するためのデザイン戦略</p>
+              </n-link>
               <p class="text-sm">腹筋ローラーの力を信じろ</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="2"
-          >
-            <n-link to="/sessions/miyaoka">
-              <p class="mb-1 font-bold">Vue2 Vue3 マイグレーション 令和最新 最強</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="2"
+            >
+              <n-link
+                to="/sessions/miyaoka"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">Vue2 Vue3 マイグレーション 令和最新 最強</p>
+              </n-link>
               <p class="text-sm">miyaoka</p>
-            </n-link>
-          </TrackLabel>
+            </TrackLabel>
 
-          <p class="timeslot">13:55 - 14:15</p>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="0"
-          >
-            <p class="mb-8 font-bold">ライトニングトーク</p>
-            <div class="mb-8">
-              <n-link to="/sessions/oreo">
-                <p class="mb-1 font-bold">レガシーなMPAアプリケーションをwebpackからviteに移行する話</p>
+            <p class="timeslot">13:55 - 14:15</p>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <p class="mb-8 font-bold">ライトニングトーク</p>
+              <div class="mb-8">
+                <n-link
+                  to="/sessions/oreo"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">レガシーなMPAアプリケーションをwebpackからviteに移行する話</p>
+                </n-link>
                 <p class="text-sm">oreo</p>
-              </n-link>
-            </div>
-            <div class="mb-8">
-              <n-link to="/sessions/ebiryu">
-                <p class="mb-1 font-bold">provide/injectを用いたローカルな状態管理</p>
+              </div>
+              <div class="mb-8">
+                <n-link
+                  to="/sessions/ebiryu"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">provide/injectを用いたローカルな状態管理</p>
+                </n-link>
                 <p class="text-sm">ebiryu</p>
-              </n-link>
-            </div>
-            <div class="mb-8">
-              <n-link to="/sessions/l4dybird">
-                <p class="mb-1 font-bold">Nuxt2 + Composition API から Nuxt Bridge へのマイグレーションのすゝめ</p>
+              </div>
+              <div class="mb-8">
+                <n-link
+                  to="/sessions/l4dybird"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">Nuxt2 + Composition API から Nuxt Bridge へのマイグレーションのすゝめ</p>
+                </n-link>
                 <p class="text-sm">掛水優輝</p>
-              </n-link>
-            </div>
-            <div>
-              <n-link to="/sessions/FurusawaKaoru">
-                <p class="mb-1 font-bold">ブログを作るならNuxt Content v2はいいぞ</p>
+              </div>
+              <div>
+                <n-link
+                  to="/sessions/FurusawaKaoru"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">ブログを作るならNuxt Content v2はいいぞ</p>
+                </n-link>
                 <p class="text-sm">古澤 棟熏</p>
+              </div>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="1"
+            >
+              <n-link
+                to="/sessions/yamanoku"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">Vue.js でアクセシブルなコンポーネントをつくるために</p>
               </n-link>
-            </div>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="1"
-          >
-            <n-link to="/sessions/yamanoku">
-              <p class="mb-1 font-bold">Vue.js でアクセシブルなコンポーネントをつくるために</p>
               <p class="text-sm">やまのく</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="2"
-          >
-            <n-link to="/sessions/kenji7157">
-              <p class="mb-1 font-bold">「こわくない」Vuetifyで始めるOSSコントリビュート</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="2"
+            >
+              <n-link
+                to="/sessions/kenji7157"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">「こわくない」Vuetifyで始めるOSSコントリビュート</p>
+              </n-link>
               <p class="text-sm">川野邉 賢二</p>
-            </n-link>
-          </TrackLabel>
+            </TrackLabel>
 
-          <p class="timeslot">14:20 - 15:05</p>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="0"
-          >
-            <div class="mb-8">
-              <n-link to="/sessions/shigasy">
+            <p class="timeslot">14:20 - 15:05</p>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <div class="mb-8">
                 <p class="mb-1 text-sm">14:20 - 14:40</p>
-                <p class="mb-1 font-bold">施策を止めるな！Vue2からVue3への移行</p>
+                <n-link
+                  to="/sessions/shigasy"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">施策を止めるな！Vue2からVue3への移行</p>
+                </n-link>
                 <p class="text-sm">志賀 奎太</p>
-              </n-link>
-            </div>
-            <div>
-              <n-link to="/sessions/tbashiyy">
+              </div>
+              <div>
                 <p class="mb-1 text-sm">14:45 - 15:05</p>
-                <p class="mb-1 font-bold">十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング</p>
+                <n-link
+                  to="/sessions/tbashiyy"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング</p>
+                </n-link>
                 <p class="text-sm">tbashiyy</p>
+              </div>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label md:centering"
+              :track-index="1"
+            >
+              <n-link
+                to="#oss-first-step"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="font-bold text-center underline">OSSはじめの一歩</p>
               </n-link>
-            </div>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label md:centering"
-            :track-index="1"
-          >
-            <n-link to="#oss-first-step">
-              <p class="font-bold text-center">OSSはじめの一歩</p>
-            </n-link>
-          </TrackLabel>
+            </TrackLabel>
 
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="2"
-          >
-            <div class="mb-8">
-              <n-link to="/sessions/kawamataryo">
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="2"
+            >
+              <div class="mb-8">
                 <p class="mb-1 text-sm">14:20 - 14:40</p>
-                <p class="mb-1 font-bold">JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する</p>
+                <n-link
+                  to="/sessions/kawamataryo"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する</p>
+                </n-link>
                 <p class="text-sm">川俣 涼</p>
-              </n-link>
-            </div>
-            <div>
-              <n-link to="/sessions/Akryum">
+              </div>
+              <div>
                 <p class="mb-1 text-sm">14:45 - 15:05</p>
-                <p class="mb-1 font-bold">How Vite enables Histoire</p>
+                <n-link
+                  to="/sessions/Akryum"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">How Vite enables Histoire</p>
+                </n-link>
                 <p class="text-sm">Guillaume Chau</p>
-              </n-link>
-            </div>
-          </TrackLabel>
+              </div>
+            </TrackLabel>
 
-          <p class="row-span-2 timeslot">15:10 - 15:55</p>
-          <TrackLabel
-            class="row-span-2 speaker-track-label md:centering"
-            :track-index="0"
-          >
-            <n-link to="#naruhodo-vue-component">
-              <p class="font-bold text-center">なるほどVue<br>コンポーネント</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="row-span-2 speaker-track-label"
-            :track-index="1"
-          >
-            <div class="mb-8">
-              <n-link to="/sessions/monsat">
+            <p class="row-span-2 timeslot">15:10 - 15:55</p>
+            <TrackLabel
+              class="row-span-2 speaker-track-label md:centering"
+              :track-index="0"
+            >
+              <n-link
+                to="#naruhodo-vue-component"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="font-bold text-center underline">なるほどVue<br>コンポーネント</p>
+              </n-link>
+            </TrackLabel>
+            <TrackLabel
+              class="row-span-2 speaker-track-label"
+              :track-index="1"
+            >
+              <div class="mb-8">
                 <p class="mb-1 text-sm">15:10 - 15:30</p>
-                <p class="mb-1 font-bold">Nuxt モジュールの作り方を知って 開発した機能を再利用しよう</p>
+                <n-link
+                  to="/sessions/monsat"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">Nuxt モジュールの作り方を知って 開発した機能を再利用しよう</p>
+                </n-link>
                 <p class="text-sm">田中弘治</p>
-              </n-link>
-            </div>
-            <div>
-              <n-link to="/sessions/ota-meshi">
+              </div>
+              <div>
                 <p class="mb-1 text-sm">15:10 - 15:30</p>
-                <p class="mb-1 font-bold">eslint-plugin-vueを使用して継続的にVue3移行する</p>
+                <n-link
+                  to="/sessions/ota-meshi"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="mb-1 font-bold underline">eslint-plugin-vueを使用して継続的にVue3移行する</p>
+                </n-link>
                 <p class="text-sm">太田 洋介</p>
-              </n-link>
-            </div>
-          </TrackLabel>
+              </div>
+            </TrackLabel>
 
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="2"
-          >
-            <n-link to="/sessions/posva">
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="2"
+            >
               <p class="mb-1 text-sm">15:10 - 15:30</p>
-              <p class="mb-1 font-bold">State Alchemy with Pinia</p>
+              <n-link
+                to="/sessions/posva"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">State Alchemy with Pinia</p>
+              </n-link>
               <p class="text-sm">Eduardo San Martin Morote</p>
-            </n-link>
-          </TrackLabel>
+            </TrackLabel>
 
-          <TrackLabel
-            class="row-span-5 h-full speaker-track-label md:centering"
-            :track-index="2"
-          >
-            <div>
-              <n-link to="#vue3-handson">
+            <TrackLabel
+              class="row-span-5 h-full speaker-track-label md:centering"
+              :track-index="2"
+            >
+              <div>
                 <p class="text-sm text-center">15:35 - 17:35</p>
-                <p class="font-bold text-center">Vue 3 ハンズオン</p>
+                <n-link
+                  to="#vue3-handson"
+                  class="hover:opacity-60 transition-opacity"
+                >
+                  <p class="font-bold text-center underline">Vue 3 ハンズオン</p>
+                </n-link>
+              </div>
+            </TrackLabel>
+
+            <p class="timeslot">
+              16:00 - 16:20
+            </p>
+
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <n-link
+                to="/sessions/watsuyo"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">安全に開発効率を上げるための Vue 2.7 移行</p>
+              </n-link>
+              <p class="text-sm">watsuyo</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="1"
+            >
+              <n-link
+                to="/sessions/Atinux"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">From Zero to One</p>
+              </n-link>
+              <p class="text-sm">Sebastien Chopin</p>
+            </TrackLabel>
+
+            <p class="timeslot">
+              16:25 - 16:45
+            </p>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <n-link
+                to="/sessions/patak"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">Vite 3 and Beyond</p>
+              </n-link>
+              <p class="text-sm">Matias Capeletto</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="1"
+            >
+              <n-link
+                to="/sessions/KanDai"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">NuxtJSによるJamstack構築とNuxt 3でどう変わるのか</p>
+              </n-link>
+              <p class="text-sm">菅家 大地</p>
+            </TrackLabel>
+
+            <p class="timeslot">
+              16:50 - 17:10
+            </p>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <n-link
+                to="/sessions/Jess"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">Component Testing</p>
+              </n-link>
+              <p class="text-sm">Jessica Sachs</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="1"
+            >
+              <n-link
+                to="/sessions/mew-ton"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成</p>
+              </n-link>
+              <p class="text-sm">みゅーとん</p>
+            </TrackLabel>
+
+            <p class="timeslot">
+              17:15 - 17:35
+            </p>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="0"
+            >
+              <n-link
+                to="/sessions/KushibikiMashu"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">共通コンポーネントのテスト実装方法にあえてVRTを選択した話</p>
+              </n-link>
+              <p class="text-sm">プログラミングをするパンダ</p>
+            </TrackLabel>
+            <TrackLabel
+              class="speaker-track-label"
+              :track-index="1"
+            >
+              <n-link
+                to="/sessions/anfu"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="mb-1 font-bold underline">Patterns of VueUse</p>
+              </n-link>
+              <p class="text-sm">Anthony Fu</p>
+            </TrackLabel>
+
+            <p class="timeslot">
+              18:00 - 19:00
+            </p>
+            <div class="flex col-span-3 justify-center items-center min-h-10 bg-sponsor md:min-h-[83px]">
+              <n-link
+                to="#peephole"
+                class="hover:opacity-60 transition-opacity"
+              >
+                <p class="font-bold underline">Peephole</p>
               </n-link>
             </div>
-          </TrackLabel>
-
-          <p class="timeslot">
-            16:00 - 16:20
-          </p>
-
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="0"
-          >
-            <n-link to="/sessions/watsuyo">
-              <p class="mb-1 font-bold">安全に開発効率を上げるための Vue 2.7 移行</p>
-              <p class="text-sm">watsuyo</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="1"
-          >
-            <n-link to="/sessions/Atinux">
-              <p class="mb-1 font-bold">From Zero to One</p>
-              <p class="text-sm">Sebastien Chopin</p>
-            </n-link>
-          </TrackLabel>
-
-          <p class="timeslot">
-            16:25 - 16:45
-          </p>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="0"
-          >
-            <n-link to="/sessions/patak">
-              <p class="mb-1 font-bold">Vite 3 and Beyond</p>
-              <p class="text-sm">Matias Capeletto</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="1"
-          >
-            <n-link to="/sessions/KanDai">
-              <p class="mb-1 font-bold">NuxtJSによるJamstack構築とNuxt 3でどう変わるのか</p>
-              <p class="text-sm">菅家 大地</p>
-            </n-link>
-          </TrackLabel>
-
-          <p class="timeslot">
-            16:50 - 17:10
-          </p>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="0"
-          >
-            <n-link to="/sessions/Jess">
-              <p class="mb-1 font-bold">Component Testing</p>
-              <p class="text-sm">Jessica Sachs</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="1"
-          >
-            <n-link to="/sessions/mew-ton">
-              <p class="mb-1 font-bold">デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成</p>
-              <p class="text-sm">みゅーとん</p>
-            </n-link>
-          </TrackLabel>
-
-          <p class="timeslot">
-            17:15 - 17:35
-          </p>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="0"
-          >
-            <n-link to="/sessions/KushibikiMashu">
-              <p class="mb-1 font-bold">共通コンポーネントのテスト手法にあえてVRTを選択した話</p>
-              <p class="text-sm">プログラミングをするパンダ</p>
-            </n-link>
-          </TrackLabel>
-          <TrackLabel
-            class="speaker-track-label"
-            :track-index="1"
-          >
-            <n-link to="/sessions/anfu">
-              <p class="mb-1 font-bold">Patterns of VueUse</p>
-              <p class="text-sm">Anthony Fu</p>
-            </n-link>
-          </TrackLabel>
-
-          <p class="timeslot">
-            18:00 - 19:00
-          </p>
-          <div class="flex col-span-3 justify-center items-center min-h-10 bg-sponsor md:min-h-[83px]">
-            <n-link to="#peephole">
-              <p class="font-bold">Peephole</p>
-            </n-link>
           </div>
         </div>
+        <ExplainText explain="※各セッションの開始・終了時間は多少前後する可能性がありますので、あらかじめご了承ください。" />
       </div>
     </div>
   </section>
