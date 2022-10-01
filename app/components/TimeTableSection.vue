@@ -32,8 +32,8 @@ import ExplainText from '~/components/ExplainText.vue'
           </div>
           <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
             <p class="timeslot">10:00 - 10:10</p>
-            <div class="flex flex-col col-span-3 justify-center items-center py-2 font-bold bg-sponsor">
-              <p>オープニング｜川口和也</p>
+            <div class="flex flex-col col-span-3 justify-center items-center py-2 text-center bg-sponsor">
+              <p><span class="font-bold">オープニング｜川口和也</span><br class="md:hidden"><span class="text-sm">（Vue.js 日本ユーザーグループ 代表）</span></p>
             </div>
           </div>
 
