@@ -102,7 +102,14 @@ import ExplainText from '~/components/ExplainText.vue'
           <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
             <p class="timeslot">11:20 - 12:00</p>
             <div class="flex flex-col col-span-3 justify-center items-center py-2 font-bold bg-sponsor">
-              <p>Evan You に聞こう</p>
+              <p>
+                <n-link
+                  to="#lets-ask-evan-you"
+                  class="underline hover:opacity-60 transition-opacity"
+                >
+                  Evan You に聞こう
+                </n-link>
+              </p>
             </div>
           </div>
           <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
