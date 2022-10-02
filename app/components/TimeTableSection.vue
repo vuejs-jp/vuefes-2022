@@ -344,7 +344,7 @@ import ExplainText from '~/components/ExplainText.vue'
                 <p class="text-sm">田中弘治</p>
               </div>
               <div>
-                <p class="mb-1 text-sm">15:10 - 15:30</p>
+                <p class="mb-1 text-sm">15:35 - 15:55</p>
                 <n-link
                   to="/sessions/ota-meshi"
                   class="hover:opacity-60 transition-opacity"
