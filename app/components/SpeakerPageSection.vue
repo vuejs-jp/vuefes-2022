@@ -67,10 +67,7 @@ const sessionSponsors = (computed(() => shuffleArray([...sponsors.value.platinum
               text="スポンサーセッション"
               class="mb-5 md:mb-10"
             />
-            <div
-              v-if="!pending"
-              class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20"
-            >
+            <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
               <div
                 v-for="sponsor in sessionSponsors"
                 :key="sponsor.name_en"

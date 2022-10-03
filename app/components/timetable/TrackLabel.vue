@@ -25,15 +25,15 @@ const trackContainerClass = computed(() => {
   switch (props.trackIndex) {
   case 0:
     return props.isSponsorEvent
-      ? 'border-2 border-track-a text-track-a md:flex items-center justify-center text-center h-full'
+      ? 'border-2 border-track-a text-track-a md:flex items-center justify-center h-full'
       : 'bg-sponsor md:border-t-2 border-track-a'
   case 1:
     return props.isSponsorEvent
-      ? 'border-2 border-track-b text-track-b md:flex items-center justify-center text-center h-full'
+      ? 'border-2 border-track-b text-track-b md:flex items-center justify-center h-full'
       : 'bg-sponsor md:border-t-2 border-track-b'
   case 2:
     return props.isSponsorEvent
-      ? 'border-2 border-track-c text-track-c md:flex items-center justify-center text-center h-full'
+      ? 'border-2 border-track-c text-track-c md:flex items-center justify-center h-full'
       : 'bg-sponsor md:border-t-2 border-track-c'
   default:
     return ''
@@ -59,10 +59,7 @@ const trackName = computed(() => {
     >
       {{ trackName }}
     </div>
-    <div
-      class="p-4"
-      :class="isSponsorEvent ? 'md:p-0' : 'md:p-6'"
-    >
+    <div class="p-4 md:p-6">
       <slot />
     </div>
   </div>

@@ -440,7 +440,7 @@ export const speakers: ISpeaker[] = [
     id: 'KushibikiMashu',
     type: 'domestic',
     session: {
-      title: '共通コンポーネントのテスト手法にあえてVRTを選択した話',
+      title: '共通コンポーネントのテスト実装方法にあえてVRTを選択した話',
       description: `
         <p>Vue を取り巻くエコシステム（ツール）とその運用の話です。</p>
         <p>■ 概要<br>
