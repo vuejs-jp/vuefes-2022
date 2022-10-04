@@ -28,11 +28,11 @@ const sessionSponsors = (computed(() => shuffleArray([...sponsors.value.platinum
 </script>
 
 <template>
-  <client-only>
-    <section
-      id="speakers"
-      class="px-5 md:px-10 lg:px-20"
-    >
+  <section
+    id="speakers"
+    class="px-5 md:px-10 lg:px-20"
+  >
+    <client-only>
       <div class="py-20 lg:py-40">
         <div class="mx-auto mb-20 md:max-w-700 lg:max-w-1260">
           <SectionTitle
@@ -85,6 +85,6 @@ const sessionSponsors = (computed(() => shuffleArray([...sponsors.value.platinum
           </template>
         </div>
       </div>
-    </section>
-  </client-only>
+    </client-only>
+  </section>
 </template>
