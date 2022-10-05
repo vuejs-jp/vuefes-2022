@@ -1,6 +1,10 @@
-export const speakers = [
+import { ISpeaker } from '~/types/interface'
+
+export const speakers: ISpeaker[] = [
+  // Evan
   {
     id: 'yyx990803',
+    type: 'evan',
     session: {
       title: 'キーノート',
       description: '調整中',
@@ -17,8 +21,10 @@ export const speakers = [
         'Evan is an independent open source developer and is the creator / project lead of Vue and Vite.',
     },
   },
+  // 海外スピーカー
   {
     id: 'posva',
+    type: 'foreign',
     session: {
       title: 'State Alchemy with Pinia',
       description:
@@ -38,6 +44,7 @@ export const speakers = [
   },
   {
     id: 'Atinux',
+    type: 'foreign',
     linkedin: 'atinux',
     session: {
       title: 'From Zero to One',
@@ -58,6 +65,7 @@ export const speakers = [
   },
   {
     id: 'patak',
+    type: 'foreign',
     web: 'https://patak.dev/',
     session: {
       title: 'Vite 3 and Beyond',
@@ -76,6 +84,7 @@ export const speakers = [
   },
   {
     id: 'anfu',
+    type: 'foreign',
     session: {
       title: 'Patterns of VueUse',
       description:
@@ -95,6 +104,7 @@ export const speakers = [
   },
   {
     id: 'Jess',
+    type: 'foreign',
     session: {
       title: 'Component Testing',
       description:
@@ -114,6 +124,7 @@ export const speakers = [
   },
   {
     id: 'Akryum',
+    type: 'foreign',
     session: {
       title: 'How Vite enables Histoire',
       description: 'A deep dive about how Histoire works.',
@@ -132,6 +143,7 @@ export const speakers = [
   // 国内スピーカー
   {
     id: 'miyaoka',
+    type: 'domestic',
     session: {
       title: 'Vue2 Vue3 マイグレーション 令和最新 最強',
       description:
@@ -151,6 +163,7 @@ export const speakers = [
   },
   {
     id: 'yamanoku',
+    type: 'domestic',
     session: {
       title: 'Vue.js でアクセシブルなコンポーネントをつくるために',
       description: `<p>昨今 Web 開発において、アクセシビリティを重視することはそれほど珍しくなくなってきました。<br>
@@ -173,6 +186,7 @@ export const speakers = [
   },
   {
     id: 'ota-meshi',
+    type: 'domestic',
     session: {
       title: 'eslint-plugin-vueを使用して継続的にVue3移行する',
       description: `<p>Vue2のアプリケーションをVue3に移行するニーズは増えてきていると思いますが、複数のアプリケーションを移行する場合、手動で実施するのはコストもかかりますし、Vue2をメインに使用してきたエンジニアが、新しいVue3でのアプリケーション開発で古い機能を使ってしてしまうというリスクもあります。<br>
@@ -193,6 +207,7 @@ export const speakers = [
   },
   {
     id: 'shigasy',
+    type: 'domestic',
     session: {
       title: '施策を止めるな！Vue2からVue3への移行',
       description: `<p>Vue3が正式リリースして約2年が経ちます。「そろそろウチのプロジェクトもVue3にしたい」と思う気持ちはありつつ、メインの施策を優先してしまい移行のための時間を取れないことが往々にしてあります。<br>
@@ -213,6 +228,7 @@ export const speakers = [
   },
   {
     id: 'tbashiyy',
+    type: 'domestic',
     session: {
       title: '十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング',
       description: `
@@ -243,6 +259,7 @@ export const speakers = [
   },
   {
     id: 'monsat',
+    type: 'domestic',
     session: {
       title: 'Nuxt モジュールの作り方を知って 開発した機能を再利用しよう',
       description: `
@@ -274,6 +291,7 @@ export const speakers = [
   },
   {
     id: 'mew-ton',
+    type: 'domestic',
     session: {
       title: 'デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成',
       description: `<p>弊社では将来的に弊社独自のデザインシステムの設計の後、既存のプロジェクトをすべて置き換えていく予定となっています。<br>
@@ -294,6 +312,7 @@ export const speakers = [
   },
   {
     id: 't0yohei',
+    type: 'domestic',
     session: {
       title: '負債が溜まったレガシーフロントエンド画面を Vue.js でリプレイスした話',
       description: `
@@ -325,6 +344,7 @@ export const speakers = [
   },
   {
     id: 'kawamataryo',
+    type: 'domestic',
     session: {
       title: 'JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する',
       description: `<p>昨今のフロントエンド開発では、型による安全性と開発者体験の向上が見込めるTypeScript（以下TS）の採用がほぼ標準となっています。<br>
@@ -346,6 +366,7 @@ export const speakers = [
   },
   {
     id: 'kenji7157',
+    type: 'domestic',
     session: {
       title: '「こわくない」Vuetifyで始めるOSSコントリビュート',
       description:
@@ -365,6 +386,7 @@ export const speakers = [
   },
   {
     id: 'watsuyo',
+    type: 'domestic',
     session: {
       title: '安全に開発効率を上げるための Vue 2.7 移行',
       description: `
@@ -394,6 +416,7 @@ export const speakers = [
   },
   {
     id: 'KanDai',
+    type: 'domestic',
     session: {
       title: 'NuxtJSによるJamstack構築とNuxt 3でどう変わるのか',
       description: `<p>モダンなWebアプリやWebサイト構築のアーキテクチャとして数年前からJamstackが注目されています。Vue.jsでもNuxtJSのSSG(Static Site Generation)やGridsomeのようなフレームワークを使うことでJamstackのサイトを構築できます。<br>
@@ -415,6 +438,7 @@ export const speakers = [
   },
   {
     id: 'KushibikiMashu',
+    type: 'domestic',
     session: {
       title: '共通コンポーネントのテスト実装方法にあえてVRTを選択した話',
       description: `
@@ -454,6 +478,7 @@ export const speakers = [
   },
   {
     id: '8845musign',
+    type: 'domestic',
     session: {
       title: '不確実性のある将来に対応するためのデザイン戦略',
       description: `<p>ソフトウェア開発には不確実性がつきものです。初期フェーズにおいてはUIの過度の一貫性や、多機能なコンポーネントはプロダクトの将来を狭める可能性があります。 また、デザイナーである私はデザインのすべてを掌握したいと考えます。ですが、現実には多くの人の手によってデザインは成長していきます。<br>
@@ -476,6 +501,7 @@ export const speakers = [
   // LT
   {
     id: 'oreo',
+    type: 'domestic',
     session: {
       title: 'レガシーなMPAアプリケーションをwebpackからviteに移行する話',
       description: `<p>株式会社iCAREでは、Vue2.6(※2.7に移行中)+Composition APIで開発を行っており、vue2系では比較的モダンな構成です。一方、Ruby on RailsのView毎にVueインスタンスを生成するMPAであり、アプリケーション全体の構成としては、レガシーな構造になっています。
@@ -496,6 +522,7 @@ export const speakers = [
   },
   {
     id: 'ebiryu',
+    type: 'domestic',
     session: {
       title: 'provide/injectを用いたローカルな状態管理',
       description: `
@@ -518,6 +545,7 @@ export const speakers = [
   },
   {
     id: 'l4dybird',
+    type: 'domestic',
     session: {
       title: 'Nuxt2 + Composition API から Nuxt Bridge へのマイグレーションのすゝめ',
       description: `
@@ -539,6 +567,7 @@ export const speakers = [
   },
   {
     id: 'FurusawaKaoru',
+    type: 'domestic',
     session: {
       title: 'ブログを作るならNuxt Content v2はいいぞ',
       description: `
