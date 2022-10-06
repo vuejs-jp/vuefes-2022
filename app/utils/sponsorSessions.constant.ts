@@ -84,7 +84,7 @@ export const sponsorSessions = [
       description: `弊社のプロダクト、ネットショップ開設サービス「STORES」は Nuxt.js で開発を行なっており、多くのページやコンポーネントは Composition API と TypeScript で書かれています。<br>
       しかし、ストアデザイン機能など、一部のUIが複雑なページは Options API と JavaScript のままであり、リファクタリングもコストが高く、機能追加や改善の手が入れづらい状態が続いていました。<br>
       本セッションでは複雑で手がつけずらいソースコードをプロダクト開発を止めることなく、且つ安全に最速で移行するために考えた戦術をご紹介します。`,
-      time: 20,
+      time: 10,
     },
     speakers: [
       {
@@ -121,7 +121,7 @@ export const sponsorSessions = [
       Vue.js を使用している LINE MUSIC のWeb版アプリでは、パフォーマンスの向上を目的に Vue3 へのマイグレーションを行いました。<br>
       その結果、アプリの読込時間が半分に減少するなど大きな成果が得られました。<br>
       このセッションでは Vue2 で実装されたプロジェクトを運用されている方に向けて、どういった経緯で Vue3 へのマイグレーションを行う事にし、どのようにして進めたか、そしてマイグレーション前後のパフォーマンスの変化をご紹介します。`,
-      time: 20,
+      time: 10,
     },
     speakers: [
       {
@@ -143,7 +143,7 @@ export const sponsorSessions = [
       description: `
       本セッションは、株式会社イエソドのスポンサーセッションです。弊社サービスの「YESOD」を軽く紹介しつつ、複数人同時編集を将来的に実現するために導入したWebSocketsのVue.js上での扱いと軽いデモを行います。<br>
       株式会社イエソドでは、「企業の人・組織・情報にまつわる非効率をなくす」をミッションに、コーポレート部門の業務を根本から改善する人・組織の時系列マスタデータストアSaaS「YESOD」を開発しています。`,
-      time: 20,
+      time: 10,
     },
     speakers: [
       {
@@ -168,7 +168,7 @@ export const sponsorSessions = [
       Vue.jsのエコシステムは非常に強力で、それだけでもアプリ開発は可能ですが、弊社の提供するJavaScript UIライブラリを使用することで、業務アプリに求められる様々な要件に素早く対応できます。<br>
       
       本セッションでは、「Excelライク」なスプレッドシートを実現する「SpreadJS（スプレッドJS）」をはじめとした、Vue.jsで使えるグレープシティのJavaScript UIライブラリをデモを交えながらご紹介します。`,
-      time: 20,
+      time: 10,
     },
     speakers: [
       {
@@ -189,7 +189,7 @@ export const sponsorSessions = [
       title: '急拡大中のヘルステックSaaSを支えるフロントエンド開発',
       description: `iCAREは現役の産業医が代表を務める法人向けヘルスケアサービスを提供する会社です。 「働くひとの健康を世界中に創る」をパーパス（存在意義）に掲げ、企業に眠る健康データ（健康診断・ストレスチェック・産業医⾯談など）を⼀元管理することで、働きがいのある組織創りを支援する健康管理システムCarelyを開発・提供しています。<br>
       今回のセッションでは、Vue2.7+Composition APIにTypescriptやGraphQLを使用したフロントエンド開発についてご紹介します。`,
-      time: 20,
+      time: 10,
     },
     speakers: [
       {
@@ -219,7 +219,7 @@ export const sponsorSessions = [
       title: 'BASEのフロントエンド組織の人数が2.5倍になって起きた変化',
       description: `2020年9月に公開されたテックブログ「<a class="inner-link" href="https://devblog.thebase.in/entry/2020/09/17/110000" target="_blank" rel="noopener">BASEにおけるVue.jsのこれまでとこれから</a>」から2年経ち、当時から比べるとフロントエンド組織の人数が2.5倍に増加しました。<br>
       本セッションでは、記事公開から2年の間の組織の変遷と合わせて、人数増加に伴って拡大したBASEのVue.jsのコードベースのmonorepo化と、既存のVue資産の運用と今後の展望についてお話をします。`,
-      time: 20,
+      time: 10,
     },
     speakers: [
       {
