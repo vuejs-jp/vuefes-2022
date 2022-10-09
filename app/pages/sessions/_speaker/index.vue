@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import PageTitle from '~~/app/components/PageTitle.vue'
+import PageTitle from '~/components/PageTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
-import SessionSection from '~/components/SessionSection.vue'
+import SessionPageSection from '~/components/SessionPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { speakers } from '~/utils/speakers.constants'
@@ -27,6 +27,7 @@ useNuxt2Meta({
   ]
 })
 </script>
+
 <template>
   <div>
     <nav-page-section class="mb-12" />
@@ -35,7 +36,7 @@ useNuxt2Meta({
       title="Session"
       title-yamato="セッション"
     />
-    <SessionSection :session-info="speaker" />
+    <SessionPageSection :session-info="speaker" />
     <ichimatsu-divided-bar color="vue-blue" />
     <footer-page-section />
   </div>

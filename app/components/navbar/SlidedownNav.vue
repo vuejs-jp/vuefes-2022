@@ -1,5 +1,5 @@
-<script setup>
-import NavPageSection from '../NavPageSection.vue'
+<script setup lang="ts">
+import NavPageSection from '~/components/NavPageSection.vue'
 
 const showNav = ref(false)
 const nav = ref(null)

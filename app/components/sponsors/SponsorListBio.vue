@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { CustomPropType } from '~/types/shims-vue'
 import { sponsorSupportLevelTitle } from '~/utils/sponsors.constants'
-import { ISponsor } from '~~/app/types/sponsors'
+import { ISponsor } from '~/types/sponsors'
 
 const props = defineProps({
   sponsors: {
@@ -72,7 +72,7 @@ const sponsorRankClass = computed(() => {
 </template>
 
 <style scoped>
-::v-deep .link {
+:v-deep .link {
   @apply underline hover:opacity-40 transition
 }
 </style>

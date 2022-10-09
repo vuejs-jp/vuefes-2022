@@ -1,5 +1,5 @@
 import Image01 from '!url-loader!~/assets/img/animation/image05.png'
-import { ISponsor, Rank } from '../types/sponsors'
+import { ISponsor, Rank } from '~/types/sponsors'
 
 export const sponsorSupportLevelTitle = (rank: Rank) => {
   switch (rank) {

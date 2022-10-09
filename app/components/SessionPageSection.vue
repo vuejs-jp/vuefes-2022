@@ -40,13 +40,13 @@ const props = defineProps({
 </template>
 
 <style scoped>
-.description ::v-deep ul {
+.description :v-deep ul {
   list-style: disc;
   margin: revert;
   padding: revert;
 }
 
-.description ::v-deep p + p {
+.description :v-deep p + p {
   margin-top: 2em;
 }
 </style>
