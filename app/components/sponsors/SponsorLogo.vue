@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { CustomPropType } from '~/types/shims-vue'
-import { ISponsor } from '~~/app/types/sponsors'
+import { ISponsor } from '~/types/sponsors'
 
 const props = defineProps({
   sponsor: {

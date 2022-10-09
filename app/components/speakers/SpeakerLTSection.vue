@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import SpeakerPageHeading from '~/components/speakers/SpeakerPageHeading.vue'
+import LinkButtonField from '~/components/forms/LinkButtonField.vue'
+</script>
+
 <template>
   <section class="p-4 border border-vue-blue md:px-10 lg:py-10 lg:px-20">
     <h3 class="mx-auto -mt-[2.0rem] mb-6 w-[14.375rem] text-xl font-bold text-center text-vue-blue md:mb-8 lg:-mt-[3.6rem] lg:mb-14 lg:w-[26.875rem] lg:text-4xl bg-img">
@@ -35,13 +40,7 @@
     </div>
   </section>
 </template>
-<script>
-import SpeakerPageHeading from '~/components/SpeakerPageHeading'
-import LinkButtonField from '~/components/forms/LinkButtonField'
-export default {
-  components: { LinkButtonField, SpeakerPageHeading }
-}
-</script>
+
 <style scoped>
 .bg-img {
   background-image: url("/img/bg.png");

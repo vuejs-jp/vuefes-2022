@@ -7,9 +7,9 @@ import PageTitle from '~/components/PageTitle.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { useSponsorsCMS } from '~/composables/useCMS'
-import { SHOW_SPONSOR_LIST } from '~~/app/utils/feature.constants'
-import { conferenceTitle } from '~~/app/utils/constants'
-import { generalOg, twitterOg } from '~~/app/utils/og.constants'
+import { SHOW_SPONSOR_LIST } from '~/utils/feature.constants'
+import { conferenceTitle } from '~/utils/constants'
+import { generalOg, twitterOg } from '~/utils/og.constants'
 
 const title = `スポンサー一覧 | ${conferenceTitle}`
 const url = 'https://vuefes.jp/2022/sponsors'

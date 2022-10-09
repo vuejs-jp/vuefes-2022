@@ -43,36 +43,36 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
               :track-index="0"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/yyx990803"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">キーノート｜Evan You</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">音声：同時通訳による日本語のみ</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/yyx990803"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">キーノート｜Evan You</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">音声：英語のみ</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="2"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/yyx990803"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">キーノート｜Evan You</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">音声：同時通訳による日本語＋英語</p>
             </TrackLabel>
           </div>
@@ -90,12 +90,12 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
             >
               <p class="mb-1 text-sm">{{ tracks.title }}</p>
-              <n-link
+              <nuxt-link
                 :to="tracks.link"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">{{ tracks.sessionTitle }}</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">{{ tracks.subTitle }}</p>
             </TrackLabel>
           </div>
@@ -103,12 +103,12 @@ import ExplainText from '~/components/ExplainText.vue'
             <p class="timeslot">11:20 - 12:00</p>
             <div class="flex flex-col col-span-3 justify-center items-center py-2 font-bold bg-sponsor">
               <p>
-                <n-link
+                <nuxt-link
                   to="#lets-ask-evan-you"
                   class="underline hover:opacity-60 transition-opacity"
                 >
                   Evan You に聞こう
-                </n-link>
+                </nuxt-link>
               </p>
             </div>
           </div>
@@ -132,12 +132,12 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
             >
               <p class="mb-1 text-sm">{{ tracks.title }}</p>
-              <n-link
+              <nuxt-link
                 :to="tracks.link"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">{{ tracks.sessionTitle }}</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">{{ tracks.subTitle }}</p>
             </TrackLabel>
           </div>          <div class="grid grid-cols-1 gap-y-1.5 mx-auto mb-5 md:grid-cols-md-timetable md:gap-2.5 md:mb-2.5 md:min-h-[83px] xl:grid-cols-timetable xl:max-w-1260">
@@ -152,36 +152,36 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
               :track-index="0"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/t0yohei"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">負債が溜まったレガシーフロントエンド画面を Vue.js でリプレイスした話</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">とよへい</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/8845musign"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">不確実性のある将来に対応するためのデザイン戦略</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">腹筋ローラーの力を信じろ</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="2"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/miyaoka"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">Vue2 Vue3 マイグレーション 令和最新 最強</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">miyaoka</p>
             </TrackLabel>
 
@@ -192,39 +192,39 @@ import ExplainText from '~/components/ExplainText.vue'
             >
               <p class="mb-8 font-bold">ライトニングトーク</p>
               <div class="mb-8">
-                <n-link
+                <nuxt-link
                   to="/sessions/oreo"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">レガシーなMPAアプリケーションをwebpackからviteに移行する話</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">oreo</p>
               </div>
               <div class="mb-8">
-                <n-link
+                <nuxt-link
                   to="/sessions/ebiryu"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">provide/injectを用いたローカルな状態管理</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">ebiryu</p>
               </div>
               <div class="mb-8">
-                <n-link
+                <nuxt-link
                   to="/sessions/l4dybird"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">Nuxt2 + Composition API から Nuxt Bridge へのマイグレーションのすゝめ</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">掛水優輝</p>
               </div>
               <div>
-                <n-link
+                <nuxt-link
                   to="/sessions/FurusawaKaoru"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">ブログを作るならNuxt Content v2はいいぞ</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">古澤 棟熏</p>
               </div>
             </TrackLabel>
@@ -232,24 +232,24 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/yamanoku"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">Vue.js でアクセシブルなコンポーネントをつくるために</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">やまのく</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="2"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/kenji7157"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">「こわくない」Vuetifyで始めるOSSコントリビュート</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">川野邉 賢二</p>
             </TrackLabel>
 
@@ -260,22 +260,22 @@ import ExplainText from '~/components/ExplainText.vue'
             >
               <div class="mb-8">
                 <p class="mb-1 text-sm">14:20 - 14:40</p>
-                <n-link
+                <nuxt-link
                   to="/sessions/shigasy"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">施策を止めるな！Vue2からVue3への移行</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">志賀 奎太</p>
               </div>
               <div>
                 <p class="mb-1 text-sm">14:45 - 15:05</p>
-                <n-link
+                <nuxt-link
                   to="/sessions/tbashiyy"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">十数万レコードに耐えうるVue.jsプロジェクトを実現するためのパフォーマンスチューニング</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">tbashiyy</p>
               </div>
             </TrackLabel>
@@ -283,12 +283,12 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label md:centering"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="#oss-first-step"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="font-bold text-center underline">OSSはじめの一歩</p>
-              </n-link>
+              </nuxt-link>
             </TrackLabel>
 
             <TrackLabel
@@ -297,22 +297,22 @@ import ExplainText from '~/components/ExplainText.vue'
             >
               <div class="mb-8">
                 <p class="mb-1 text-sm">14:20 - 14:40</p>
-                <n-link
+                <nuxt-link
                   to="/sessions/kawamataryo"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">JSからTSへ移行したVue.jsプロダクトの型チェックを漸進的に強化する</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">川俣 涼</p>
               </div>
               <div>
                 <p class="mb-1 text-sm">14:45 - 15:05</p>
-                <n-link
+                <nuxt-link
                   to="/sessions/Akryum"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">How Vite enables Histoire</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">Guillaume Chau</p>
               </div>
             </TrackLabel>
@@ -322,12 +322,12 @@ import ExplainText from '~/components/ExplainText.vue'
               class="row-span-2 speaker-track-label md:centering"
               :track-index="0"
             >
-              <n-link
+              <nuxt-link
                 to="#naruhodo-vue-component"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="font-bold text-center underline">なるほどVue<br>コンポーネント</p>
-              </n-link>
+              </nuxt-link>
             </TrackLabel>
             <TrackLabel
               class="row-span-2 speaker-track-label"
@@ -335,22 +335,22 @@ import ExplainText from '~/components/ExplainText.vue'
             >
               <div class="mb-8">
                 <p class="mb-1 text-sm">15:10 - 15:30</p>
-                <n-link
+                <nuxt-link
                   to="/sessions/monsat"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">Nuxt モジュールの作り方を知って 開発した機能を再利用しよう</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">田中弘治</p>
               </div>
               <div>
                 <p class="mb-1 text-sm">15:35 - 15:55</p>
-                <n-link
+                <nuxt-link
                   to="/sessions/ota-meshi"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="mb-1 font-bold underline">eslint-plugin-vueを使用して継続的にVue3移行する</p>
-                </n-link>
+                </nuxt-link>
                 <p class="text-sm">太田 洋介</p>
               </div>
             </TrackLabel>
@@ -360,12 +360,12 @@ import ExplainText from '~/components/ExplainText.vue'
               :track-index="2"
             >
               <p class="mb-1 text-sm">15:10 - 15:30</p>
-              <n-link
+              <nuxt-link
                 to="/sessions/posva"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">State Alchemy with Pinia</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">Eduardo San Martin Morote</p>
             </TrackLabel>
 
@@ -375,12 +375,12 @@ import ExplainText from '~/components/ExplainText.vue'
             >
               <div>
                 <p class="text-sm text-center">15:35 - 17:35</p>
-                <n-link
+                <nuxt-link
                   to="#vue3-handson"
                   class="hover:opacity-60 transition-opacity"
                 >
                   <p class="font-bold text-center underline">Vue 3 ハンズオン</p>
-                </n-link>
+                </nuxt-link>
               </div>
             </TrackLabel>
 
@@ -392,24 +392,24 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
               :track-index="0"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/watsuyo"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">安全に開発効率を上げるための Vue 2.7 移行</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">watsuyo</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/Atinux"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">From Zero to One</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">Sebastien Chopin</p>
             </TrackLabel>
 
@@ -420,24 +420,24 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
               :track-index="0"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/patak"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">Vite 3 and Beyond</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">Matias Capeletto</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/KanDai"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">NuxtJSによるJamstack構築とNuxt 3でどう変わるのか</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">菅家 大地</p>
             </TrackLabel>
 
@@ -448,24 +448,24 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
               :track-index="0"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/Jess"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">Component Testing</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">Jessica Sachs</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/mew-ton"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">デザインシステムを後から導入する前提で作った 変更に強いNuxt3プロジェクトの構成</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">みゅーとん</p>
             </TrackLabel>
 
@@ -476,24 +476,24 @@ import ExplainText from '~/components/ExplainText.vue'
               class="speaker-track-label"
               :track-index="0"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/KushibikiMashu"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">共通コンポーネントのテスト実装方法にあえてVRTを選択した話</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">プログラミングをするパンダ</p>
             </TrackLabel>
             <TrackLabel
               class="speaker-track-label"
               :track-index="1"
             >
-              <n-link
+              <nuxt-link
                 to="/sessions/anfu"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="mb-1 font-bold underline">Patterns of VueUse</p>
-              </n-link>
+              </nuxt-link>
               <p class="text-sm">Anthony Fu</p>
             </TrackLabel>
 
@@ -501,12 +501,12 @@ import ExplainText from '~/components/ExplainText.vue'
               18:00 - 19:00
             </p>
             <div class="flex col-span-3 justify-center items-center min-h-10 bg-sponsor md:min-h-[83px]">
-              <n-link
+              <nuxt-link
                 to="#peephole"
                 class="hover:opacity-60 transition-opacity"
               >
                 <p class="font-bold underline">Peephole</p>
-              </n-link>
+              </nuxt-link>
             </div>
           </div>
         </div>

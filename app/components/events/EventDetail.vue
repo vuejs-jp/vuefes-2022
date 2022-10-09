@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import SubTitle from '~/components/SubTitle.vue'
+import SpeakerProfiles from '~/components/speakers/SpeakerProfiles.vue'
+import PageSubTitle from '~/components/PageSubTitle.vue'
 import type { CustomPropType } from '~/types/shims-vue'
 import { IEvent } from '~/types/events'
-import SpeakerProfiles from '../speakers/SpeakerProfiles.vue'
 
 const props = defineProps({
   event: {
@@ -19,9 +19,9 @@ const eventInfo = computed(() => props.event)
     :id="eventInfo.id"
     class="pt-[17vw] mt-[-17vw] md:pt-32 md:-mt-32"
   >
-    <SubTitle class="mb-7 md:mb-14">
+    <PageSubTitle class="mb-7 md:mb-14">
       {{ eventInfo.title }}
-    </SubTitle>
+    </PageSubTitle>
     <div
       v-if="eventInfo.logoList.length"
       class="flex mx-auto mb-14 max-w-[400px]"

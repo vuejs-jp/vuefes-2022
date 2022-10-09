@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SectionTitle from '~/components/SectionTitle.vue'
-import SubTitle from '~/components/SubTitle.vue'
+import PageSubTitle from '~/components/PageSubTitle.vue'
 import ExplainText from '~/components/ExplainText.vue'
 import AccordionView from '~/components/AccordionView.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField'
@@ -72,7 +72,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           />
         </div>
         <section class="mb-12.5 md:mb-22.5">
-          <SubTitle class="mb-5 md:mb-14">個人スポンサー限定<br class="md:hidden">ギフトボックス</SubTitle>
+          <PageSubTitle class="mb-5 md:mb-14">個人スポンサー限定<br class="md:hidden">ギフトボックス</PageSubTitle>
           <ExplainText
             :explain="giftboxInfo"
             class="mx-auto mb-5 max-w-700 md:mb-14"
@@ -102,7 +102,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           <p class="text-xs leading-5 text-vue-blue md:text-base md:leading-7">{{ giftboxCaution2 }}</p>
         </section>
         <section class="mx-auto max-w-700">
-          <SubTitle class="mb-14">FAQ</SubTitle>
+          <PageSubTitle class="mb-14">FAQ</PageSubTitle>
           <accordion-view
             v-for="(faq, index) in faqList"
             :key="index"
