@@ -3,8 +3,7 @@ import SpeakerPageBlock from '~/components/speakers/SpeakerPageBlock.vue'
 import SpeakerPageHeading from '~/components/speakers/SpeakerPageHeading.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
-import { ISpeaker } from '~/types/interface'
-import { SHOW_SPONSOR_SESSION } from '~/utils/feature.constants'
+// import { ISpeaker } from '~/types/interface'
 
 const shuffleArray = ([...array]) => {
   for (let i = array.length - 1; i >= 0; i--) {
@@ -15,16 +14,16 @@ const shuffleArray = ([...array]) => {
 }
 
 const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 'main')
-const evan = mainSessionSpeakers.find(speaker => speaker.type === 'evan')
-const foreignSpeakers = shuffleArray(mainSessionSpeakers.filter(speaker => speaker.type === 'foreign')) as ISpeaker[]
-const domesticSpeakers = shuffleArray(mainSessionSpeakers.filter(speaker => speaker.type === 'domestic')) as ISpeaker[]
-const shuffledMainSessionSpeakers = [evan].concat(foreignSpeakers, domesticSpeakers)
-const LTSpeakers = shuffleArray(speakers.filter(speaker => speaker.session.type === 'LT'))
+// const evan = mainSessionSpeakers.find(speaker => speaker.type === 'evan')
+// const foreignSpeakers = shuffleArray(mainSessionSpeakers.filter(speaker => speaker.type === 'foreign')) as ISpeaker[]
+// const domesticSpeakers = shuffleArray(mainSessionSpeakers.filter(speaker => speaker.type === 'domestic')) as ISpeaker[]
+// const shuffledMainSessionSpeakers = [evan].concat(foreignSpeakers, domesticSpeakers)
+const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
 
 const { fetchContent } = useSponsorsCMS()
-const { pending, data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
+const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 
-const sessionSponsors = (computed(() => shuffleArray([...sponsors.value.platinum, ...sponsors.value.gold])))
+const sessionSponsors = (computed(() => [...sponsors.value.platinum, ...sponsors.value.gold]))
 </script>
 
 <template>
@@ -32,59 +31,55 @@ const sessionSponsors = (computed(() => shuffleArray([...sponsors.value.platinum
     id="speakers"
     class="px-5 md:px-10 lg:px-20"
   >
-    <client-only>
-      <div class="py-20 lg:py-40">
-        <div class="mx-auto mb-20 md:max-w-700 lg:max-w-1260">
-          <SectionTitle
-            class="mb-10 lg:mb-20"
-            title="Speakers"
-            title-yamato="スピーカー"
+    <div class="py-20 lg:py-40">
+      <div class="mx-auto mb-20 md:max-w-700 lg:max-w-1260">
+        <SectionTitle
+          class="mb-10 lg:mb-20"
+          title="Speakers"
+          title-yamato="スピーカー"
+        />
+        <SpeakerPageHeading
+          text="セッション"
+          class="mb-5 md:mb-10"
+        />
+        <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
+          <SpeakerPageBlock
+            v-for="speaker in mainSessionSpeakers"
+            :key="speaker.id"
+            :speaker="speaker"
           />
-          <SpeakerPageHeading
-            text="セッション"
-            class="mb-5 md:mb-10"
+        </div>
+        <SpeakerPageHeading
+          text="ライトニングトーク"
+          class="mb-5 md:mb-10"
+        />
+        <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
+          <SpeakerPageBlock
+            v-for="speaker in LTSpeakers"
+            :key="speaker.id"
+            :speaker="speaker"
           />
-          <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
-            <SpeakerPageBlock
-              v-for="speaker in shuffledMainSessionSpeakers"
-              :key="speaker.id"
-              :speaker="speaker"
-            />
-          </div>
-          <SpeakerPageHeading
-            text="ライトニングトーク"
-            class="mb-5 md:mb-10"
-          />
-          <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
-            <SpeakerPageBlock
-              v-for="speaker in LTSpeakers"
-              :key="speaker.id"
-              :speaker="speaker"
-            />
-          </div>
-          <template v-if="SHOW_SPONSOR_SESSION">
-            <SpeakerPageHeading
-              text="スポンサーセッション"
-              class="mb-5 md:mb-10"
-            />
-            <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
-              <div
-                v-for="sponsor in sessionSponsors"
-                :key="sponsor.name_en"
+        </div>
+        <SpeakerPageHeading
+          text="スポンサーセッション"
+          class="mb-5 md:mb-10"
+        />
+        <div class="grid grid-cols-2 gap-4 mb-14 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:mb-20">
+          <div
+            v-for="sponsor in sessionSponsors"
+            :key="sponsor.name_en"
+          >
+            <nuxt-link :to="`/sponsor-sessions/${sponsor.name_en}`">
+              <img
+                :src="`/sponsor/${sponsor.name_en}.png`"
+                :alt="sponsor.name_jp"
+                class="mb-2 md:mb-4"
               >
-                <nuxt-link :to="`/sponsor-sessions/${sponsor.name_en}`">
-                  <img
-                    :src="`/sponsor/${sponsor.name_en}.png`"
-                    :alt="sponsor.name_jp"
-                    class="mb-2 md:mb-4"
-                  >
-                  <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
-                </nuxt-link>
-              </div>
-            </div>
-          </template>
+              <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
+            </nuxt-link>
+          </div>
         </div>
       </div>
-    </client-only>
+    </div>
   </section>
 </template>
