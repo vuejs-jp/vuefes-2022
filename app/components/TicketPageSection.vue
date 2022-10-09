@@ -102,7 +102,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           <p class="text-xs leading-5 text-vue-blue md:text-base md:leading-7">{{ giftboxCaution2 }}</p>
         </section>
         <section class="mx-auto max-w-700">
-          <SubTitle class="mb-14">FAQ</SubTitle>
+          <PageSubTitle class="mb-14">FAQ</PageSubTitle>
           <accordion-view
             v-for="(faq, index) in faqList"
             :key="index"
