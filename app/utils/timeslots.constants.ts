@@ -30,7 +30,7 @@ export const goldSponsorSessions = [
     events: [
       {
         title: 'ゴールドスポンサーセッション',
-        subTitle: 'STOERS 株式会社',
+        subTitle: 'STORES 株式会社',
         sessionTitle: 'プロダクト開発を止めずに Composition API と TypeScript に最速で移行するための戦い',
         link: '/sponsor-sessions/stores'
       },
