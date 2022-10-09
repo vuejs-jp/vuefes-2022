@@ -1,6 +1,6 @@
 import { createClient } from 'newt-client-js'
 import { Query } from 'newt-client-js/dist/types/types'
-import { ISponsor } from '../types/sponsors'
+import { ISponsor } from '~/types/sponsors'
 
 export function useCMS<T>(options: { modelUid: string }) {
   const runtimeConfig = useRuntimeConfig()

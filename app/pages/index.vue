@@ -7,14 +7,14 @@ import SpeakerPageSection from '~/components/SpeakerPageSection.vue'
 import StorePageSection from '~/components/StorePageSection.vue'
 import SponsorsPageSection from '~/components/SponsorsPageSection.vue'
 import TeamPageSection from '~/components/TeamPageSection.vue'
-import TimeTableSection from '~/components/TimeTableSection.vue'
+import TimetablePageSection from '~/components/TimetablePageSection.vue'
 import FormPageSection from '~/components/FormPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
-import EventsPageSection from '../components/EventsPageSection.vue'
+import EventsPageSection from '~/components/EventsPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { SHOW_TICKET, SHOW_TEAM, SHOW_STORE, SHOW_TIMETABLE } from '~/utils/feature.constants'
-import { conferenceTitle } from '../utils/constants'
-import { generalOg, twitterOg } from '../utils/og.constants'
+import { conferenceTitle } from '~/utils/constants'
+import { generalOg, twitterOg } from '~/utils/og.constants'
 
 useNuxt2Meta({
   title: conferenceTitle,
@@ -35,7 +35,7 @@ useNuxt2Meta({
     <speaker-page-section />
     <template v-if="SHOW_TIMETABLE">
       <ichimatsu-divided-bar color="timetable" />
-      <time-table-section />
+      <timetable-page-section />
     </template>
     <ichimatsu-divided-bar color="typescript-blue" />
     <events-page-section />

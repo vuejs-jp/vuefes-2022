@@ -2,7 +2,7 @@
 import SponsorList from '~/components/sponsors/SponsorList.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { useSponsorsCMS } from '~/composables/useCMS'
-import { individuals } from '~~/app/utils/individuals.constants'
+import { individuals } from '~/utils/individuals.constants'
 
 const { fetchContent } = useSponsorsCMS()
 const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import PageTitle from '~~/app/components/PageTitle.vue'
+import PageTitle from '~/components/PageTitle.vue'
 import NavPageSection from '~/components/NavPageSection.vue'
-import SessionSection from '~/components/SessionSection.vue'
+import SessionPageSection from '~/components/SessionPageSection.vue'
+import SpeakerProfiles from '~/components/speakers/SpeakerProfiles.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle, linkUrl } from '~/utils/constants'
 import { sponsorSessions } from '~/utils/sponsorSessions.constant'
-import SpeakerProfiles from '~~/app/components/speakers/SpeakerProfiles.vue'
     
 const route = useRoute()
     
@@ -45,9 +45,9 @@ useNuxt2Meta({
       >
     </div>
     <p class="mb-8 text-base font-bold text-center text-vue-blue md:mb-15 md:text-22">{{ sponsor.name_jp }}</p>
-    <SessionSection :session-info="sessionInfo">
+    <SessionPageSection :session-info="sessionInfo">
       <SpeakerProfiles :speaker-profiles="sessionInfo.speakers" />
-    </SessionSection>
+    </SessionPageSection>
     <ichimatsu-divided-bar color="vue-blue" />
     <footer-page-section />
   </div>

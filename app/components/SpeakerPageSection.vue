@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import SpeakerPageBlock from '~/components/SpeakerPageBlock.vue'
+import SpeakerPageBlock from '~/components/speakers/SpeakerPageBlock.vue'
+import SpeakerPageHeading from '~/components/speakers/SpeakerPageHeading.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
 import { ISpeaker } from '~/types/interface'
-import SpeakerPageHeading from './SpeakerPageHeading.vue'
 import { SHOW_SPONSOR_SESSION } from '~/utils/feature.constants'
 
 const shuffleArray = ([...array]) => {
@@ -72,14 +72,14 @@ const sessionSponsors = (computed(() => shuffleArray([...sponsors.value.platinum
                 v-for="sponsor in sessionSponsors"
                 :key="sponsor.name_en"
               >
-                <n-link :to="`/sponsor-sessions/${sponsor.name_en}`">
+                <nuxt-link :to="`/sponsor-sessions/${sponsor.name_en}`">
                   <img
                     :src="`/sponsor/${sponsor.name_en}.png`"
                     :alt="sponsor.name_jp"
                     class="mb-2 md:mb-4"
                   >
                   <p class="text-lg font-bold text-vue-blue md:text-22">{{ sponsor.name_jp }}</p>
-                </n-link>
+                </nuxt-link>
               </div>
             </div>
           </template>

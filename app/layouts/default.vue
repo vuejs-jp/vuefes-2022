@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { initHeadingFont } from '../services/initHeadingFont'
-import SlidedownNav from '~~/app/components/navbar/SlidedownNav.vue'
+import { initHeadingFont } from '~/services/initHeadingFont'
+import SlidedownNav from '~/components/navbar/SlidedownNav.vue'
 
 onMounted(() => {
   if (document !== undefined) {
