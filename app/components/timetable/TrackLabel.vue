@@ -54,7 +54,7 @@ const trackName = computed(() => {
 <template>
   <div :class="trackContainerClass">
     <div
-      class="py-[7px] w-[50%] text-xs font-bold text-center text-white md:hidden"
+      class="w-[50%] py-[7px] text-center text-xs font-bold text-white md:hidden"
       :class="trackLabelClasses"
     >
       {{ trackName }}

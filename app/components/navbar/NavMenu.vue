@@ -34,7 +34,7 @@ const localIsOpen = computed({
     <transition name="fade">
       <nav
         v-if="localIsOpen"
-        class="fixed top-0 left-0 z-10 w-screen h-screen text-vue-blue bg-white"
+        class="fixed top-0 left-0 z-10 h-screen w-screen bg-white text-vue-blue"
       >
         <div class="px-[3vw] pt-[5vw] text-right">
           <button
@@ -52,7 +52,7 @@ const localIsOpen = computed({
           <li
             v-for="link in menuLinks"
             :key="link.displayName"
-            class="block py-6 text-center border-b last:border-b-0 border-vue-blue"
+            class="block border-b border-vue-blue py-6 text-center last:border-b-0"
           >
             <!-- eslint-disable vue/no-deprecated-v-on-native-modifier -->
             <nuxt-link

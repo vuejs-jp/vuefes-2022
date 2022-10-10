@@ -36,7 +36,7 @@ const colorClass = computed(() => {
 
 <template>
   <div
-    class="w-full h-10 bg-vertical-20 bg-40 lg:h-20 lg:bg-vertical-40 lg:bg-80"
+    class="h-10 w-full bg-40 bg-vertical-20 lg:h-20 lg:bg-80 lg:bg-vertical-40"
     :class="colorClass"
   />
 </template>

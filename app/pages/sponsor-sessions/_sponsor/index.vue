@@ -38,13 +38,13 @@ useNuxt2Meta({
       title="Session"
       title-yamato="セッション"
     />
-    <div class="aspect-[250/140] mx-auto mb-3 w-40 md:mb-6 md:w-62.5">
+    <div class="mx-auto mb-3 aspect-[250/140] w-40 md:mb-6 md:w-62.5">
       <img
         :src="sponsor.image.src"
         :alt="sponsor.name_jp"
       >
     </div>
-    <p class="mb-8 text-base font-bold text-center text-vue-blue md:mb-15 md:text-22">{{ sponsor.name_jp }}</p>
+    <p class="mb-8 text-center text-base font-bold text-vue-blue md:mb-15 md:text-22">{{ sponsor.name_jp }}</p>
     <SessionPageSection :session-info="sessionInfo">
       <SpeakerProfiles :speaker-profiles="sessionInfo.speakers" />
     </SessionPageSection>

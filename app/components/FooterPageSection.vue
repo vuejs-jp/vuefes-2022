@@ -1,7 +1,7 @@
 <template>
   <section
     id="footer"
-    class="py-10 text-white bg-vue-blue lg:py-20"
+    class="bg-vue-blue py-10 text-white lg:py-20"
   >
     <img
       class="mx-auto mb-10 w-[9.375rem] lg:mb-20 lg:w-[15rem]"

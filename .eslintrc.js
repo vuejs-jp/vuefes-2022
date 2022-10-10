@@ -22,6 +22,7 @@ module.exports = {
         tags: ['custom-yamato', 'custom-title'],
       },
     ],
+    'tailwindcss/enforces-negative-arbitrary-values': [0],
     'vue/no-v-for-template-key-on-child': 'off',
     'vue/no-deprecated-slot-attribute': 'off',
     'vue/singleline-html-element-content-newline': 'off',

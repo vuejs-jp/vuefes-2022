@@ -25,7 +25,7 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
   <a
     v-if="isExternalLink"
     :href="link"
-    class="flex justify-center items-center py-2 font-bold text-vue-blue rounded-4xl border border-vue-blue hover:opacity-40 transition md:py-3 md:text-lg"
+    class="flex items-center justify-center rounded-4xl border border-vue-blue py-2 font-bold text-vue-blue transition hover:opacity-40 md:py-3 md:text-lg"
     target="_blank"
     rel="noopener"
   >
@@ -34,7 +34,7 @@ const emit = defineEmits<ILinkButtonFieldEmit>()
   <nuxt-link
     v-else
     :to="link"
-    class="flex justify-center items-center py-2 font-bold text-vue-blue rounded-4xl border border-vue-blue hover:opacity-40 transition md:py-3 md:text-lg"
+    class="flex items-center justify-center rounded-4xl border border-vue-blue py-2 font-bold text-vue-blue transition hover:opacity-40 md:py-3 md:text-lg"
   >
     {{ titleLabel }}
   </nuxt-link>

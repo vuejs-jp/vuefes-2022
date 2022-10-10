@@ -17,14 +17,14 @@ const eventInfo = computed(() => props.event)
 <template>
   <div
     :id="eventInfo.id"
-    class="pt-[17vw] mt-[-17vw] md:pt-32 md:-mt-32"
+    class="mt-[-17vw] pt-[17vw] md:-mt-32 md:pt-32"
   >
     <PageSubTitle class="mb-7 md:mb-14">
       {{ eventInfo.title }}
     </PageSubTitle>
     <div
       v-if="eventInfo.logoList.length"
-      class="flex mx-auto mb-14 max-w-[400px]"
+      class="mx-auto mb-14 flex max-w-[400px]"
     >
       <div
         v-for="(logo, index) in eventInfo.logoList"
@@ -48,7 +48,7 @@ const eventInfo = computed(() => props.event)
           <img
             :src="logo.src"
             :alt="logo.alt"
-            class="object-contain w-full"
+            class="w-full object-contain"
           >
         </template>
       </div>

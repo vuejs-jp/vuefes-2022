@@ -10,45 +10,45 @@ import {
 <template>
   <section
     id="store"
-    class="py-10 px-5 bg-store md:px-10 lg:p-20"
+    class="bg-store py-10 px-5 md:px-10 lg:p-20"
   >
-    <div class="py-20 bg-white lg:py-40">
-      <div class="px-5 mx-auto max-w-1190">
+    <div class="bg-white py-20 lg:py-40">
+      <div class="mx-auto max-w-1190 px-5">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Vue Fes Store"
           title-yamato="ストア"
         />
         <div class="mx-auto mb-10 max-w-700 lg:mb-20">
-          <p class="mb-6 paragraph">
+          <p class="paragraph mb-6">
             {{ storeDescription }}
           </p>
         </div>
-        <div class="flex flex-wrap gap-14 justify-between mx-auto mb-10 lg:mb-20">
+        <div class="mx-auto mb-10 flex flex-wrap justify-between gap-14 lg:mb-20">
           <div
             v-for="(goods, index) in goodsList"
             :key="index"
             class="w-full md:w-[45%] xl:w-[30%]"
           >
-            <div class="aspect-square flex mb-10 md:mb-5">
+            <div class="mb-10 flex aspect-square md:mb-5">
               <img
                 :alt="`${goods.name}のサンプル画像`"
                 :src="`/store/${goods.image}`"
                 loading="lazy"
-                class="block object-contain mx-auto max-h-full"
+                class="mx-auto block max-h-full object-contain"
               >
             </div>
-            <p class="text-2xl font-bold text-center text-vue-blue">
+            <p class="text-center text-2xl font-bold text-vue-blue">
               {{ goods.name }}
             </p>
-            <p class="mb-10 text-2xl font-bold text-center text-vue-blue">
+            <p class="mb-10 text-center text-2xl font-bold text-vue-blue">
               {{ goods.price }}
             </p>
             <p class="mb-5 text-sm text-vue-blue md:min-h-[80px]">
               {{ goods.description }}
             </p>
             <p
-              class="p-6 text-sm font-bold text-vue-blue whitespace-pre-line bg-gray-50"
+              class="whitespace-pre-line bg-gray-50 p-6 text-sm font-bold text-vue-blue"
               v-text="goods.specification"
             />
           </div>
@@ -66,5 +66,6 @@ import {
 <style scoped>
 .paragraph {
   @apply text-sm leading-7 lg:text-lg lg:leading-8 text-vue-blue
+
 }
 </style>

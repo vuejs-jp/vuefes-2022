@@ -1,16 +1,16 @@
 <template>
   <header class="py-[5vw] px-[2vw] lg:py-10">
-    <nav class="flex justify-between items-center">
+    <nav class="flex items-center justify-between">
       <div class="flex">
         <nuxt-link to="/">
           <img
-            class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-[200px] lg:h-9"
+            class="mr-[2.6vw] h-[3.51vw] w-[19.48vw] lg:mr-5 lg:h-9 lg:w-[200px]"
             :src="`/icon/vuefes_logo.svg`"
             :alt="conferenceTitle"
           >
         </nuxt-link>
         <p
-          class="flex after:block items-center pt-[1vw] after:ml-[1vw] after:w-[6vw] after:h-px text-[1.69vw] font-bold text-vue-blue after:border-b after:border-vue-blue lg:pt-2 lg:text-base"
+          class="flex items-center pt-[1vw] text-[1.69vw] font-bold text-vue-blue after:ml-[1vw] after:block after:h-px after:w-[6vw] after:border-b after:border-vue-blue lg:pt-2 lg:text-base"
         >
           {{ subtitle }}
         </p>
@@ -28,7 +28,7 @@
         >
           <nuxt-link
             :to="`/${link.uri}`"
-            class="text-xl hover:opacity-60 transition-opacity"
+            class="text-xl transition-opacity hover:opacity-60"
           >
             {{ link.displayName }}
           </nuxt-link>

@@ -11,8 +11,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="p-5 text-vue-blue border border-vue-blue md:flex md:p-12.5">
-    <p class="shrink-0 mb-5 text-sm font-extrabold text-center md:mt-15 md:mr-12.5 md:text-22">
+  <div class="border border-vue-blue p-5 text-vue-blue md:flex md:p-12.5">
+    <p class="mb-5 shrink-0 text-center text-sm font-extrabold md:mt-15 md:mr-12.5 md:text-22">
       Speaker Profile<template v-if="speakerProfiles.length > 1">s</template>
     </p>
     <div>
@@ -21,13 +21,13 @@ const props = defineProps({
         :key="speaker.name"
         class="mb-8 last:mb-0"
       >
-        <div class="mb-5 md:flex md:mb-0">
+        <div class="mb-5 md:mb-0 md:flex">
           <img
-            class="mx-auto mb-5 w-28 h-28 md:mr-8 md:ml-0 md:w-37.5 md:h-37.5"
+            class="mx-auto mb-5 h-28 w-28 md:mr-8 md:ml-0 md:h-37.5 md:w-37.5"
             :alt="`${speaker.name}の写真`"
             :src="speaker.image"
           >
-          <div class="text-center md: md:pt-5 md:text-left">
+          <div class="md: text-center md:pt-5 md:text-left">
             <p class="text-11 opacity-60 md:text-sm">
               {{ speaker.title }}
             </p>
@@ -40,7 +40,7 @@ const props = defineProps({
                 :aria-label="`${speaker.name}のTwitterアカウント`"
                 target="_blank"
                 rel="noopener"
-                class="flex mr-5"
+                class="mr-5 flex"
                 :href="`https://twitter.com/${speaker.twitter}`"
               >
                 <img

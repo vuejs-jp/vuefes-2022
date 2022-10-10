@@ -21,10 +21,10 @@ const handleClick = () => {
 <template>
   <button
     type="submit"
-    class="w-[56.62vw] h-[9.48vw] text-[3.38vw] text-center text-vue-blue bg-transparent rounded-4xl border border-vue-blue hover:opacity-60 transition-opacity md:w-[48.98vw] md:h-[6.43vw] md:text-[2.45vw] lg:w-[26.875rem] lg:h-[3.9375rem] lg:text-[1.5rem]"
+    class="h-[9.48vw] w-[56.62vw] rounded-4xl border border-vue-blue bg-transparent text-center text-[3.38vw] text-vue-blue transition-opacity hover:opacity-60 md:h-[6.43vw] md:w-[48.98vw] md:text-[2.45vw] lg:h-[3.9375rem] lg:w-[26.875rem] lg:text-[1.5rem]"
     @click="handleClick"
   >
-    <div class="flex justify-center items-center align-middle">
+    <div class="flex items-center justify-center align-middle">
       <TwitterSvg class="w-[3.64vw]" />
       <span class="ml-[1.82vw] lg:ml-1">
         <span class="font-bold">Twitter</span> ー {{ titleLabel }}

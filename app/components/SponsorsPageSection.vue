@@ -11,9 +11,9 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 <template>
   <section
     id="sponsors"
-    class="py-10 px-5 bg-sponsors md:px-10 lg:p-20"
+    class="bg-sponsors py-10 px-5 md:px-10 lg:p-20"
   >
-    <div class="py-20 bg-white lg:py-40">
+    <div class="bg-white py-20 lg:py-40">
       <div class="mx-auto max-w-1190">
         <SectionTitle
           class="mb-10 lg:mb-20"
@@ -32,13 +32,13 @@ const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
             <SponsorList :sponsors="sponsors.streaming" />
           </div>
         </template>
-        <div class="relative py-10 px-5 mx-5 text-vue-blue border border-vue-blue md:p-15">
-          <h3 class="absolute -top-4 left-1/2 px-8 font-yu-gothic text-xl font-bold text-center bg-white -translate-x-1/2 md:-top-5 md:text-3xl top">Individual</h3>
+        <div class="relative mx-5 border border-vue-blue py-10 px-5 text-vue-blue md:p-15">
+          <h3 class="top absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-8 text-center font-yu-gothic text-xl font-bold md:-top-5 md:text-3xl">Individual</h3>
           <ul>
             <li
               v-for="individual in individuals"
               :key="individual"
-              class="inline mr-6 text-sm leading-8 md:text-xl md:leading-10"
+              class="mr-6 inline text-sm leading-8 md:text-xl md:leading-10"
             >
               {{ individual }}
             </li>

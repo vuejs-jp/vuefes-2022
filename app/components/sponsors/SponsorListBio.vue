@@ -26,7 +26,7 @@ const sponsorRankClass = computed(() => {
   <div class="mb-12 text-vue-blue md:mb-16">
     <h2
       :id="supportLevelAnchor"
-      class="pt-[17vw] mt-[-17vw] mb-6 font-yu-gothic text-xl font-bold md:pt-32 md:-mt-32 md:text-3xl"
+      class="mt-[-17vw] mb-6 pt-[17vw] font-yu-gothic text-xl font-bold md:-mt-32 md:pt-32 md:text-3xl"
     >
       {{ supportLevelTitle }}
     </h2>
@@ -38,7 +38,7 @@ const sponsorRankClass = computed(() => {
         v-for="sponsor in sponsors"
         :id="sponsor.name_en"
         :key="sponsor.name"
-        class="pt-[17vw] mt-[-17vw] mb-2 md:pt-32 md:-mt-32 md:mb-7"
+        class="mt-[-17vw] mb-2 pt-[17vw] md:-mt-32 md:mb-7 md:pt-32"
       >
         <a
           :href="sponsor.corporate_url"
@@ -49,7 +49,7 @@ const sponsorRankClass = computed(() => {
             :src="sponsor.image.src"
             :alt="sponsor.name_jp"
             loading="lazy"
-            class="aspect-video mb-5 w-full"
+            class="mb-5 aspect-video w-full"
           >
         </a>
         <h3 class="text-lg font-bold leading-5 md:text-2xl">{{ sponsor.name_jp }}</h3>
@@ -57,12 +57,12 @@ const sponsorRankClass = computed(() => {
           :href="sponsor.corporate_url"
           target="_blank"
           rel="noopener"
-          class="inline-block mb-4 text-sm underline break-all hover:opacity-40 transition md:text-lg"
+          class="mb-4 inline-block break-all text-sm underline transition hover:opacity-40 md:text-lg"
         >{{ sponsor.corporate_url }}</a>
         <!-- eslint-disable vue/no-v-html -->
         <p
           v-if="sponsor.bio"
-          class="text-sm leading-6 break-all md:text-lg md:leading-8"
+          class="break-all text-sm leading-6 md:text-lg md:leading-8"
           v-html="sponsor.bio"
         />
         <!-- eslint-enable vue/no-v-html -->
@@ -74,5 +74,6 @@ const sponsorRankClass = computed(() => {
 <style scoped>
 :v-deep .link {
   @apply underline hover:opacity-40 transition
+
 }
 </style>

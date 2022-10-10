@@ -15,12 +15,12 @@ const props = defineProps({
     v-if="sponsor"
     :id="sponsor.name_jp"
     :href="`/sponsors#${sponsor.name_en}`"
-    class="shadow-card hover:shadow-card-hover transition"
+    class="shadow-card transition hover:shadow-card-hover"
   >
     <img
       :src="props.sponsor.image.src"
       :alt="props.sponsor.name_jp"
-      class="aspect-16/9 object-cover w-full bg-center"
+      class="aspect-16/9 w-full bg-center object-cover"
     >
   </a>
 </template>

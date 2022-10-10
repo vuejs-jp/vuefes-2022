@@ -9,8 +9,7 @@
     {
       "name": "vuefes-2022 (profile mode)",
       "request": "launch",
-      "type": "node",
-      "flutterMode": "profile"
+      "type": "node"
     }
   ]
 }

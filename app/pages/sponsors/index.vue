@@ -48,9 +48,9 @@ const links = [
     />
     <div
       v-if="SHOW_SPONSOR_LIST"
-      class="px-5 mx-auto max-w-1190"
+      class="mx-auto max-w-1190 px-5"
     >
-      <ul class="grid grid-cols-2 gap-4 mb-12 md:grid-cols-3 md:mb-24 lg:grid-cols-5">
+      <ul class="mb-12 grid grid-cols-2 gap-4 md:mb-24 md:grid-cols-3 lg:grid-cols-5">
         <li
           v-for="link in links"
           :key="link.label"

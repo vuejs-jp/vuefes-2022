@@ -12,10 +12,10 @@ import {
 <template>
   <section
     id="events"
-    class="py-10 px-5 bg-events md:px-10 lg:p-20"
+    class="bg-events py-10 px-5 md:px-10 lg:p-20"
   >
-    <div class="py-20 bg-white lg:py-40">
-      <div class="px-5 mx-auto max-w-[940px]">
+    <div class="bg-white py-20 lg:py-40">
+      <div class="mx-auto max-w-[940px] px-5">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Events"

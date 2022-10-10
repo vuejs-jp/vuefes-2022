@@ -13,8 +13,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <section class="px-5 mx-auto max-w-900 text-vue-blue">
-    <span class="inline-block py-1 px-4 mb-2.5 text-sm font-extrabold text-white bg-vue-blue md:text-lg">
+  <section class="mx-auto max-w-900 px-5 text-vue-blue">
+    <span class="mb-2.5 inline-block bg-vue-blue py-1 px-4 text-sm font-extrabold text-white md:text-lg">
       {{ sessionInfo.session.time }}min
     </span>
     <h2 class="mb-5 text-xl font-bold leading-8 md:mb-10 md:text-25">
@@ -22,7 +22,7 @@ const props = defineProps({
     </h2>
     <!-- eslint-disable vue/no-v-html -->
     <div
-      class="mb-8 text-sm leading-7 md:mb-20 md:text-lg md:leading-8 description"
+      class="description mb-8 text-sm leading-7 md:mb-20 md:text-lg md:leading-8"
       v-html="sessionInfo.session.description"
     />
     <!-- eslint-enaable vue/no-v-html -->

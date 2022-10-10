@@ -8,3 +8,4 @@ export const SHOW_EVENT_SPEAKER_PROFILE_VUE = false
 export const SHOW_EVENT_SPEAKER_PROFILE_PEEPHOLE = true
 export const SHOW_TIMETABLE = true
 export const SHOW_SPONSOR_SESSION = true
+export const SHUFFLE_SPEAKERS = false

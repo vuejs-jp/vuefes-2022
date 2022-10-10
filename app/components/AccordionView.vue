@@ -18,14 +18,14 @@ const end = (el: HTMLElement) => {
 </script>
 
 <template>
-  <div class="mb-5 last:border-0 border-b border-vue-blue md:px-6 md:mb-10">
+  <div class="mb-5 border-b border-vue-blue last:border-0 md:mb-10 md:px-6">
     <div
-      class="flex gap-5 justify-between items-center pb-5 cursor-pointer md:pb-10"
+      class="flex cursor-pointer items-center justify-between gap-5 pb-5 md:pb-10"
       tabindex="0"
       @click="open"
       @keyup="open"
     >
-      <p class="text-15 font-bold text-left text-vue-blue md:text-lg"><slot name="title" /></p>
+      <p class="text-left text-15 font-bold text-vue-blue md:text-lg"><slot name="title" /></p>
       <CloseSvg
         v-if="isOpen"
         class="shrink-0"
