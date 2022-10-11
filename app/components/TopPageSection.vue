@@ -19,44 +19,23 @@
             {{ eventDate }}
           </p>
         </div>
-        <p class="text-[3.9vw] font-bold text-center text-vue-blue lg:text-[2.5rem]">
+        <p class="text-[5.7vw] font-bold text-center text-vue-blue lg:text-[2.5rem]">
           {{ streamingNow }}
         </p>
-        <div class="flex flex-wrap gap-x-[3.125rem] justify-center lg:my-[3.125rem]">
+        <div class="flex flex-wrap gap-x-[3.125rem] gap-y-7 justify-center mt-8 mb-24 lg:my-[3.125rem]">
           <a
-            href="#"
+            v-for="track in tracks"
+            :key="track.id"
+            :href="track.url"
             target="_blank"
             rel="noopener"
           >
             <div
-              class="flex flex-col gap-[0.6875rem] justify-center font-bold bg-track-a rounded-full lg:w-[30rem] lg:h-[6.75rem]"
+              class="flex flex-col gap-[0.6875rem] justify-center w-[32.125em] h-32 font-bold rounded-full lg:w-[30rem] lg:h-[6.75rem]"
+              :class="track.bgClass"
             >
-              <p class="font-bold text-center text-white lg:text-2xl">{{ medpeerTrack }}</p>
-              <p class="font-bold text-center text-white lg:text-lg">{{ medpeerHashTag }}</p>
-            </div>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener"
-          >
-            <div
-              class="flex flex-col gap-[0.6875rem] justify-center font-bold bg-track-b rounded-full lg:w-[30rem] lg:h-[6.75rem]"
-            >
-              <p class="font-bold text-center text-white lg:text-2xl">{{ futureTrack }}</p>
-              <p class="font-bold text-center text-white lg:text-lg">{{ futureHashTag }}</p>
-            </div>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener"
-          >
-            <div
-              class="flex flex-col gap-[0.6875rem] justify-center font-bold bg-track-c rounded-full lg:w-[30rem] lg:h-[6.75rem]"
-            >
-              <p class="font-bold text-center text-white lg:text-2xl">{{ cloudsignTrack }}</p>
-              <p class="font-bold text-center text-white lg:text-lg">{{ cloudsignHashTag }}</p>
+              <p class="text-3xl font-bold text-center text-white lg:text-2xl">{{ track.name }}</p>
+              <p class="text-xl font-bold text-center text-white lg:text-lg">{{ track.hashTag }}</p>
             </div>
           </a>
         </div>
@@ -88,7 +67,7 @@
 
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
-import { conferenceTitle, eventDate, streamingNow, medpeerTrack, medpeerHashTag, futureTrack, futureHashTag, cloudsignTrack, cloudsignHashTag, tweetLabel, tweetUrl } from '~/utils/constants'
+import { conferenceTitle, eventDate, streamingNow, tracks, medpeerTrack, medpeerHashTag, futureTrack, futureHashTag, cloudsignTrack, cloudsignHashTag, tweetLabel, tweetUrl } from '~/utils/constants'
 import TopAnimation from '~/components/TopAnimation.vue'
 
 const tweet = () => {
