@@ -34,6 +34,8 @@ useNuxt2Meta({
       <timetable-page-section />
     </template>
     <speaker-page-section />
+    <ichimatsu-divided-bar color="typescript-blue" />
+    <events-page-section />
     <template v-if="SHOW_STORE">
       <ichimatsu-divided-bar color="asagi" />
       <store-page-section />
@@ -44,8 +46,6 @@ useNuxt2Meta({
     </template>
     <ichimatsu-divided-bar color="hiwamoegi" />
     <sponsors-page-section />
-    <ichimatsu-divided-bar color="typescript-blue" />
-    <events-page-section />
     <ichimatsu-divided-bar color="white" />
     <message-page-section />
     <ichimatsu-divided-bar color="white" />
