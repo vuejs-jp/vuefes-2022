@@ -103,6 +103,8 @@ module.exports = {
         'linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%), linear-gradient(45deg, #33A6B8 25%, transparent 25%, transparent 75%, #33A6B8 75%)',
       'ichimatsu-typescript-blue':
         'linear-gradient(45deg, #4374AA 25%, transparent 25%, transparent 75%, #4374AA 75%), linear-gradient(45deg, #4374AA 25%, transparent 25%, transparent 75%, #4374AA 75%)',
+      'ichimatsu-white-green':
+        'linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%), linear-gradient(45deg, #fff 25%, #5ab088 25%, #5ab088 75%, #fff 75%)',
       sponsors: 'linear-gradient(180deg, #90b44b 0%, #5ab088 100%)',
       events: 'linear-gradient(180deg, #4374AA 0%, rgba(255, 255, 255, 0) 100%)',
       store: 'linear-gradient(180deg, #33A6B8 0%, rgba(255, 255, 255, 0) 100%)',
