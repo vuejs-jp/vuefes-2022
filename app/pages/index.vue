@@ -46,7 +46,7 @@ useNuxt2Meta({
     </template>
     <ichimatsu-divided-bar color="hiwamoegi" />
     <sponsors-page-section />
-    <ichimatsu-divided-bar color="white" />
+    <ichimatsu-divided-bar color="white-green" />
     <message-page-section />
     <ichimatsu-divided-bar color="white" />
     <form-page-section />

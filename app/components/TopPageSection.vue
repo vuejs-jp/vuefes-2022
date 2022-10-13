@@ -7,7 +7,7 @@
         >
           <top-animation />
         </div>
-        <div class="flex flex-wrap gap-x-8 gap-y-2.5 justify-center items-baseline mb-16">
+        <div class="flex flex-wrap gap-x-8 gap-y-2.5 justify-center items-baseline mb-8 md:mb-16">
           <h1
             class="text-[7.01vw] font-extrabold leading-none text-center text-vue-blue lg:text-[4.0625rem]"
           >
@@ -19,10 +19,10 @@
             {{ eventDate }}
           </p>
         </div>
-        <p class="text-[5.7vw] font-bold text-center text-vue-blue lg:text-[2.5rem]">
+        <p class="text-[5.7vw] font-bold text-center text-vue-blue md:text-[2.5rem]">
           {{ streamingNow }}
         </p>
-        <div class="flex flex-wrap gap-x-[3.125rem] gap-y-4 justify-center mt-4 mb-12 md:gap-y-7 lg:gap-y-7 lg:my-[3.125rem]">
+        <div class="flex flex-wrap gap-x-[3.125rem] gap-y-4 justify-center mt-4 mb-12 md:gap-y-7 lg:gap-y-7 lg:mt-6">
           <a
             v-for="track in tracks"
             :key="track.id"
@@ -32,7 +32,7 @@
             class="hover:opacity-80 transition-opacity"
           >
             <div
-              class="flex flex-col justify-center w-[67vw] max-w-[30rem] h-16 font-bold rounded-full md:w-[30rem] md:h-[6.75rem] lg:w-[30rem] lg:h-[6.75rem]"
+              class="flex flex-col justify-center w-[67vw] max-w-[30rem] h-16 font-bold rounded-full shadow-card md:w-[30rem] md:h-[6.75rem] lg:w-[30rem] lg:h-[6.75rem]"
               :class="track.bgClass"
             >
               <p class="text-base font-bold text-center text-white md:text-2xl lg:text-2xl">{{ track.name }}</p>
@@ -68,7 +68,7 @@
 
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
-import { conferenceTitle, eventDate, streamingNow, tracks, medpeerTrack, medpeerHashTag, futureTrack, futureHashTag, cloudsignTrack, cloudsignHashTag, tweetLabel, tweetUrl } from '~/utils/constants'
+import { conferenceTitle, eventDate, streamingNow, tracks, tweetLabel, tweetUrl } from '~/utils/constants'
 import TopAnimation from '~/components/TopAnimation.vue'
 
 const tweet = () => {
