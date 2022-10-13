@@ -236,11 +236,11 @@ export const websiteLinks = [
 ]
 
 export const menuLinks = [
-  { displayName: 'Speakers', uri: '#speakers' },
   { displayName: 'TimeTable', uri: '#timetable' },
+  { displayName: 'Speakers', uri: '#speakers' },
   { displayName: 'Events', uri: '#events' },
-  { displayName: 'Ticket', uri: '#ticket' },
   { displayName: 'Store', uri: '#store' },
+  { displayName: 'Ticket', uri: '#ticket' },
   { displayName: 'Sponsors', uri: '#sponsors' },
   { displayName: 'Contact', uri: '#form' },
   { displayName: 'Team', uri: '#team' },
