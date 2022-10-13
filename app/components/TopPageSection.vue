@@ -22,7 +22,7 @@
         <p class="text-[5.7vw] font-bold text-center text-vue-blue lg:text-[2.5rem]">
           {{ streamingNow }}
         </p>
-        <div class="flex flex-wrap gap-x-[3.125rem] gap-y-4 justify-center mt-4 mb-12 lg:my-[3.125rem]">
+        <div class="flex flex-wrap gap-x-[3.125rem] gap-y-4 justify-center mt-4 mb-12 md:gap-y-7 lg:gap-y-7 lg:my-[3.125rem]">
           <a
             v-for="track in tracks"
             :key="track.id"
