@@ -18,6 +18,32 @@ export const vuefesTwitterID = '@vuefes'
 
 export const eventDate = '2022.10.16 SUN'
 
+export const streamingNow = '＼YouTube Live配信中！／'
+
+export const tracks = [
+  {
+    id: 1,
+    name: 'メドピアトラック',
+    hashTag: '#vuefes_medpeer',
+    url: 'https://www.youtube.com/watch?v=HsBTx36c_kA',
+    bgClass: 'bg-track-a'
+  },
+  {
+    id: 2,
+    name: 'FUTURE トラック',
+    hashTag: '#vuefes_future',
+    url: 'https://www.youtube.com/watch?v=dtD4p89ogKM',
+    bgClass: 'bg-track-b'
+  },
+  {
+    id: 3,
+    name: 'クラウドサイントラック',
+    hashTag: '#vuefes_cloudsign',
+    url: 'https://www.youtube.com/watch?v=eOJZ_3W4kaQ',
+    bgClass: 'bg-track-c'
+  }
+]
+
 export const message1 =
   'Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。文字通り Fes = お祭りのように Vue.js を共に盛り上げ、共に学び、そしてなによりも共に楽しむために誕生しました。'
 
@@ -198,11 +224,11 @@ export const websiteLinks = [
 ]
 
 export const menuLinks = [
-  { displayName: 'Speakers', uri: '#speakers' },
   { displayName: 'TimeTable', uri: '#timetable' },
+  { displayName: 'Speakers', uri: '#speakers' },
   { displayName: 'Events', uri: '#events' },
-  { displayName: 'Ticket', uri: '#ticket' },
   { displayName: 'Store', uri: '#store' },
+  { displayName: 'Ticket', uri: '#ticket' },
   { displayName: 'Sponsors', uri: '#sponsors' },
   { displayName: 'Contact', uri: '#form' },
   { displayName: 'Team', uri: '#team' },
