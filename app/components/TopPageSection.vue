@@ -22,7 +22,7 @@
         <p class="text-[5.7vw] font-bold text-center text-vue-blue lg:text-[2.5rem]">
           {{ streamingNow }}
         </p>
-        <div class="flex flex-wrap gap-x-[3.125rem] gap-y-7 justify-center mt-8 mb-24 lg:my-[3.125rem]">
+        <div class="flex flex-wrap gap-x-[3.125rem] gap-y-4 justify-center mt-4 mb-12 lg:my-[3.125rem]">
           <a
             v-for="track in tracks"
             :key="track.id"
@@ -32,11 +32,11 @@
             class="hover:opacity-80 transition-opacity"
           >
             <div
-              class="flex flex-col gap-[0.4875rem] justify-center w-[80vw] max-w-[30rem] h-32 min-h-[20vh] font-bold rounded-full md:w-[30rem] md:h-[6.75rem] lg:w-[30rem] lg:h-[6.75rem]"
+              class="flex flex-col justify-center w-[67vw] max-w-[30rem] h-16 font-bold rounded-full md:w-[30rem] md:h-[6.75rem] lg:w-[30rem] lg:h-[6.75rem]"
               :class="track.bgClass"
             >
-              <p class="text-2xl font-bold text-center text-white">{{ track.name }}</p>
-              <p class="text-xl font-bold text-center text-white">{{ track.hashTag }}</p>
+              <p class="text-base font-bold text-center text-white md:text-2xl lg:text-2xl">{{ track.name }}</p>
+              <p class="text-sm font-normal text-center text-white md:text-xl lg:text-xl">{{ track.hashTag }}</p>
             </div>
           </a>
         </div>
