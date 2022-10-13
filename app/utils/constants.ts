@@ -44,18 +44,6 @@ export const tracks = [
   }
 ]
 
-export const medpeerTrack = 'メドピアトラック'
-
-export const medpeerHashTag = '#vuefes_medpeer'
-
-export const futureTrack = 'FUTURE トラック'
-
-export const futureHashTag = '#vuefes_future'
-
-export const cloudsignTrack = 'クラウドサイントラック'
-
-export const cloudsignHashTag = '#vuefes_cloudsign'
-
 export const message1 =
   'Vue Fes Japan は 2018 年に誕生した日本最大級の Vue.js カンファレンスです。文字通り Fes = お祭りのように Vue.js を共に盛り上げ、共に学び、そしてなによりも共に楽しむために誕生しました。'
 
