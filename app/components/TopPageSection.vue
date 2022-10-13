@@ -35,8 +35,8 @@
               class="flex flex-col gap-[0.4875rem] justify-center w-[80vw] max-w-[30rem] h-32 min-h-[20vh] font-bold rounded-full md:w-[30rem] md:h-[6.75rem] lg:w-[30rem] lg:h-[6.75rem]"
               :class="track.bgClass"
             >
-              <p class="text-2xl font-bold text-center text-white lg:text-2xl">{{ track.name }}</p>
-              <p class="text-xl font-bold text-center text-white lg:text-lg">{{ track.hashTag }}</p>
+              <p class="text-2xl font-bold text-center text-white">{{ track.name }}</p>
+              <p class="text-xl font-bold text-center text-white">{{ track.hashTag }}</p>
             </div>
           </a>
         </div>
