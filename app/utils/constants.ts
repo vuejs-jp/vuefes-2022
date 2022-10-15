@@ -18,7 +18,7 @@ export const vuefesTwitterID = '@vuefes'
 
 export const eventDate = '2022.10.16 SUN'
 
-export const streamingNow = '＼YouTube Live配信中！／'
+export const streamingNow = '＼YouTube Live配信予定！／'
 
 export const tracks = [
   {
