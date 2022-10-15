@@ -29,27 +29,26 @@ useNuxt2Meta({
   <div>
     <nav-page-section />
     <top-page-section />
-    <ichimatsu-divided-bar color="white" />
-    <message-page-section />
-    <ichimatsu-divided-bar color="white" />
-    <speaker-page-section />
     <template v-if="SHOW_TIMETABLE">
       <ichimatsu-divided-bar color="timetable" />
       <timetable-page-section />
     </template>
+    <speaker-page-section />
     <ichimatsu-divided-bar color="typescript-blue" />
     <events-page-section />
-    <template v-if="SHOW_TICKET">
-      <ichimatsu-divided-bar color="tohoh" />
-      <ticket-page-section />
-    </template>
     <template v-if="SHOW_STORE">
       <ichimatsu-divided-bar color="asagi" />
       <store-page-section />
     </template>
+    <template v-if="SHOW_TICKET">
+      <ichimatsu-divided-bar color="tohoh" />
+      <ticket-page-section />
+    </template>
     <ichimatsu-divided-bar color="hiwamoegi" />
     <sponsors-page-section />
-    <ichimatsu-divided-bar color="silver-tree" />
+    <ichimatsu-divided-bar color="white-green" />
+    <message-page-section />
+    <ichimatsu-divided-bar color="white" />
     <form-page-section />
     <template v-if="SHOW_TEAM">
       <ichimatsu-divided-bar color="sangosyu" />
