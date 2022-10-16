@@ -19,7 +19,7 @@
             {{ eventDate }}
           </p>
         </div>
-        <p class="text-[5.7vw] font-bold text-center text-vue-blue md:text-[2.5rem]">
+        <p v-if="LIVE_YOUTUBE" class="text-[5.7vw] font-bold text-center text-vue-blue md:text-[2.5rem]">
           {{ streamingNow }}
         </p>
         <div class="flex flex-wrap gap-x-[3.125rem] gap-y-4 justify-center mt-4 mb-12 md:gap-y-7 lg:gap-y-7 lg:mt-6">
@@ -69,6 +69,7 @@
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
 import { conferenceTitle, eventDate, streamingNow, tracks, tweetLabel, tweetUrl } from '~/utils/constants'
+import { LIVE_YOUTUBE } from '~/utils/feature.constants'
 import TopAnimation from '~/components/TopAnimation.vue'
 
 const tweet = () => {
