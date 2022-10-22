@@ -3,5 +3,8 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "jsx": "preserve"
+  },
+  "vueCompilerOptions": {
+    "target": 2
   }
 }

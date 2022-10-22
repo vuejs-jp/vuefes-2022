@@ -29,6 +29,7 @@
     "@testing-library/vue": "^6.5.1",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
+    "@vue/runtime-dom": "^3.2.41",
     "eslint": "^8.8.0",
     "eslint-plugin-tailwindcss": "^3.4.3",
     "eslint-plugin-vue": "^8.4.1",
