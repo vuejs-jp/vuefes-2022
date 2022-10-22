@@ -516,7 +516,7 @@ import ExplainText from '~/components/ExplainText.vue'
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .timeslot {
   @apply text-lg xl:text-23 text-white text-center bg-timetable-timeslot col-span-3 md:col-span-1 min-h-10 pt-1.5 md:pt-[29px];
 }
