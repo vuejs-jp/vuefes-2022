@@ -21,7 +21,7 @@ module.exports = {
         tags: ['custom-yamato', 'custom-title'],
       },
     ],
-    'tailwindcss/classnames-order': 0,
+    'tailwindcss/classnames-order': 0, // 近くこちらのルールは外せると良い
     'vue/no-v-for-template-key-on-child': 'off',
     'vue/no-deprecated-slot-attribute': 'off',
     'vue/singleline-html-element-content-newline': 'off',
