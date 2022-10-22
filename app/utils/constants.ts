@@ -26,22 +26,22 @@ export const tracks = [
     name: 'メドピアトラック',
     hashTag: '#vuefes_medpeer',
     url: 'https://www.youtube.com/watch?v=HsBTx36c_kA',
-    bgClass: 'bg-track-a'
+    bgClass: 'bg-track-a',
   },
   {
     id: 2,
     name: 'FUTURE トラック',
     hashTag: '#vuefes_future',
     url: 'https://www.youtube.com/watch?v=dtD4p89ogKM',
-    bgClass: 'bg-track-b'
+    bgClass: 'bg-track-b',
   },
   {
     id: 3,
     name: 'クラウドサイントラック',
     hashTag: '#vuefes_cloudsign',
     url: 'https://www.youtube.com/watch?v=eOJZ_3W4kaQ',
-    bgClass: 'bg-track-c'
-  }
+    bgClass: 'bg-track-c',
+  },
 ]
 
 export const message1 =

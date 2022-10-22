@@ -11,7 +11,6 @@ module.exports = {
     parser: '@typescript-eslint/parser',
   },
   rules: {
-    indent: ['error', 2],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
