@@ -280,7 +280,7 @@ import ExplainText from '~/components/ExplainText.vue'
               </div>
             </TrackLabel>
             <TrackLabel
-              class="speaker-track-label md:centering"
+              class="md:flex md:justify-center md:items-center speaker-track-label"
               :track-index="1"
             >
               <nuxt-link
@@ -319,7 +319,7 @@ import ExplainText from '~/components/ExplainText.vue'
 
             <p class="row-span-2 timeslot">15:10 - 15:55</p>
             <TrackLabel
-              class="row-span-2 speaker-track-label md:centering"
+              class="row-span-2 md:flex md:justify-center md:items-center speaker-track-label"
               :track-index="0"
             >
               <nuxt-link
@@ -370,7 +370,7 @@ import ExplainText from '~/components/ExplainText.vue'
             </TrackLabel>
 
             <TrackLabel
-              class="row-span-5 h-full speaker-track-label md:centering"
+              class="row-span-5 h-full md:flex md:justify-center md:items-center speaker-track-label"
               :track-index="2"
             >
               <div>
@@ -516,16 +516,12 @@ import ExplainText from '~/components/ExplainText.vue'
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .timeslot {
   @apply text-lg xl:text-23 text-white text-center bg-timetable-timeslot col-span-3 md:col-span-1 min-h-10 pt-1.5 md:pt-[29px];
 }
 
 .speaker-track-label {
   @apply col-span-3 md:col-span-1;
-}
-
-.md\:centering {
-  @apply md:flex md:justify-center md:items-center
 }
 </style>
