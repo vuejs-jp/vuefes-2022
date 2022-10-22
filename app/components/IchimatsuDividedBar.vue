@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import type { CustomPropType } from '~/types/shims-vue'
-
-const props = defineProps({
-  color: {
-    type: String as CustomPropType<'white' | 'vue-blue' | 'hiwamoegi' | 'silver-tree' | 'sangosyu' | 'tohoh' | 'asagi' | 'timetable' | 'typescript-blue' | 'white-green'>,
-    required: true,
-  },
-})
+const props = defineProps<{
+  color: 'white' | 'vue-blue' | 'hiwamoegi' | 'silver-tree' | 'sangosyu' | 'tohoh' | 'asagi' | 'timetable' | 'typescript-blue' | 'white-green'
+}>()
 
 const colorClass = computed(() => {
   switch (props.color) {
