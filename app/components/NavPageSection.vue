@@ -4,7 +4,7 @@
       <div class="flex">
         <nuxt-link to="/">
           <img
-            class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-[200px] lg:h-9"
+            class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-50 lg:h-9"
             :src="`/icon/vuefes_logo.svg`"
             :alt="conferenceTitle"
           >

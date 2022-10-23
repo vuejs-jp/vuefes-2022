@@ -27,7 +27,7 @@ export default {
     id="form"
     class="py-20 lg:py-40"
   >
-    <div class="px-5 mx-auto max-w-[43.75rem]">
+    <div class="px-5 mx-auto max-w-700">
       <SectionTitle
         class="mb-10 lg:mb-20"
         title="Contact"

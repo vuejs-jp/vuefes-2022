@@ -15,7 +15,7 @@ import {
     class="py-10 px-5 bg-events md:px-10 lg:p-20"
   >
     <div class="py-20 bg-white lg:py-40">
-      <div class="px-5 mx-auto max-w-[940px]">
+      <div class="px-5 mx-auto max-w-940">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Events"

@@ -57,7 +57,7 @@ const handleFocusOut = (e) => {
     <textarea
       :id="idLabel"
       :name="name"
-      class="block py-3.5 px-4 mt-2.5 w-full h-[8.125rem] text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-[11.25rem]"
+      class="block py-3.5 px-4 mt-2.5 w-full h-32.5 text-vue-blue bg-transparent border border-vue-blue lg:py-7 lg:px-8 lg:h-45"
       :rows="rows"
       :placeholder="placeholder"
       :required="required"

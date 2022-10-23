@@ -44,7 +44,7 @@ import {
             <p class="mb-10 text-2xl font-bold text-center text-vue-blue">
               {{ goods.price }}
             </p>
-            <p class="mb-5 text-sm text-vue-blue md:min-h-[80px]">
+            <p class="mb-5 text-sm text-vue-blue md:min-h-20">
               {{ goods.description }}
             </p>
             <p

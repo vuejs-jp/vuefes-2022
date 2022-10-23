@@ -24,7 +24,7 @@ const eventInfo = computed(() => props.event)
     </PageSubTitle>
     <div
       v-if="eventInfo.logoList.length"
-      class="flex mx-auto mb-14 max-w-[400px]"
+      class="flex mx-auto mb-14 max-w-400"
     >
       <div
         v-for="(logo, index) in eventInfo.logoList"
