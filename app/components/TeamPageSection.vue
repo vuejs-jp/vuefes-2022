@@ -15,7 +15,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
     class="py-10 px-5 bg-staffs md:px-10 lg:p-20"
   >
     <div class="py-20 px-5 bg-white lg:py-40">
-      <div class="mx-auto max-w-[43.75rem] lg:max-w-[73.75rem]">
+      <div class="mx-auto max-w-700 lg:max-w-1180">
         <SectionTitle
           class="mb-10 lg:mb-20"
           title="Team"

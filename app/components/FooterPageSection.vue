@@ -4,7 +4,7 @@
     class="py-10 text-white bg-vue-blue lg:py-20"
   >
     <img
-      class="mx-auto mb-10 w-[9.375rem] lg:mb-20 lg:w-[15rem]"
+      class="mx-auto mb-10 w-37.5 lg:mb-20 lg:w-60"
       :src="`/icon/vuefes_logo-invert.svg`"
       alt="Vue fes 2022"
     >

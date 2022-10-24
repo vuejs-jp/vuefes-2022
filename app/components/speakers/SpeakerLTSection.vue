@@ -5,7 +5,7 @@ import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 
 <template>
   <section class="p-4 border border-vue-blue md:px-10 lg:py-10 lg:px-20">
-    <h3 class="mx-auto mt-[-2.0rem] mb-6 w-[14.375rem] text-xl font-bold text-center text-vue-blue md:mb-8 lg:mt-[-3.6rem] lg:mb-14 lg:w-[26.875rem] lg:text-4xl bg-img">
+    <h3 class="mx-auto -mt-8 mb-6 w-57.5 text-xl font-bold text-center text-vue-blue md:mb-8 lg:my-14 lg:w-107.5 lg:text-4xl bg-img">
       LT募集について
     </h3>
     <p class="mb-8 text-sm leading-7 text-vue-blue lg:mb-12 lg:text-lg lg:leading-8">

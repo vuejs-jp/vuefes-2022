@@ -11,7 +11,7 @@ import {
 
 <template>
   <div>
-    <div class="relative z-10 mx-auto w-[12.5rem] bg-white lg:w-[21.25rem]">
+    <div class="relative z-10 mx-auto w-50 bg-white lg:w-85">
       <h3 class="text-xl font-bold text-center text-vue-blue lg:text-4xl">
         託児サポート
       </h3>

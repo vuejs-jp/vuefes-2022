@@ -22,7 +22,7 @@ const handleClick = () => {
 
 <template>
   <div
-    class="inline-block before:block relative before:-z-10 w-full before:w-full max-w-[30rem] h-16 before:h-full before:bg-submit-border rounded-4xl before:rounded-4xl shadow-submit transition lg:h-[4.5rem]"
+    class="inline-block before:block relative before:-z-10 w-full before:w-full max-w-480 h-16 before:h-full before:bg-submit-border rounded-4xl before:rounded-4xl shadow-submit transition lg:h-18"
     :class="{ 'hover:shadow-submit-hover': !disabled, 'opacity-40': disabled }"
   >
     <div class="flex absolute top-0 justify-center items-center p-px w-full h-full">
