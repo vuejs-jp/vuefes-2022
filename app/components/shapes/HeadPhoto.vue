@@ -48,7 +48,7 @@ interface IPropParts {
   key: string
 }
 
-export default {
+export default defineComponent({
   name: 'HeadPhoto',
   props: {
     parts: {
@@ -98,5 +98,5 @@ export default {
 
     return { transform, CLIP_ID, imageSrc }
   },
-}
+})
 </script>

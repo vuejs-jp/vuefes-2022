@@ -32,7 +32,7 @@ import HeadSlash from '~/components/shapes/HeadSlash.vue'
 import HeadTriangle from '~/components/shapes/HeadTriangle.vue'
 import HeadPhoto from '~/components/shapes/HeadPhoto.vue'
 
-export default {
+export default defineComponent({
   components: {
     HeadCircle,
     HeadCross,
@@ -45,5 +45,5 @@ export default {
     const useAnime = useAnimation()
     return { ...useAnime }
   },
-}
+})
 </script>

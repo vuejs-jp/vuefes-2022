@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import type { CustomPropType } from '~/types/shims-vue'
 import { ISpeakerProfile } from '~/types/interface'
 
-const props = defineProps({
-  speakerProfile: {
-    type: Object as CustomPropType<ISpeakerProfile>,
-    required: true,
-  }
-})
+const props = defineProps<{
+  speakerProfile: ISpeakerProfile
+}>()
 
 const speakerInfo = computed(() => props.speakerProfile)
 </script>

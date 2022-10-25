@@ -24,7 +24,7 @@ interface IPropParts {
   key: string
 }
 
-export default {
+export default defineComponent({
   name: 'HeadCircle',
   props: {
     parts: {
@@ -62,6 +62,5 @@ export default {
     return { transform }
   }
 
-}
-
+})
 </script>

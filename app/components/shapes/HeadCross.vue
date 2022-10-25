@@ -38,7 +38,7 @@ interface IPropParts {
   key: string
 }
 
-export default {
+export default defineComponent({
   name: 'HeadCross',
   props: {
     parts: {
@@ -90,5 +90,5 @@ export default {
       transform,
     }
   }
-}
+})
 </script>

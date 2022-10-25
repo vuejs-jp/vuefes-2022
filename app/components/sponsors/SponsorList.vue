@@ -2,6 +2,7 @@
 import type { CustomPropType } from '~/types/shims-vue'
 import SponsorLogo from '~/components/sponsors/SponsorLogo.vue'
 import { sponsorSupportLevelTitle } from '~/utils/sponsors.constants'
+import { ISponsor } from '~/types/sponsors'
 
 const props = defineProps({
   sponsors: {

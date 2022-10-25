@@ -16,7 +16,9 @@ export interface ISponsor {
   bio?: string
   twitter: string
   facebook: string
-  image: string
+  image: {
+    src: string
+  }
   corporate_url: string
   rank: Rank
   order: number

@@ -22,7 +22,7 @@ interface IPropParts {
   key: string
 }
 
-export default {
+export default defineComponent({
   name: 'HeadTriangle',
   props: {
     parts: {
@@ -62,6 +62,5 @@ export default {
       KEY_FRAME
     }
   }
-
-}
+})
 </script>
