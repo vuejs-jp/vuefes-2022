@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import SpeakerProfiles from '~/components/speakers/SpeakerProfiles.vue'
 import PageSubTitle from '~/components/PageSubTitle.vue'
-import type { CustomPropType } from '~/types/shims-vue'
 import { IEvent } from '~/types/events'
 
-const props = defineProps({
-  event: {
-    type: Object as CustomPropType<IEvent>,
-    required: true,
-  }
-})
+const props = defineProps<{
+  event: IEvent
+}>()
 
 const eventInfo = computed(() => props.event)
 </script>

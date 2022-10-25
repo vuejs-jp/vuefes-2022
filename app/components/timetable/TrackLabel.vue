@@ -1,13 +1,9 @@
 <script setup lang="ts">
-const props = defineProps({
-  trackIndex: {
-    type: Number as PropType<0 | 1 | 2>,
-    required: true,
-  },
-  isSponsorEvent: {
-    type: Boolean,
-    default: false,
-  },
+const props = withDefaults(defineProps<{
+  trackIndex: 0 | 1 | 2,
+  isSponsorEvent: boolean
+}>(), {
+  isSponsorEvent: false
 })
 
 const trackLabelClasses = computed(() => {

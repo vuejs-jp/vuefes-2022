@@ -34,7 +34,7 @@ interface IPropParts {
   key: string
 }
 
-export default {
+export default defineComponent({
   name: 'HeadHorizontal',
   props: {
     parts: {
@@ -71,5 +71,5 @@ export default {
 
     return { transform }
   }
-}
+})
 </script>

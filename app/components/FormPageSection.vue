@@ -8,7 +8,7 @@ import useForm from '~/composables/useForm'
 
 import { introduction } from '~/utils/constants'
 
-export default {
+export default defineComponent({
   components: {
     SubmitButtonField,
     InputField,
@@ -19,7 +19,7 @@ export default {
     const formComposable = useForm()
     return { ...formComposable, introduction }
   },
-}
+})
 </script>
 
 <template>

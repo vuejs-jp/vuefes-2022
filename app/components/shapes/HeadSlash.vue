@@ -28,7 +28,7 @@ interface IPropParts {
   key: string
 }
 
-export default {
+export default defineComponent({
   name: 'HeadSlash',
   props: {
     parts: {
@@ -83,5 +83,5 @@ export default {
       KEY_FRAME2
     }
   }
-}
+})
 </script>

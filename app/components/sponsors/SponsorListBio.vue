@@ -37,7 +37,7 @@ const sponsorRankClass = computed(() => {
       <div
         v-for="sponsor in sponsors"
         :id="sponsor.name_en"
-        :key="sponsor.name"
+        :key="sponsor.name_en"
         class="pt-[17vw] mt-[-17vw] mb-2 md:pt-32 md:-mt-32 md:mb-7"
       >
         <a
@@ -71,7 +71,7 @@ const sponsorRankClass = computed(() => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 ::v-deep .link {
   @apply underline hover:opacity-40 transition
 }

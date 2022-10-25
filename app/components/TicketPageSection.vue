@@ -3,7 +3,7 @@ import SectionTitle from '~/components/SectionTitle.vue'
 import PageSubTitle from '~/components/PageSubTitle.vue'
 import ExplainText from '~/components/ExplainText.vue'
 import AccordionView from '~/components/AccordionView.vue'
-import LinkButtonField from '~/components/forms/LinkButtonField'
+import LinkButtonField from '~/components/forms/LinkButtonField.vue'
 import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotionCaution, promotionInfo, promotionInfo2, promotionInfo3, promotionInfo4 } from '~/utils/constants'
 </script>
 
