@@ -180,7 +180,12 @@ import ExplainText from '~/components/ExplainText.vue'
                   <p class="text-sm">{{ event.subTitle }}</p>
                 </template>
                 <template v-if="event.type === 'lt' || event.type === 'multiple_session'">
-                  <p v-if="event.type === 'lt'" class="mb-8 font-bold">ライトニングトーク</p>
+                  <p
+                    v-if="event.type === 'lt'"
+                    class="mb-8 font-bold"
+                  >
+                    ライトニングトーク
+                  </p>
                   <div
                     v-for="(e, k) in event.events"
                     :key="k"
