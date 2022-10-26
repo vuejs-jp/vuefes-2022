@@ -16,7 +16,7 @@ const props = defineProps({
     <div class="font-kokuryu-heading text-40 opacity-10 lg:text-80">
       {{ titleYamato }}
     </div>
-    <h2 class="-mt-6 text-xl font-extrabold lg:-mt-14 lg:text-40">
+    <h2 class="-mt-6 text-xl font-extrabold lg:-mt-8 lg:text-40">
       {{ title }}
     </h2>
   </div>

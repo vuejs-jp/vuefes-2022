@@ -412,8 +412,8 @@ import ExplainText from '~/components/ExplainText.vue'
             </div>
           </div>
         </div>
+        <ExplainText explain="※各セッションの開始・終了時間は多少前後する可能性がありますので、あらかじめご了承ください。" />
       </div>
-      <ExplainText explain="※各セッションの開始・終了時間は多少前後する可能性がありますので、あらかじめご了承ください。" />
     </div>
   </section>
 </template>
