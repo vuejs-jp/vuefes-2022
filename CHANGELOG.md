@@ -1,5 +1,116 @@
 # CHANGELOG
 
+## [ver.2022.18.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.18.1)
+
+- 当日用レイアウトを公開
+
+## [ver.2022.17.6](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.17.6)
+
+- v-deep の指定方法が間違っていたので修正
+
+## [ver.2022.17.5](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.17.5)
+
+- ページリロード時、正しい位置までスクロールしないので、スピーカーのシャッフル表示をやめた
+
+## [ver.2022.17.4](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.17.4)
+
+- リファクタリング
+- STORES 株式会社の社名を typo していたので修正
+
+## [ver.2022.17.3](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.17.3)
+
+- ゴールドスポンサーのセッション時間が間違っていたので修正
+
+## [ver.2022.17.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.17.2)
+
+- TOP のスピーカーの並びをランダムに変更
+
+## [ver.2022.17.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.17.1)
+
+- タイムテーブルのスタイルを調整
+- タイムテーブルを表示
+
+## [ver.2022.16.5](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.16.5)
+
+- Peephole の登壇者に Yaël さんを追加
+- 企画セクションに「Evan You に聞こう」を追加
+
+## [ver.2022.16.4](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.16.4)
+
+- 誤ってタイムテーブルが公開されてしまっていたので、非表示にした。
+
+## [ver.2022.16.3](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.16.3)
+
+- タイムテーブルのスタイルを調整
+- スポンサーを追加
+  - ワインと鍋
+  - エキサイト株式会社
+
+## [ver.2022.16.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.16.2)
+
+- 株式会社イエソドのスポンサーセッション情報を追加
+- Jess さんのセッションタイトルを変更
+
+## [ver.2022.16.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.16.1)
+
+- スポンサーセッション情報を追加
+- 企画セクションを更新
+  - 各企画の登壇社者情報を追加
+  - ハンズオンを追加
+
+## [ver.2022.15.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.15.1)
+
+- 個人スポンサーを掲載
+
+## [ver.2022.14.4](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.14.4)
+
+- OG タイトルのスピーカー名が undefined になっていた不具合を修正
+
+## [ver.2022.14.3](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.14.3)
+
+- スピーカー情報を更新
+
+## [ver.2022.14.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.14.2)
+
+- お問合せセクションの文言を変更
+
+## [ver.2022.14.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.14.1)
+
+- 企画セクションを追加
+
+## [ver.2022.13.5](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.13.5)
+
+- スピーカー情報を更新
+- グッズの発送時期を変更
+
+## [ver.2022.13.4](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.13.4)
+
+- 国内スピーカーの OGP 画像を追加
+
+## [ver.2022.13.3](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.13.3)
+
+- スピーカー情報を更新
+
+## [ver.2022.13.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.13.2)
+
+- グッズの販売を終了
+
+## [ver.2022.13.1](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.13.1)
+
+- グローバルナビを実装
+
+## [ver.2022.12.5](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.12.5)
+
+- グッズの販売終了日時を更新
+
+## [ver.2022.12.4](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.12.4)
+
+- ストアの商品にステッカーを追加
+
+## [ver.2022.12.3](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.12.3)
+
+- 配信スポンサーの見出しテキストを変更
+
 ## [ver.2022.12.2](https://github.com/vuejs-jp/vuefes-2022/tree/ver.2022.12.2)
 
 - T シャツのサイズを追加
