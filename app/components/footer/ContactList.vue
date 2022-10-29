@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import TwitterSvg from '~/static/icon/twitter_logo-invert.svg?inline'
-import NoteSvg from '~/static/icon/note_logo.svg?inline'
-import YouTubeSvg from '~/static/icon/youtube_logo.svg?inline'
-import GithubSvg from '~/static/icon/github_logo.svg?inline'
+import TwitterSvg from '~/assets/icon/twitter_logo-invert.svg'
+import NoteSvg from '~/assets/icon/note_logo.svg'
+import YouTubeSvg from '~/assets/icon/youtube_logo.svg'
+import GithubSvg from '~/assets/icon/github_logo.svg'
 
 import { networkLinks } from '~/utils/constants'
 
@@ -45,15 +45,14 @@ const onMouseLeave = (value: string) => {
   >
     <a
       v-for="network in networkLinks"
+      :id="`${network.value}Icon`"
       :key="network.value"
       :href="network.url"
       :title="network.description"
       class="flex justify-center items-center w-40 h-10 text-base font-bold hover:text-vue-blue hover:bg-white rounded-full border-2 shadow-sm transition lg:w-55 lg:h-13.5 lg:text-lg"
       target="_blank"
       rel="noopener"
-      @mouseover="onMouseOver(network.value)"
       @focus="onMouseLeave(network.value)"
-      @mouseout="onMouseLeave(network.value)"
       @blur="onMouseLeave(network.value)"
     >
       <span class="pr-2">

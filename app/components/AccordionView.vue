@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import OpenSvg from '~/static/icon/open_logo.svg?inline'
-import CloseSvg from '~/static/icon/close_logo.svg?inline'
+import OpenSvg from '~/assets/icon/open_logo.svg'
+import CloseSvg from '~/assets/icon/close_logo.svg'
 
 const isOpen = ref(false)
 
@@ -25,15 +25,16 @@ const end = (el: HTMLElement) => {
       @click="open"
       @keyup="open"
     >
-      <p class="text-15 font-bold text-left text-vue-blue md:text-lg"><slot name="title" /></p>
-      <CloseSvg
-        v-if="isOpen"
-        class="shrink-0"
-      />
-      <OpenSvg
-        v-if="!isOpen"
-        class="shrink-0"
-      />
+      <slot name="title" />
+      <transition
+        name="rotate"
+        mode="out-in"
+      >
+        <div>
+          <OpenSvg v-if="isOpen" />
+          <CloseSvg v-if="!isOpen" />
+        </div>
+      </transition>
     </div>
     <transition
       name="accordion"

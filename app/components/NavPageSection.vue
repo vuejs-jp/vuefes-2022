@@ -3,11 +3,7 @@
     <nav class="flex justify-between items-center">
       <div class="flex">
         <nuxt-link to="/">
-          <img
-            class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-50 lg:h-9"
-            :src="`/icon/vuefes_logo.svg`"
-            :alt="conferenceTitle"
-          >
+          <VuefesLogo class="mr-[2.6vw] w-[39.48vw] h-[3.51vw] lg:mr-5 lg:w-50 lg:h-9" />
         </nuxt-link>
         <p
           class="flex after:block items-center pt-[1vw] after:ml-[1vw] after:w-[6vw] after:h-px text-[1.69vw] font-bold text-vue-blue after:border-b after:border-vue-blue lg:pt-2 lg:text-base"
@@ -39,7 +35,8 @@
 </template>
 
 <script setup lang="ts">
-import { conferenceTitle, subtitle } from '~/utils/constants'
+import { subtitle } from '~/utils/constants'
+import VuefesLogo from '~/assets/icon/vuefes_logo.svg'
 import NavMenu from '~/components/navbar/NavMenu.vue'
 import { menuLinks } from '~/utils/constants'
 

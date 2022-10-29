@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { defineProps, defineEmits } from '#imports'
+import MenuOpenLogo from '~/assets/img/menu-open.svg'
+import MenuCloseLogo from '~/assets/img/menu-close.svg'
 import { menuLinks } from '~/utils/constants'
 
 const props = defineProps<{
@@ -26,10 +28,7 @@ const localIsOpen = computed({
       type="button"
       @click="localIsOpen = true"
     >
-      <img
-        alt="オープンボタン"
-        src="~/assets/img/menu-open.svg"
-      >
+      <MenuOpenLogo />
     </button>
     <transition name="fade">
       <nav
@@ -42,10 +41,7 @@ const localIsOpen = computed({
             class="cursor-pointer"
             @click="localIsOpen = false"
           >
-            <img
-              alt="クローズボタン"
-              src="~/assets/img/menu-close.svg"
-            >
+            <MenuCloseLogo />
           </button>
         </div>
         <ul class="mx-[3vw]">

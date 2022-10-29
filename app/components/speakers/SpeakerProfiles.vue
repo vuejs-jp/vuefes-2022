@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { CustomPropType } from '~/types/shims-vue'
 import { ISpeakerProfile } from '~/types/interface'
+import TwitterSvg from '~/assets/icon/twitter_logo.svg'
+import GithubSvg from '~/assets/icon/github_logo-invert.svg'
 
 const props = defineProps({
   speakerProfiles: {
@@ -43,11 +45,9 @@ const props = defineProps({
                 class="flex mr-5"
                 :href="`https://twitter.com/${speaker.twitter}`"
               >
-                <img
-                  class="w-6"
-                  src="/icon/twitter_logo.svg"
-                  alt="Twitterのlogo"
-                >
+                <TwitterSvg
+                  class="w-6 h-6"
+                />
               </a>
               <a
                 v-if="speaker.github"
@@ -56,11 +56,9 @@ const props = defineProps({
                 rel="noopener"
                 :href="`https://github.com/${speaker.github}`"
               >
-                <img
-                  class="w-6"
-                  src="/icon/github_logo-invert.svg"
-                  alt="Githubのlogo"
-                >
+                <GithubSvg
+                  class="w-6 h-6"
+                />
               </a>
             </span>
           </div>

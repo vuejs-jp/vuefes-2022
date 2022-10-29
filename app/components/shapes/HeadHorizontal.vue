@@ -5,7 +5,7 @@
   >
     <rect
       key="1"
-      ref="shape1"
+      :ref="shape1"
       x="-60"
       y="-60"
       width="120"
@@ -13,7 +13,7 @@
     />
     <rect
       key="2"
-      ref="shape2"
+      :ref="shape2"
       x="-60"
       y="60"
       width="120"
@@ -44,21 +44,22 @@ export default defineComponent({
   },
   setup(props, setupContext) {
     const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
-    const refs = setupContext.refs
+    const shape1 = ref(null)
+    const shape2 = ref(null)
 
     const transform = transformPosition(props)
 
 
     const createAnimations = () => {
       setTimeout(() => {
-        createAnimation(refs.shape1, { height: 55 })
-        createAnimation(refs.shape2, { y: 5, height: 55 })
+        createAnimation(shape1.value, { height: 55 })
+        createAnimation(shape2.value, { y: 5, height: 55 })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      fadeAnimation(refs.shape1, { y: -60, height: 0 })
-      fadeAnimation(refs.shape1, { y: 60, height: 0 })
+      fadeAnimation(shape1.value, { y: -60, height: 0 })
+      fadeAnimation(shape1.value, { y: 60, height: 0 })
     }
 
     onMounted(() => {
@@ -69,7 +70,7 @@ export default defineComponent({
       fadeAnimations()
     })
 
-    return { transform }
+    return { transform, shape1, shape2 }
   }
 })
 </script>

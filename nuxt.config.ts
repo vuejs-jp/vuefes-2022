@@ -1,4 +1,5 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
+import { defineNuxtConfig } from 'nuxt/config'
+import svgLoader from 'vite-svg-loader'
 import { generalOg, twitterOg } from './app/utils/og.constants'
 import { preloadImages } from './app/utils/preload.constants'
 import { conferenceTitle } from './app/utils/constants'
@@ -34,16 +35,10 @@ export default defineNuxtConfig({
     },
   },
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
-  buildModules: ['@nuxtjs/device', '@nuxtjs/svg', '@nuxtjs/tailwindcss'],
-  modules: [
-    [
-      '@nuxtjs/google-gtag', // GA3
-      {
-        id: process.env.NUXT_GTAG_ID,
-        debug: !isProd,
-      },
-    ],
-  ],
+  buildModules: ['@nuxtjs/tailwindcss'],
+  vite: {
+    plugins: [svgLoader()],
+  },
   bridge: {
     meta: true,
   },

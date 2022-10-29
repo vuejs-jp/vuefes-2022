@@ -5,12 +5,12 @@
   >
     <polygon
       key="0"
-      ref="shape1"
+      :ref="shape1"
       :points="KEY_FRAME1[0]"
     />
     <polygon
       key="1"
-      ref="shape2"
+      :ref="shape2"
       :points="KEY_FRAME2[0]"
     />
   </g>
@@ -39,7 +39,8 @@ export default defineComponent({
 
   setup(props, setupContext) {
     const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
-    const refs = setupContext.refs
+    const shape1 = ref(null)
+    const shape2 = ref(null)
 
     const KEY_FRAME1 = ['-60 -60 -60 -60 -60 -60', '-60 -60 54 -60 -60 54']
     const KEY_FRAME2 = ['60 60 60 60 60 60', '60 60 -54 60 60 -54']
@@ -58,14 +59,14 @@ export default defineComponent({
 
     const createAnimations = () => {
       setTimeout(() => {
-        createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
-        createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
+        createAnimation(shape1.value, { points: KEY_FRAME1[1] })
+        createAnimation(shape2.value, { points: KEY_FRAME2[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      fadeAnimation(refs.shape1, { points: KEY_FRAME1[0] })
-      fadeAnimation(refs.shape2, { points: KEY_FRAME2[0] })
+      fadeAnimation(shape1.value, { points: KEY_FRAME1[0] })
+      fadeAnimation(shape2.value, { points: KEY_FRAME2[0] })
     }
 
     onMounted(() => {
@@ -80,7 +81,9 @@ export default defineComponent({
       transform,
       getFillColor,
       KEY_FRAME1,
-      KEY_FRAME2
+      KEY_FRAME2,
+      shape1,
+      shape2,
     }
   }
 })

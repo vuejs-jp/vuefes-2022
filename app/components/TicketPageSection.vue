@@ -107,8 +107,8 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
             v-for="(faq, index) in faqList"
             :key="index"
           >
-            <template slot="title">{{ faq.question }}</template>
-            <template slot="content">
+            <template #title>{{ faq.question }}</template>
+            <template #content>
               <!-- eslint-disable vue/no-v-html -->
               <p
                 class="pb-5 text-13 leading-5 text-vue-blue md:pb-10 md:text-base md:leading-6"
