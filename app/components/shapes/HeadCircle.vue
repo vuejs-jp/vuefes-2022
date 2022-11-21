@@ -4,7 +4,7 @@
     class="fill-anime-sangosyou"
   >
     <circle
-      ref="shape"
+      :ref="shape"
       cx="0"
       cy="0"
       r="0"
@@ -35,7 +35,7 @@ export default defineComponent({
 
   setup(props, setupContext) {
     const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
-    const refs = setupContext.refs
+    const shape = ref(null)
 
     const KEY_FRAME = [0, 60]
 
@@ -43,12 +43,12 @@ export default defineComponent({
 
     const createAnimations = () => {
       setTimeout(() => {
-        createAnimation(refs.shape, { r: KEY_FRAME[1] })
+        createAnimation(shape.value, { r: KEY_FRAME[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      fadeAnimation(refs.shape, { r: KEY_FRAME[0] })
+      fadeAnimation(shape.value, { r: KEY_FRAME[0] })
     }
 
     onMounted(() => {
@@ -59,7 +59,7 @@ export default defineComponent({
       fadeAnimations()
     })
 
-    return { transform }
+    return { transform, shape }
   }
 
 })

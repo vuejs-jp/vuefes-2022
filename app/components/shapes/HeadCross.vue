@@ -5,22 +5,22 @@
   >
     <polygon
       key="1"
-      ref="shape1"
+      :ref="shape1"
       :points="KEY_FRAME1[0]"
     />
     <polygon
       key="2"
-      ref="shape2"
+      :ref="shape2"
       :points="KEY_FRAME2[0]"
     />
     <polygon
       key="3"
-      ref="shape3"
+      :ref="shape3"
       :points="KEY_FRAME3[0]"
     />
     <polygon
       key="4"
-      ref="shape4"
+      :ref="shape4"
       :points="KEY_FRAME4[0]"
     />
   </g>
@@ -49,7 +49,10 @@ export default defineComponent({
 
   setup(props, setupContext) {
     const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
-    const refs = setupContext.refs
+    const shape1 = ref(null)
+    const shape2 = ref(null)
+    const shape3 = ref(null)
+    const shape4 = ref(null)
 
     const KEY_FRAME1 = ['0 -60 0 -60 0 -60', '-54 -60 54 -60 0 -6']
     const KEY_FRAME2 = ['-60 0 -60 0 -60 0', '-60 -54 -60 54 -6 0']
@@ -60,18 +63,18 @@ export default defineComponent({
 
     const createAnimations = () => {
       setTimeout(() => {
-        createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
-        createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
-        createAnimation(refs.shape3, { points: KEY_FRAME3[1] })
-        createAnimation(refs.shape4, { points: KEY_FRAME4[1] })
+        createAnimation(shape1.value, { points: KEY_FRAME1[1] })
+        createAnimation(shape2.value, { points: KEY_FRAME2[1] })
+        createAnimation(shape3.value, { points: KEY_FRAME3[1] })
+        createAnimation(shape4.value, { points: KEY_FRAME4[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      fadeAnimation(refs.shape1, { points:KEY_FRAME1[0] })
-      fadeAnimation(refs.shape2, { points:KEY_FRAME2[0] })
-      fadeAnimation(refs.shape3, { points:KEY_FRAME3[0] })
-      fadeAnimation(refs.shape4, { points:KEY_FRAME4[0] })
+      fadeAnimation(shape1.value, { points:KEY_FRAME1[0] })
+      fadeAnimation(shape2.value, { points:KEY_FRAME2[0] })
+      fadeAnimation(shape3.value, { points:KEY_FRAME3[0] })
+      fadeAnimation(shape4.value, { points:KEY_FRAME4[0] })
     }
 
     onMounted(() => {
@@ -88,6 +91,10 @@ export default defineComponent({
       KEY_FRAME3,
       KEY_FRAME4,
       transform,
+      shape1,
+      shape2,
+      shape3,
+      shape4,
     }
   }
 })

@@ -1,6 +1,6 @@
-import { gsap, Power2 } from 'gsap'
-
 export function useAnimationParts() {
+  const { gsap, Power2 } = useGsap()
+
   const PARTS_CREATE_TIME = 0.6
   const PARTS_FADE_TIME = 0.2
 

@@ -15,7 +15,7 @@ const title = `スポンサー一覧 | ${conferenceTitle}`
 const url = 'https://vuefes.jp/2022/sponsors'
 const description = `${conferenceTitle} のスポンサー情報です。`
 
-useNuxt2Meta({
+useHead({
   title,
   meta: [
     ...generalOg(title, description, url),

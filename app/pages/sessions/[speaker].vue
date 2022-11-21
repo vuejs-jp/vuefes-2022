@@ -11,19 +11,23 @@ import { conferenceTitle, linkUrl } from '~/utils/constants'
 const route = useRoute()
 
 const speaker = computed(() => {
-  return speakers.find(speaker => speaker.id === route.params.speaker)
+  return speakers.find(speaker => {
+    return speaker.id === route.params.speaker
+  })
 })
 
-const url = `https://vuefes.jp/2022/sessions/${speaker.value.id}`
-const title = `${speaker.value.session.title}（${speaker.value.profile.name}） | ${conferenceTitle}`
-const description = `${conferenceTitle} のセッション情報です。スピーカーの ${speaker.value.profile.name} が、「${speaker.value.session.title}」を発表します。`
-const ogImageUrl = `${linkUrl}speaker-og-images/${speaker.value.id}.jpg`
+const url = computed(() => `https://vuefes.jp/2022/sessions/${speaker.value.id}`)
+const title = computed(() => {
+  return `${speaker.value.session?.title}（${speaker.value.profile?.name}） | ${conferenceTitle}`
+})
+const description = computed(() => `${conferenceTitle} のセッション情報です。スピーカーの ${speaker.value.profile?.name} が、「${speaker.value.session?.title}」を発表します。`)
+const ogImageUrl = computed(() => `${linkUrl}speaker-og-images/${speaker.value.id}.jpg`)
 
-useNuxt2Meta({
+useHead({
   title,
   meta: [
-    ...generalOg(title, description, url, ogImageUrl),
-    ...twitterOg(title, description, ogImageUrl),
+    ...generalOg(title.value, description.value, url.value, ogImageUrl.value),
+    ...twitterOg(title.value, description.value, ogImageUrl.value),
   ]
 })
 </script>

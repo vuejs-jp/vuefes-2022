@@ -3,6 +3,29 @@
     <div class="relative mx-auto max-w-1920">
       <div class="px-5">
         <div
+          v-if="!SHOW_ANIMATION"
+          class="aspect-[650/384] mb-[6.23vw] md:aspect-[782/384] lg:aspect-auto lg:mb-9"
+        >
+          <picture>
+            <source
+              srcset="/img/kv_solid_lg.png"
+              media="(min-width: 981px)"
+            >
+            <source
+              srcset="/img/kv_solid_md.png"
+              media="(min-width: 771px)"
+            >
+            <img
+              class="mx-auto"
+              src="/img/kv_solid_sm.png"
+              :alt="conferenceTitle"
+              width="1178"
+              height="384"
+            >
+          </picture>
+        </div>
+        <div
+          v-if="SHOW_ANIMATION"
           class="aspect-[648/384] mx-auto mb-[6.23vw] max-w-1176 md:aspect-[780/384] lg:aspect-[1176/384] lg:mb-9"
         >
           <top-animation />
@@ -72,7 +95,7 @@
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
 import { conferenceTitle, eventDate, streamingNow, tracks, tweetLabel, tweetUrl } from '~/utils/constants'
-import { LIVE_YOUTUBE } from '~/utils/feature.constants'
+import { LIVE_YOUTUBE, SHOW_ANIMATION } from '~/utils/feature.constants'
 import TopAnimation from '~/components/TopAnimation.vue'
 
 const tweet = () => {

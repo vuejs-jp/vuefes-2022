@@ -1,13 +1,10 @@
 <template>
   <div class="flex flex-col">
-    <img
-      alt="Vue Fes 2022"
-      :src="`/icon/vuefes_logo.svg`"
-    >
+    <VuefesLogo />
     <nuxt-link
       to="/"
       title="トップへ戻る"
-      class="flex justify-center items-center"
+      class="flex items-center justify-center"
     >
       Oooops, something is wrong \ {{ error.statusCode }} / error
     </nuxt-link>
@@ -15,7 +12,12 @@
 </template>
 
 <script lang="ts">
+import VuefesLogo from '~/assets/icon/vuefes_logo.svg'
+
 export default {
+  components: {
+    VuefesLogo
+  },
   props: {
     error: {
       type: Object,

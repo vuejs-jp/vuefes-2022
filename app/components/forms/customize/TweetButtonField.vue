@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TwitterSvg from '~/static/icon/twitter_logo.svg?inline'
+import TwitterSvg from '~/assets/icon/twitter_logo.svg'
 
 interface ITweetButtonFieldEmit {
   (e: 'on-click'): void

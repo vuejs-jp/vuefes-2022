@@ -1,4 +1,5 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
+import { defineNuxtConfig } from 'nuxt/config'
+import svgLoader from 'vite-svg-loader'
 import { generalOg, twitterOg } from './app/utils/og.constants'
 import { preloadImages } from './app/utils/preload.constants'
 import { conferenceTitle } from './app/utils/constants'
@@ -34,29 +35,22 @@ export default defineNuxtConfig({
     },
   },
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
-  buildModules: ['@nuxtjs/device', '@nuxtjs/svg', '@nuxtjs/tailwindcss'],
-  modules: [
-    [
-      '@nuxtjs/google-gtag', // GA3
-      {
-        id: process.env.NUXT_GTAG_ID,
-        debug: !isProd,
-      },
-    ],
-  ],
+  modules: ['@nuxtjs/tailwindcss'],
+  vite: {
+    plugins: [svgLoader()],
+  },
   bridge: {
     meta: true,
   },
   generate: {
     dir: 'dist/2022',
   },
-  publicRuntimeConfig: {
-    kokuryuFontId: process.env.NUXT_KOKURYU_FONT_ID,
-    gtagId: process.env.NUXT_GTAG_ID,
-    newtCdnToken: process.env.NUXT_NEWT_CDN_TOKEN,
-    newtSpaceUid: process.env.NUXT_NEWT_SPACE_UID,
-  },
-  build: {
-    extractCSS: true,
+  runtimeConfig: {
+    public: {
+      kokuryuFontId: process.env.NUXT_KOKURYU_FONT_ID,
+      gtagId: process.env.NUXT_GTAG_ID,
+      newtCdnToken: process.env.NUXT_NEWT_CDN_TOKEN,
+      newtSpaceUid: process.env.NUXT_NEWT_SPACE_UID,
+    },
   },
 })

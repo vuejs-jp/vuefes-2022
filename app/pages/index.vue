@@ -16,7 +16,7 @@ import { SHOW_TICKET, SHOW_TEAM, SHOW_STORE, SHOW_TIMETABLE } from '~/utils/feat
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 
-useNuxt2Meta({
+useHead({
   title: conferenceTitle,
   meta: [
     ...generalOg(),
