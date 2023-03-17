@@ -26,7 +26,7 @@ const localIsOpen = computed({
   <div>
     <button
       type="button"
-      @click="localIsOpen = true"
+      @click="localIsOpen.value = true"
     >
       <MenuOpenLogo />
     </button>
@@ -39,7 +39,7 @@ const localIsOpen = computed({
           <button
             type="button"
             class="cursor-pointer"
-            @click="localIsOpen = false"
+            @click="localIsOpen.value = false"
           >
             <MenuCloseLogo />
           </button>
@@ -54,7 +54,7 @@ const localIsOpen = computed({
             <nuxt-link
               :to="link.uri"
               class="font-bold"
-              @click.native="localIsOpen = false"
+              @click.native="localIsOpen.value = false"
             >
               {{ link.displayName }}
             </nuxt-link>

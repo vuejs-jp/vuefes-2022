@@ -2,39 +2,36 @@
 import TwitterSvg from '~/assets/icon/twitter_logo-invert.svg'
 import NoteSvg from '~/assets/icon/note_logo.svg'
 import YouTubeSvg from '~/assets/icon/youtube_logo.svg'
-import GithubSvg from '~/assets/icon/github_logo.svg'
+import GitHubSvg from '~/assets/icon/github_logo.svg'
 
 import { networkLinks } from '~/utils/constants'
 
+const mouseTwitter = ref(false)
+const mouseNote = ref(false)
+const mouseYouTube = ref(false)
+const mouseGitHub = ref(false)
+
 const onMouseOver = (value: string) => {
   if (value === 'twitter') {
-    document.getElementById('twitterIcon').setAttribute('fill', '#35495e')
-    document.getElementById('twitterIcon').setAttribute('stroke', '#35495e')
+    mouseTwitter.value = true
   } else if (value === 'note') {
-    document.getElementById('noteIcon').setAttribute('fill', '#35495e')
-    document.getElementById('noteIcon').setAttribute('stroke', '#35495e')
+    mouseNote.value = true
   } else if (value === 'youtube') {
-    document.getElementById('youtubeIcon').setAttribute('fill', '#35495e')
-    document.getElementById('youtubeIcon').setAttribute('stroke', '#35495e')
+    mouseYouTube.value = true
   } else {
-    document.getElementById('githubIcon').setAttribute('fill', '#35495e')
-    document.getElementById('githubIcon').setAttribute('stroke', '#35495e')
+    mouseGitHub.value = true
   }
 }
 
 const onMouseLeave = (value: string) => {
   if (value === 'twitter') {
-    document.getElementById('twitterIcon').setAttribute('fill', '#fff')
-    document.getElementById('twitterIcon').setAttribute('stroke', '#fff')
+    mouseTwitter.value = false
   } else if (value === 'note') {
-    document.getElementById('noteIcon').setAttribute('fill', '#fff')
-    document.getElementById('noteIcon').setAttribute('stroke', '#fff')
+    mouseNote.value = false
   } else if (value === 'youtube') {
-    document.getElementById('youtubeIcon').setAttribute('fill', '#fff')
-    document.getElementById('youtubeIcon').setAttribute('stroke', '#fff')
+    mouseYouTube.value = false
   } else {
-    document.getElementById('githubIcon').setAttribute('fill', '#fff')
-    document.getElementById('githubIcon').setAttribute('stroke', '#fff')
+    mouseGitHub.value = false
   }
 }
 </script>
@@ -52,21 +49,23 @@ const onMouseLeave = (value: string) => {
       class="flex justify-center items-center w-40 h-10 text-base font-bold hover:text-vue-blue hover:bg-white rounded-full border-2 shadow-sm transition lg:w-55 lg:h-13.5 lg:text-lg"
       target="_blank"
       rel="noopener"
-      @focus="onMouseLeave(network.value)"
+      @focus="onMouseOver(network.value)"
       @blur="onMouseLeave(network.value)"
+      @mouseover="onMouseOver(network.value)"
+      @mouseleave="onMouseLeave(network.value)"
     >
       <span class="pr-2">
         <template v-if="network.value === 'twitter'">
-          <TwitterSvg />
+          <TwitterSvg :style="{ stroke: mouseTwitter ? '#35495e' : '#fff', fill: mouseTwitter ? '#35495e' : '#fff' }" />
         </template>
         <template v-if="network.value === 'note'">
-          <NoteSvg />
+          <NoteSvg :style="{ stroke: mouseNote ? '#35495e' : '#fff', fill: mouseTwitter ? '#35495e' : '#fff' }" />
         </template>
         <template v-if="network.value === 'youtube'">
-          <YouTubeSvg />
+          <YouTubeSvg :style="{ stroke: mouseYouTube ? '#35495e' : '#fff', fill: mouseTwitter ? '#35495e' : '#fff' }" />
         </template>
         <template v-if="network.value === 'github'">
-          <GithubSvg />
+          <GitHubSvg :style="{ stroke: mouseGitHub ? '#35495e' : '#fff', fill: mouseTwitter ? '#35495e' : '#fff' }" />
         </template>
       </span>
       {{ network.title }}

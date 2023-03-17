@@ -21,6 +21,7 @@ const end = (el: HTMLElement) => {
   <div class="mb-5 last:border-0 border-b border-vue-blue md:px-6 md:mb-10">
     <div
       class="flex gap-5 justify-between items-center pb-5 cursor-pointer md:pb-10"
+      role="button"
       tabindex="0"
       @click="open"
       @keyup="open"
