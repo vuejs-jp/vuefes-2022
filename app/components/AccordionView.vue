@@ -62,7 +62,7 @@ const end = (el: HTMLElement) => {
   overflow: hidden;
 }
 
-.accordion-enter,
+.accordion-enter-from,
 .accordion-leave-to {
   height: 0 !important;
   opacity: 0;
