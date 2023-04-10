@@ -1,9 +1,9 @@
 <template>
-  <div class="md:container md:mx-auto">
-    <NuxtLayout>
-      <NuxtPage>
+  <NuxtLayout>
+    <NuxtPage>
+      <div class="md:container md:mx-auto">
         <slot />
-      </NuxtPage>
-    </NuxtLayout>
-  </div>
+      </div>
+    </NuxtPage>
+  </NuxtLayout>
 </template>
