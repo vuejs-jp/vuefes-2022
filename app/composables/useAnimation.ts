@@ -142,27 +142,27 @@ export function useAnimation() {
               break
             case '1':
               parts.type = 'head-photo'
-              parts.src = `${urlBasePath}/image01.png`
+              parts.src = 'image01.png'
               break
             case '2':
               parts.type = 'head-photo'
-              parts.src = `${urlBasePath}/image02.png`
+              parts.src = 'image02.png'
               break
             case '3':
               parts.type = 'head-photo'
-              parts.src = `${urlBasePath}/image03.png`
+              parts.src = 'image03.png'
               break
             case '4':
               parts.type = 'head-photo'
-              parts.src = `${urlBasePath}/image04.png`
+              parts.src = 'image04.png'
               break
             case '5':
               parts.type = 'head-photo'
-              parts.src = `${urlBasePath}/image05.png`
+              parts.src = 'image05.png'
               break
             case '6':
               parts.type = 'head-photo'
-              parts.src = `${urlBasePath}/image06.png`
+              parts.src = 'image06.png'
               break
           }
           return parts
