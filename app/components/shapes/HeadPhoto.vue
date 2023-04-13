@@ -29,7 +29,6 @@
   </g>
 </template>
 <script lang="ts">
-import { urlBasePath } from '~/utils/constants'
 import type { CustomPropType } from '~/types/shims-vue'
 import { useAnimationParts } from '~/composables/useAnimationParts'
 
@@ -76,7 +75,7 @@ export default defineComponent({
         'image05.png': Image05,
         'image06.png': Image06,
       }
-      return `${urlBasePath}/${images[props.parts.src]}`
+      return images[props.parts.src]
     })
 
     const createAnimations = () => {

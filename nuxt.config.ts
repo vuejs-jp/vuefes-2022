@@ -36,7 +36,6 @@ export default defineNuxtConfig({
       class: [isProd ? 'prod-body' : 'body'],
     },
   },
-  serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],
   buildModules: ['@nuxtjs/device', '@nuxtjs/svg', '@nuxtjs/tailwindcss'],
   modules: [
     [
