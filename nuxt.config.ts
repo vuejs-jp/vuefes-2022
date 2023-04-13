@@ -1,14 +1,14 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
 import { generalOg, twitterOg } from './app/utils/og.constants'
 import { preloadImages } from './app/utils/preload.constants'
-import { conferenceTitle } from './app/utils/constants'
+import { conferenceTitle, urlBasePath } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'app/',
   router: {
-    base: isProd ? '/2022/' : '/',
+    base: urlBasePath,
   },
   app: {
     buildAssetsDir: '/_nuxt/',
@@ -31,6 +31,9 @@ export default defineNuxtConfig({
     ],
     htmlAttrs: {
       lang: 'ja',
+    },
+    bodyAttrs: {
+      class: [isProd ? 'prod-body' : 'body'],
     },
   },
   serverMiddleware: [{ path: '/api/hello', handler: '~/server/api/hello.ts' }],

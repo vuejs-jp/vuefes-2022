@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { urlBasePath } from '~/utils/constants'
 import { staffList } from '~/utils/staffs.constants'
 import SectionTitle from '~/components/SectionTitle.vue'
 
@@ -38,7 +39,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
               >
                 <img
                   :alt="`${staff.name} logo`"
-                  :src="`/staff/${staff.image}`"
+                  :src="`${urlBasePath}/staff/${staff.image}`"
                   loading="lazy"
                   class="mb-1 w-full lg:mb-2"
                 >
@@ -48,7 +49,7 @@ const showStaffs = computed(() => staffList.filter((staff) => staff.image !== ''
             <template v-else>
               <img
                 :alt="`${staff.name} logo`"
-                :src="`/staff/${staff.image}`"
+                :src="`${urlBasePath}/staff/${staff.image}`"
                 loading="lazy"
                 class="mb-1 w-full lg:mb-2"
               >

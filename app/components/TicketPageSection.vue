@@ -4,7 +4,7 @@ import PageSubTitle from '~/components/PageSubTitle.vue'
 import ExplainText from '~/components/ExplainText.vue'
 import AccordionView from '~/components/AccordionView.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
-import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotionCaution, promotionInfo, promotionInfo2, promotionInfo3, promotionInfo4 } from '~/utils/constants'
+import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotionCaution, promotionInfo, promotionInfo2, promotionInfo3, promotionInfo4, urlBasePath } from '~/utils/constants'
 </script>
 
 <template>
@@ -27,7 +27,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           <div class="mb-7.5">
             <div class="px-6 md:px-14">
               <img
-                src="/img/preregister_bannar.jpg"
+                :src="`${urlBasePath}/img/preregister_bannar.jpg`"
                 alt=""
                 class="w-full"
               >
@@ -40,7 +40,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
           <div>
             <div class="px-6 md:px-14">
               <img
-                src="/img/personal_sponsor_bannar.jpg"
+                :src="`${urlBasePath}/img/personal_sponsor_bannar.jpg`"
                 alt=""
                 class="w-full"
               >
@@ -85,7 +85,7 @@ import { faqList, giftboxCaution1, giftboxCaution2, giftboxInfo, gifts, promotio
             >
               <div class="aspect-square mb-1.5 md:mb-2.5">
                 <img
-                  :src="`/img/${gift.value}_sample.jpg`"
+                  :src="`${urlBasePath}/img/${gift.value}_sample.jpg`"
                   :alt="`${gift.title}用サンプル画像`"
                   loading="lazy"
                 >

@@ -5,7 +5,7 @@
         <nuxt-link to="/">
           <img
             class="mr-[2.6vw] w-[19.48vw] h-[3.51vw] lg:mr-5 lg:w-50 lg:h-9"
-            :src="`/icon/vuefes_logo.svg`"
+            :src="`${urlBasePath}/icon/vuefes_logo.svg`"
             :alt="conferenceTitle"
           >
         </nuxt-link>
@@ -41,7 +41,7 @@
 <script setup lang="ts">
 import { conferenceTitle, subtitle } from '~/utils/constants'
 import NavMenu from '~/components/navbar/NavMenu.vue'
-import { menuLinks } from '~/utils/constants'
+import { menuLinks, urlBasePath } from '~/utils/constants'
 
 
 const isOpen = ref(false)

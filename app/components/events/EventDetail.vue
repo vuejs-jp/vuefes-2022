@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SpeakerProfiles from '~/components/speakers/SpeakerProfiles.vue'
 import PageSubTitle from '~/components/PageSubTitle.vue'
+import { urlBasePath } from '~/utils/constants'
 import { IEvent } from '~/types/events'
 
 const props = defineProps<{
@@ -34,7 +35,7 @@ const eventInfo = computed(() => props.event)
             rel="noopener"
           >
             <img
-              :src="logo.src"
+              :src="`${urlBasePath}${logo.src}`"
               :alt="logo.alt"
               class="aspect-square w-full"
             >
@@ -42,7 +43,7 @@ const eventInfo = computed(() => props.event)
         </template>
         <template v-else>
           <img
-            :src="logo.src"
+            :src="`${urlBasePath}${logo.src}`"
             :alt="logo.alt"
             class="object-contain w-full"
           >

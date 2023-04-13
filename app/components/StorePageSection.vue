@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionTitle from '~/components/SectionTitle.vue'
+import { urlBasePath } from '~/utils/constants'
 import {
   storeDescription,
   goodsList,
@@ -33,7 +34,7 @@ import {
             <div class="aspect-square flex mb-10 md:mb-5">
               <img
                 :alt="`${goods.name}のサンプル画像`"
-                :src="`/store/${goods.image}`"
+                :src="`${urlBasePath}/store/${goods.image}`"
                 loading="lazy"
                 class="block object-contain mx-auto max-h-full"
               >

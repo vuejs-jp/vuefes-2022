@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ExplainText from '~/components/ExplainText.vue'
 import LinkButtonField from '~/components/forms/LinkButtonField.vue'
+import { urlBasePath } from '~/utils/constants'
 import {
   childcareDescription,
   childcareCostSupportConditions,
@@ -19,7 +20,7 @@ import {
     <div class="py-10 px-5 -mt-4 text-vue-blue border border-vue-blue md:p-20 lg:-mt-5">
       <div class="aspect-[738/269] mb-10">
         <img
-          src="/events/childcare.png"
+          :src="`${urlBasePath}/events/childcare.png`"
           alt="託児サポートのイメージ画像"
           loading="lazy"
         >
