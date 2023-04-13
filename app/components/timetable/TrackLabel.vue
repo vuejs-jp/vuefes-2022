@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   trackIndex: 0 | 1 | 2,
-  isSponsorEvent: boolean
+  isSponsorEvent?: boolean
 }>(), {
   isSponsorEvent: false
 })

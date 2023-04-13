@@ -3,6 +3,29 @@
     <div class="relative mx-auto max-w-1920">
       <div class="px-5">
         <div
+          v-if="!SHOW_ANIMATION"
+          class="aspect-[650/384] mb-[6.23vw] md:aspect-[782/384] lg:aspect-auto lg:mb-9"
+        >
+          <picture>
+            <source
+              :srcset="`${urlBasePath}/img/kv_solid_lg.png`"
+              media="(min-width: 981px)"
+            >
+            <source
+              :srcset="`${urlBasePath}/img/kv_solid_md.png`"
+              media="(min-width: 771px)"
+            >
+            <img
+              class="mx-auto"
+              :src="`${urlBasePath}/img/kv_solid_sm.png`"
+              :alt="conferenceTitle"
+              width="1178"
+              height="384"
+            >
+          </picture>
+        </div>
+        <div
+          v-if="SHOW_ANIMATION"
           class="aspect-[648/384] mx-auto mb-[6.23vw] max-w-1176 md:aspect-[780/384] lg:aspect-[1176/384] lg:mb-9"
         >
           <top-animation />
@@ -52,16 +75,16 @@
       </div>
       <picture>
         <source
-          srcset="/img/wave_lg.png"
+          :srcset="`${urlBasePath}/img/wave_lg.png`"
           media="(min-width: 981px)"
         >
         <source
-          srcset="/img/wave_md.png"
+          :srcset="`${urlBasePath}/img/wave_md.png`"
           media="(min-width: 771px)"
         >
         <img
           class="absolute bottom-0 left-1/2 -z-10 opacity-40 -translate-x-1/2"
-          src="/img/wave_sm.png"
+          :src="`${urlBasePath}/img/wave_sm.png`"
           alt=""
         >
       </picture>
@@ -71,8 +94,8 @@
 
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
-import { conferenceTitle, eventDate, streamingNow, tracks, tweetLabel, tweetUrl } from '~/utils/constants'
-import { LIVE_YOUTUBE } from '~/utils/feature.constants'
+import { conferenceTitle, eventDate, streamingNow, tracks, tweetLabel, tweetUrl, urlBasePath } from '~/utils/constants'
+import { LIVE_YOUTUBE, SHOW_ANIMATION } from '~/utils/feature.constants'
 import TopAnimation from '~/components/TopAnimation.vue'
 
 const tweet = () => {
