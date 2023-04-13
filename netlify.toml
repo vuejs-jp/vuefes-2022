@@ -2,3 +2,8 @@
   from = "/2022/*"
   to = "/2022/index.html"
   status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/2022/:splat"
+  status = 301
