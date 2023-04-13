@@ -5,7 +5,7 @@
   >
     <img
       class="mx-auto mb-10 w-37.5 lg:mb-20 lg:w-60"
-      :src="`/icon/vuefes_logo-invert.svg`"
+      :src="`${urlBasePath}/icon/vuefes_logo-invert.svg`"
       alt="Vue fes 2022"
     >
     <contact-list class="mb-5 lg:mb-10" />
@@ -20,4 +20,5 @@ import ContactList from '~/components/footer/ContactList.vue'
 import PastEvents from '~/components/footer/PastEvents.vue'
 import PrivacyPolicyAndCoc from '~/components/footer/PrivacyPolicyAndCoc.vue'
 import CopyrightText from '~/components/footer/CopyrightText.vue'
+import { urlBasePath } from '~/utils/constants'
 </script>

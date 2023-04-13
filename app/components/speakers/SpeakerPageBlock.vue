@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { urlBasePath } from '~/utils/constants'
 import { ISpeaker } from '~/types/interface'
 
 const props = defineProps<{
@@ -13,7 +14,7 @@ const speakerInfo = computed(() => props.speaker)
       <img
         class="aspect-square mb-2.5 w-full"
         :alt="`${speakerInfo.profile.name}の写真`" 
-        :src="speakerInfo.profile.image"
+        :src="`${urlBasePath}${speakerInfo.profile.image}`"
         loading="lazy"
       >
       <p class="text-xs">

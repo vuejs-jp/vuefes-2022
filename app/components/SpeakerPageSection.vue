@@ -3,6 +3,7 @@ import SpeakerPageBlock from '~/components/speakers/SpeakerPageBlock.vue'
 import SpeakerPageHeading from '~/components/speakers/SpeakerPageHeading.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
+import { urlBasePath } from '~/utils/constants'
 // import { ISpeaker } from '~/types/interface'
 
 const shuffleArray = ([...array]) => {
@@ -71,7 +72,7 @@ const sessionSponsors = (computed(() => [...sponsors.value.platinum, ...sponsors
           >
             <nuxt-link :to="`/sponsor-sessions/${sponsor.name_en}`">
               <img
-                :src="`/sponsor/${sponsor.name_en}.png`"
+                :src="`${urlBasePath}/sponsor/${sponsor.name_en}.png`"
                 :alt="sponsor.name_jp"
                 class="mb-2 md:mb-4"
               >

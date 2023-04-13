@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { urlBasePath } from '~/utils/constants'
 import { ISpeakerProfile } from '~/types/interface'
 
 const props = defineProps<{
@@ -19,7 +20,7 @@ const speakerInfo = computed(() => props.speakerProfile)
           <img
             class="mx-auto mb-5 w-28 h-28 md:mr-8 md:ml-0 md:w-37.5 md:h-37.5"
             :alt="`${speakerInfo.name}の写真`"
-            :src="speakerInfo.image"
+            :src="`${urlBasePath}${speakerInfo.image}`"
           >
           <div class="text-center md: md:pt-5 md:text-left">
             <p class="text-11 opacity-60 md:text-sm">
@@ -39,7 +40,7 @@ const speakerInfo = computed(() => props.speakerProfile)
               >
                 <img
                   class="w-6"
-                  src="/icon/twitter_logo.svg"
+                  :src="`${urlBasePath}/icon/twitter_logo.svg`"
                   alt="Twitterのlogo"
                 >
               </a>
@@ -52,7 +53,7 @@ const speakerInfo = computed(() => props.speakerProfile)
               >
                 <img
                   class="w-6"
-                  src="/icon/github_logo-invert.svg"
+                  :src="`${urlBasePath}/icon/github_logo-invert.svg`"
                   alt="Githubのlogo"
                 >
               </a>

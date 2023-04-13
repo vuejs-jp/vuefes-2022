@@ -1,3 +1,5 @@
+import { isProd } from './environment.constants'
+
 export const conferenceTitle = 'Vue Fes Japan Online 2022'
 
 export const subtitle = 'さまざまな困難を乗り越えたすべての人へ'
@@ -13,6 +15,8 @@ export const ogPrivacyDescription = 'Vue Fes Japan Online 2022 のプライバ�
 export const ogSponsorDescription = 'Vue Fes Japan Online 2022 のスポンサーの一覧'
 
 export const linkUrl = 'https://vuefes.jp/2022/'
+
+export const urlBasePath = isProd ? '/2022' : ''
 
 export const vuefesTwitterID = '@vuefes'
 
