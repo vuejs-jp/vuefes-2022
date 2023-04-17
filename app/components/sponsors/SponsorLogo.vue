@@ -7,10 +7,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <a
+  <nuxt-link
     v-if="sponsor"
     :id="sponsor.name_jp"
-    :href="`/sponsors#${sponsor.name_en}`"
+    :to="`/sponsors#${sponsor.name_en}`"
     class="shadow-card hover:shadow-card-hover transition"
   >
     <img
@@ -18,5 +18,5 @@ const props = defineProps<{
       :alt="props.sponsor.name_jp"
       class="aspect-16/9 object-cover w-full bg-center"
     >
-  </a>
+  </nuxt-link>
 </template>
