@@ -14,7 +14,7 @@
         cx="0"
         cy="0"
         r="0"
-        clip-path="url(#clip-boundary)"
+        :clip-path="`url(${urlBasePath}#clip-boundary)`"
       />
     </clipPath>
     <image
@@ -24,11 +24,12 @@
       y="-60"
       width="120"
       height="120"
-      :clip-path="`url(#${CLIP_ID})`"
+      :clip-path="`url(${urlBasePath}#${CLIP_ID})`"
     />
   </g>
 </template>
 <script lang="ts">
+import { urlBasePath } from '~/utils/constants'
 import type { CustomPropType } from '~/types/shims-vue'
 import { useAnimationParts } from '~/composables/useAnimationParts'
 
@@ -96,7 +97,7 @@ export default defineComponent({
       fadeAnimations()
     })
 
-    return { transform, CLIP_ID, imageSrc }
+    return { urlBasePath, transform, CLIP_ID, imageSrc }
   },
 })
 </script>
