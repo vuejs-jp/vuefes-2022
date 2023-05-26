@@ -19,7 +19,7 @@
     </clipPath>
     <image
       key="1"
-      :href="imageSrc"
+      :href="`${urlBasePath}/${imageSrc}`"
       x="-60"
       y="-60"
       width="120"
