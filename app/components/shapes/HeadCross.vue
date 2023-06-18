@@ -5,22 +5,22 @@
   >
     <polygon
       key="1"
-      ref="shape1"
+      :ref="shape1"
       :points="KEY_FRAME1[0]"
     />
     <polygon
       key="2"
-      ref="shape2"
+      :ref="shape2"
       :points="KEY_FRAME2[0]"
     />
     <polygon
       key="3"
-      ref="shape3"
+      :ref="shape3"
       :points="KEY_FRAME3[0]"
     />
     <polygon
       key="4"
-      ref="shape4"
+      :ref="shape4"
       :points="KEY_FRAME4[0]"
     />
   </g>
@@ -91,6 +91,10 @@ export default defineComponent({
       KEY_FRAME3,
       KEY_FRAME4,
       transform,
+      shape1,
+      shape2,
+      shape3,
+      shape4,
     }
   }
 })

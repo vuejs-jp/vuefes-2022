@@ -33,12 +33,12 @@ import { urlBasePath } from '~/utils/constants'
 import type { CustomPropType } from '~/types/shims-vue'
 import { useAnimationParts } from '~/composables/useAnimationParts'
 
-import Image01 from '!url-loader!~/assets/img/animation/image01.png'
-import Image02 from '!url-loader!~/assets/img/animation/image02.png'
-import Image03 from '!url-loader!~/assets/img/animation/image03.png'
-import Image04 from '!url-loader!~/assets/img/animation/image04.png'
-import Image05 from '!url-loader!~/assets/img/animation/image05.png'
-import Image06 from '!url-loader!~/assets/img/animation/image06.png'
+import Image01 from '~/assets/img/animation/image01.png'
+import Image02 from '~/assets/img/animation/image02.png'
+import Image03 from '~/assets/img/animation/image03.png'
+import Image04 from '~/assets/img/animation/image04.png'
+import Image05 from '~/assets/img/animation/image05.png'
+import Image06 from '~/assets/img/animation/image06.png'
 
 interface IPropParts {
   type: string

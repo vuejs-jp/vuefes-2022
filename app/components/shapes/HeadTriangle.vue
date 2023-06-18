@@ -4,7 +4,7 @@
     class="fill-anime-tohoh"
   >
     <polygon
-      ref="shape"
+      :ref="shape"
       :points="KEY_FRAME[0]"
     />
   </g>
@@ -59,7 +59,8 @@ export default defineComponent({
 
     return {
       transform,
-      KEY_FRAME
+      KEY_FRAME,
+      shape,
     }
   }
 })

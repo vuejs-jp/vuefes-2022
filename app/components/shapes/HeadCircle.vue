@@ -4,7 +4,7 @@
     class="fill-anime-sangosyou"
   >
     <circle
-      ref="shape"
+      :ref="shape"
       cx="0"
       cy="0"
       r="0"
@@ -59,7 +59,7 @@ export default defineComponent({
       fadeAnimations()
     })
 
-    return { transform }
+    return { transform, shape }
   }
 
 })

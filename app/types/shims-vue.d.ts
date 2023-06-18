@@ -1,3 +1,3 @@
-import { PropType } from '@nuxt/bridge/dist/runtime/vue2-bridge'
+import { PropType } from 'vue'
 
 declare type CustomPropType<T> = PropType<T>

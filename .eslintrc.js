@@ -28,7 +28,16 @@ module.exports = {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['index', 'default', 'error', 'privacy'],
+        ignores: [
+          'index',
+          'default',
+          'error',
+          'privacy',
+          'sessions',
+          'sponsors',
+          '[speaker]',
+          '[sponsor]',
+        ],
       },
     ],
   },

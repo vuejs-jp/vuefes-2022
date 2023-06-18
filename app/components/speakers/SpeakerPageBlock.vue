@@ -9,7 +9,7 @@ const props = defineProps<{
 const speakerInfo = computed(() => props.speaker)
 </script>
 <template>
-  <router-link :to="`/sessions/${speakerInfo.id}`">
+  <nuxt-link :to="`/sessions/${props.speaker.id}`">
     <div class="text-vue-blue">
       <img
         class="aspect-square mb-2.5 w-full"
@@ -24,5 +24,5 @@ const speakerInfo = computed(() => props.speaker)
         {{ speakerInfo.profile.name }}
       </p>
     </div>
-  </router-link>
+  </nuxt-link>
 </template>

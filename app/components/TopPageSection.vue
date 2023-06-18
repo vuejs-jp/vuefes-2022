@@ -8,16 +8,16 @@
         >
           <picture>
             <source
-              :srcset="`${urlBasePath}/img/kv_solid_lg.png`"
+              srcset="/img/kv_solid_lg.png"
               media="(min-width: 981px)"
             >
             <source
-              :srcset="`${urlBasePath}/img/kv_solid_md.png`"
+              srcset="/img/kv_solid_md.png"
               media="(min-width: 771px)"
             >
             <img
               class="mx-auto"
-              :src="`${urlBasePath}/img/kv_solid_sm.png`"
+              src="/img/kv_solid_sm.png"
               :alt="conferenceTitle"
               width="1178"
               height="384"
@@ -94,7 +94,7 @@
 
 <script setup lang="ts">
 import TweetButtonField from '~/components/forms/customize/TweetButtonField.vue'
-import { conferenceTitle, eventDate, streamingNow, tracks, tweetLabel, tweetUrl, urlBasePath } from '~/utils/constants'
+import { conferenceTitle, eventDate, streamingNow, tracks, tweetLabel, tweetUrl } from '~/utils/constants'
 import { LIVE_YOUTUBE, SHOW_ANIMATION } from '~/utils/feature.constants'
 import TopAnimation from '~/components/TopAnimation.vue'
 
