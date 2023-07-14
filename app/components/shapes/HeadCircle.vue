@@ -4,7 +4,7 @@
     class="fill-anime-sangosyou"
   >
     <circle
-      :ref="shape"
+      ref="shape"
       cx="0"
       cy="0"
       r="0"

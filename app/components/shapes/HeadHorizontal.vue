@@ -5,7 +5,7 @@
   >
     <rect
       key="1"
-      :ref="shape1"
+      ref="shape1"
       x="-60"
       y="-60"
       width="120"
@@ -13,7 +13,7 @@
     />
     <rect
       key="2"
-      :ref="shape2"
+      ref="shape2"
       x="-60"
       y="60"
       width="120"

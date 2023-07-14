@@ -5,12 +5,12 @@
   >
     <polygon
       key="0"
-      :ref="shape1"
+      ref="shape1"
       :points="KEY_FRAME1[0]"
     />
     <polygon
       key="1"
-      :ref="shape2"
+      ref="shape2"
       :points="KEY_FRAME2[0]"
     />
   </g>

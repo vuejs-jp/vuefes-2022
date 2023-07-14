@@ -14,17 +14,17 @@
         cx="0"
         cy="0"
         r="0"
-        :clip-path="`url(${urlBasePath}#clip-boundary)`"
+        :clip-path="`url(#clip-boundary)`"
       />
     </clipPath>
     <image
       key="1"
-      :href="`${urlBasePath}/${imageSrc}`"
+      :href="imageSrc"
       x="-60"
       y="-60"
       width="120"
       height="120"
-      :clip-path="`url(${urlBasePath}#${CLIP_ID})`"
+      :clip-path="`url(#${CLIP_ID})`"
     />
   </g>
 </template>
@@ -60,7 +60,7 @@ export default defineComponent({
 
   setup(props, setupContext) {
     const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
-    const refs = setupContext.refs
+    const shape = ref(null)
 
     const KEY_FRAME = [0, 60 * (2 ^ 0.5)]
     const CLIP_ID = `photo-clip${props.parts.key}`
@@ -81,12 +81,12 @@ export default defineComponent({
 
     const createAnimations = () => {
       setTimeout(() => {
-        createAnimation(refs.shape, { r: KEY_FRAME[1] })
+        createAnimation(shape.value, { r: KEY_FRAME[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      fadeAnimation(refs.shape, { r: KEY_FRAME[0] })
+      fadeAnimation(shape.value, { r: KEY_FRAME[0] })
     }
 
     onMounted(() => {
