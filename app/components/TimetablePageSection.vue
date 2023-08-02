@@ -198,7 +198,7 @@ import ExplainText from '~/components/ExplainText.vue'
                         {{ e.title }}
                       </p>
                       <nuxt-link
-                        to="/sessions/oreo"
+                        :to="e.link"
                         class="hover:opacity-60 transition-opacity"
                       >
                         <p class="mb-1 font-bold underline">{{ e.sessionTitle }}</p>
