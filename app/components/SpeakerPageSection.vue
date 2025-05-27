@@ -72,7 +72,7 @@ const sessionSponsors = (computed(() => [...sponsors.value.platinum, ...sponsors
           >
             <nuxt-link :to="`/sponsor-sessions/${sponsor.name_en}`">
               <img
-                :src="`${urlBasePath}/sponsor/${sponsor.name_en}.png`"
+                :src="`${urlBasePath}/sponsor-square/${sponsor.name_en}.png`"
                 :alt="sponsor.name_jp"
                 class="mb-2 md:mb-4"
               >
