@@ -39,8 +39,7 @@ export default defineComponent({
 
   setup(props, setupContext) {
     const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
-    const shape1 = ref()
-    const shape2 = ref()
+    const refs = setupContext.refs
 
     const KEY_FRAME1 = ['-60 -60 -60 -60 -60 -60', '-60 -60 54 -60 -60 54']
     const KEY_FRAME2 = ['60 60 60 60 60 60', '60 60 -54 60 60 -54']
@@ -59,14 +58,14 @@ export default defineComponent({
 
     const createAnimations = () => {
       setTimeout(() => {
-        createAnimation(shape1.value, { points: KEY_FRAME1[1] })
-        createAnimation(shape2.value, { points: KEY_FRAME2[1] })
+        createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
+        createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      fadeAnimation(shape1.value, { points: KEY_FRAME1[0] })
-      fadeAnimation(shape2.value, { points: KEY_FRAME2[0] })
+      fadeAnimation(refs.shape1, { points: KEY_FRAME1[0] })
+      fadeAnimation(refs.shape2, { points: KEY_FRAME2[0] })
     }
 
     onMounted(() => {

@@ -14,17 +14,17 @@
         cx="0"
         cy="0"
         r="0"
-        :clip-path="`url(${urlBasePath}#clip-boundary)`"
+        clip-path="url(#clip-boundary)"
       />
     </clipPath>
     <image
       key="1"
-      :href="`${urlBasePath}/${imageSrc}`"
+      :href="imageSrc"
       x="-60"
       y="-60"
       width="120"
       height="120"
-      :clip-path="`url(${urlBasePath}#${CLIP_ID})`"
+      :clip-path="`url(#${CLIP_ID})`"
     />
   </g>
 </template>
@@ -33,12 +33,12 @@ import { urlBasePath } from '~/utils/constants'
 import type { CustomPropType } from '~/types/shims-vue'
 import { useAnimationParts } from '~/composables/useAnimationParts'
 
-import Image01 from '!url-loader!~/assets/img/animation/image01.png'
-import Image02 from '!url-loader!~/assets/img/animation/image02.png'
-import Image03 from '!url-loader!~/assets/img/animation/image03.png'
-import Image04 from '!url-loader!~/assets/img/animation/image04.png'
-import Image05 from '!url-loader!~/assets/img/animation/image05.png'
-import Image06 from '!url-loader!~/assets/img/animation/image06.png'
+import Image01 from '~/assets/img/animation/image01.png'
+import Image02 from '~/assets/img/animation/image02.png'
+import Image03 from '~/assets/img/animation/image03.png'
+import Image04 from '~/assets/img/animation/image04.png'
+import Image05 from '~/assets/img/animation/image05.png'
+import Image06 from '~/assets/img/animation/image06.png'
 
 interface IPropParts {
   type: string
@@ -69,12 +69,12 @@ export default defineComponent({
 
     const imageSrc = computed(() => {
       const images = {
-        'image01.png': Image01,
-        'image02.png': Image02,
-        'image03.png': Image03,
-        'image04.png': Image04,
-        'image05.png': Image05,
-        'image06.png': Image06,
+        'image01.png': Image01.default || Image01,
+        'image02.png': Image02.default || Image02,
+        'image03.png': Image03.default || Image03,
+        'image04.png': Image04.default || Image04,
+        'image05.png': Image05.default || Image05,
+        'image06.png': Image06.default || Image06,
       }
       return images[props.parts.src]
     })

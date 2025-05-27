@@ -49,10 +49,7 @@ export default defineComponent({
 
   setup(props, setupContext) {
     const { createAnimation, fadeAnimation, transformPosition } = useAnimationParts()
-    const shape1 = ref()
-    const shape2 = ref()
-    const shape3 = ref()
-    const shape4 = ref()
+    const refs = setupContext.refs
 
     const KEY_FRAME1 = ['0 -60 0 -60 0 -60', '-54 -60 54 -60 0 -6']
     const KEY_FRAME2 = ['-60 0 -60 0 -60 0', '-60 -54 -60 54 -6 0']
@@ -63,18 +60,18 @@ export default defineComponent({
 
     const createAnimations = () => {
       setTimeout(() => {
-        createAnimation(shape1.value, { points: KEY_FRAME1[1] })
-        createAnimation(shape2.value, { points: KEY_FRAME2[1] })
-        createAnimation(shape3.value, { points: KEY_FRAME3[1] })
-        createAnimation(shape4.value, { points: KEY_FRAME4[1] })
+        createAnimation(refs.shape1, { points: KEY_FRAME1[1] })
+        createAnimation(refs.shape2, { points: KEY_FRAME2[1] })
+        createAnimation(refs.shape3, { points: KEY_FRAME3[1] })
+        createAnimation(refs.shape4, { points: KEY_FRAME4[1] })
       }, 0)
     }
 
     const fadeAnimations = () => {
-      fadeAnimation(shape1.value, { points:KEY_FRAME1[0] })
-      fadeAnimation(shape2.value, { points:KEY_FRAME2[0] })
-      fadeAnimation(shape3.value, { points:KEY_FRAME3[0] })
-      fadeAnimation(shape4.value, { points:KEY_FRAME4[0] })
+      fadeAnimation(refs.shape1, { points:KEY_FRAME1[0] })
+      fadeAnimation(refs.shape2, { points:KEY_FRAME2[0] })
+      fadeAnimation(refs.shape3, { points:KEY_FRAME3[0] })
+      fadeAnimation(refs.shape4, { points:KEY_FRAME4[0] })
     }
 
     onMounted(() => {

@@ -60,5 +60,10 @@ export default defineNuxtConfig({
   },
   build: {
     extractCSS: true,
+    loaders: {
+      imgUrl: {
+        esModule: false,
+      },
+    },
   },
 })
