@@ -2,7 +2,6 @@
 import type { CustomPropType } from '~/types/shims-vue'
 import { sponsorSupportLevelTitle } from '~/utils/sponsors.constants'
 import { ISponsor } from '~/types/sponsors'
-import { REDIRECT_URL } from '~/utils/environment.constants'
 
 const props = defineProps({
   sponsors: {
@@ -47,7 +46,7 @@ const sponsorRankClass = computed(() => {
           rel="noopener"
         >
           <img
-            :src="`${REDIRECT_URL}/sponsor/${sponsor.image.src}`"
+            :src="sponsor.image.src"
             :alt="sponsor.name_jp"
             loading="lazy"
             class="aspect-video mb-5 w-full"
