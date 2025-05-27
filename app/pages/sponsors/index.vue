@@ -6,10 +6,12 @@ import SponsorListBio from '~/components/sponsors/SponsorListBio.vue'
 import PageTitle from '~/components/PageTitle.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
-import { useSponsorsCMS } from '~/composables/useCMS'
+// import { useSponsorsCMS } from '~/composables/useCMS'
 import { SHOW_SPONSOR_LIST } from '~/utils/feature.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
+
+import { sponsors } from '~/utils/newt.constants'
 
 const title = `スポンサー一覧 | ${conferenceTitle}`
 const url = 'https://vuefes.jp/2022/sponsors'
@@ -23,8 +25,8 @@ useNuxt2Meta({
   ]
 })
 
-const { fetchContent } = useSponsorsCMS()
-const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
+// const { fetchContent } = useSponsorsCMS()
+// const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 
 const links = [
   { label: 'Platinum', link: '#platinum' },

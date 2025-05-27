@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ISponsor } from '~/types/sponsors'
+import { REDIRECT_URL } from '~/utils/environment.constants'
 
 const props = defineProps<{
   sponsor: ISponsor
@@ -14,7 +15,7 @@ const props = defineProps<{
     class="shadow-card hover:shadow-card-hover transition"
   >
     <img
-      :src="props.sponsor.image.src"
+      :src="`${REDIRECT_URL}/sponsor/${props.sponsor.image.src}`"
       :alt="props.sponsor.name_jp"
       class="aspect-16/9 object-cover w-full bg-center"
     >
