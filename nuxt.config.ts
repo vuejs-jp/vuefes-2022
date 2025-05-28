@@ -25,7 +25,7 @@ export default defineNuxtConfig({
       ...twitterOg(),
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/2022/favicon.ico' },
       { rel: 'icon', sizes: '180x180', href: '/icon/apple-touch-icon.png' },
       ...preloadImages(),
     ],
