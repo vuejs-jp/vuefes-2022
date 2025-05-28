@@ -1,14 +1,14 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
 import { generalOg, twitterOg } from './app/utils/og.constants'
 import { preloadImages } from './app/utils/preload.constants'
-import { conferenceTitle, urlBasePath } from './app/utils/constants'
+import { conferenceTitle } from './app/utils/constants'
 import { isProd } from './app/utils/environment.constants'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'app/',
   router: {
-    base: urlBasePath,
+    base: '/2022/',
   },
   app: {
     buildAssetsDir: '/_nuxt/',
