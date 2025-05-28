@@ -1,3 +1,5 @@
+import { urlBasePath } from '~/utils/constants'
+
 export function useAnimation() {
   // types
   type TWindowType = 'sm' | 'md' | 'lg'
@@ -99,7 +101,7 @@ export function useAnimation() {
             x: (GAP + GRID) / 2 + col * (GAP + GRID),
             y: (GAP + GRID) / 2 + row * (GAP + GRID),
             rotate: 0,
-            src: '',
+            src: urlBasePath,
             key: `${row}-${col}`,
           }
           switch (p) {
