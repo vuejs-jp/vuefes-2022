@@ -60,6 +60,7 @@ export default defineNuxtConfig({
   },
   build: {
     extractCSS: true,
+    publicPath: isProd ? '/2022/_nuxt/' : '/_nuxt/',
     loaders: {
       imgUrl: {
         esModule: false,
