@@ -14,6 +14,7 @@ if (!fs.existsSync(generatedDir)) {
 
 fs.removeSync(publishDir)
 fs.ensureDirSync(publishDir)
+fs.ensureDirSync(yearDir)
 
 for (const entry of fs.readdirSync(generatedDir)) {
   if (entry === '2022') {
