@@ -6,6 +6,19 @@ set -ue -o pipefail
 # Prevent commands misbehaving due to locale differences
 export LC_ALL=C
 
+if [ ! -x ./node_modules/.bin/imagemin ]; then
+  echo "imagemin の optionalDependencies が未インストールのため、画像最適化をスキップします"
+  exit 0
+fi
+
+for plugin in imagemin-mozjpeg imagemin-gifsicle imagemin-pngquant imagemin-optipng imagemin-svgo
+do
+  if [ ! -d "./node_modules/${plugin}" ]; then
+    echo "${plugin} が未インストールのため、画像最適化をスキップします"
+    exit 0
+  fi
+done
+
 for file in `git diff --cached --name-status | \
   awk '$1 ~ /[AM]/ && tolower($2) ~ /\.(jpe?g|png|gif|svg)$/ {print $2}'`
 do
