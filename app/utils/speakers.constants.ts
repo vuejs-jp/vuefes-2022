@@ -458,8 +458,8 @@ export const speakers: ISpeaker[] = [
         <p>なお、本発表は以下の3記事の内容を合わせて再構成したものになる予定です。</p>
         <ul>
         <li><a class="inner-link" target="_blank" rel="noopener" href="https://devblog.thebase.in/entry/2021/12/08/203039">「Storybook と Chromatic でビジュアルリグレッションテストを実施する」</a></li>
-        <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/process-of-introduction-of-chromatic">「ビジュアルリグレッションテストのツールを導入するまでの意思決定プロセス」</a></li>
-        <li><a class="inner-link" target="_blank" rel="noopener" href-"https://devblog.thebase.in/entry/typescript-compiler-api-storybook">「TypeScript Compiler API で40の Storybook コンポーネントを storiesOf から CSF（Component Story Format）に置換した」</a></li>
+        <li><a class="inner-link" target="_blank" rel="noopener" href="https://devblog.thebase.in/entry/process-of-introduction-of-chromatic">「ビジュアルリグレッションテストのツールを導入するまでの意思決定プロセス」</a></li>
+        <li><a class="inner-link" target="_blank" rel="noopener" href="https://devblog.thebase.in/entry/typescript-compiler-api-storybook">「TypeScript Compiler API で40の Storybook コンポーネントを storiesOf から CSF（Component Story Format）に置換した」</a></li>
         </ul>
       `,
       time: 20,

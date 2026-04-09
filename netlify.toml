@@ -1,3 +1,7 @@
+[build]
+  command = "npm run generate"
+  publish = "dist"
+
 [[redirects]]
   from = "/2022/*"
   to = "/2022/index.html"

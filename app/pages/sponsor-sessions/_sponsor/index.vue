@@ -7,14 +7,27 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle, linkUrl } from '~/utils/constants'
+import { sponsors as fallbackSponsors } from '~/utils/newt.constants'
 import { sponsorSessions } from '~/utils/sponsorSessions.constant'
+
+function findFallbackSponsor(name: string) {
+  for (const sponsors of Object.values(fallbackSponsors)) {
+    const sponsor = sponsors.find((entry) => entry.name_en === name)
+
+    if (sponsor) {
+      return sponsor
+    }
+  }
+}
     
 const route = useRoute()
     
 const sessionInfo = computed(() => sponsorSessions.find(session => session.id === route.params.sponsor))
 
 const { fetchContentByName } = useSponsorsCMS()
-const { pending, data: sponsor } = useLazyAsyncData('sponsor-session', () => fetchContentByName(route.params.sponsor))
+const sponsorSlug = String(route.params.sponsor)
+const { data: sponsor } = useLazyAsyncData(`sponsor-session:${sponsorSlug}`, () => fetchContentByName(sponsorSlug))
+const resolvedSponsor = computed(() => sponsor.value ?? findFallbackSponsor(sponsorSlug))
     
 const url = `https://vuefes.jp/2022/sponsor-sessions/${sessionInfo.value.id}`
 const title = `${sessionInfo.value.session.title}（${sessionInfo.value.sponsor}） | ${conferenceTitle}`
@@ -31,7 +44,7 @@ useNuxt2Meta({
 </script>
 
 <template>
-  <div v-if="!pending">
+  <div v-if="resolvedSponsor && sessionInfo">
     <nav-page-section class="mb-12" />
     <PageTitle
       class="mb-10 md:mb-24"
@@ -40,11 +53,11 @@ useNuxt2Meta({
     />
     <div class="aspect-[250/140] mx-auto mb-3 w-40 md:mb-6 md:w-62.5">
       <img
-        :src="sponsor.image.src"
-        :alt="sponsor.name_jp"
+        :src="resolvedSponsor.image.src"
+        :alt="resolvedSponsor.name_jp"
       >
     </div>
-    <p class="mb-8 text-base font-bold text-center text-vue-blue md:mb-15 md:text-22">{{ sponsor.name_jp }}</p>
+    <p class="mb-8 text-base font-bold text-center text-vue-blue md:mb-15 md:text-22">{{ resolvedSponsor.name_jp }}</p>
     <SessionPageSection :session-info="sessionInfo">
       <SpeakerProfiles :speaker-profiles="sessionInfo.speakers" />
     </SessionPageSection>
