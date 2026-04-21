@@ -2,6 +2,9 @@
   command = "npm run generate"
   publish = "dist"
 
+[build.environment]
+  NITRO_PRESET = "server"
+
 [[redirects]]
   from = "/2022/*"
   to = "/2022/index.html"
