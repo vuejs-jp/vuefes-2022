@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     base: '/2022/',
   },
   app: {
-    buildAssetsDir: '/_nuxt/',
+    buildAssetsDir: '_nuxt/',
     baseURL: isProd ? '/2022/' : '/',
   },
 
