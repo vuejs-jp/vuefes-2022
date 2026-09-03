@@ -8,7 +8,6 @@ import StorePageSection from '~/components/StorePageSection.vue'
 import SponsorsPageSection from '~/components/SponsorsPageSection.vue'
 import TeamPageSection from '~/components/TeamPageSection.vue'
 import TimetablePageSection from '~/components/TimetablePageSection.vue'
-import FormPageSection from '~/components/FormPageSection.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import EventsPageSection from '~/components/EventsPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
@@ -48,8 +47,6 @@ useNuxt2Meta({
     <sponsors-page-section />
     <ichimatsu-divided-bar color="white-green" />
     <message-page-section />
-    <ichimatsu-divided-bar color="white" />
-    <form-page-section />
     <template v-if="SHOW_TEAM">
       <ichimatsu-divided-bar color="sangosyu" />
       <team-page-section />

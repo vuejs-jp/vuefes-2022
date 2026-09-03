@@ -4,7 +4,7 @@ import SpeakerPageHeading from '~/components/speakers/SpeakerPageHeading.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
 import { speakers } from '~/utils/speakers.constants'
 import { urlBasePath } from '~/utils/constants'
-import { sponsors as fallbackSponsors } from '~/utils/newt.constants'
+import { sponsors } from '~/utils/newt.constants'
 // import { ISpeaker } from '~/types/interface'
 
 const shuffleArray = ([...array]) => {
@@ -22,14 +22,7 @@ const mainSessionSpeakers = speakers.filter(speaker => speaker.session.type === 
 // const shuffledMainSessionSpeakers = [evan].concat(foreignSpeakers, domesticSpeakers)
 const LTSpeakers = speakers.filter(speaker => speaker.session.type === 'LT')
 
-const { fetchContent } = useSponsorsCMS()
-const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
-
-const sessionSponsors = computed(() => {
-  const resolvedSponsors = sponsors.value ?? fallbackSponsors
-
-  return [...resolvedSponsors.platinum, ...resolvedSponsors.gold]
-})
+const sessionSponsors = [...sponsors.platinum, ...sponsors.gold]
 </script>
 
 <template>

@@ -6,7 +6,6 @@ import SponsorListBio from '~/components/sponsors/SponsorListBio.vue'
 import PageTitle from '~/components/PageTitle.vue'
 import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
-// import { useSponsorsCMS } from '~/composables/useCMS'
 import { SHOW_SPONSOR_LIST } from '~/utils/feature.constants'
 import { conferenceTitle } from '~/utils/constants'
 import { generalOg, twitterOg } from '~/utils/og.constants'
@@ -24,9 +23,6 @@ useNuxt2Meta({
     ...twitterOg(title, description),
   ]
 })
-
-// const { fetchContent } = useSponsorsCMS()
-// const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 
 const links = [
   { label: 'Platinum', link: '#platinum' },
