@@ -7,12 +7,12 @@ import FooterPageSection from '~/components/FooterPageSection.vue'
 import IchimatsuDividedBar from '~/components/IchimatsuDividedBar.vue'
 import { generalOg, twitterOg } from '~/utils/og.constants'
 import { conferenceTitle, linkUrl } from '~/utils/constants'
-import { sponsors as fallbackSponsors } from '~/utils/newt.constants'
+import { sponsors } from '~/utils/newt.constants'
 import { sponsorSessions } from '~/utils/sponsorSessions.constant'
 
-function findFallbackSponsor(name: string) {
-  for (const sponsors of Object.values(fallbackSponsors)) {
-    const sponsor = sponsors.find((entry) => entry.name_en === name)
+function findSponsor(name: string) {
+  for (const sponsorGroup of Object.values(sponsors)) {
+    const sponsor = sponsorGroup.find((entry) => entry.name_en === name)
 
     if (sponsor) {
       return sponsor
@@ -24,10 +24,7 @@ const route = useRoute()
     
 const sessionInfo = computed(() => sponsorSessions.find(session => session.id === route.params.sponsor))
 
-const { fetchContentByName } = useSponsorsCMS()
-const sponsorSlug = String(route.params.sponsor)
-const { data: sponsor } = useLazyAsyncData(`sponsor-session:${sponsorSlug}`, () => fetchContentByName(sponsorSlug))
-const resolvedSponsor = computed(() => sponsor.value ?? findFallbackSponsor(sponsorSlug))
+const resolvedSponsor = computed(() => findSponsor(String(route.params.sponsor)))
     
 const url = `https://vuefes.jp/2022/sponsor-sessions/${sessionInfo.value.id}`
 const title = `${sessionInfo.value.session.title}（${sessionInfo.value.sponsor}） | ${conferenceTitle}`

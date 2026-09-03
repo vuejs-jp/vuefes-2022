@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import SponsorList from '~/components/sponsors/SponsorList.vue'
 import SectionTitle from '~/components/SectionTitle.vue'
-// import { useSponsorsCMS } from '~/composables/useCMS'
 import { individuals } from '~/utils/individuals.constants'
 
 import { sponsors } from '~/utils/newt.constants'
-
-// const { fetchContent } = useSponsorsCMS()
-// const { data: sponsors } = useLazyAsyncData('sponsors', () => fetchContent())
 </script>
 
 <template>
